@@ -1,0 +1,309 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Sage & Rose palette */
+  --color-sage-dark: #946B66;
+  --color-sage: #C4A4A0;
+  --color-sage-light: #D4B5B1;
+  --color-sage-soft: #E8D5D2;
+  --color-rose-dark: #6B6866;
+  --color-rose: #B0ADAB;
+  --color-rose-light: #C9C6C4;
+  --color-rose-soft: #E0DDDB;
+  --color-cream: #F5F0EB;
+  --color-cream-dark: #EDE6DD;
+  --color-text: #5E524F;
+  --color-text-light: #8A7F7C;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Lato", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--color-rose-dark);
+}
+
+/* Glass navigation - sage base */
+.glass-nav {
+  background: rgba(148, 107, 102, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-nav-scrolled {
+  background: rgba(148, 107, 102, 0.9);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+}
+
+/* === Uniform button styles === */
+
+/* Primary: sage filled */
+.btn-primary {
+  background-color: var(--color-sage);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(196, 164, 160, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-sage-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(196, 164, 160, 0.4);
+}
+
+/* Secondary: white with rose border */
+.btn-secondary {
+  border: 2px solid var(--color-rose-light);
+  color: var(--color-rose-dark);
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-rose);
+  color: white;
+  border-color: var(--color-rose);
+  transform: translateY(-1px);
+}
+
+/* Section padding */
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* Cool photo filter */
+.photo-filter {
+  filter: brightness(1.05) saturate(0.75) contrast(0.95);
+}
+
+.photo-filter-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-filter-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(245, 240, 235, 0.25) 0%,
+    rgba(220, 225, 230, 0.18) 100%
+  );
+  pointer-events: none;
+}
+
+/* Quote parallax */
+.parallax-quote {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  .parallax-quote {
+    background-attachment: scroll;
+  }
+}
+
+/* Bounce animation */
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+.animate-bounce-down {
+  animation: bounceDown 2s ease-in-out infinite;
+}
+
+/* Card hover */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+
+.card-hover:hover .card-icon {
+  transform: scale(1.1);
+}
+
+.card-icon {
+  transition: transform 0.3s ease;
+}
+
+/* Tarief card hover */
+.tarief-card {
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tarief-card:hover {
+  border-color: var(--color-rose-light);
+}
+
+/* AOS overrides */
+[data-aos] {
+  pointer-events: auto !important;
+}
+
+/* === Lotus breathing animation === */
+@keyframes lotusBreath {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.12); opacity: 1; }
+}
+
+.animate-lotus-breath {
+  animation: lotusBreath 4s ease-in-out infinite;
+}
+
+/* === Scroll progress bar === */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  z-index: 100;
+  background: linear-gradient(90deg, var(--color-sage), var(--color-rose));
+  transform-origin: left;
+  transition: none;
+}
+
+/* === Staggered text reveal === */
+@keyframes fadeUpWord {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.word-reveal > span {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeUpWord 0.6s ease-out forwards;
+}
+
+/* === Text highlight sweep === */
+@keyframes highlightSweep {
+  from { background-size: 0% 40%; }
+  to { background-size: 100% 40%; }
+}
+
+.text-highlight {
+  background-image: linear-gradient(120deg, var(--color-rose-light) 0%, var(--color-sage-light) 100%);
+  background-repeat: no-repeat;
+  background-position: 0 85%;
+  background-size: 0% 40%;
+}
+
+.text-highlight.animate {
+  animation: highlightSweep 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* === Quote marks animation === */
+@keyframes quoteMarkFade {
+  from { opacity: 0; transform: scale(0.5) rotate(-10deg); }
+  to { opacity: 0.15; transform: scale(1) rotate(0deg); }
+}
+
+.quote-mark-animated {
+  display: inline-block;
+  opacity: 0;
+  font-size: 6rem;
+  line-height: 0;
+  vertical-align: -0.3em;
+  color: var(--color-rose);
+  animation: quoteMarkFade 0.8s ease-out forwards;
+}
+
+/* === Floating particles === */
+@keyframes floatParticle {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(10px, -15px); }
+  50% { transform: translate(-5px, -25px); }
+  75% { transform: translate(15px, -10px); }
+}
+
+.floating-particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatParticle var(--duration, 8s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+/* === Magnetic button === */
+.magnetic-btn {
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: transform;
+}
+
+/* === Hero parallax === */
+.hero-parallax {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+/* === Counter animation === */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Card accent reveal on hover === */
+.card-accent-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-accent-hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-sage), var(--color-rose));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.card-accent-hover:hover::before {
+  transform: scaleX(1);
+}
+
+.card-accent-hover:hover .card-icon {
+  color: var(--color-sage) !important;
+}
+
+/* === Smooth section transitions === */
+.section-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

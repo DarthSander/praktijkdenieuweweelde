@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:2begke.your-wobbio.com)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --no-import-alias --use-npm)",
+      "Bash(rm -f index.html)",
+      "Bash(npx create-next-app@latest nieuwe-weelde --typescript --tailwind --eslint --app --src-dir --no-import-alias --use-npm)",
+      "Bash(cp -r nieuwe-weelde/* .)",
+      "Bash(cp -r nieuwe-weelde/.* .)",
+      "Bash(rm -rf nieuwe-weelde)",
+      "Bash(npm install:*)",
+      "Bash(npx next:*)",
+      "Bash(taskkill //F //IM node.exe)",
+      "WebSearch",
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:splashfinder.app)",
+      "Bash(curl:*)",
+      "Bash(ls:*)",
+      "Bash(node -e ':*)",
+      "WebFetch(domain:relatieguide.nl)",
+      "WebFetch(domain:www.pieterneldijkstra.nl)",
+      "WebFetch(domain:www.aerjentamminga.nl)",
+      "WebFetch(domain:psyflix.net)",
+      "WebFetch(domain:pmc.ncbi.nlm.nih.gov)",
+      "WebFetch(domain:www.hael.nl)"
+    ]
+  }
+}
