@@ -1,46 +1,4 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
-
-function AnimatedPrice({ target, suffix }: { target: number; suffix: string }) {
-  const [count, setCount] = useState(0);
-  const [started, setStarted] = useState(false);
-  const ref = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting && !started) setStarted(true); },
-      { threshold: 0.5 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [started]);
-
-  useEffect(() => {
-    if (!started) return;
-    const duration = 1200;
-    const steps = 30;
-    const increment = target / steps;
-    let current = 0;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= target) {
-        setCount(target);
-        clearInterval(timer);
-      } else {
-        setCount(Math.round(current));
-      }
-    }, duration / steps);
-    return () => clearInterval(timer);
-  }, [started, target]);
-
-  return (
-    <span ref={ref}>
-      €{started ? count : 0}{suffix}
-    </span>
-  );
-}
 
 const plans = [
   {
@@ -104,7 +62,7 @@ export default function Tarieven() {
                 )}
               </div>
               <p className="text-3xl font-bold text-[#6B6866] mb-8">
-                <AnimatedPrice target={plan.price} suffix={plan.priceSuffix} />
+                €{plan.price}{plan.priceSuffix}
                 <span className="text-base font-normal text-[#C4A4A0] ml-1">{plan.per}</span>
               </p>
               <ul className="space-y-3 mb-8 flex-grow">
