@@ -15,7 +15,7 @@ export default function Footer() {
         </p>
         <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-10">
           <a href="/privacyverklaring" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Privacyverklaring</a>
-          <a href="#" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Algemene Voorwaarden</a>
+          <a href="/algemene-voorwaarden" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Algemene Voorwaarden</a>
           <a href="/klachtenregeling" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Klachtenregeling</a>
         </div>
         <p className="text-white/30 text-xs mb-6">
