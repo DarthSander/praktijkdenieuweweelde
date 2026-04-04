@@ -33,13 +33,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <a href="#" className="flex items-center gap-2 text-white font-[family-name:var(--font-playfair)] text-lg font-semibold">
-            <LotusIcon className="w-6 h-6 text-white/85 animate-lotus-breath" />
-            Relatiepraktijk de Nieuwe Weelde
+        <div className="flex justify-between items-center h-16 gap-2">
+          <a href="#" className="flex items-center gap-2 text-white font-[family-name:var(--font-playfair)] text-sm sm:text-base md:text-lg font-semibold min-w-0 flex-1">
+            <LotusIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white/85 animate-lotus-breath flex-shrink-0" />
+            <span className="truncate">Relatiepraktijk de Nieuwe Weelde</span>
           </a>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 flex-shrink-0">
             {links.map((link) => (
               <a key={link.href} href={link.href} className="text-white/85 hover:text-white transition text-sm tracking-wide">
                 {link.label}
@@ -50,7 +50,7 @@ export default function Navbar() {
             </a>
           </div>
 
-          <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden text-white" aria-label="Menu">
+          <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden text-white flex-shrink-0" aria-label="Menu">
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
