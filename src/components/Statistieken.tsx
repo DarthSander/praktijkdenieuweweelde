@@ -2,45 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 
-interface MethodCard {
-  percentage: number;
-  method: string;
-  subtitle: string;
-  description: string;
-  source: string;
-  delay: string;
-}
-
-const methods: MethodCard[] = [
-  {
-    percentage: 71,
-    method: "IBCT",
-    subtitle: "Integrative Behavioral Couple Therapy",
-    description:
-      "Wetenschappelijk onderbouwd via de grootste gerandomiseerde studie in de relatietherapie. Effecten blijven aantoonbaar stabiel tot vijf jaar na afsluiting.",
-    source: "Christensen et al., RCT",
-    delay: "100",
-  },
-  {
-    percentage: 73,
-    method: "EFT",
-    subtitle: "Emotionally Focused Therapy",
-    description:
-      "Gehechtheidsgebaseerde aanpak waarbij 82% van de behaalde resultaten stabiel blijft bij follow-up onderzoek tot twee jaar na de behandeling.",
-    source: "Internationaal EFT-onderzoek",
-    delay: "200",
-  },
-  {
-    percentage: 70,
-    method: "Gottman",
-    subtitle: "Gottman Method",
-    description:
-      "Gebaseerd op meer dan 40 jaar longitudinaal onderzoek. Richt zich op concrete communicatiepatronen en het versterken van vriendschap en vertrouwen.",
-    source: "Gottman Institute Research",
-    delay: "300",
-  },
-];
-
 function AnimatedPercentage({
   target,
   delayMs = 0,
@@ -82,9 +43,30 @@ function AnimatedPercentage({
   return <span ref={ref}>{count}</span>;
 }
 
+const relatiemethoden = [
+  {
+    method: "EFT",
+    subtitle: "Emotionally Focused Therapy",
+    percentage: 73,
+  },
+  {
+    method: "IBCT",
+    subtitle: "Integrative Behavioral Couple Therapy",
+    percentage: 71,
+  },
+  {
+    method: "Gottman",
+    subtitle: "Gottman Method",
+    percentage: 70,
+  },
+];
+
+// Gemiddelde: (73 + 71 + 70) / 3 ≈ 71
+const gemiddeld = 71;
+
 export default function Statistieken() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-[#E8D5D2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16" data-aos="fade-up">
@@ -103,53 +85,47 @@ export default function Statistieken() {
           </p>
         </div>
 
-        {/* Method cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-10">
-          {methods.map((m) => (
-            <div
-              key={m.method}
-              data-aos="fade-up"
-              data-aos-delay={m.delay}
-              className="card-hover card-accent-hover bg-[#F5F0EB] rounded-2xl p-8 text-center flex flex-col"
-            >
-              {/* Big number */}
-              <div className="mb-1">
-                <span className="text-5xl md:text-6xl font-[family-name:var(--font-playfair)] font-bold text-[#946B66]">
-                  <AnimatedPercentage
-                    target={m.percentage}
-                    delayMs={parseInt(m.delay)}
-                  />
-                </span>
-                <span className="text-3xl font-[family-name:var(--font-playfair)] font-bold text-[#946B66]">
-                  %
-                </span>
-              </div>
-              <p className="text-xs text-[#C4A4A0] mb-5">
-                van de koppels geholpen
-              </p>
-
-              <div className="border-t border-[#E8D5D2] pt-5 mb-4">
-                <h3 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-1">
-                  {m.method}
-                </h3>
-                <p className="text-xs text-[#C4A4A0]">{m.subtitle}</p>
-              </div>
-
-              <p className="text-[#5E524F] text-sm leading-relaxed flex-grow">
-                {m.description}
-              </p>
-
-              <p className="mt-5 text-xs text-[#B0ADAB] border-t border-[#E8D5D2] pt-4">
-                — {m.source}
-              </p>
+        {/* Gecombineerd methode-blok */}
+        <div className="max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100">
+          <div className="card-hover card-accent-hover bg-[#F5F0EB] rounded-2xl p-8 text-center flex flex-col">
+            {/* Gemiddeld percentage */}
+            <div className="mb-1">
+              <span className="text-5xl md:text-6xl font-[family-name:var(--font-playfair)] font-bold text-[#946B66]">
+                <AnimatedPercentage target={gemiddeld} delayMs={100} />
+              </span>
+              <span className="text-3xl font-[family-name:var(--font-playfair)] font-bold text-[#946B66]">
+                %
+              </span>
             </div>
-          ))}
+            <p className="text-xs text-[#C4A4A0] mb-6">
+              gemiddeld succes&shy;percentage — erkende relatietherapie&shy;methoden
+            </p>
+
+            {/* Drie methoden */}
+            <div className="border-t border-[#E8D5D2] pt-6 flex flex-col gap-4">
+              {relatiemethoden.map((m) => (
+                <div key={m.method} className="flex items-baseline justify-between gap-4">
+                  <div className="text-left">
+                    <span className="text-base font-[family-name:var(--font-playfair)] font-bold text-[#6B6866]">
+                      {m.method}
+                    </span>
+                    <span className="ml-2 text-xs text-[#C4A4A0]">{m.subtitle}</span>
+                  </div>
+                  <span className="shrink-0 text-sm font-semibold text-[#946B66]">{m.percentage}%</span>
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-6 text-xs text-[#B0ADAB] border-t border-[#E8D5D2] pt-4">
+              — Christensen et al., Internationaal EFT-onderzoek, Gottman Institute Research
+            </p>
+          </div>
         </div>
 
         {/* Disclaimer */}
         <p
           data-aos="fade-up"
-          className="text-center text-xs text-[#B0ADAB] max-w-2xl mx-auto leading-relaxed"
+          className="text-center text-xs text-[#8A7F7C] max-w-2xl mx-auto leading-relaxed"
         >
           Internationaal onderzoek toont geen significant verschil in
           effectiviteit tussen erkende methoden. De keuze voor een aanpak hangt
