@@ -111,7 +111,7 @@ export default function Statistieken() {
                     </span>
                     <span className="ml-2 text-xs text-[#C4A4A0]">{m.subtitle}</span>
                   </div>
-                  <span className="shrink-0 text-sm font-semibold text-[#946B66]">{m.percentage}%</span>
+                  {/* percentage removed — only average shown */}
                 </div>
               ))}
             </div>

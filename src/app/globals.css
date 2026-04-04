@@ -18,6 +18,11 @@
   --font-sans: "Lato", sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
