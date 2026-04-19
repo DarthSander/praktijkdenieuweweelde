@@ -1,9 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { MessageCircle, X, Send, Sparkles } from "lucide-react";
+import { X, Send } from "lucide-react";
+import LotusIcon from "../LotusIcon";
 import ChatMessage from "./ChatMessage";
-import IntakeModal from "../intake/IntakeModal";
+import { useStreamingText } from "@/lib/useStreamingText";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -15,7 +16,7 @@ const BLOG_PROMPT_KEY = "nw_blog_endprompt_v1";
 const WELCOME: Msg = {
   role: "assistant",
   content:
-    "Hoi, ik ben de digitale assistent van Eva. Ik kan je helpen met vragen over relatietherapie, IBCT, kosten of werkwijze. Waar zit je mee?",
+    "Hoi, ik ben Bea. Ik kan je helpen met vragen over relatietherapie, IBCT, kosten of de werkwijze van Eva. Waar zit je mee?",
 };
 
 export default function ChatWidget() {
@@ -23,11 +24,12 @@ export default function ChatWidget() {
   const [hasConsent, setHasConsent] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([WELCOME]);
   const [input, setInput] = useState("");
-  const [streaming, setStreaming] = useState(false);
-  const [intakeOpen, setIntakeOpen] = useState(false);
   const sessionIdRef = useRef<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const abortRef = useRef<AbortController | null>(null);
+
+  const stream = useStreamingText(85);
 
   // Restore state
   useEffect(() => {
@@ -50,6 +52,20 @@ export default function ChatWidget() {
     if (typeof window === "undefined") return;
     localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
   }, [messages]);
+
+  // Sync streamed text into the last assistant message during streaming
+  useEffect(() => {
+    if (!stream.isStreaming && stream.visibleText === "") return;
+    setMessages((prev) => {
+      if (prev.length === 0) return prev;
+      const last = prev[prev.length - 1];
+      if (last.role !== "assistant") return prev;
+      if (last.content === stream.visibleText) return prev;
+      const copy = prev.slice();
+      copy[copy.length - 1] = { role: "assistant", content: stream.visibleText };
+      return copy;
+    });
+  }, [stream.visibleText, stream.isStreaming]);
 
   // Autoscroll
   useEffect(() => {
@@ -95,7 +111,6 @@ export default function ChatWidget() {
           if (sessionStorage.getItem(promptedKey)) return;
           sessionStorage.setItem(promptedKey, "1");
           setMessages((prev) => {
-            // Voeg alleen toe als laatste assistant-bericht niet al een blog-vraag is
             const last = prev[prev.length - 1];
             if (last && last.role === "assistant" && last.content.includes("interessant")) return prev;
             return [
@@ -127,27 +142,36 @@ export default function ChatWidget() {
 
   const send = useCallback(async () => {
     const text = input.trim();
-    if (!text || streaming) return;
+    if (!text || stream.isStreaming) return;
     setInput("");
-    const newMsgs: Msg[] = [...messages, { role: "user", content: text }, { role: "assistant", content: "" }];
+
+    const newMsgs: Msg[] = [
+      ...messages,
+      { role: "user", content: text },
+      { role: "assistant", content: "" },
+    ];
     setMessages(newMsgs);
-    setStreaming(true);
+    stream.start();
+
+    abortRef.current?.abort();
+    const ctrl = new AbortController();
+    abortRef.current = ctrl;
 
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          messages: newMsgs.slice(0, -1).filter((m) => m.content), // skip welcome with same role rule? all good
+          messages: newMsgs.slice(0, -1).filter((m) => m.content),
           sessionId: sessionIdRef.current,
           pageUrl: typeof window !== "undefined" ? window.location.pathname : undefined,
         }),
+        signal: ctrl.signal,
       });
       if (!res.ok || !res.body) throw new Error("Request failed");
 
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
-      let acc = "";
       let sessionParsed = false;
       while (true) {
         const { value, done } = await reader.read();
@@ -163,27 +187,16 @@ export default function ChatWidget() {
           chunk = chunk.slice(newlineIdx + 1);
           sessionParsed = true;
         }
-        acc += chunk;
-        setMessages((prev) => {
-          const copy = prev.slice();
-          copy[copy.length - 1] = { role: "assistant", content: acc };
-          return copy;
-        });
+        if (chunk) stream.push(chunk);
       }
     } catch (err) {
+      if ((err as Error).name === "AbortError") return;
       console.error(err);
-      setMessages((prev) => {
-        const copy = prev.slice();
-        copy[copy.length - 1] = {
-          role: "assistant",
-          content: "Sorry, er ging iets mis. Probeer het zo opnieuw.",
-        };
-        return copy;
-      });
+      stream.push("Sorry, er ging iets mis. Probeer het zo opnieuw.");
     } finally {
-      setStreaming(false);
+      stream.finish();
     }
-  }, [input, messages, streaming]);
+  }, [input, messages, stream]);
 
   const handleKey = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {
@@ -192,16 +205,22 @@ export default function ChatWidget() {
     }
   };
 
+  const lastIsAssistantEmpty =
+    messages.length > 0 &&
+    messages[messages.length - 1].role === "assistant" &&
+    messages[messages.length - 1].content === "" &&
+    stream.isStreaming;
+
   return (
     <>
       {/* Floating bubble */}
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          aria-label="Open chat"
-          className="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-[#946B66] hover:bg-[#7a5752] text-white shadow-lg flex items-center justify-center transition-all hover:scale-105"
+          aria-label="Open chat met Bea"
+          className="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-[#946B66] hover:bg-[#7a5752] text-white shadow-[0_8px_24px_rgba(148,107,102,0.35)] flex items-center justify-center transition-all hover:scale-105"
         >
-          <MessageCircle className="w-6 h-6" />
+          <LotusIcon className="w-7 h-7" />
         </button>
       )}
 
@@ -210,34 +229,42 @@ export default function ChatWidget() {
         <div
           className="fixed z-50 bg-white shadow-2xl flex flex-col
                      inset-0 md:inset-auto md:bottom-5 md:right-5
-                     md:w-[380px] md:h-[560px] md:rounded-2xl
-                     border border-[#E8D5D2]"
+                     md:w-[400px] md:h-[600px] md:rounded-2xl
+                     md:border md:border-[#EDE6DD]"
         >
           {/* Header */}
-          <div className="flex items-center justify-between px-4 py-3 border-b border-[#F5F0EB] bg-[#946B66] text-white md:rounded-t-2xl">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                <Sparkles className="w-4 h-4" />
+          <div className="flex items-center justify-between px-4 py-3 bg-white border-b border-[#F5F0EB] md:rounded-t-2xl">
+            <div className="flex items-center gap-2.5">
+              <div className="w-9 h-9 rounded-full bg-[#F5F0EB] flex items-center justify-center text-[#946B66]">
+                <LotusIcon className="w-5 h-5" />
               </div>
               <div>
-                <div className="text-sm font-semibold leading-tight">Assistent van Eva</div>
-                <div className="text-[11px] text-white/75 leading-tight">Meestal binnen 1 minuut antwoord</div>
+                <div className="text-[15px] font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] leading-tight">
+                  Bea
+                </div>
+                <div className="text-[11px] text-[#B0ADAB] leading-tight">de Nieuwe Weelde · online</div>
               </div>
             </div>
-            <button onClick={() => setOpen(false)} aria-label="Sluit chat" className="p-1 hover:bg-white/10 rounded">
+            <button
+              onClick={() => setOpen(false)}
+              aria-label="Sluit chat"
+              className="p-1.5 hover:bg-[#F5F0EB] rounded-full text-[#5E524F] transition"
+            >
               <X className="w-5 h-5" />
             </button>
           </div>
 
           {/* Messages */}
           <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-4 bg-white">
-            {messages.map((m, i) => (
-              <ChatMessage key={i} role={m.role} content={m.content} onOpenIntake={() => setIntakeOpen(true)} />
-            ))}
-            {streaming && messages[messages.length - 1]?.content === "" && (
-              <div className="flex gap-2 mb-3">
-                <div className="w-7 h-7 rounded-full bg-[#946B66] flex items-center justify-center flex-shrink-0">
-                  <Sparkles className="w-3.5 h-3.5 text-white" />
+            {messages.map((m, i) => {
+              const prev = messages[i - 1];
+              const showAvatar = !prev || prev.role !== m.role;
+              return <ChatMessage key={i} role={m.role} content={m.content} showAvatar={showAvatar} />;
+            })}
+            {lastIsAssistantEmpty && (
+              <div className="flex gap-2 mb-2">
+                <div className="w-7 h-7 rounded-full bg-[#F5F0EB] flex items-center justify-center flex-shrink-0 text-[#946B66]">
+                  <LotusIcon className="w-4 h-4" />
                 </div>
                 <div className="px-3.5 py-3 rounded-2xl bg-[#F5F0EB] flex gap-1">
                   <span className="w-1.5 h-1.5 bg-[#C4A4A0] rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
@@ -253,9 +280,8 @@ export default function ChatWidget() {
             {!hasConsent ? (
               <div className="text-xs text-[#5E524F] leading-relaxed space-y-2">
                 <p>
-                  Deze chat gebruikt AI (Anthropic). Je berichten worden tijdelijk verwerkt om antwoord te geven en
-                  worden 30 dagen bewaard. Geen contactgegevens nodig om te chatten — deel ze pas in de vragenlijst.
-                  Lees meer in de{" "}
+                  Bea wordt aangedreven door AI (Anthropic). Je berichten worden tijdelijk verwerkt en maximaal
+                  30 dagen bewaard. Je hoeft geen contactgegevens te delen om te chatten. Lees meer in de{" "}
                   <a href="/privacyverklaring" className="text-[#946B66] underline">
                     privacyverklaring
                   </a>
@@ -273,15 +299,15 @@ export default function ChatWidget() {
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKey}
                   rows={1}
-                  placeholder="Typ je vraag…"
-                  className="flex-1 resize-none px-3 py-2 text-sm bg-[#F5F0EB] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#C4A4A0] max-h-32"
-                  disabled={streaming}
+                  placeholder="Stel je vraag aan Bea…"
+                  className="flex-1 resize-none px-3.5 py-2.5 text-sm bg-[#F5F0EB] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#C4A4A0] max-h-32 placeholder:text-[#B0ADAB]"
+                  disabled={stream.isStreaming}
                 />
                 <button
                   onClick={send}
-                  disabled={streaming || !input.trim()}
+                  disabled={stream.isStreaming || !input.trim()}
                   aria-label="Verstuur"
-                  className="w-9 h-9 rounded-full bg-[#946B66] hover:bg-[#7a5752] disabled:opacity-40 disabled:cursor-not-allowed text-white flex items-center justify-center transition flex-shrink-0"
+                  className="w-10 h-10 rounded-full bg-[#946B66] hover:bg-[#7a5752] disabled:opacity-30 disabled:cursor-not-allowed text-white flex items-center justify-center transition flex-shrink-0"
                 >
                   <Send className="w-4 h-4" />
                 </button>
@@ -290,8 +316,6 @@ export default function ChatWidget() {
           </div>
         </div>
       )}
-
-      <IntakeModal open={intakeOpen} onClose={() => setIntakeOpen(false)} />
     </>
   );
 }

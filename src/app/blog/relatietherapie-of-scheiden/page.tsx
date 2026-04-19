@@ -127,7 +127,7 @@ export default function Page() {
 
       <h2>Wat kost helderheid?</h2>
       <p>
-        Een traject van vier tot zes oriënterende sessies kost bij mij in Tilburg rond de € 600 tot € 900 (zie het artikel <Link href="/blog/wat-kost-relatietherapie">wat kost relatietherapie</Link>). Dat is niet niks. Maar vergeleken met de kosten van een gehaaste of spijtige scheiding (of van jaren doorgaan in mist) is het een eerlijke investering in helderheid.
+        Een traject van vier tot zes oriënterende sessies kost bij mij in Tilburg rond de € 600 tot € 900. Dat is niet niks. Maar vergeleken met de kosten van een gehaaste of spijtige scheiding (of van jaren doorgaan in mist) is het een eerlijke investering in helderheid.
       </p>
 
       <h2>Een kennismaking zonder verplichting</h2>

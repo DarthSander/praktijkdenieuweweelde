@@ -33,25 +33,6 @@ export const blogPosts: BlogPost[] = [
     category: "Relatietherapie",
   },
   {
-    slug: "wat-kost-relatietherapie",
-    title: "Wat kost relatietherapie in 2026? Tarieven, vergoeding en wat je ervoor krijgt",
-    description:
-      "Wat kost relatietherapie in Nederland in 2026? Eerlijk overzicht van tarieven, vergoedingen en wat de investering je oplevert. Inclusief IBCT-tarieven in Tilburg.",
-    excerpt:
-      "Relatietherapie is een investering in de belangrijkste relatie van jullie leven. Maar wat kost het eigenlijk, en wordt het vergoed door de zorgverzekeraar? Een helder overzicht van de tarieven in 2026.",
-    image: "/pampas-beige.jpg",
-    imageAlt: "Warm beige pampasgras, symbool voor bewuste keuze en waarde",
-    readingTime: "6 min leestijd",
-    date: "2026-04-20",
-    dateLabel: "20 april 2026",
-    related: [
-      "hoe-lang-duurt-relatietherapie",
-      "relatietherapie-aan-huis",
-      "wat-is-ibct",
-    ],
-    category: "Praktische informatie",
-  },
-  {
     slug: "relatietherapie-na-vreemdgaan",
     title: "Relatietherapie na vreemdgaan: kan de relatie echt herstellen?",
     description:
@@ -83,9 +64,9 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-20",
     dateLabel: "20 april 2026",
     related: [
-      "wat-kost-relatietherapie",
       "hoe-lang-duurt-relatietherapie",
       "wat-is-ibct",
+      "wanneer-is-relatietherapie-zinvol",
     ],
     category: "Werkwijze",
   },
@@ -122,8 +103,8 @@ export const blogPosts: BlogPost[] = [
     dateLabel: "20 april 2026",
     related: [
       "wat-is-ibct",
-      "wat-kost-relatietherapie",
       "relatietherapie-aan-huis",
+      "wanneer-is-relatietherapie-zinvol",
     ],
     category: "Praktische informatie",
   },

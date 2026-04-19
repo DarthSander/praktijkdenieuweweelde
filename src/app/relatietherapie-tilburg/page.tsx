@@ -276,8 +276,8 @@ export default function Page() {
               Meer lezen voor je de stap zet?
             </h2>
             <p className="text-[#5E524F] text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-              De blog bevat artikelen over wanneer therapie zinvol is, wat het kost, en hoe
-              IBCT-therapie er in de praktijk uitziet.
+              De blog bevat artikelen over wanneer therapie zinvol is, hoe lang een traject duurt,
+              en hoe IBCT-therapie er in de praktijk uitziet.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link
@@ -285,12 +285,6 @@ export default function Page() {
                 className="bg-white border border-[#EDE6DD] hover:border-[#C4A4A0] text-[#6B6866] px-5 py-2.5 rounded-full text-sm font-semibold transition"
               >
                 Wanneer is relatietherapie zinvol?
-              </Link>
-              <Link
-                href="/blog/wat-kost-relatietherapie"
-                className="bg-white border border-[#EDE6DD] hover:border-[#C4A4A0] text-[#6B6866] px-5 py-2.5 rounded-full text-sm font-semibold transition"
-              >
-                Wat kost relatietherapie?
               </Link>
               <Link
                 href="/blog/hoe-lang-duurt-relatietherapie"
