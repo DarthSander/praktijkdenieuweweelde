@@ -1,30 +1,50 @@
 import type { MetadataRoute } from "next";
+import { blogPosts } from "@/lib/blog-posts";
+
+const base = "https://www.praktijkdenieuweweelde.nl";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const now = new Date();
+
+  const staticPages: MetadataRoute.Sitemap = [
     {
-      url: "https://www.praktijkdenieuweweelde.nl",
-      lastModified: new Date(),
+      url: base,
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: "https://www.praktijkdenieuweweelde.nl/privacyverklaring",
-      lastModified: new Date(),
+      url: `${base}/blog`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${base}/privacyverklaring`,
+      lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: "https://www.praktijkdenieuweweelde.nl/algemene-voorwaarden",
-      lastModified: new Date(),
+      url: `${base}/algemene-voorwaarden`,
+      lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: "https://www.praktijkdenieuweweelde.nl/klachtenregeling",
-      lastModified: new Date(),
+      url: `${base}/klachtenregeling`,
+      lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,
     },
   ];
+
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${base}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...blogPages];
 }

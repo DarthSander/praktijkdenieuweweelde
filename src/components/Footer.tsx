@@ -15,6 +15,7 @@ export default function Footer() {
           Samen groeien, liefhebben en leven. Relatietherapie aan huis in Tilburg.
         </p>
         <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-10">
+          <Link href="/blog" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Blog</Link>
           <Link href="/privacyverklaring" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Privacyverklaring</Link>
           <Link href="/algemene-voorwaarden" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Algemene Voorwaarden</Link>
           <Link href="/klachtenregeling" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Klachtenregeling</Link>

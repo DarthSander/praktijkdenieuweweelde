@@ -20,6 +20,7 @@ export default function Navbar() {
     { label: "IBCT Therapie", href: "/#ibct" },
     { label: "Werkwijze", href: "/#werkwijze" },
     { label: "Tarieven", href: "/#tarieven" },
+    { label: "Blog", href: "/blog" },
   ];
 
   const handleLinkClick = () => setMobileOpen(false);
