@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-posts";
+import { landingPages } from "@/lib/landing-pages";
 
 const base = "https://www.praktijkdenieuweweelde.nl";
 
@@ -39,6 +40,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  const landing: MetadataRoute.Sitemap = landingPages.map((p) => ({
+    url: `${base}/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${base}/blog/${post.slug}`,
     lastModified: new Date(post.date),
@@ -46,5 +54,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...blogPages];
+  return [...staticPages, ...landing, ...blogPages];
 }
