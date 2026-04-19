@@ -130,9 +130,9 @@ export default function Page() {
         Een traject van vier tot zes oriënterende sessies kost bij mij in Tilburg rond de € 600 tot € 900. Dat is niet niks. Maar vergeleken met de kosten van een gehaaste of spijtige scheiding (of van jaren doorgaan in mist) is het een eerlijke investering in helderheid.
       </p>
 
-      <h2>Een kennismaking zonder verplichting</h2>
+      <h2>Een eerste gesprek bij jullie thuis</h2>
       <p>
-        Als jullie op dit kruispunt staan, is een gesprek al een stap. Het eerste kennismakingsgesprek is gratis en vindt plaats bij jullie thuis. We verkennen samen waar jullie staan, en of relatietherapie (of juist een ander pad) passend is. Je bepaalt zelf wat daarna volgt.
+        Als jullie op dit kruispunt staan, is een gesprek al een stap. Een intakegesprek vindt plaats bij jullie thuis. We verkennen samen waar jullie staan, en of relatietherapie (of juist een ander pad) passend is. Je bepaalt zelf wat daarna volgt.
       </p>
       <p>
         Stuur een bericht via het <Link href="/#contact">contactformulier</Link>, ik reageer binnen vierentwintig uur.

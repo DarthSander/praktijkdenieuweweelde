@@ -8,8 +8,8 @@ type Props = {
 
 export default function LandingCTA({
   title = "Klaar voor een eerste gesprek?",
-  text = "Het eerste kennismakingsgesprek is gratis en vrijblijvend, bij jullie thuis. We verkennen samen jullie situatie en of IBCT passend is.",
-  buttonLabel = "Plan een kennismaking",
+  text = "Een intakegesprek vindt plaats bij jullie thuis. We verkennen samen jullie situatie en of IBCT passend is.",
+  buttonLabel = "Plan een intakegesprek",
 }: Props) {
   return (
     <section className="section-padding bg-[#F5F0EB]">

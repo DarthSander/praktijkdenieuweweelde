@@ -152,10 +152,10 @@ export default function Page() {
 
       <h2>Is IBCT iets voor jullie?</h2>
       <p>
-        De beste manier om dat te ontdekken is een gratis kennismakingsgesprek, zonder verplichting. Tijdens dat gesprek verkennen we jullie situatie, leg ik de IBCT-aanpak uit en kijken we of deze methode bij jullie past.
+        De beste manier om dat te ontdekken is een intakegesprek. Tijdens dat gesprek verkennen we jullie situatie, leg ik de IBCT-aanpak uit en kijken we of deze methode bij jullie past.
       </p>
       <p>
-        Plan een kennismaking via het <Link href="/#contact">contactformulier</Link>. Ik neem binnen vierentwintig uur contact op.
+        Plan een intakegesprek via het <Link href="/#contact">contactformulier</Link>. Ik neem binnen vierentwintig uur contact op.
       </p>
 
       <div className="blog-sources">

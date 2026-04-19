@@ -34,11 +34,11 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Wat kost relatietherapie in Tilburg bij jou?",
-    a: "Een IBCT-sessie van 90 minuten kost € 150, inclusief reiskosten binnen het werkgebied. Het eerste kennismakingsgesprek is gratis en vrijblijvend. Voor koppels die preventief willen werken bied ik een APK voor relaties aan van drie sessies voor € 325.",
+    a: "Een IBCT-sessie van 90 minuten kost € 150, inclusief reiskosten binnen het werkgebied. Voor koppels die preventief willen werken bied ik een APK voor relaties aan van drie sessies voor € 325.",
   },
   {
     q: "Hoe snel kunnen wij starten?",
-    a: "De wachttijd voor een kennismakingsgesprek is meestal één tot twee weken. Bij acute situaties probeer ik eerder ruimte te maken. Na de kennismaking plannen we in onderling overleg het vervolg.",
+    a: "De wachttijd voor een intakegesprek is meestal één tot twee weken. Bij acute situaties probeer ik eerder ruimte te maken. Na het intakegesprek plannen we in onderling overleg het vervolg.",
   },
   {
     q: "Is relatietherapie vergoed door de zorgverzekeraar?",
@@ -46,7 +46,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Wij twijfelen of relatietherapie iets voor ons is.",
-    a: "Die twijfel is heel gewoon. Juist daarom is het eerste gesprek gratis en zonder verplichting. We verkennen samen of IBCT bij jullie situatie past, en welke stappen passend zijn. Jullie zitten nergens aan vast.",
+    a: "Die twijfel is heel gewoon. In een eerste intakegesprek verkennen we samen of IBCT bij jullie situatie past, en welke stappen passend zijn. Jullie zitten nergens aan vast.",
   },
   {
     q: "Wat als wij verschillend gemotiveerd zijn?",
@@ -240,8 +240,8 @@ export default function Page() {
                 },
                 {
                   icon: Heart,
-                  title: "Eerste gesprek gratis",
-                  text: "De kennismaking is gratis en zonder verplichting. Pas na dat gesprek beslissen jullie of een traject passend is.",
+                  title: "Op jullie tempo",
+                  text: "Na een intakegesprek beslissen jullie zelf of een traject passend is. Jullie zitten nergens aan vast.",
                 },
               ].map((item) => (
                 <div key={item.title} className="bg-white rounded-2xl p-6 md:p-7 flex gap-4">
@@ -261,8 +261,8 @@ export default function Page() {
         </section>
 
         <LandingCTA
-          title="Een kennismaking is vrijblijvend"
-          text="Ik kom bij jullie thuis in Tilburg voor een eerste gesprek. Gratis, zonder verplichting. Jullie vertellen waar het schuurt, ik leg uit hoe IBCT werkt en samen bepalen we of het past."
+          title="Een intakegesprek bij jullie thuis"
+          text="Ik kom bij jullie thuis in Tilburg voor een eerste gesprek. Jullie vertellen waar het schuurt, ik leg uit hoe IBCT werkt en samen bepalen we of het past."
         />
 
         <LandingFAQ

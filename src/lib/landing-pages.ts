@@ -17,7 +17,7 @@ export const landingPages: LandingPage[] = [
     title: "Relatietherapie in Tilburg",
     metaTitle: "Relatietherapie Tilburg | IBCT aan huis door Eva Mulder",
     description:
-      "Relatietherapie in Tilburg aan huis. IBCT-relatietherapeut Eva Mulder begeleidt koppels in Tilburg en omgeving. Eerste kennismaking gratis en vrijblijvend.",
+      "Relatietherapie in Tilburg aan huis. IBCT-relatietherapeut Eva Mulder begeleidt koppels in Tilburg en omgeving.",
     h1: "Relatietherapie in Tilburg, gewoon bij jullie thuis",
     heroKicker: "IBCT relatietherapie in Tilburg",
     heroSubtitle:
@@ -31,7 +31,7 @@ export const landingPages: LandingPage[] = [
     title: "Relatietherapie in de Reeshof",
     metaTitle: "Relatietherapie Reeshof | IBCT aan huis in Tilburg-West",
     description:
-      "Relatietherapie in de Reeshof, aan huis. IBCT-relatietherapeut Eva Mulder woont en werkt in Tilburg-West. Avondsessies mogelijk. Eerste gesprek gratis.",
+      "Relatietherapie in de Reeshof, aan huis. IBCT-relatietherapeut Eva Mulder woont en werkt in Tilburg-West. Avondsessies mogelijk.",
     h1: "Relatietherapie in de Reeshof, op jullie eigen bank",
     heroKicker: "IBCT relatietherapie in Tilburg-West",
     heroSubtitle:
@@ -45,7 +45,7 @@ export const landingPages: LandingPage[] = [
     title: "Relatietherapie in Berkel-Enschot",
     metaTitle: "Relatietherapie Berkel-Enschot | IBCT aan huis",
     description:
-      "Relatietherapie in Berkel-Enschot aan huis. IBCT-relatietherapeut Eva Mulder begeleidt koppels in Berkel-Enschot discreet en respectvol. Eerste kennismaking gratis.",
+      "Relatietherapie in Berkel-Enschot aan huis. IBCT-relatietherapeut Eva Mulder begeleidt koppels in Berkel-Enschot discreet en respectvol.",
     h1: "Relatietherapie in Berkel-Enschot, in jullie vertrouwde omgeving",
     heroKicker: "IBCT relatietherapie in Berkel-Enschot",
     heroSubtitle:

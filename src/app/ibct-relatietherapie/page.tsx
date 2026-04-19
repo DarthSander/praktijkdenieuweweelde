@@ -50,7 +50,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Is IBCT geschikt voor elk koppel?",
-    a: "IBCT werkt voor de meeste relatieproblematiek, van communicatie tot intimiteit tot levensfase-overgangen. Bij acuut huiselijk geweld of actieve verslaving is een andere zorgvorm vaak eerst nodig. In het kennismakingsgesprek kijken we samen of IBCT passend is voor jullie situatie.",
+    a: "IBCT werkt voor de meeste relatieproblematiek, van communicatie tot intimiteit tot levensfase-overgangen. Bij acuut huiselijk geweld of actieve verslaving is een andere zorgvorm vaak eerst nodig. In het intakegesprek kijken we samen of IBCT passend is voor jullie situatie.",
   },
 ];
 
@@ -205,7 +205,7 @@ export default function Page() {
 
         <LandingCTA
           title="Benieuwd of IBCT bij jullie past?"
-          text="Het kennismakingsgesprek is gratis en zonder verplichting. We verkennen jullie situatie en kijken of IBCT aansluit bij wat jullie zoeken."
+          text="In een intakegesprek verkennen we samen jullie situatie en kijken we of IBCT aansluit bij wat jullie zoeken."
         />
 
         <LandingFAQ heading="Veelgestelde vragen over IBCT" items={faqs} />

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Relatiepraktijk de Nieuwe Weelde",
   },
   description:
-    "IBCT relatietherapie aan huis in Tilburg door Eva Mulder. Wetenschappelijk onderbouwde begeleiding voor koppels in de Reeshof, Centrum en Berkel-Enschot. Eerste kennismaking gratis.",
+    "IBCT relatietherapie aan huis in Tilburg door Eva Mulder. Wetenschappelijk onderbouwde begeleiding voor koppels in de Reeshof, Centrum en Berkel-Enschot.",
   keywords: [
     "relatietherapie Tilburg",
     "relatietherapeut Tilburg",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     siteName: "Relatiepraktijk de Nieuwe Weelde",
     title: "Relatiepraktijk de Nieuwe Weelde | IBCT Relatietherapeut Tilburg",
     description:
-      "IBCT relatietherapie aan huis in Tilburg door Eva Mulder. Wetenschappelijk onderbouwde begeleiding voor koppels. Eerste kennismaking gratis.",
+      "IBCT relatietherapie aan huis in Tilburg door Eva Mulder. Wetenschappelijk onderbouwde begeleiding voor koppels.",
     images: [
       {
         url: "/pampas-water.jpg",
@@ -134,16 +134,6 @@ const jsonLd = {
     "@type": "OfferCatalog",
     name: "Relatietherapie",
     itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Kennismakingsgesprek",
-          description: "Vrijblijvend eerste kennismakingsgesprek aan huis, gratis.",
-        },
-        price: "0",
-        priceCurrency: "EUR",
-      },
       {
         "@type": "Offer",
         itemOffered: {

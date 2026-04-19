@@ -99,13 +99,13 @@ export default function BlogLayout({ post, related, children }: Props) {
               Herkennen jullie iets in dit verhaal?
             </h2>
             <p className="text-white/85 text-base leading-relaxed mb-6">
-              Een goed gesprek is vaak het begin van herstel. In een vrijblijvende kennismaking ontdekken jullie of IBCT-therapie bij jullie past, gewoon bij jullie thuis op de bank.
+              Een goed gesprek is vaak het begin van herstel. In een intakegesprek ontdekken jullie of IBCT bij jullie past, gewoon bij jullie thuis op de bank.
             </p>
             <Link
               href="/#contact"
               className="inline-block bg-white text-[#946B66] px-7 py-3 rounded-full font-semibold text-sm hover:bg-[#F5F0EB] transition"
             >
-              Plan een kennismaking
+              Plan een intakegesprek
             </Link>
           </div>
         </article>

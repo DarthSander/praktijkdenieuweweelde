@@ -115,7 +115,7 @@ export default function Page() {
 
       <h2>Wanneer is professionele hulp zinvol?</h2>
       <p>
-        Als jullie één of meer van deze signalen herkennen, dan is een kennismakingsgesprek zinvol:
+        Als jullie één of meer van deze signalen herkennen, dan is een intakegesprek zinvol:
       </p>
       <ul>
         <li>Elk gesprek over gevoelige onderwerpen escaleert of loopt dood.</li>
@@ -138,7 +138,7 @@ export default function Page() {
 
       <h2>Een gesprek kan verschil maken</h2>
       <p>
-        Als jullie herkennen wat in dit artikel staat, dan weten jullie dat er iets moet veranderen. Maar hoe begin je? Vaak met één simpel bericht. Een gratis kennismaking geeft helderheid zonder verplichting. We kijken samen naar jullie patroon en bespreken of IBCT passend is.
+        Als jullie herkennen wat in dit artikel staat, dan weten jullie dat er iets moet veranderen. Maar hoe begin je? Vaak met één simpel bericht. In een intakegesprek kijken we samen naar jullie patroon en bespreken we of IBCT passend is.
       </p>
       <p>
         Stuur een bericht via het <Link href="/#contact">contactformulier</Link>, dan nemen we binnen een dag contact op.

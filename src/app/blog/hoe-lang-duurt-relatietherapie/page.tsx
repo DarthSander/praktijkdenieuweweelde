@@ -27,7 +27,7 @@ export default function Page() {
   return (
     <BlogLayout post={post} related={related}>
       <p>
-        'Hoe lang zijn wij hiermee bezig?' Het is een van de eerste vragen die ik krijg in een kennismakingsgesprek. En terecht. Jullie willen weten waar je aan begint. Een heel eerlijk antwoord kan ik niet geven in één zin, want het hangt af van wat er speelt. Maar ik kan wel laten zien wat de wetenschap en mijn ervaring als IBCT-therapeut laten zien over wat een realistisch beeld is.
+        'Hoe lang zijn wij hiermee bezig?' Het is een van de eerste vragen die ik krijg in een intakegesprek. En terecht. Jullie willen weten waar je aan begint. Een heel eerlijk antwoord kan ik niet geven in één zin, want het hangt af van wat er speelt. Maar ik kan wel laten zien wat de wetenschap en mijn ervaring als IBCT-therapeut laten zien over wat een realistisch beeld is.
       </p>
 
       <h2>Het korte antwoord: gemiddeld 8 tot 20 sessies</h2>
@@ -55,7 +55,7 @@ export default function Page() {
         IBCT werkt in drie herkenbare fasen. Elke fase heeft zijn eigen doel en lengte.
       </p>
 
-      <h3>Fase 1: kennismaking en assessment (1 tot 3 sessies)</h3>
+      <h3>Fase 1: intake en assessment (1 tot 3 sessies)</h3>
       <p>
         Dit zijn de eerste gesprekken waarin ik jullie leer kennen, jullie mij leren kennen, en we samen in kaart brengen wat er speelt. Ik zie jullie zowel samen als individueel. In deze fase wordt de <em>DEEP-analyse</em> van jullie relatie gemaakt: de verschillen, kwetsbaarheden, externe stressoren en patronen die jullie samen vormen. Aan het einde van deze fase weten we allebei waar we aan beginnen.
       </p>
@@ -105,7 +105,7 @@ export default function Page() {
 
       <h2>Hoe snel kan je starten?</h2>
       <p>
-        In mijn praktijk werk ik meestal met een wachttijd van één tot twee weken voor een kennismakingsgesprek. Bij acute crisis probeer ik sneller ruimte te maken. Wil je weten wat er mogelijk is? Stuur gerust een bericht.
+        In mijn praktijk werk ik meestal met een wachttijd van één tot twee weken voor een intakegesprek. Bij acute crisis probeer ik sneller ruimte te maken. Wil je weten wat er mogelijk is? Stuur gerust een bericht.
       </p>
 
       <h2>Kortere trajecten: de APK voor relaties</h2>
@@ -113,9 +113,9 @@ export default function Page() {
         Niet elke reden om aan jullie relatie te werken vraagt om een volledig traject. Soms is een korte check-up voldoende. Voor koppels die preventief willen werken, bied ik een <Link href="/#tarieven">APK voor relaties</Link> aan: drie sessies waarin we samen jullie relatie onder de loep leggen zonder dat er een crisis is. Een soort periodieke keuring voor de liefde.
       </p>
 
-      <h2>Een kennismaking zonder verplichting</h2>
+      <h2>Eerst kennismaken, daarna pas een traject</h2>
       <p>
-        Welke duur past bij jullie? Dat kunnen we het beste samen inschatten in een gratis kennismakingsgesprek. Ik geef daarin een eerlijke indicatie van wat ik verwacht, zonder nu al een definitief aantal sessies te noemen.
+        Welke duur past bij jullie? Dat kunnen we het beste samen inschatten in een intakegesprek. Ik geef daarin een eerlijke indicatie van wat ik verwacht, zonder nu al een definitief aantal sessies te noemen.
       </p>
       <p>
         Plan een afspraak via het <Link href="/#contact">contactformulier</Link>, ik neem binnen vierentwintig uur contact op.

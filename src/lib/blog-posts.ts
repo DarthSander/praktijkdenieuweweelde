@@ -95,7 +95,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Hoe lang duurt relatietherapie? Gemiddeld tussen 8 en 20 sessies. IBCT-therapeut Eva Mulder uit Tilburg legt uit wat jullie per fase kunnen verwachten.",
     excerpt:
-      "Een van de meest gestelde vragen tijdens een kennismaking: hoe lang zijn wij hier mee bezig? Een eerlijk antwoord, gebaseerd op wat de wetenschap laat zien over effectieve relatietherapie.",
+      "Een van de meest gestelde vragen tijdens een intakegesprek: hoe lang zijn wij hier mee bezig? Een eerlijk antwoord, gebaseerd op wat de wetenschap laat zien over effectieve relatietherapie.",
     image: "/pampas-breeze.jpg",
     imageAlt: "Pampasgras in de bries, symbool voor tijd en beweging",
     readingTime: "7 min leestijd",

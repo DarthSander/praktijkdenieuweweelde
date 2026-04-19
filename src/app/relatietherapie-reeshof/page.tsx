@@ -38,11 +38,11 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Wat kost relatietherapie in de Reeshof?",
-    a: "Een IBCT-sessie van 90 minuten kost € 150, inclusief reiskosten. Het kennismakingsgesprek is gratis. De APK voor relaties (drie sessies preventief) kost € 325.",
+    a: "Een IBCT-sessie van 90 minuten kost € 150, inclusief reiskosten. De APK voor relaties (drie sessies preventief) kost € 325.",
   },
   {
     q: "Wij hebben nog nooit therapie gedaan, hoe gaat dat in zijn werk?",
-    a: "De eerste sessie is een kennismaking. We drinken thee, maken kennis, en jullie vertellen waar het schuurt. Ik leg uit hoe IBCT werkt en samen kijken we of het past. Jullie zitten nergens aan vast, ook niet na een eerste gesprek.",
+    a: "De eerste sessie is een intakegesprek. We drinken thee, maken kennis, en jullie vertellen waar het schuurt. Ik leg uit hoe IBCT werkt en samen kijken we of het past. Jullie zitten nergens aan vast, ook niet na een eerste gesprek.",
   },
   {
     q: "Is het niet ongemakkelijk om een therapeut thuis te ontvangen?",
@@ -216,8 +216,8 @@ export default function Page() {
                 },
                 {
                   icon: Heart,
-                  title: "Eerste gesprek gratis",
-                  text: "De kennismaking is gratis en zonder verplichting. Zonder druk, zonder haast.",
+                  title: "Op jullie tempo",
+                  text: "Na een intakegesprek beslissen jullie zelf of een traject passend is. Zonder druk, zonder haast.",
                 },
               ].map((item) => (
                 <div key={item.title} className="bg-white rounded-2xl p-6 md:p-7 flex gap-4">

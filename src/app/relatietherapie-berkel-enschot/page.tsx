@@ -38,7 +38,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Wat kost relatietherapie in Berkel-Enschot?",
-    a: "Een IBCT-sessie van 90 minuten kost € 150, inclusief reiskosten naar Berkel-Enschot. Het kennismakingsgesprek is gratis en zonder verplichting. De APK voor relaties (drie sessies preventief) kost € 325.",
+    a: "Een IBCT-sessie van 90 minuten kost € 150, inclusief reiskosten naar Berkel-Enschot. De APK voor relaties (drie sessies preventief) kost € 325.",
   },
   {
     q: "Hoeveel sessies zijn er meestal nodig?",
@@ -215,8 +215,8 @@ export default function Page() {
                 },
                 {
                   icon: Heart,
-                  title: "Eerste gesprek gratis",
-                  text: "Het kennismakingsgesprek is vrijblijvend. Zonder druk, zonder haast.",
+                  title: "Op jullie tempo",
+                  text: "Na een intakegesprek beslissen jullie zelf of een traject passend is. Zonder druk, zonder haast.",
                 },
               ].map((item) => (
                 <div key={item.title} className="bg-white rounded-2xl p-6 md:p-7 flex gap-4">
@@ -237,7 +237,7 @@ export default function Page() {
 
         <LandingCTA
           title="Een eerste gesprek, zonder verplichting"
-          text="Stuur een bericht via het contactformulier. Ik neem binnen vierentwintig uur contact op en we plannen een kennismaking op een moment dat voor jullie uitkomt, bij jullie thuis in Berkel-Enschot."
+          text="Stuur een bericht via het contactformulier. Ik neem binnen vierentwintig uur contact op en we plannen een intakegesprek op een moment dat voor jullie uitkomt, bij jullie thuis in Berkel-Enschot."
         />
 
         <LandingFAQ

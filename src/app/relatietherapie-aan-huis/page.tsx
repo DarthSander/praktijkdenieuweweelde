@@ -38,7 +38,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Wat kost relatietherapie aan huis?",
-    a: "Een sessie van 90 minuten kost € 150, inclusief reiskosten binnen mijn werkgebied. De prijs is dus gelijk aan een sessie in de praktijk elders, maar jullie sparen tijd en gedoe uit. Kennismaking is gratis.",
+    a: "Een sessie van 90 minuten kost € 150, inclusief reiskosten binnen mijn werkgebied. De prijs is dus gelijk aan een sessie in de praktijk elders, maar jullie sparen tijd en gedoe uit.",
   },
   {
     q: "Is het wel professioneel om thuis therapie te krijgen?",
@@ -186,7 +186,7 @@ export default function Page() {
 
         <LandingCTA
           title="Klaar voor een eerste gesprek thuis?"
-          text="Het kennismakingsgesprek is gratis en vrijblijvend. Stuur een bericht via het contactformulier, dan stemmen we samen af wanneer het jullie uitkomt."
+          text="Stuur een bericht via het contactformulier voor een intakegesprek, dan stemmen we samen af wanneer het jullie uitkomt."
         />
 
         <LandingFAQ

@@ -49,7 +49,7 @@ export default function LandingHero({
             href="/#contact"
             className="btn-secondary inline-block px-8 py-4 rounded-full text-base font-semibold"
           >
-            Plan een kennismaking
+            Plan een intakegesprek
           </Link>
           <Link
             href={`#${anchorId}`}

@@ -38,7 +38,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Mag ons kind er bij zijn als het nog heel klein is?",
-    a: "Een baby die slaapt of in de wipstoel ligt kan prima. Voor peuters en oudere kinderen adviseer ik een moment dat zij slapen of bij oma zijn, zodat jullie met volle aandacht kunnen werken. In het kennismakingsgesprek kijken we wat voor jullie realistisch is.",
+    a: "Een baby die slaapt of in de wipstoel ligt kan prima. Voor peuters en oudere kinderen adviseer ik een moment dat zij slapen of bij oma zijn, zodat jullie met volle aandacht kunnen werken. In het intakegesprek kijken we wat voor jullie realistisch is.",
   },
   {
     q: "Wij ruziën veel meer sinds de baby. Betekent dat dat er iets mis is?",
@@ -46,7 +46,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Kan ik ook alleen komen als mijn partner nog niet klaar is voor therapie?",
-    a: "IBCT is een koppeltherapie, dus we werken met jullie samen. Maar als je partner nog twijfelt, kan een eerste kennismakingsgesprek met één van jullie soms al helpen om die drempel lager te maken. Neem gerust contact op om te overleggen.",
+    a: "IBCT is een koppeltherapie, dus we werken met jullie samen. Maar als je partner nog twijfelt, kan een eerste intakegesprek met één van jullie soms al helpen om die drempel lager te maken. Neem gerust contact op om te overleggen.",
   },
 ];
 
@@ -196,8 +196,8 @@ export default function Page() {
                 },
                 {
                   icon: Heart,
-                  title: "Eerste gesprek gratis",
-                  text: "Het kennismakingsgesprek is vrijblijvend. Zonder druk, zonder haast, op een moment dat past.",
+                  title: "Op jullie tempo",
+                  text: "Na een intakegesprek beslissen jullie zelf of een traject passend is. Zonder druk, op een moment dat past.",
                 },
               ].map((item) => (
                 <div key={item.title} className="bg-white rounded-2xl p-6 md:p-7 flex gap-4">
@@ -218,7 +218,7 @@ export default function Page() {
 
         <LandingCTA
           title="Een eerste stap, zonder verplichting"
-          text="Stuur een bericht via het contactformulier. Ik neem binnen vierentwintig uur contact op en we plannen een kennismaking op een avond die jullie uitkomt."
+          text="Stuur een bericht via het contactformulier. Ik neem binnen vierentwintig uur contact op en we plannen een intakegesprek op een avond die jullie uitkomt."
         />
 
         <LandingFAQ

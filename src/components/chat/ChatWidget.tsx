@@ -29,7 +29,7 @@ export default function ChatWidget() {
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const abortRef = useRef<AbortController | null>(null);
 
-  const stream = useStreamingText(85);
+  const stream = useStreamingText(45);
 
   // Restore state
   useEffect(() => {
@@ -257,6 +257,12 @@ export default function ChatWidget() {
           {/* Messages */}
           <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-4 bg-white">
             {messages.map((m, i) => {
+              const isLast = i === messages.length - 1;
+              // Hide the empty assistant placeholder used as streaming sync target —
+              // the typing indicator below already shows its own avatar.
+              if (isLast && m.role === "assistant" && m.content === "" && stream.isStreaming) {
+                return null;
+              }
               const prev = messages[i - 1];
               const showAvatar = !prev || prev.role !== m.role;
               return <ChatMessage key={i} role={m.role} content={m.content} showAvatar={showAvatar} />;
