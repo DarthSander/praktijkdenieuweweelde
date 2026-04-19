@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 
@@ -84,10 +84,6 @@ export const metadata: Metadata = {
     images: ["/pampas-water.jpg"],
   },
 
-  pinterest: {
-    richPin: true,
-  },
-
   formatDetection: {
     telephone: true,
     email: true,
@@ -95,6 +91,12 @@ export const metadata: Metadata = {
   },
 
   category: "health",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#946B66",
+  width: "device-width",
+  initialScale: 1,
 };
 
 const jsonLd = {
@@ -147,8 +149,19 @@ const jsonLd = {
           "@type": "Service",
           name: "IBCT relatiesessie",
           description:
-            "Integrative Behavioral Couple Therapy sessie aan huis in Tilburg en omgeving.",
+            "Integrative Behavioral Couple Therapy sessie aan huis in Tilburg en omgeving (90 minuten).",
         },
+        price: "150",
+        priceCurrency: "EUR",
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "APK voor Relaties",
+          description: "Preventieve relatie-check-up (3 sessies).",
+        },
+        price: "325",
         priceCurrency: "EUR",
       },
     ],

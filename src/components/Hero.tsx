@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 import { ChevronDown } from "lucide-react";
 import MagneticButton from "./MagneticButton";
@@ -58,10 +59,13 @@ export default function Hero() {
         className="absolute inset-0 hero-parallax"
         style={{ transform: `translateY(${scrollY * 0.3}px)` }}
       >
-        <img
+        <Image
           src="/pampas-water.jpg"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover scale-110"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover scale-110"
         />
         {/* Warm gradient overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#F5F0EB]/80 via-[#F5F0EB]/50 to-[#F5F0EB]/85" />

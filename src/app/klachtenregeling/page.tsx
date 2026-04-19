@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -9,7 +11,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.praktijkdenieuweweelde.nl/klachtenregeling",
   },
-  robots: { index: true, follow: false },
+  robots: { index: true, follow: true },
 };
 
 export default function Klachtenregeling() {
@@ -18,6 +20,13 @@ export default function Klachtenregeling() {
       <Navbar />
       <main className="bg-[#F5F0EB] pt-28 pb-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-[#946B66] hover:text-[#6B6866] text-sm mb-8 transition"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Terug naar home
+          </Link>
           <h1 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-2">
             Klachtenregeling
           </h1>

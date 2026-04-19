@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -9,7 +11,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.praktijkdenieuweweelde.nl/privacyverklaring",
   },
-  robots: { index: true, follow: false },
+  robots: { index: true, follow: true },
 };
 
 export default function Privacyverklaring() {
@@ -18,6 +20,13 @@ export default function Privacyverklaring() {
       <Navbar />
       <main className="bg-[#F5F0EB] pt-28 pb-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-[#946B66] hover:text-[#6B6866] text-sm mb-8 transition"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Terug naar home
+          </Link>
           <h1 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-2">
             Privacyverklaring
           </h1>
@@ -163,10 +172,10 @@ export default function Privacyverklaring() {
               </p>
             </section>
 
-            <section>
+            <section id="cookies">
               <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">9. Cookies</h2>
               <p className="text-sm">
-                Deze website maakt alleen gebruik van functionele cookies die noodzakelijk zijn voor een goede werking van de site. Er worden geen tracking- of marketingcookies geplaatst. Uw cookievoorkeuren worden lokaal in uw browser opgeslagen. Meer informatie vindt u in ons <button className="text-[#946B66] underline underline-offset-2">cookiebeleid</button>.
+                Deze website maakt alleen gebruik van functionele cookies die noodzakelijk zijn voor een goede werking van de site. Er worden geen tracking- of marketingcookies geplaatst. Uw cookievoorkeuren worden lokaal in uw browser opgeslagen en kunt u opnieuw instellen via de cookie-instellingen onderaan deze pagina.
               </p>
             </section>
 

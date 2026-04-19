@@ -15,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     {
+      url: "https://www.praktijkdenieuweweelde.nl/algemene-voorwaarden",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
       url: "https://www.praktijkdenieuweweelde.nl/klachtenregeling",
       lastModified: new Date(),
       changeFrequency: "yearly",

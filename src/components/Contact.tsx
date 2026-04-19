@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { MapPin, Mail, Phone } from "lucide-react";
 
 type Status = "idle" | "sending" | "success" | "error";
@@ -22,6 +23,7 @@ export default function Contact() {
       message: (form.elements.namedItem("bericht") as HTMLTextAreaElement).value,
       partner: (form.elements.namedItem("partner") as HTMLInputElement).value,
       telefoon: (form.elements.namedItem("telefoon") as HTMLInputElement).value,
+      botcheck: (form.elements.namedItem("botcheck") as HTMLInputElement).value,
       subject: "Nieuw contactverzoek via de website",
       from_name: "Relatiepraktijk de Nieuwe Weelde",
     };
@@ -117,6 +119,31 @@ export default function Contact() {
                   <label htmlFor="bericht" className="block text-xs font-semibold text-[#C4A4A0] uppercase tracking-wide mb-1.5">Bericht</label>
                   <textarea id="bericht" name="bericht" rows={3} placeholder="Waar kan ik je mee helpen?" className="w-full px-0 py-2.5 border-0 border-b border-[#EDE6DD] bg-transparent text-[#5E524F] text-sm focus:border-[#C4A4A0] focus:ring-0 outline-none transition resize-none placeholder:text-[#E8D5D2]" />
                 </div>
+
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  style={{ display: "none" }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+
+                <label className="flex items-start gap-2 text-xs text-[#5E524F] leading-relaxed">
+                  <input
+                    type="checkbox"
+                    name="akkoord"
+                    required
+                    className="mt-0.5 accent-[#946B66]"
+                  />
+                  <span>
+                    Ik ga akkoord met de verwerking van mijn gegevens zoals beschreven in de{" "}
+                    <Link href="/privacyverklaring" className="text-[#946B66] underline underline-offset-2">
+                      privacyverklaring
+                    </Link>
+                    .
+                  </span>
+                </label>
+
                 {status === "error" && (
                   <p className="text-red-500 text-sm">{errorMsg}</p>
                 )}

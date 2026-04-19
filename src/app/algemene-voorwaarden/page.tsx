@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -9,7 +11,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.praktijkdenieuweweelde.nl/algemene-voorwaarden",
   },
-  robots: { index: true, follow: false },
+  robots: { index: true, follow: true },
 };
 
 export default function AlgemeneVoorwaarden() {
@@ -18,6 +20,13 @@ export default function AlgemeneVoorwaarden() {
       <Navbar />
       <main className="bg-[#F5F0EB] pt-28 pb-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-[#946B66] hover:text-[#6B6866] text-sm mb-8 transition"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Terug naar home
+          </Link>
           <h1 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-2">
             Algemene Voorwaarden
           </h1>
@@ -117,7 +126,7 @@ export default function AlgemeneVoorwaarden() {
               </p>
               <p className="mt-3 text-sm">
                 Voor meer informatie over hoe wij omgaan met persoonsgegevens verwijzen wij naar onze{" "}
-                <a href="/privacyverklaring" className="text-[#946B66] underline underline-offset-2">privacyverklaring</a>.
+                <Link href="/privacyverklaring" className="text-[#946B66] underline underline-offset-2">privacyverklaring</Link>.
               </p>
             </section>
 
@@ -142,7 +151,7 @@ export default function AlgemeneVoorwaarden() {
               </div>
               <p className="mt-4 text-sm">
                 Voor meer informatie over de klachtenprocedure verwijzen wij naar onze{" "}
-                <a href="/klachtenregeling" className="text-[#946B66] underline underline-offset-2">klachtenregeling</a>.
+                <Link href="/klachtenregeling" className="text-[#946B66] underline underline-offset-2">klachtenregeling</Link>.
               </p>
             </section>
 

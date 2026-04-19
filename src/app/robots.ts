@@ -7,6 +7,5 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
     sitemap: "https://www.praktijkdenieuweweelde.nl/sitemap.xml",
-    host: "https://www.praktijkdenieuweweelde.nl",
   };
 }
