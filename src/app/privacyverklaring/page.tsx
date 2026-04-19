@@ -172,15 +172,33 @@ export default function Privacyverklaring() {
               </p>
             </section>
 
+            <section>
+              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">9. Chatbot en AI-assistent</h2>
+              <p className="text-sm mb-3">
+                Op deze website staat een chatbot die wordt aangedreven door een AI-model van <strong>Anthropic</strong> (Claude). De chatbot beantwoordt vragen over relatietherapie en de praktijk. Daarnaast kan de korte intake-vragenlijst gebruikmaken van AI om persoonlijke vervolgvragen te stellen.
+              </p>
+              <div className="bg-white rounded-xl p-4 text-sm space-y-2">
+                <p><strong>Welke gegevens worden naar Anthropic gestuurd?</strong> Alleen de tekst die u zelf in het chatvenster of in de vrije-tekstvelden van de vragenlijst typt. <em>Voordat</em> uw bericht wordt verstuurd, verwijdert onze server automatisch e-mailadressen en telefoonnummers uit de tekst.</p>
+                <p><strong>Welke gegevens gaan NIET naar Anthropic?</strong> Uw naam, contactgegevens, IP-adres en factuurgegevens.</p>
+                <p><strong>Hoe lang bewaren wij chat-gesprekken?</strong> Maximaal 30 dagen, daarna worden ze automatisch verwijderd. Intake-antwoorden worden tot 6 maanden bewaard, of korter als geen behandeling volgt.</p>
+                <p><strong>Waar staan de gegevens?</strong> In een Supabase-database (regio Frankfurt, EU). Anthropic verwerkt aanvragen binnen de EU/VS, op basis van een Data Processing Addendum en (waar van toepassing) het EU-VS Data Privacy Framework.</p>
+                <p><strong>Toestemming.</strong> Voordat de chatbot of de AI-assistent in de vragenlijst start, vragen wij uw expliciete toestemming. Zonder die toestemming kunt u de website gewoon gebruiken en kunt u via het contactformulier of telefonisch contact opnemen.</p>
+                <p><strong>Geen medisch advies.</strong> De chatbot geeft geen diagnoses en is geen vervanging voor een gesprek met Eva. Bij acute nood: bel 112 of 113 Zelfmoordpreventie (0800-0113).</p>
+              </div>
+              <p className="text-sm mt-3">
+                Grondslag: uitdrukkelijke toestemming (AVG art. 9 lid 2a) en gerechtvaardigd belang voor het beantwoorden van praktische vragen.
+              </p>
+            </section>
+
             <section id="cookies">
-              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">9. Cookies</h2>
+              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">10. Cookies</h2>
               <p className="text-sm">
                 Deze website maakt alleen gebruik van functionele cookies die noodzakelijk zijn voor een goede werking van de site. Er worden geen tracking- of marketingcookies geplaatst. Uw cookievoorkeuren worden lokaal in uw browser opgeslagen en kunt u opnieuw instellen via de cookie-instellingen onderaan deze pagina.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">10. Wijzigingen</h2>
+              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">11. Wijzigingen</h2>
               <p className="text-sm">
                 Deze privacyverklaring kan worden aangepast. De meest actuele versie is altijd te vinden op deze pagina. Bij wezenlijke wijzigingen word ik u hierover informeren.
               </p>
