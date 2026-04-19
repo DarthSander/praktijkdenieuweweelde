@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Herken je deze 7 tekenen in jullie relatie? Dan is relatietherapie zinvol. IBCT-therapeut Eva Mulder uit Tilburg legt uit wanneer het tijd is voor professionele hulp.",
     excerpt:
-      "De meeste koppels wachten gemiddeld zes jaar voordat zij hulp zoeken. Zonde, want hoe langer je wacht, hoe dieper de patronen zich vastzetten. Dit zijn de zeven signalen die erop wijzen dat relatietherapie zinvol is.",
+      "Veel koppels worstelen jarenlang met relationele problemen voordat ze hulp zoeken. Dat is jammer, want hoe eerder je aan de slag gaat, hoe meer ruimte er is voor herstel. Dit zijn zeven signalen die aangeven dat professionele begeleiding zinvol kan zijn.",
     image: "/pampas-breeze.jpg",
     imageAlt: "Zacht licht door pampasgras, symbool voor rust en reflectie in de relatie",
     readingTime: "7 min leestijd",
@@ -57,7 +57,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Relatietherapie aan huis heeft unieke voordelen boven een praktijkruimte. Meer rust, minder drempel en therapie in jullie eigen omgeving. Eva Mulder werkt in Tilburg.",
     excerpt:
-      "Stel je voor: geen volle wachtkamer, geen steriele spreekkamer, maar gewoon op jullie eigen bank. Relatietherapie aan huis heeft unieke voordelen, zowel praktisch als therapeutisch.",
+      "Relatietherapie aan huis verlaagt de drempel en laat gesprekken natuurlijker verlopen. Je zit in je eigen omgeving, op de plek waar jullie dagelijks leven zich afspeelt. Een overzicht van de voordelen, en wanneer het juist niet passend is.",
     image: "/pampas-indoor.jpg",
     imageAlt: "Pampasgras in huiselijke omgeving, symbool voor therapie in vertrouwde sfeer",
     readingTime: "6 min leestijd",
