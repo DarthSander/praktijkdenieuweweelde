@@ -23,7 +23,7 @@ export default function Contact() {
       message: (form.elements.namedItem("bericht") as HTMLTextAreaElement).value,
       partner: (form.elements.namedItem("partner") as HTMLInputElement).value,
       telefoon: (form.elements.namedItem("telefoon") as HTMLInputElement).value,
-      botcheck: (form.elements.namedItem("botcheck") as HTMLInputElement).value,
+      botcheck: (form.elements.namedItem("botcheck") as HTMLInputElement).checked,
       subject: "Nieuw contactverzoek via de website",
       from_name: "Relatiepraktijk de Nieuwe Weelde",
     };
