@@ -72,7 +72,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "relatietherapie-of-scheiden",
-    title: "Relatietherapie of scheiden? Zo maken jullie een weloverwogen keuze",
+    title: "Scheiden of relatietherapie? Een weloverwogen keuze maken",
     description:
       "Moeten jullie doorgaan of uit elkaar? Relatietherapie kan helpen de juiste keuze te maken. IBCT-therapeut Eva Mulder uit Tilburg legt uit hoe je helderheid krijgt.",
     excerpt:
