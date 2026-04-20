@@ -84,7 +84,7 @@ export default function Page() {
 
       <h2>Een eerste stap zetten</h2>
       <p>
-        De zwaarste stap is vaak de eerste. Een intakegesprek vindt normaliter gezamenlijk plaats, maar kan ook individueel als dat prettiger voelt. We spreken af bij jullie thuis, zodat we in een vertrouwde omgeving kunnen verkennen waar jullie staan en of relatietherapie passend is. Jullie bepalen zelf wat daarna volgt. Stuur een bericht via het <Link href="/#contact">contactformulier</Link> of maak direct een afspraak in de <Link href="/#contact">agenda</Link>. Ik reageer binnen vierentwintig uur.
+        De zwaarste stap is vaak de eerste. Een intakegesprek vindt normaliter gezamenlijk plaats, maar kan ook individueel als dat prettiger voelt. We spreken af bij jullie thuis, zodat we in een vertrouwde omgeving kunnen verkennen waar jullie staan en of relatietherapie passend is. Jullie bepalen zelf wat daarna volgt. Stuur een bericht via het <Link href="/#contact">contactformulier</Link>. Ik reageer binnen vierentwintig uur.
       </p>
 
       <div className="blog-sources">
