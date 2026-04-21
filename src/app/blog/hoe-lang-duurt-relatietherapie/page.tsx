@@ -27,109 +27,65 @@ export default function Page() {
   return (
     <BlogLayout post={post} related={related}>
       <p>
-        'Hoe lang zijn wij hiermee bezig?' Het is een van de eerste vragen die ik krijg in een intakegesprek. En terecht. Jullie willen weten waar je aan begint. Een heel eerlijk antwoord kan ik niet geven in één zin, want het hangt af van wat er speelt. Maar ik kan wel laten zien wat de wetenschap en mijn ervaring als IBCT-therapeut laten zien over wat een realistisch beeld is.
+        IBCT werkt met een kerntraject van tien sessies. Dat is het aantal dat in onderzoek en praktijk het meest effectief blijkt. Afhankelijk van jullie dynamiek, geschiedenis en hulpvraag kan het traject korter of langer zijn. Het is dan ook logisch dat veel koppels in het eerste gesprek willen weten hoe lang relatietherapie in hun situatie zal duren. Een exact aantal valt vooraf niet te geven, maar op basis van wetenschappelijk onderzoek én mijn ervaring kan ik wel een realistisch beeld schetsen van wat jullie mogen verwachten. Voor sommige koppels zijn acht sessies voldoende, terwijl anderen richting de vijftien tot twintig sessies gaan, bijvoorbeeld wanneer er langdurige conflicten, terugkerende patronen of bijkomende stressoren spelen. Dat sluit aan bij zowel het Nederlandstalige protocol van Dijkstra en Tamminga (2025) als bij internationaal onderzoek, waaruit blijkt dat de meeste koppels tussen de tien en vijftien sessies nodig hebben, met uitschieters wanneer de problematiek complexer is.
       </p>
 
-      <h2>Het korte antwoord: gemiddeld 8 tot 20 sessies</h2>
+      <h2>Factoren die de duur van een IBCT-traject beïnvloeden</h2>
       <p>
-        Een gemiddeld IBCT-traject in Nederland bestaat uit acht tot twintig sessies. Dijkstra en Tamminga (2025) werken in hun Nederlandstalige protocol met een kerntraject van tien sessies, uit te breiden waar nodig. Internationaal onderzoek laat een vergelijkbaar beeld zien: in de grote RCT van Christensen en collega's (2004) werden koppels 26 sessies gezien, maar in reguliere praktijk blijkt 10 tot 15 sessies meestal voldoende.
+        Een aantal factoren speelt een belangrijke rol bij de duur van het traject. Bij langdurige of diep ingesleten conflicten is vaak meer tijd nodig om patronen te begrijpen en te doorbreken. Ook complicerende factoren zoals ontrouw, depressie, verslaving of trauma kunnen het traject verlengen, en soms is aanvullende individuele ondersteuning wenselijk. Daarnaast maakt motivatie veel uit: koppels die open zijn, eerlijk durven kijken naar zichzelf en tussen sessies oefenen, zetten meestal sneller stappen. De kwaliteit van de relatie vóór de crisis speelt eveneens mee: wat er jarenlang is opgebouwd, helpt vaak in het herstel. Tot slot laat onderzoek zien dat commitment, de bereidheid om samen te investeren, een van de sterkste voorspellers is van duurzaam herstel.
       </p>
-      <p>
-        Met een frequentie van eens per twee weken betekent dat een doorloop van vijf tot negen maanden. Sommige koppels werken intensiever, elke week, en zijn dan na drie tot vijf maanden klaar. Anderen kiezen bewust voor een lager tempo.
-      </p>
-
-      <h2>Wat bepaalt de duur?</h2>
-      <p>
-        Een aantal factoren beïnvloedt hoe lang een traject duurt:
-      </p>
-      <ul>
-        <li><strong>Ernst van de problematiek:</strong> langdurige conflicten zitten vaak dieper ingesleten en vragen meer tijd.</li>
-        <li><strong>Complicerende factoren:</strong> ontrouw, depressie, verslaving of trauma vragen extra sessies en soms aanvullende individuele hulp.</li>
-        <li><strong>Motivatie en openheid:</strong> koppels die beide eerlijk zijn en tussen sessies in oefenen, maken sneller stappen.</li>
-        <li><strong>De kwaliteit van de relatie voor de crisis:</strong> wat er jarenlang is opgebouwd, helpt in herstel.</li>
-        <li><strong>Commitment:</strong> Baucom en collega's (2015) toonden aan dat commitment de sterkste voorspeller is van hoe goed een koppel op lange termijn herstelt.</li>
-      </ul>
 
       <h2>De fasen van een IBCT-traject</h2>
       <p>
-        IBCT werkt in drie herkenbare fasen. Elke fase heeft zijn eigen doel en lengte.
+        IBCT werkt met drie fasen. Elke fase heeft een eigen doel, tempo en manier van werken. Samen vormen ze een traject dat inzicht geeft in jullie patronen én ruimte maakt voor blijvende verandering.
       </p>
 
-      <h3>Fase 1: intake en assessment (1 tot 3 sessies)</h3>
+      <h3>Fase 1: Intake en assessment (1–3 sessies)</h3>
       <p>
-        Dit zijn de eerste gesprekken waarin ik jullie leer kennen, jullie mij leren kennen, en we samen in kaart brengen wat er speelt. Ik zie jullie zowel samen als individueel. In deze fase wordt de <em>DEEP-analyse</em> van jullie relatie gemaakt: de verschillen, kwetsbaarheden, externe stressoren en patronen die jullie samen vormen. Aan het einde van deze fase weten we allebei waar we aan beginnen.
+        In deze fase leer ik jullie en jullie relatiegeschiedenis goed kennen. We verkennen samen wat er speelt, welke patronen zichtbaar zijn en wat jullie verlangen of missen. Soms spreek ik partners ook individueel, wanneer dat helpt om het geheel beter te begrijpen, maar dat is niet altijd nodig.
+      </p>
+      <p>
+        Op basis van deze informatie maak ik een relatieformulering (officiële term: casusconceptualisatie): een helder overzicht van de patronen die tussen jullie zijn ontstaan en wat jullie nodig hebben om daar beweging in te krijgen.
       </p>
 
-      <h3>Fase 2: werken aan acceptatie en verandering (5 tot 15 sessies)</h3>
+      <h3>Fase 2: Acceptatie en verandering (5–15 sessies)</h3>
       <p>
-        Dit is het hart van de therapie. We werken met twee hoofdtechnieken: <em>empathic joining</em> (onder de harde emoties de zachte emoties zichtbaar maken) en <em>unified detachment</em> (samen kijken naar het patroon zonder blame). Tegelijkertijd oefenen we met concreet ander gedrag in het dagelijks leven.
-      </p>
-      <p>
-        In deze fase zie je vaak bewegingen: de ene week voelt het beter, de volgende week loopt er iets mis. Dat hoort erbij. Onderzoek (Doss et al., 2005) laat zien dat vooruitgang in IBCT gestaag is en tot ná de therapie doorloopt.
+        Dit is het hart van de therapie. We werken met twee kerninterventies: empathisch verbinden en gezamenlijke afstand nemen (samen naar het patroon kijken). Daarnaast oefenen jullie met kleine gedragingen die helpen om verbinding te herstellen. In deze fase zie je vaak beweging: de ene week voelt het lichter, de volgende week schuurt het weer. Dat hoort erbij.
       </p>
 
-      <h3>Fase 3: afronden en bestendigen (2 tot 3 sessies)</h3>
+      <h3>Fase 3: Afronden en bestendigen (2–3 sessies)</h3>
       <p>
-        In de laatste sessies oefenen we hoe jullie zelf signalen leren herkennen, hoe je in zwaardere momenten terugvalt op wat je geleerd hebt, en wat je afspreekt als terugval zich aandient. Soms eindigen we met een afspraak voor een terugkombekjaar, bijvoorbeeld een halfjaarlijkse check-in.
+        In de afrondende fase richten we ons op het vasthouden van wat jullie hebben geleerd. Jullie leren signalen herkennen, terugval voorkomen en weten wat te doen als het toch even misloopt. Soms plannen we een terugkommoment om te kijken hoe het gaat en waar eventueel bijgestuurd kan worden.
       </p>
 
-      <h2>Hoe vaak zie je elkaar?</h2>
+      <h2>Hoe vaak gaan we elkaar zien?</h2>
       <p>
-        Het protocol werkt het beste met een vaste frequentie. De meeste koppels beginnen met wekelijks of eens per twee weken. Wekelijks werkt snel en intensief, tweewekelijks geeft meer ruimte om tussen sessies te oefenen. Ik adviseer vaak te beginnen met wekelijks, en na fase 1 (drie sessies) samen te evalueren wat past.
-      </p>
-      <p>
-        Een sessie duurt in mijn praktijk negentig minuten. Dat is ruimer dan de gebruikelijke vijftig minuten, en dat is bewust. Bij <Link href="/blog/relatietherapie-aan-huis">therapie aan huis</Link> heb je iets meer aanlooptijd nodig om echt op onderwerp te komen, en negentig minuten geeft die ruimte zonder te gehaast te zijn.
+        In de meeste trajecten zie ik koppels één keer per twee weken en soms ook één keer per week. In het begin kiezen veel koppels voor wekelijkse sessies, omdat dat helpt om sneller inzicht te krijgen in patronen en om de eerste veranderingen goed te ondersteunen. Naarmate jullie meer grip krijgen op wat er tussen jullie gebeurt, kan de frequentie omlaag. Soms plannen we juist tijdelijk wat dichter op elkaar, bijvoorbeeld wanneer er veel spanning is of wanneer jullie in een intensieve fase van verandering zitten. De frequentie stemmen we altijd af op wat jullie nodig hebben en wat past bij jullie situatie.
       </p>
 
-      <h2>Hoe weet je of het werkt?</h2>
+      <h2>Hoe ziet een sessie eruit?</h2>
       <p>
-        Progressie in relatietherapie voelt zelden lineair. De meeste koppels ervaren grofweg dit patroon:
-      </p>
-      <ul>
-        <li><strong>Sessie 1 tot 3:</strong> opluchting, soms even meer ruzie thuis omdat er thema's weer leven.</li>
-        <li><strong>Sessie 4 tot 8:</strong> eerste aha-momenten, maar ook terugval.</li>
-        <li><strong>Sessie 9 tot 14:</strong> merkbaar ander samenwerken, andere gesprekken.</li>
-        <li><strong>Sessie 15 en verder:</strong> de patronen zijn helder en jullie weten zelf wat jullie te doen staat.</li>
-      </ul>
-      <p>
-        Wat ik vaak hoor rond sessie acht: 'we voelen dat er iets verandert, maar we kunnen het nog niet precies benoemen.' Dat klopt, verandering in patronen gaat sneller in gedrag dan in woorden.
+        Een sessie duurt meestal 90 minuten. We beginnen met een korte check-in: hoe is het sinds de vorige keer gegaan, wat viel op, waar liepen jullie tegenaan? Daarna werken we aan het thema dat op dat moment centraal staat. Soms gaat het om inzicht krijgen in het patroon tussen jullie, soms om het oefenen van nieuw gedrag of het verdiepen van begrip voor elkaar. Een belangrijk onderdeel van IBCT is dat jullie tussen de sessies door thuis zelfstandig en gezamenlijk opdrachten doen. Die &lsquo;huiswerkopdrachten&rsquo; zijn geen &lsquo;extra werk&rsquo;, maar vormen de cruciale basis voor verandering. In de sessie bespreken we wat jullie hebben geprobeerd, wat hielp en wat lastig was. Aan het einde van de sessie kiezen we samen een haalbare stap voor thuis, zodat jullie steeds meer grip krijgen op het patroon. Elke sessie bouwt voort op de vorige, maar er is altijd ruimte voor wat er op dat moment speelt.
       </p>
 
-      <h2>Houdt het effect aan?</h2>
+      <h2>Hoe weet je of relatietherapie werkt?</h2>
       <p>
-        Dit is de mooiste vraag, en de wetenschap heeft een duidelijk antwoord. Christensen en collega's (2006) volgden koppels twee jaar na einde IBCT-therapie, en 69 procent was klinisch significant verbeterd. Een latere studie (Christensen, Atkins, Baucom &amp; Yi, 2010) volgde dezelfde koppels vijf jaar na de behandeling, en nog steeds was vijftig procent klinisch significant verbeterd.
-      </p>
-      <p>
-        Belangrijk: de vooruitgang in IBCT is gestaag en houdt aan. Baucom en collega's (2011) toonden zelfs aan dat negativiteit en withdrawal-gedrag nog ná einde therapie bleven dalen, tot twee jaar daarna. Wat in de therapie is aangeleerd, werkt door in het dagelijks leven.
+        Veel koppels merken al in de eerste weken of het traject iets in beweging zet. Dat betekent niet dat alles meteen makkelijker wordt, maar wel dat jullie meer grip krijgen op wat er tussen jullie gebeurt. Je merkt dat gesprekken minder snel escaleren, dat jullie elkaar beter begrijpen of dat er meer ruimte komt om moeilijke dingen te bespreken zonder dat het meteen misloopt. Soms zie je subtiele veranderingen: een andere toon, meer nieuwsgierigheid, meer rust. Soms zijn het grotere stappen, zoals weer samen kunnen lachen of elkaar opzoeken in plaats van vermijden. Onderzoek laat zien dat vooruitgang in IBCT vaak gestaag verloopt: niet in één rechte lijn, maar met kleine verschuivingen die zich stap voor stap opbouwen. Een belangrijk signaal dat therapie werkt, is dat jullie thuis dingen anders gaan doen en dat die nieuwe patronen steeds beter voor jullie gaan werken.
       </p>
 
-      <h2>Hoe snel kan je starten?</h2>
+      <h2>Wat als relatietherapie niet werkt?</h2>
       <p>
-        In mijn praktijk werk ik meestal met een wachttijd van één tot twee weken voor een intakegesprek. Bij acute crisis probeer ik sneller ruimte te maken. Wil je weten wat er mogelijk is? Stuur gerust een bericht.
+        Soms merken koppels dat relatietherapie niet brengt wat ze hadden gehoopt. Dat betekent niet dat jullie gefaald hebben of dat de relatie &lsquo;niet goed genoeg&rsquo; is. Soms is de pijn te groot, zijn de verschillen te fundamenteel of is er te weinig energie om nog verder te investeren. In dat geval kijken we samen wat wél helpend is. Dat kan betekenen dat we onderzoeken hoe jullie op een respectvolle manier verder kunnen, samen of apart. IBCT is geen therapievorm die koppels koste wat kost bij elkaar wil houden. Het is therapie die helpt om helderheid te krijgen. Ook als die helderheid betekent dat <Link href="/blog/relatietherapie-of-scheiden">scheiden beter voor jullie werkt dan doorgaan</Link>. Wat de uitkomst ook is, jullie hoeven het niet alleen te doen.
       </p>
 
-      <h2>Kortere trajecten: de APK voor relaties</h2>
       <p>
-        Niet elke reden om aan jullie relatie te werken vraagt om een volledig traject. Soms is een korte check-up voldoende. Voor koppels die preventief willen werken, bied ik een <Link href="/#tarieven">APK voor relaties</Link> aan: drie sessies waarin we samen jullie relatie onder de loep leggen zonder dat er een crisis is. Een soort periodieke keuring voor de liefde.
-      </p>
-
-      <h2>Eerst kennismaken, daarna pas een traject</h2>
-      <p>
-        Welke duur past bij jullie? Dat kunnen we het beste samen inschatten in een intakegesprek. Ik geef daarin een eerlijke indicatie van wat ik verwacht, zonder nu al een definitief aantal sessies te noemen.
-      </p>
-      <p>
-        Plan een afspraak via het <Link href="/#contact">contactformulier</Link>, ik neem binnen vierentwintig uur contact op.
+        IBCT vraagt moed en bereidheid om samen te kijken naar wat er tussen jullie gebeurt. Het is geen snelle oplossing, maar een proces dat helderheid en beweging brengt. Als jullie willen onderzoeken of dit traject bij jullie past, kunnen jullie via het <Link href="/#contact">contactformulier</Link> eenvoudig een kennismaking plannen. Dan kijken we rustig wat er nodig is om verder te kunnen.
       </p>
 
       <div className="blog-sources">
         <h3>Bronnen</h3>
         <ul>
-          <li>Baucom, K. J. W., Sevier, M., Eldridge, K. A., Doss, B. D., &amp; Christensen, A. (2011). Observed communication in couples 2 years after integrative and traditional behavioral couple therapy. <em>Journal of Consulting and Clinical Psychology, 79</em>(5), 565-576.</li>
-          <li>Baucom, B. R., Atkins, D. C., Simpson Rowe, L., Doss, B. D., &amp; Christensen, A. (2015). Prediction of treatment response at 5-year follow-up. <em>Journal of Consulting and Clinical Psychology, 83</em>(1), 103-114.</li>
-          <li>Christensen, A., Atkins, D. C., Yi, J., Baucom, D. H., &amp; George, W. H. (2006). Couple and individual adjustment for 2 years following a randomized clinical trial. <em>Journal of Consulting and Clinical Psychology, 74</em>(6), 1180-1191.</li>
-          <li>Christensen, A., Atkins, D. C., Baucom, B., &amp; Yi, J. (2010). Marital status and satisfaction five years following a randomized clinical trial. <em>Journal of Consulting and Clinical Psychology, 78</em>(2), 225-235.</li>
           <li>Dijkstra, P., &amp; Tamminga, A. (2025). <em>IBCT-relatietherapie</em> (herziene uitgave). Amsterdam: Boom.</li>
-          <li>Doss, B. D., Thum, Y. M., Sevier, M., Atkins, D. C., &amp; Christensen, A. (2005). Improving relationships: Mechanisms of change in couple therapy. <em>Journal of Consulting and Clinical Psychology, 73</em>(4), 624-633.</li>
         </ul>
       </div>
     </BlogLayout>
