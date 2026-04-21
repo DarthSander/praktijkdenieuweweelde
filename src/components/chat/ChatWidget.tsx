@@ -140,6 +140,13 @@ export default function ChatWidget() {
     setTimeout(() => inputRef.current?.focus(), 100);
   }, []);
 
+  const handleCardNavigate = useCallback(() => {
+    if (typeof window === "undefined") return;
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      setOpen(false);
+    }
+  }, []);
+
   const send = useCallback(async () => {
     const text = input.trim();
     if (!text || stream.isStreaming) return;
@@ -265,7 +272,15 @@ export default function ChatWidget() {
               }
               const prev = messages[i - 1];
               const showAvatar = !prev || prev.role !== m.role;
-              return <ChatMessage key={i} role={m.role} content={m.content} showAvatar={showAvatar} />;
+              return (
+                <ChatMessage
+                  key={i}
+                  role={m.role}
+                  content={m.content}
+                  showAvatar={showAvatar}
+                  onNavigate={handleCardNavigate}
+                />
+              );
             })}
             {lastIsAssistantEmpty && (
               <div className="flex gap-2 mb-2">

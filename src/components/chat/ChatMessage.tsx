@@ -2,18 +2,21 @@
 
 import LotusIcon from "../LotusIcon";
 import ChatBlogCard from "./ChatBlogCard";
+import ChatContactCard from "./ChatContactCard";
 
 type Props = {
   role: "user" | "assistant";
   content: string;
   showAvatar?: boolean;
+  onNavigate?: () => void;
 };
 
 type Segment =
   | { type: "text"; value: string }
-  | { type: "blog"; slug: string };
+  | { type: "blog"; slug: string }
+  | { type: "contact" };
 
-const TOKEN_RE = /\[\[blog:([a-z0-9-]+)\]\]/gi;
+const TOKEN_RE = /\[\[(?:blog:([a-z0-9-]+)|contact)\]\]/gi;
 
 function parseSegments(content: string): Segment[] {
   const segments: Segment[] = [];
@@ -24,7 +27,11 @@ function parseSegments(content: string): Segment[] {
     if (match.index > lastIndex) {
       segments.push({ type: "text", value: content.slice(lastIndex, match.index) });
     }
-    segments.push({ type: "blog", slug: match[1] });
+    if (match[1]) {
+      segments.push({ type: "blog", slug: match[1] });
+    } else {
+      segments.push({ type: "contact" });
+    }
     lastIndex = match.index + match[0].length;
   }
   if (lastIndex < content.length) {
@@ -33,7 +40,7 @@ function parseSegments(content: string): Segment[] {
   return segments;
 }
 
-export default function ChatMessage({ role, content, showAvatar = true }: Props) {
+export default function ChatMessage({ role, content, showAvatar = true, onNavigate }: Props) {
   const isUser = role === "user";
   const segments = parseSegments(content);
 
@@ -65,7 +72,10 @@ export default function ChatMessage({ role, content, showAvatar = true }: Props)
                 </div>
               );
             }
-            return <ChatBlogCard key={i} slug={seg.slug} />;
+            if (seg.type === "blog") {
+              return <ChatBlogCard key={i} slug={seg.slug} onNavigate={onNavigate} />;
+            }
+            return <ChatContactCard key={i} onNavigate={onNavigate} />;
           })}
         </div>
       </div>
