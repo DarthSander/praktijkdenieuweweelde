@@ -1,11 +1,17 @@
 import type { MetadataRoute } from "next";
 
+const BASE_URL = "https://www.praktijkdenieuweweelde.nl";
+
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-    },
-    sitemap: "https://www.praktijkdenieuweweelde.nl/sitemap.xml",
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/api/"],
+      },
+    ],
+    sitemap: `${BASE_URL}/sitemap.xml`,
+    host: BASE_URL,
   };
 }
