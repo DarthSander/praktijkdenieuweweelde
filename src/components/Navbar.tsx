@@ -36,7 +36,12 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 gap-2">
-          <Link href="/" aria-label="Naar de homepage" className="flex items-center gap-2 text-white font-[family-name:var(--font-playfair)] text-sm sm:text-base md:text-lg font-semibold min-w-0 flex-1">
+          <Link
+            href="/"
+            onClick={handleLinkClick}
+            aria-label="Naar de homepage"
+            className="relative z-10 flex items-center gap-2 h-16 text-white font-[family-name:var(--font-playfair)] text-sm sm:text-base md:text-lg font-semibold min-w-0 flex-1"
+          >
             <LotusIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white/85 animate-lotus-breath flex-shrink-0" />
             <span className="truncate">Relatiepraktijk de Nieuwe Weelde</span>
           </Link>
