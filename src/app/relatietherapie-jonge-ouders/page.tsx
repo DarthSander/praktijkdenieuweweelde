@@ -42,7 +42,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Wij ruziën veel meer sinds de baby. Betekent dat dat er iets mis is?",
-    a: "Niet per se. Als het window of tolerance van allebei de partners dichtknijpt door slaapgebrek, wordt bijna alles een trigger. Dat is geen karakterfout, dat is hoe jullie stresssysteem werkt onder druk. We kijken hoe jullie dat samen weer kunnen verruimen.",
+    a: "Niet per se. Als het draagvermogen van allebei de partners dichtknijpt door slaapgebrek, wordt bijna alles een trigger. Dat is geen karakterfout, dat is hoe jullie stresssysteem werkt onder druk. We kijken hoe jullie dat samen weer kunnen verruimen.",
   },
   {
     q: "Kan ik ook alleen komen als mijn partner nog niet klaar is voor therapie?",
@@ -106,7 +106,7 @@ export default function Page() {
               {[
                 {
                   title: "Kort lontje door slaaptekort",
-                  text: "Wat jullie vroeger met een glimlach konden wegwuiven, wordt nu een irritatie. Dat ligt niet aan jullie karakter. Bij slaaptekort krimpt jullie window of tolerance, waardoor zelfs kleine dingen als trigger gaan werken.",
+                  text: "Wat jullie vroeger met een glimlach konden wegwuiven, wordt nu een irritatie. Dat ligt niet aan jullie karakter. Bij slaaptekort krimpt jullie draagvermogen, waardoor zelfs kleine dingen als trigger gaan werken.",
                 },
                 {
                   title: "Ongelijke verdeling die schuurt",
@@ -118,11 +118,11 @@ export default function Page() {
                 },
                 {
                   title: "De een wil praten, de ander wil rust",
-                  text: "Het demand-withdraw-patroon wordt scherper als jullie moe zijn. De een zoekt verbinding via gesprek, de ander juist via even alleen zijn. Beide zijn begrijpelijk, beide voelen als afwijzing voor de ander.",
+                  text: "Het vraag-en-terugtrek-patroon wordt scherper als jullie moe zijn. De een zoekt verbinding via gesprek, de ander juist via even alleen zijn. Beide zijn begrijpelijk, beide voelen als afwijzing voor de ander.",
                 },
                 {
                   title: "Jezelf verliezen in het ouderschap",
-                  text: "Veel jonge ouders worstelen met zelfdifferentiatie: dicht genoeg bij je partner en kind blijven, zonder jezelf kwijt te raken. Dat is een stille strijd die zich vaak vertaalt in prikkelbaarheid of apathie.",
+                  text: "Veel jonge ouders worstelen met de balans: dicht genoeg bij je partner en kind blijven zonder jezelf kwijt te raken. Dat is een stille strijd die zich vaak vertaalt in prikkelbaarheid of apathie.",
                 },
                 {
                   title: "Onderwerpen die jullie vermijden",
@@ -149,9 +149,10 @@ export default function Page() {
               <p>
                 In IBCT maken we eerst het patroon zichtbaar. Niet wie er gelijk heeft, maar wat
                 er gebeurt tussen jullie als de moeheid hoog is en de lontjes kort. We werken met
-                de DEEP-analyse: welke verschillen spelen een rol, welke emotionele
-                gevoeligheden raken jullie sneller dan vroeger, welke druk van buitenaf doet
-                mee, en hoe praten jullie als het schuurt.
+                de DEEP/PEEP-analyse: welke persoonlijke verschillen spelen een rol, welke
+                emotionele gevoeligheden raken jullie sneller dan vroeger, welke externe
+                stressoren doen mee, en welke patronen ontstaan in jullie interactie als het
+                schuurt.
               </p>
               <p>
                 Vaak ontdekken koppels dat onder de frustratie iets zachters zit. Onder &quot;jij

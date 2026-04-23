@@ -113,7 +113,7 @@ export const blogPosts: BlogPost[] = [
     slug: "communicatieproblemen-in-een-relatie",
     title: "Communicatieproblemen in een relatie: oorzaken, patronen en oplossingen",
     description:
-      "Communicatieproblemen zijn de belangrijkste reden dat koppels hulp zoeken. Leer het demand-withdraw-patroon herkennen en doorbreken met IBCT-therapie in Tilburg.",
+      "Communicatieproblemen zijn de belangrijkste reden dat koppels hulp zoeken. Leer het vraag-en-terugtrek-patroon herkennen en doorbreken met IBCT-therapie in Tilburg.",
     excerpt:
       "Bijna elk koppel dat zich bij mij meldt, noemt communicatieproblemen als belangrijkste klacht. Maar onder de schijnbare communicatieproblemen ligt bijna altijd iets diepers. Een uitleg over hoe patronen ontstaan, en hoe jullie ze doorbreken.",
     image: "/pampas-beige.jpg",

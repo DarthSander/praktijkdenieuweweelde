@@ -170,9 +170,9 @@ export default function Page() {
             <div className="bg-[#F5F0EB] rounded-2xl p-8 md:p-10 text-[#5E524F] leading-relaxed space-y-5">
               <p>
                 IBCT combineert acceptatie van wat moeilijk veranderbaar is met verandering van
-                wat wél bijgesteld kan worden. We werken met de DEEP-analyse om te begrijpen
-                waarom jullie terechtkomen in dezelfde patronen, en hoe jullie er anders in
-                kunnen staan.
+                wat wél bijgesteld kan worden. We werken met de DEEP/PEEP-analyse om te
+                begrijpen waarom jullie terechtkomen in dezelfde patronen, en hoe jullie er
+                anders in kunnen staan.
               </p>
               <p>
                 Een belangrijk onderdeel is het zichtbaar maken van zachte emoties onder harde.

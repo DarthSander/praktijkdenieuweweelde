@@ -48,12 +48,12 @@ export default function Page() {
         Dit zijn geen technische communicatieproblemen. Dit zijn relationele patronen. En die vragen iets anders dan een cursus 'actief luisteren'.
       </p>
 
-      <h2>Het demand-withdraw-patroon: het meest onderzochte conflictpatroon</h2>
+      <h2>Het vraag-en-terugtrek-patroon: het meest onderzochte conflictpatroon</h2>
       <p>
         Als er één patroon is dat in bijna elk stressend koppel voorkomt, is het dit: de één brengt iets aan, wil iets oplossen, wordt feller of emotioneler. De ander voelt het als aanval, kritiek of een eindeloze discussie, en trekt zich terug. Die terugtrekking voedt de frustratie van de eerste, die nóg feller wordt. Waarna de ander nog verder weggaat.
       </p>
       <p>
-        Dit is het <em>demand-withdraw-patroon</em>. Het is onderzocht door tientallen teams, en consistent blijkt het een van de sterkste voorspellers van relatie-ontbinding. Het wrange is dat beide partners goed bedoelde redenen hebben om te doen wat ze doen. Degene die vraagt wil contact en oplossing. Degene die zich terugtrekt wil rust en de-escalatie. Allebei willen ze veiligheid, maar ze lopen in precies tegenovergestelde richting om die veiligheid te zoeken.
+        Dit is het <em>vraag-en-terugtrek-patroon</em> (in de internationale literatuur ook bekend als demand-withdraw). Het is onderzocht door tientallen teams, en consistent blijkt het een van de sterkste voorspellers van relatie-ontbinding. Het wrange is dat beide partners goed bedoelde redenen hebben om te doen wat ze doen. Degene die vraagt wil contact en oplossing. Degene die zich terugtrekt wil rust en de-escalatie. Allebei willen ze veiligheid, maar ze lopen in precies tegenovergestelde richting om die veiligheid te zoeken.
       </p>
 
       <h2>Waarom 'beter communiceren' vaak niet werkt</h2>
@@ -80,20 +80,20 @@ export default function Page() {
         <li>De stilte van de partner die wegtrekt ligt vaak op 'Ik weet niet hoe ik dit goed kan doen, ik ben bang om jou verder pijn te doen.' (angst)</li>
       </ul>
       <p>
-        In de zichtbare ruzie horen jullie elkaar aanvallen. In de onderliggende laag willen jullie allebei gezien worden. De techniek van <em>empathic joining</em> helpt om die onderlaag zichtbaar te maken.
+        In de zichtbare ruzie horen jullie elkaar aanvallen. In de onderliggende laag willen jullie allebei gezien worden. <em>Empathische aansluiting</em> &mdash; in de internationale literatuur empathic joining genoemd &mdash; helpt om die onderlaag zichtbaar te maken.
       </p>
 
       <h2>Wat maakt IBCT effectief bij communicatieproblemen?</h2>
       <p>
-        In IBCT werken we niet primair aan communicatietechniek. We werken aan twee dingen tegelijk: acceptatie van wat in de partner moeilijk veranderbaar is, en verandering van wat wel veranderbaar is. Twee technieken zijn hierbij essentieel.
+        In IBCT werken we niet primair aan communicatietechniek. We werken aan twee dingen tegelijk: acceptatie van wat in de partner moeilijk veranderbaar is, en verandering van wat wel veranderbaar is. Twee bewegingen zijn hierbij essentieel.
       </p>
 
-      <h3>Unified detachment</h3>
+      <h3>Samen kijken naar het patroon</h3>
       <p>
         Samen kijken naar het patroon alsof het een derde partij is. 'Daar gaat het patroon weer.' 'We zitten nu in het bekende moment, jij zegt iets, ik voel me aangevallen, ik word stil.' Deze houding haalt de hitte uit het moment. Je bent dan geen tegenstanders meer, maar twee onderzoekers die samen een taai patroon bestuderen.
       </p>
 
-      <h3>Empathic joining</h3>
+      <h3>Empathische aansluiting</h3>
       <p>
         De therapeut helpt beide partners om onder de harde woorden de zachte laag te vinden. Niet als trucje, maar als serieuze verdieping. Als dat lukt, ontstaat er vaak een opvallende rust: 'Oh, dus dát is wat je eigenlijk wilde zeggen.' In onderzoek is aangetoond dat juist deze verschuiving de grootste impact heeft op langetermijnverbetering (Doss et al., 2005).
       </p>

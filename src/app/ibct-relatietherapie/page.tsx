@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { BookOpen, Scale, Heart, Compass } from "lucide-react";
+import { Heart, HandHeart, Sparkles, MessageCircle, Compass } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LandingHero from "@/components/LandingHero";
@@ -30,28 +29,126 @@ export const metadata: Metadata = {
 const faqs: FAQItem[] = [
   {
     q: "Waar staat IBCT precies voor?",
-    a: "IBCT staat voor Integrative Behavioral Couple Therapy. Het is ontwikkeld door Andrew Christensen en Neil Jacobson aan de University of California. Het model combineert gedragsmatige verandering met acceptatie van wat moeilijk veranderbaar is.",
+    a: "IBCT staat voor Integrative Behavioral Couple Therapy. Het is een vorm van relatietherapie die acceptatie en gedragsverandering combineert. De methode helpt koppels om patronen te begrijpen, verschillen te accepteren en nieuwe manieren van omgaan met elkaar te ontwikkelen.",
   },
   {
     q: "Wat maakt IBCT anders dan andere vormen van relatietherapie?",
-    a: "IBCT werkt niet alleen aan communicatievaardigheden, maar vooral aan de emotionele laag eronder. We kijken naar het patroon tussen jullie (de DEEP-analyse), naar zachte emoties onder harde reacties, en naar wat wel en niet te veranderen is. Die combinatie maakt het effect duurzamer.",
+    a: "IBCT richt zich niet alleen op communicatie of gedrag, maar ook op de onderliggende gevoeligheden en verschillen die spanning veroorzaken. Door acceptatie en verandering te combineren ontstaat er ruimte voor echte beweging, zonder dat één van jullie zich moet aanpassen of “de schuld” krijgt.",
   },
   {
     q: "Hoe wetenschappelijk is IBCT eigenlijk?",
-    a: "IBCT is een van de best onderzochte vormen van relatietherapie wereldwijd. Grootschalig onderzoek laat zien dat ongeveer twee derde van de koppels na een IBCT-traject een duidelijke verbetering ervaart. De effecten houden bij de meeste stellen ook na twee en vijf jaar stand.",
+    a: "IBCT is een van de best onderzochte vormen van relatietherapie wereldwijd. De methode is ontwikkeld aan de University of California en wordt ondersteund door tientallen jaren onderzoek. In Nederland wordt IBCT gebruikt door veel relatietherapeuten en systeemtherapeuten vanwege de sterke wetenschappelijke basis.",
   },
   {
     q: "Hoeveel sessies zijn er meestal nodig?",
-    a: "Een IBCT-traject bestaat vaak uit acht tot twintig sessies. We beginnen met een assessmentfase van drie tot vier sessies waarin we jullie dynamiek helder krijgen. Daarna werken we gericht aan acceptatie en verandering.",
+    a: "Er worden 10 sessies per koppel ingericht voor het gehele traject. De meeste koppels volgen tussen de 8 en 15 sessies. De duur hangt af van jullie situatie, de intensiteit van de patronen en wat jullie willen bereiken. Tijdens de intake bespreken we wat voor jullie passend lijkt en evalueren we regelmatig het tempo.",
   },
   {
-    q: "Wat is de DEEP-analyse?",
-    a: "De DEEP-analyse is de kern van IBCT. We kijken naar Differences (verschillen tussen jullie), Emotional sensitivities (emotionele kwetsbaarheden), External stressors (omstandigheden die meedoen), en Patterns of communication (hoe jullie met elkaar praten). Samen verklaart dat waarom dezelfde thema&apos;s blijven terugkomen.",
+    q: "Wat is de DEEP/PEEP-analyse?",
+    a: "De DEEP/PEEP-analyse is een manier om jullie interactiepatroon helder te krijgen. We kijken naar persoonlijke verschillen, emotionele gevoeligheden, externe stressoren en patronen in de interactie. Dit geeft snel inzicht in waar jullie vastlopen en waar ruimte zit voor verandering.",
   },
   {
     q: "Is IBCT geschikt voor elk koppel?",
-    a: "IBCT werkt voor de meeste relatieproblematiek, van communicatie tot intimiteit tot levensfase-overgangen. Bij acuut huiselijk geweld of actieve verslaving is een andere zorgvorm vaak eerst nodig. In het intakegesprek kijken we samen of IBCT passend is voor jullie situatie.",
+    a: "IBCT is geschikt voor koppels die vastlopen in terugkerende patronen, botsende verschillen, afstand, twijfels of een vertrouwensbreuk. Ook wanneer één van jullie twijfelt over samen verder gaan, kan IBCT helpen om helderheid te krijgen, zonder druk of sturing naar een bepaalde uitkomst.",
   },
+];
+
+const bouwstenen = [
+  {
+    number: "1",
+    icon: Heart,
+    title: "Onderlinge verschillen accepteren",
+    text: "We onderzoeken de gevoeligheden, verwachtingen en achtergronden die onder jullie reacties liggen. Hierdoor ontstaat meer begrip en zachtheid, wat ruimte geeft om elkaar weer te bereiken.",
+  },
+  {
+    number: "2",
+    icon: HandHeart,
+    title: "Verschillen en spanningen leren verdragen",
+    text: "Niet alle verschillen verdwijnen. Met technieken zoals exposure, normalisatie en zelfzorg leren jullie omgaan met terugkerende thema’s zonder dat ze steeds opnieuw escaleren.",
+  },
+  {
+    number: "3",
+    icon: Sparkles,
+    title: "Uitwisselen van positief gedrag",
+    text: "We bouwen aan kleine, haalbare gedragsveranderingen die direct effect hebben in het dagelijks leven. Denk aan waardering uitspreken, positieve momenten creëren en gedrag dat spanning oproept vervangen door gedrag dat wél werkt.",
+  },
+  {
+    number: "4",
+    icon: MessageCircle,
+    title: "Communicatie verbeteren",
+    text: "We oefenen met duidelijkheid, luisteren zonder te onderbreken, het stoppen van escalatie en het voeren van gesprekken die helderheid geven. Binnen dit onderdeel leren koppels ook samen problemen oplossen op een manier die veilig en constructief blijft.",
+  },
+];
+
+const deepPeep = [
+  {
+    title: "Persoonlijke verschillen",
+    text: "De onderlinge verschillen die spanning oproepen of botsingen veroorzaken.",
+  },
+  {
+    title: "Emotionele gevoeligheden",
+    text: "De kwetsbaarheden, verwachtingen en pijnpunten die onder jullie reacties liggen.",
+  },
+  {
+    title: "Externe stressoren",
+    text: "Factoren van buitenaf die druk geven, zoals werkstress, ouderschap, mantelzorg of financiële zorgen.",
+  },
+  {
+    title: "Patronen in de interactie",
+    text: "De manier waarop jullie op elkaar reageren en hoe die reacties elkaar versterken.",
+  },
+];
+
+const fasen = [
+  {
+    label: "Fase 1",
+    sessions: "1–3 sessies",
+    title: "Intake en assessment",
+    intro: "In deze fase leer ik jullie en jullie relatiegeschiedenis goed kennen. We verkennen:",
+    bullets: [
+      "wat er speelt",
+      "welke patronen zichtbaar zijn",
+      "wat jullie verlangen of missen",
+    ],
+    outro:
+      "Soms spreek ik partners individueel wanneer dat helpt om het geheel beter te begrijpen. Op basis hiervan maak ik een casusconceptualisatie: een helder overzicht van jullie persoonlijke verschillen, emotionele gevoeligheden, externe stressoren en patronen in de interactie.",
+  },
+  {
+    label: "Fase 2",
+    sessions: "5–15 sessies",
+    title: "Acceptatie en verandering",
+    intro: "Dit is het hart van de therapie. We werken met:",
+    bullets: [
+      "empathische aansluiting",
+      "gezamenlijke onthechting (samen naar het patroon kijken)",
+    ],
+    outro:
+      "In deze fase zie je vaak beweging: de ene week voelt het lichter, de volgende week schuurt het weer. Dat hoort bij het proces.",
+  },
+  {
+    label: "Fase 3",
+    sessions: "2–3 sessies",
+    title: "Afronden en bestendigen",
+    intro: "We richten ons op:",
+    bullets: [
+      "het vasthouden van wat jullie hebben geleerd",
+      "signalen herkennen",
+      "terugval voorkomen",
+      "weten wat te doen als het toch even misloopt",
+    ],
+    outro:
+      "Soms plannen we een terugkommoment om te kijken hoe het gaat en waar eventueel bijgestuurd kan worden.",
+  },
+];
+
+const themas = [
+  "vastlopende communicatie",
+  "het vraag-en-terugtrek-patroon (de één zet druk, de ander trekt zich terug)",
+  "intimiteit en seksualiteit",
+  "vertrouwen na een breuk",
+  "rolverdeling en verwachtingen",
+  "grote levensovergangen (kinderen, verhuizing, baanwissel)",
+  "vermijding van lastige gesprekken",
 ];
 
 export default function Page() {
@@ -73,107 +170,71 @@ export default function Page() {
 
         <section id="inhoud" className="section-padding bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-6 text-center">
-              Wat IBCT is
-            </h2>
             <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
               <p>
-                IBCT, voluit Integrative Behavioral Couple Therapy, is een vorm van
-                relatietherapie die is ontwikkeld door Andrew Christensen en Neil Jacobson. Het
-                model werd in de jaren negentig in de Verenigde Staten ontwikkeld en is sindsdien
-                een van de best onderzochte vormen van relatietherapie wereldwijd.
-              </p>
-              <p>
-                De kern van IBCT is dat duurzame verandering in een relatie twee dingen nodig
-                heeft: werkelijke verandering van gedrag waar dat kan, en acceptatie van wat niet
-                of moeilijk veranderbaar is. Als je alleen op verandering inzet, raakt de
-                relatie uitgeput. Als je alleen op acceptatie inzet, blijft er te veel pijn
-                onuitgesproken. De combinatie maakt dat er ruimte ontstaat.
+                IBCT (Integrative Behavioral Couple Therapy) is een wetenschappelijk onderbouwde
+                vorm van relatietherapie die werkt met twee pijlers: acceptatie van wat niet of
+                moeilijk veranderbaar is, en verandering van gedrag waar dat wél kan. Die
+                combinatie maakt IBCT effectief voor koppels die vastlopen in terugkerende
+                patronen, botsende verschillen of situaties waarin emoties hoog oplopen.
               </p>
             </div>
           </div>
         </section>
 
         <section className="section-padding bg-[#F5F0EB]">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
-                De vier bouwstenen
-              </h2>
-              <p className="text-[#5E524F] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                Deze onderdelen komen in vrijwel elk IBCT-traject terug. Niet in vaste volgorde,
-                wel steeds in onderlinge samenhang.
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-6 text-center">
+              Wat IBCT is
+            </h2>
+            <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
+              <p>
+                IBCT werd ontwikkeld door Andrew Christensen en Neil Jacobson en is wereldwijd
+                een van de best onderzochte vormen van relatietherapie. De kern van IBCT is dat
+                duurzame verandering ontstaat wanneer koppels:
               </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                {
-                  icon: Compass,
-                  title: "De DEEP-analyse",
-                  text: "Jullie eigen patroon in kaart. Welke verschillen spelen een rol, welke emotionele gevoeligheden raken jullie, welke externe druk doet mee, en hoe praten jullie als het schuurt.",
-                },
-                {
-                  icon: Heart,
-                  title: "Zachte emoties onder harde",
-                  text: "Boosheid is vaak een beschermlaag. Daaronder zit kwetsbaarheid: pijn, teleurstelling, angst om er niet toe te doen. Die laag zichtbaar maken is de motor van verandering.",
-                },
-                {
-                  icon: Scale,
-                  title: "Empathic joining",
-                  text: "Een techniek waarin jullie elkaar opnieuw raken, niet door compromissen maar door begrip voor hoe het er voor de ander werkelijk uitziet. Daardoor verandert vaak het gedrag vanzelf mee.",
-                },
-                {
-                  icon: BookOpen,
-                  title: "Tolerance building",
-                  text: "Niet alles hoeft opgelost. Sommige verschillen blijven. Tolerance building helpt om die verschillen minder pijnlijk te maken, zodat jullie er samen mee kunnen leven zonder ze elke keer weer uit te vechten.",
-                },
-              ].map((item) => (
-                <div key={item.title} className="bg-white rounded-2xl p-6 md:p-7 flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#E8D5D2]/50 flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-5 h-5 text-[#946B66]" />
-                  </div>
-                  <div>
-                    <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg mb-1.5">
-                      {item.title}
-                    </h3>
-                    <p className="text-[#5E524F] text-sm md:text-base leading-relaxed">{item.text}</p>
-                  </div>
-                </div>
-              ))}
+              <ul className="list-disc pl-6 space-y-1.5">
+                <li>begrijpen wat er onder hun reacties ligt,</li>
+                <li>anders leren omgaan met verschillen,</li>
+                <li>haalbare gedragsveranderingen aanbrengen die de relatie versterken.</li>
+              </ul>
+              <p>
+                Alleen inzetten op verandering put een relatie uit. Alleen inzetten op acceptatie
+                laat te veel pijn liggen. IBCT brengt die twee in balans.
+              </p>
             </div>
           </div>
         </section>
 
         <section className="section-padding bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-6 text-center">
-              Hoe een traject eruitziet
-            </h2>
-            <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
-              <p>
-                Een IBCT-traject begint met een assessmentfase van drie tot vier sessies. In die
-                fase leer ik jullie kennen, breng ik jullie patroon in kaart en maak ik samen met
-                jullie de DEEP-analyse. Die analyse deel ik in de zogenoemde feedbacksessie:
-                jullie krijgen een helder beeld van wat jullie dynamiek drijft en waar de ruimte
-                zit.
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
+                De vier bouwstenen van IBCT
+              </h2>
+              <p className="text-[#5E524F] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+                IBCT werkt met vier interventiegebieden die elkaar versterken.
               </p>
-              <p>
-                Daarna volgt de werkfase. Hierin werken we aan empathic joining, oefenen we met
-                tolerance building en brengen we actieve verandering aan waar dat mogelijk is.
-                Jullie eigen window of tolerance speelt daarin een rol: als de spanning te hoog
-                oploopt, wordt het ingewikkeld om echt contact te maken. We werken dan eerst aan
-                het terugvinden van die ruimte.
-              </p>
-              <p>
-                Een traject duurt vaak acht tot twintig sessies, afhankelijk van wat jullie nodig
-                hebben. Meer over looptijd en wanneer therapie helpt vind je in de blogs over{" "}
-                <Link href="/blog/hoe-lang-duurt-relatietherapie">hoe lang relatietherapie duurt</Link>
-                {" "}en{" "}
-                <Link href="/blog/wanneer-is-relatietherapie-zinvol">
-                  wanneer relatietherapie zinvol is
-                </Link>
-                .
-              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {bouwstenen.map((b) => (
+                <div key={b.number} className="bg-[#F5F0EB] rounded-2xl p-6 md:p-7">
+                  <div className="flex gap-4 mb-3">
+                    <div className="w-12 h-12 rounded-full bg-[#E8D5D2]/60 flex items-center justify-center flex-shrink-0">
+                      <b.icon className="w-5 h-5 text-[#946B66]" />
+                    </div>
+                    <div>
+                      <p className="text-[#C4A4A0] text-xs font-semibold uppercase tracking-wider mb-1">
+                        Bouwsteen {b.number}
+                      </p>
+                      <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg">
+                        {b.title}
+                      </h3>
+                    </div>
+                  </div>
+                  <p className="text-[#5E524F] text-sm md:text-base leading-relaxed">{b.text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -181,34 +242,92 @@ export default function Page() {
         <section className="section-padding bg-[#F5F0EB]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
+              <div className="w-14 h-14 rounded-full bg-[#E8D5D2]/50 flex items-center justify-center mx-auto mb-5">
+                <Compass className="w-6 h-6 text-[#946B66]" />
+              </div>
               <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
-                Voor welke thema&apos;s werkt IBCT
+                De DEEP/PEEP-analyse
               </h2>
+              <p className="text-[#5E524F] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+                In IBCT gebruiken we de DEEP/PEEP-analyse om snel zicht te krijgen op wat er
+                tussen jullie gebeurt. We kijken naar jullie persoonlijke verschillen, de
+                emotionele gevoeligheden die onder reacties liggen, de externe stressoren die
+                druk geven en de patronen in de interactie die zich herhalen. Dit geeft een
+                helder beeld van waar jullie vastlopen en waar ruimte zit voor verandering.
+              </p>
             </div>
-            <div className="bg-white rounded-2xl p-8 md:p-10 text-[#5E524F] leading-relaxed space-y-5">
-              <p>
-                IBCT is inzetbaar voor een brede waaier aan relatievraagstukken. Communicatie die
-                vastloopt, het demand-withdraw-patroon waarin de een druk zet en de ander zich
-                terugtrekt, seksualiteit en intimiteit, vertrouwen na een breuk, rolverdeling,
-                grote levensovergangen zoals een kind of baanwissel, en patronen van vermijding
-                waarbij jullie lastige gesprekken steeds uit de weg gaan.
+            <div className="grid md:grid-cols-2 gap-5">
+              {deepPeep.map((item) => (
+                <div key={item.title} className="bg-white rounded-2xl p-6 md:p-7">
+                  <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#5E524F] text-sm md:text-base leading-relaxed">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section-padding bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
+                Hoe een IBCT-traject eruitziet
+              </h2>
+              <p className="text-[#5E524F] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+                Een traject bestaat uit drie fasen. Elke fase heeft een eigen doel, tempo en
+                manier van werken.
               </p>
-              <p>
-                Een belangrijk concept dat IBCT gebruikt is zelfdifferentiatie: het vermogen om
-                emotioneel dicht bij je partner te kunnen zijn zonder jezelf kwijt te raken. Veel
-                conflicten zijn in de kern een worsteling daartussen. Als dat evenwicht zich
-                herstelt, kunnen jullie tegelijk verbonden én jezelf zijn.
-              </p>
+            </div>
+            <div className="space-y-6">
+              {fasen.map((fase) => (
+                <div key={fase.label} className="bg-[#F5F0EB] rounded-2xl p-6 md:p-8">
+                  <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
+                    <p className="text-[#C4A4A0] text-xs font-semibold uppercase tracking-wider">
+                      {fase.label} &middot; {fase.sessions}
+                    </p>
+                    <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-xl md:text-2xl">
+                      {fase.title}
+                    </h3>
+                  </div>
+                  <div className="text-[#5E524F] text-sm md:text-base leading-relaxed space-y-3">
+                    <p>{fase.intro}</p>
+                    <ul className="list-disc pl-6 space-y-1.5">
+                      {fase.bullets.map((b) => (
+                        <li key={b}>{b}</li>
+                      ))}
+                    </ul>
+                    <p>{fase.outro}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section-padding bg-[#F5F0EB]">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-6 text-center">
+              Voor welke thema&apos;s werkt IBCT?
+            </h2>
+            <div className="bg-white rounded-2xl p-8 md:p-10 text-[#5E524F] text-base md:text-lg leading-relaxed space-y-4">
+              <p>IBCT is geschikt voor een brede waaier aan relatievraagstukken, zoals:</p>
+              <ul className="list-disc pl-6 space-y-2">
+                {themas.map((t) => (
+                  <li key={t}>{t}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
 
         <LandingCTA
-          title="Benieuwd of IBCT bij jullie past?"
+          title="Is IBCT passend voor jullie?"
           text="In een intakegesprek verkennen we samen jullie situatie en kijken we of IBCT aansluit bij wat jullie zoeken."
         />
 
-        <LandingFAQ heading="Veelgestelde vragen over IBCT" items={faqs} />
+        <LandingFAQ heading="Veelgestelde vragen" items={faqs} />
       </main>
       <Footer />
     </>
