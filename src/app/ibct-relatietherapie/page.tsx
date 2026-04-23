@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BookOpen, Scale, Heart, Compass } from "lucide-react";
+import { Heart, HandHeart, Sparkles, MessageCircle, Compass } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LandingHero from "@/components/LandingHero";
@@ -30,11 +30,11 @@ export const metadata: Metadata = {
 const faqs: FAQItem[] = [
   {
     q: "Waar staat IBCT precies voor?",
-    a: "IBCT staat voor Integrative Behavioral Couple Therapy. Het is ontwikkeld door Andrew Christensen en Neil Jacobson aan de University of California. Het model combineert gedragsmatige verandering met acceptatie van wat moeilijk veranderbaar is.",
+    a: "IBCT staat voor Integrative Behavioral Couple Therapy, een vorm van relatietherapie die in de jaren negentig in de Verenigde Staten is ontwikkeld door Andrew Christensen en Neil Jacobson. Het model combineert acceptatie van wat moeilijk veranderbaar is met gerichte gedragsverandering waar dat wel kan.",
   },
   {
     q: "Wat maakt IBCT anders dan andere vormen van relatietherapie?",
-    a: "IBCT werkt niet alleen aan communicatievaardigheden, maar vooral aan de emotionele laag eronder. We kijken naar het patroon tussen jullie (de DEEP-analyse), naar zachte emoties onder harde reacties, en naar wat wel en niet te veranderen is. Die combinatie maakt het effect duurzamer.",
+    a: "IBCT werkt niet alleen aan communicatievaardigheden, maar vooral aan de emotionele laag eronder. We brengen jullie eigen patroon in kaart met de DEEP/PEEP-analyse, maken zichtbaar wat onder harde reacties ligt, en kijken samen wat wel en niet veranderbaar is. Die combinatie maakt het effect duurzamer.",
   },
   {
     q: "Hoe wetenschappelijk is IBCT eigenlijk?",
@@ -42,11 +42,11 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Hoeveel sessies zijn er meestal nodig?",
-    a: "Een IBCT-traject bestaat vaak uit acht tot twintig sessies. We beginnen met een assessmentfase van drie tot vier sessies waarin we jullie dynamiek helder krijgen. Daarna werken we gericht aan acceptatie en verandering.",
+    a: "Een IBCT-traject bestaat vaak uit acht tot twintig sessies. We beginnen met een kennismakingsfase van drie tot vier sessies waarin we jullie dynamiek helder krijgen. Daarna werken we gericht aan acceptatie, tolerantie en verandering.",
   },
   {
-    q: "Wat is de DEEP-analyse?",
-    a: "De DEEP-analyse is de kern van IBCT. We kijken naar Differences (verschillen tussen jullie), Emotional sensitivities (emotionele kwetsbaarheden), External stressors (omstandigheden die meedoen), en Patterns of communication (hoe jullie met elkaar praten). Samen verklaart dat waarom dezelfde thema&apos;s blijven terugkomen.",
+    q: "Wat is de DEEP/PEEP-analyse?",
+    a: "De DEEP/PEEP-analyse is de kern van IBCT. We kijken naar persoonlijke verschillen, emotionele gevoeligheden, externe stressoren en patronen in de interactie. Samen verklaren die vier elementen waarom dezelfde thema's tussen jullie blijven terugkomen.",
   },
   {
     q: "Is IBCT geschikt voor elk koppel?",
@@ -98,71 +98,197 @@ export default function Page() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
-                De vier bouwstenen
+                De vier IBCT-processen
               </h2>
               <p className="text-[#5E524F] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                Deze onderdelen komen in vrijwel elk IBCT-traject terug. Niet in vaste volgorde,
-                wel steeds in onderlinge samenhang.
+                IBCT werkt langs vier samenhangende sporen. Niet in een vaste volgorde, wel
+                steeds in onderlinge afstemming op wat jullie nodig hebben.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
-              {[
-                {
-                  icon: Compass,
-                  title: "De DEEP-analyse",
-                  text: "Jullie eigen patroon in kaart. Welke verschillen spelen een rol, welke emotionele gevoeligheden raken jullie, welke externe druk doet mee, en hoe praten jullie als het schuurt.",
-                },
-                {
-                  icon: Heart,
-                  title: "Zachte emoties onder harde",
-                  text: "Boosheid is vaak een beschermlaag. Daaronder zit kwetsbaarheid: pijn, teleurstelling, angst om er niet toe te doen. Die laag zichtbaar maken is de motor van verandering.",
-                },
-                {
-                  icon: Scale,
-                  title: "Empathic joining",
-                  text: "Een techniek waarin jullie elkaar opnieuw raken, niet door compromissen maar door begrip voor hoe het er voor de ander werkelijk uitziet. Daardoor verandert vaak het gedrag vanzelf mee.",
-                },
-                {
-                  icon: BookOpen,
-                  title: "Tolerance building",
-                  text: "Niet alles hoeft opgelost. Sommige verschillen blijven. Tolerance building helpt om die verschillen minder pijnlijk te maken, zodat jullie er samen mee kunnen leven zonder ze elke keer weer uit te vechten.",
-                },
-              ].map((item) => (
-                <div key={item.title} className="bg-white rounded-2xl p-6 md:p-7 flex gap-4">
+              <div className="bg-white rounded-2xl p-6 md:p-7">
+                <div className="flex gap-4 mb-3">
                   <div className="w-12 h-12 rounded-full bg-[#E8D5D2]/50 flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-5 h-5 text-[#946B66]" />
+                    <Heart className="w-5 h-5 text-[#946B66]" />
                   </div>
                   <div>
-                    <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg mb-1.5">
-                      {item.title}
+                    <p className="text-[#C4A4A0] text-xs font-semibold uppercase tracking-wider mb-1">
+                      Eerste spoor &middot; acceptatie
+                    </p>
+                    <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg">
+                      Acceptatie-processen
                     </h3>
-                    <p className="text-[#5E524F] text-sm md:text-base leading-relaxed">{item.text}</p>
                   </div>
                 </div>
-              ))}
+                <p className="text-[#5E524F] text-sm md:text-base leading-relaxed mb-3">
+                  Onderlinge verschillen leren accepteren in plaats van bevechten.
+                </p>
+                <ul className="text-[#5E524F] text-sm md:text-base leading-relaxed space-y-2 list-disc pl-5">
+                  <li>
+                    <strong>Emotionele acceptatie</strong> &mdash; inzicht krijgen in de
+                    gevoeligheden, verwachtingen en kwetsbaarheden die onder reacties liggen.
+                  </li>
+                  <li>
+                    <strong>Empathische aansluiting</strong> &mdash; elkaar weer kunnen bereiken
+                    op de momenten waarop het schuurt; begrijpen wat er onder de oppervlakte
+                    speelt.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white rounded-2xl p-6 md:p-7">
+                <div className="flex gap-4 mb-3">
+                  <div className="w-12 h-12 rounded-full bg-[#E8D5D2]/50 flex items-center justify-center flex-shrink-0">
+                    <HandHeart className="w-5 h-5 text-[#946B66]" />
+                  </div>
+                  <div>
+                    <p className="text-[#C4A4A0] text-xs font-semibold uppercase tracking-wider mb-1">
+                      Tweede spoor &middot; tolerantie
+                    </p>
+                    <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg">
+                      Tolerantie bevorderen
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-[#5E524F] text-sm md:text-base leading-relaxed mb-3">
+                  Leren omgaan met verschillen die niet verdwijnen.
+                </p>
+                <ul className="text-[#5E524F] text-sm md:text-base leading-relaxed space-y-2 list-disc pl-5">
+                  <li>
+                    <strong>Exposure</strong> &mdash; stap voor stap oefenen met situaties die
+                    spanning oproepen, zodat ze minder beladen worden.
+                  </li>
+                  <li>
+                    <strong>Zelfzorg</strong> &mdash; herkennen wat je nodig hebt om kalm te
+                    blijven in lastige momenten.
+                  </li>
+                  <li>
+                    <strong>Normalisatie</strong> &mdash; begrijpen dat sommige verschillen
+                    normaal zijn en niet opgelost hoeven te worden.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white rounded-2xl p-6 md:p-7">
+                <div className="flex gap-4 mb-3">
+                  <div className="w-12 h-12 rounded-full bg-[#E8D5D2]/50 flex items-center justify-center flex-shrink-0">
+                    <Sparkles className="w-5 h-5 text-[#946B66]" />
+                  </div>
+                  <div>
+                    <p className="text-[#C4A4A0] text-xs font-semibold uppercase tracking-wider mb-1">
+                      Verandering
+                    </p>
+                    <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg">
+                      Uitwisseling van positief gedrag
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-[#5E524F] text-sm md:text-base leading-relaxed mb-3">
+                  Kleine, haalbare gedragsveranderingen die direct effect hebben:
+                </p>
+                <ul className="text-[#5E524F] text-sm md:text-base leading-relaxed space-y-1.5 list-disc pl-5">
+                  <li>Positieve gedragingen bewust inzetten.</li>
+                  <li>Waardering vaker uitspreken.</li>
+                  <li>Momenten van verbinding opzoeken.</li>
+                  <li>Gedrag dat spanning oproept vervangen door gedrag dat wél werkt.</li>
+                </ul>
+              </div>
+
+              <div className="bg-white rounded-2xl p-6 md:p-7">
+                <div className="flex gap-4 mb-3">
+                  <div className="w-12 h-12 rounded-full bg-[#E8D5D2]/50 flex items-center justify-center flex-shrink-0">
+                    <MessageCircle className="w-5 h-5 text-[#946B66]" />
+                  </div>
+                  <div>
+                    <p className="text-[#C4A4A0] text-xs font-semibold uppercase tracking-wider mb-1">
+                      Vaardigheden
+                    </p>
+                    <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg">
+                      Communicatie verbeteren
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-[#5E524F] text-sm md:text-base leading-relaxed mb-3">
+                  Vaardigheden die helpen om gesprekken helder en veilig te houden:
+                </p>
+                <ul className="text-[#5E524F] text-sm md:text-base leading-relaxed space-y-1.5 list-disc pl-5">
+                  <li>Duidelijk aangeven wat je bedoelt.</li>
+                  <li>Luisteren zonder te onderbreken.</li>
+                  <li>Ruzies stoppen voordat ze escaleren.</li>
+                  <li>Gesprekken voeren die helderheid geven in plaats van verwarring.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="section-padding bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <div className="w-14 h-14 rounded-full bg-[#E8D5D2]/50 flex items-center justify-center mx-auto mb-5">
+                <Compass className="w-6 h-6 text-[#946B66]" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
+                De DEEP/PEEP-analyse
+              </h2>
+              <p className="text-[#5E524F] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+                Om helder te krijgen waarom jullie vastlopen, gebruiken we de DEEP/PEEP-analyse.
+                Daarbij kijken we naar vier elementen die samen jullie interactiepatroon vormen.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-5">
+              {[
+                {
+                  title: "Persoonlijke verschillen",
+                  text: "De onderlinge verschillen die spanning oproepen of botsingen veroorzaken.",
+                },
+                {
+                  title: "Emotionele gevoeligheden",
+                  text: "De kwetsbaarheden, verwachtingen en pijnpunten die onder jullie reacties liggen.",
+                },
+                {
+                  title: "Externe stressoren",
+                  text: "Factoren van buitenaf die druk geven, zoals werkstress, ouderschap, mantelzorg of financiële zorgen.",
+                },
+                {
+                  title: "Patronen in de interactie",
+                  text: "De manier waarop jullie op elkaar reageren en hoe die reacties elkaar versterken.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-[#F5F0EB] rounded-2xl p-6 md:p-7">
+                  <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#5E524F] text-sm md:text-base leading-relaxed">{item.text}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-[#5E524F] text-base md:text-lg leading-relaxed text-center mt-10 max-w-2xl mx-auto">
+              Deze analyse maakt zichtbaar wat er tussen jullie gebeurt en waar ruimte zit voor
+              acceptatie, tolerantie en verandering.
+            </p>
+          </div>
+        </section>
+
+        <section className="section-padding bg-[#F5F0EB]">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-6 text-center">
               Hoe een traject eruitziet
             </h2>
             <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
               <p>
-                Een IBCT-traject begint met een assessmentfase van drie tot vier sessies. In die
-                fase leer ik jullie kennen, breng ik jullie patroon in kaart en maak ik samen met
-                jullie de DEEP-analyse. Die analyse deel ik in de zogenoemde feedbacksessie:
+                Een IBCT-traject begint met een kennismakingsfase van drie tot vier sessies. In
+                die fase leer ik jullie kennen, breng ik jullie patroon in kaart en maak ik samen
+                met jullie de DEEP/PEEP-analyse. Die analyse deel ik in een terugkoppelsessie:
                 jullie krijgen een helder beeld van wat jullie dynamiek drijft en waar de ruimte
                 zit.
               </p>
               <p>
-                Daarna volgt de werkfase. Hierin werken we aan empathic joining, oefenen we met
-                tolerance building en brengen we actieve verandering aan waar dat mogelijk is.
-                Jullie eigen window of tolerance speelt daarin een rol: als de spanning te hoog
-                oploopt, wordt het ingewikkeld om echt contact te maken. We werken dan eerst aan
-                het terugvinden van die ruimte.
+                Daarna volgt de werkfase. Hierin werken we aan empathische aansluiting, oefenen
+                we met tolerantie bevorderen en brengen we actieve verandering aan waar dat
+                mogelijk is. Jullie eigen draagvermogen voor spanning speelt daarin een rol: als
+                de spanning te hoog oploopt, wordt het ingewikkeld om echt contact te maken. We
+                werken dan eerst aan het terugvinden van die ruimte.
               </p>
               <p>
                 Een traject duurt vaak acht tot twintig sessies, afhankelijk van wat jullie nodig
@@ -178,26 +304,26 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="section-padding bg-[#F5F0EB]">
+        <section className="section-padding bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
                 Voor welke thema&apos;s werkt IBCT
               </h2>
             </div>
-            <div className="bg-white rounded-2xl p-8 md:p-10 text-[#5E524F] leading-relaxed space-y-5">
+            <div className="bg-[#F5F0EB] rounded-2xl p-8 md:p-10 text-[#5E524F] leading-relaxed space-y-5">
               <p>
                 IBCT is inzetbaar voor een brede waaier aan relatievraagstukken. Communicatie die
-                vastloopt, het demand-withdraw-patroon waarin de een druk zet en de ander zich
-                terugtrekt, seksualiteit en intimiteit, vertrouwen na een breuk, rolverdeling,
-                grote levensovergangen zoals een kind of baanwissel, en patronen van vermijding
-                waarbij jullie lastige gesprekken steeds uit de weg gaan.
+                vastloopt, het vraag-en-terugtrek-patroon waarin de een druk zet en de ander
+                zich terugtrekt, seksualiteit en intimiteit, vertrouwen na een breuk,
+                rolverdeling, grote levensovergangen zoals een kind of baanwissel, en patronen
+                van vermijding waarbij jullie lastige gesprekken steeds uit de weg gaan.
               </p>
               <p>
-                Een belangrijk concept dat IBCT gebruikt is zelfdifferentiatie: het vermogen om
-                emotioneel dicht bij je partner te kunnen zijn zonder jezelf kwijt te raken. Veel
+                Een belangrijk uitgangspunt in IBCT is dat jullie tegelijk verbonden én jezelf
+                kunnen zijn: emotioneel dicht bij je partner zonder jezelf kwijt te raken. Veel
                 conflicten zijn in de kern een worsteling daartussen. Als dat evenwicht zich
-                herstelt, kunnen jullie tegelijk verbonden én jezelf zijn.
+                herstelt, ontstaat er weer ruimte tussen jullie.
               </p>
             </div>
           </div>

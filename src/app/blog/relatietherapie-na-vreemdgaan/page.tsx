@@ -70,7 +70,7 @@ export default function Page() {
         <li>Verschillen tussen jullie die mogelijk zijn gaan schuren.</li>
         <li>Individuele kwetsbaarheden die al langer meespeelden bij een of beide partners.</li>
         <li>Externe stressoren zoals werkdruk, een sterfgeval of verhuizing.</li>
-        <li>Het patroon waarin jullie samen verstrikt waren geraakt, bijvoorbeeld het demand-withdraw-patroon.</li>
+        <li>Het patroon waarin jullie samen verstrikt waren geraakt, bijvoorbeeld het vraag-en-terugtrek-patroon.</li>
       </ul>
       <p>
         Deze analyse is geen rechtvaardiging van de ontrouw. Wel geeft het een context waarin beide partners kunnen begrijpen wat zich heeft opgebouwd. Dat maakt herstel mogelijk, omdat er iets veranderbaars zichtbaar wordt.

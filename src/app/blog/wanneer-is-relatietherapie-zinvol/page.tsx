@@ -43,7 +43,7 @@ export default function Page() {
 
       <h2>2. Jullie herhalen steeds hetzelfde patroon</h2>
       <p>
-        Herkennen jullie dit? De een brengt iets ter sprake, de ander trekt zich terug, waarna de eerste nog feller wordt en de ander zich nog verder terugtrekt. Dat is het bekende <em>demand-withdraw-patroon</em>, een veel voorkomende interactiecyclus in relaties.
+        Herkennen jullie dit? De een brengt iets ter sprake, de ander trekt zich terug, waarna de eerste nog feller wordt en de ander zich nog verder terugtrekt. Dat is het bekende <em>vraag-en-terugtrek-patroon</em>, een veel voorkomende interactiecyclus in relaties.
       </p>
       <p>
         Dit patroon is zo lastig te doorbreken, juist omdat beide partners goede redenen denken te hebben voor hun gedrag. Wie vraagt wil contact, wie zich terugtrekt wil rust. Zonder hulp van buitenaf blijft dit patroon zich herhalen. In de sectie over <Link href="/#ibct">IBCT-therapie</Link> lees je hoe we daar samen uit komen.

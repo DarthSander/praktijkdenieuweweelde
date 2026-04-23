@@ -74,33 +74,44 @@ export default function Page() {
         Een belangrijk onderzoek van Doss en collega's (2005) liet zien dat acceptatie als een <strong>buffer</strong> werkt: als er tijdens de therapie een terugval in doelgedrag optreedt, is dat in IBCT minder schadelijk voor de relatietevredenheid dan in TBCT. Acceptatie maakt veranderingen robuust.
       </p>
 
-      <h2>Het DEEP-model: hoe pijn in een relatie ontstaat</h2>
+      <h2>De DEEP/PEEP-analyse: hoe pijn in een relatie ontstaat</h2>
       <p>
-        IBCT werkt met een helder analysemodel: DEEP. Het helpt koppels om hun conflicten niet als persoonlijk schuldvraagstuk te zien, maar als een samenspel van vier lagen.
+        IBCT werkt met een helder analysemodel, in het Engels DEEP en in het Nederlands ook wel PEEP genoemd. Het helpt koppels om hun conflicten niet als persoonlijk schuldvraagstuk te zien, maar als een samenspel van vier lagen.
       </p>
       <ul>
-        <li><strong>D - Differences:</strong> verschillen tussen partners. Persoonlijkheid, tempo, behoeftes, waarden.</li>
-        <li><strong>E - Emotional sensitivities:</strong> individuele kwetsbaarheden, vaak uit de eigen geschiedenis. Zoals: bang om niet genoeg te zijn, of om verlaten te worden.</li>
-        <li><strong>E - External circumstances:</strong> externe stressoren zoals werk, jonge kinderen, schoonfamilie of een verbouwing.</li>
-        <li><strong>P - Pattern of interaction:</strong> het terugkerende interactiepatroon dat zich vormt uit de eerste drie. Bijvoorbeeld het demand-withdraw-patroon.</li>
+        <li><strong>Persoonlijke verschillen:</strong> de onderlinge verschillen die spanning oproepen of botsingen veroorzaken. Persoonlijkheid, tempo, behoeftes, waarden.</li>
+        <li><strong>Emotionele gevoeligheden:</strong> de kwetsbaarheden, verwachtingen en pijnpunten die onder jullie reacties liggen. Vaak uit de eigen geschiedenis: bang om niet genoeg te zijn, of om verlaten te worden.</li>
+        <li><strong>Externe stressoren:</strong> factoren van buitenaf die druk geven, zoals werk, jonge kinderen, schoonfamilie, mantelzorg of financiële zorgen.</li>
+        <li><strong>Patronen in de interactie:</strong> de manier waarop jullie op elkaar reageren en hoe die reacties elkaar versterken. Het terugkerende interactiepatroon dat zich vormt uit de eerste drie.</li>
       </ul>
       <p>
-        De magie van DEEP zit in het inzicht: geen van jullie heeft het gedaan. Het probleem is samen ontstaan, uit een samenspel van verschillen, kwetsbaarheden, omstandigheden en patronen. Dit verandert de toon van de gesprekken fundamenteel: van 'wie heeft schuld' naar 'wat zit er tussen ons'.
+        De kracht van deze analyse zit in het inzicht: geen van jullie heeft het gedaan. Het probleem is samen ontstaan, uit een samenspel van verschillen, gevoeligheden, omstandigheden en patronen. Dit verandert de toon van de gesprekken fundamenteel: van 'wie heeft schuld' naar 'wat zit er tussen ons'.
       </p>
 
-      <h2>De twee kernteksten van IBCT</h2>
-
-      <h3>Empathic joining</h3>
+      <h2>De vier IBCT-processen</h2>
       <p>
-        Onder elke harde emotie (woede, minachting, afstand) ligt een zachte emotie (pijn, angst, schaamte, teleurstelling). De therapeut helpt om die zachte laag zichtbaar te maken en te laten uitspreken. Als dat lukt, verandert de manier waarop partners elkaar zien: van aanvaller naar kwetsbaar mens.
+        IBCT werkt langs vier samenhangende sporen, die elkaar versterken in een traject.
       </p>
 
-      <h3>Unified detachment</h3>
+      <h3>Acceptatie-processen (eerste spoor)</h3>
       <p>
-        Samen kijken naar het patroon alsof je naar een film kijkt. 'Kijk, daar gaat het weer.' 'Jij zei iets, ik voelde me aangevallen, ik werd stil.' Door het patroon te beschrijven in plaats van te bestrijden, ontstaat er ruimte. Beide partners worden onderzoekers van hun gezamenlijke dynamiek.
+        Hier draait het om onderlinge verschillen accepteren. Twee elementen staan centraal:
+        <strong> emotionele acceptatie</strong> &mdash; inzicht krijgen in de gevoeligheden, verwachtingen en kwetsbaarheden die onder reacties liggen &mdash; en <strong>empathische aansluiting</strong>: elkaar weer kunnen bereiken op de momenten waarop het schuurt, en begrijpen wat er onder de oppervlakte speelt. Onder elke harde emotie (woede, minachting, afstand) ligt vaak een zachte emotie (pijn, angst, schaamte, teleurstelling). Als die zachte laag tussen jullie weer bespreekbaar wordt, verandert de manier waarop partners elkaar zien.
       </p>
+
+      <h3>Tolerantie bevorderen (tweede spoor)</h3>
       <p>
-        Deze twee technieken vormen samen de kern van een IBCT-sessie. Daaromheen werken we met toleranceoefeningen, gedragsverandering en concrete afspraken. Lees meer over hoe patronen werken in het artikel over <Link href="/blog/communicatieproblemen-in-een-relatie">communicatieproblemen in een relatie</Link>.
+        Niet alle verschillen verdwijnen. Tolerantie bevorderen helpt om met die blijvende verschillen te leren leven. We oefenen met situaties die spanning oproepen, zodat ze minder beladen worden (exposure), we kijken samen naar zelfzorg &mdash; herkennen wat je nodig hebt om kalm te blijven in lastige momenten &mdash; en we werken aan normalisatie: begrijpen dat sommige verschillen normaal zijn en niet opgelost hoeven te worden.
+      </p>
+
+      <h3>Uitwisseling van positief gedrag</h3>
+      <p>
+        Kleine, haalbare gedragsveranderingen die direct effect hebben. Positieve gedragingen bewust inzetten, waardering vaker uitspreken, momenten van verbinding opzoeken en gedrag dat spanning oproept vervangen door gedrag dat wél werkt.
+      </p>
+
+      <h3>Communicatie verbeteren</h3>
+      <p>
+        Vaardigheden die helpen om gesprekken helder en veilig te houden: duidelijk aangeven wat je bedoelt, luisteren zonder te onderbreken, ruzies stoppen voordat ze escaleren, en gesprekken voeren die helderheid geven in plaats van verwarring. Lees meer over hoe patronen werken in het artikel over <Link href="/blog/communicatieproblemen-in-een-relatie">communicatieproblemen in een relatie</Link>.
       </p>
 
       <h2>Voor wie werkt IBCT?</h2>
@@ -137,8 +148,8 @@ export default function Page() {
         Een traject bestaat meestal uit drie fasen:
       </p>
       <ol>
-        <li><strong>Kennismaking en DEEP-analyse</strong> (1 tot 3 sessies).</li>
-        <li><strong>Werken aan acceptatie en verandering</strong> met de beide kerntechnieken (5 tot 15 sessies).</li>
+        <li><strong>Kennismaking en DEEP/PEEP-analyse</strong> (1 tot 3 sessies).</li>
+        <li><strong>Werken aan acceptatie, tolerantie en verandering</strong> langs de vier IBCT-processen (5 tot 15 sessies).</li>
         <li><strong>Afronden en bestendigen</strong> van wat jullie geleerd hebben (2 tot 3 sessies).</li>
       </ol>
       <p>

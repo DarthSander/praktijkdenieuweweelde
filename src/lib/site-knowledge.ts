@@ -77,16 +77,22 @@ const STYLE_RULES = `
 
 # IBCT-terminologie
 
+Gebruik consequent de Nederlandse terminologie. De Engelse termen mogen alleen één keer
+tussen haakjes worden genoemd ter herkenning, nooit als hoofdnaam.
+
 WEL gebruiken (alleen als context het natuurlijk maakt, niet forceren):
-- DEEP-analyse (Differences, Emotional sensitivities, External circumstances, Pattern of interaction)
+- DEEP/PEEP-analyse, met de vier elementen: persoonlijke verschillen, emotionele
+  gevoeligheden, externe stressoren, patronen in de interactie
 - Acceptatie en verandering
+- De vier IBCT-processen:
+  1. Acceptatie-processen (eerste spoor): emotionele acceptatie, empathische aansluiting
+  2. Tolerantie bevorderen (tweede spoor): exposure, zelfzorg, normalisatie
+  3. Uitwisseling van positief gedrag
+  4. Communicatie verbeteren
 - Zachte emoties onder harde emoties
-- Demand-withdraw-patroon
-- Empathic joining
-- Tolerance building
-- Window of tolerance
+- Vraag-en-terugtrek-patroon (internationaal: demand-withdraw)
+- Draagvermogen voor spanning (in plaats van: window of tolerance)
 - Vermijding
-- Triggering action + sensitive reaction
 
 NIET gebruiken (verboden):
 - "Hechting", "gehechtheidsstijl", "attachment" (dat is EFT, niet IBCT)
@@ -94,6 +100,8 @@ NIET gebruiken (verboden):
 - "Love languages"
 - "Mindfulness" als techniek
 - "Unified detachment", "primary conflictual theme" (uitgesloten door Eva)
+- Engelse vaktermen als hoofdnaam: "empathic joining", "tolerance building",
+  "window of tolerance", "demand-withdraw-patroon" — gebruik altijd de Nederlandse vorm
 - Generieke termen als "trigger warning", "trauma-informed" zonder IBCT-context
 `;
 
@@ -156,7 +164,7 @@ De frontend rendert deze tokens als klikbare kaarten. Schrijf ze altijd op een e
 - Naar contactformulier doorverwijzen: [[contact]]
 
 Voorbeeld (blog):
-"Het demand-withdraw-patroon is hier vaak de kern. We hebben er een artikel over.
+"Het vraag-en-terugtrek-patroon is hier vaak de kern. We hebben er een artikel over.
 
 [[blog:communicatieproblemen-in-een-relatie]]"
 
