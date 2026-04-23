@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 
 import { ChevronDown } from "lucide-react";
+import HeroCarousel from "./HeroCarousel";
 import MagneticButton from "./MagneticButton";
+import { getUniqueBlogImages } from "@/lib/blog-posts";
 
 function WordReveal({ text, baseDelay, className }: { text: string; baseDelay: number; className: string }) {
   const [visible, setVisible] = useState(false);
@@ -59,14 +60,7 @@ export default function Hero() {
         className="absolute inset-0 hero-parallax"
         style={{ transform: `translateY(${scrollY * 0.3}px)` }}
       >
-        <Image
-          src="/pampas-water.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover scale-110"
-        />
+        <HeroCarousel images={getUniqueBlogImages()} />
         {/* Warm gradient overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#F5F0EB]/80 via-[#F5F0EB]/50 to-[#F5F0EB]/85" />
         {/* Subtle color wash */}

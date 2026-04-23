@@ -160,3 +160,10 @@ export function getRelatedPosts(slug: string): BlogPost[] {
     .map((relatedSlug) => getPostBySlug(relatedSlug))
     .filter((p): p is BlogPost => Boolean(p));
 }
+
+export function getUniqueBlogImages(): { src: string; alt: string }[] {
+  const seen = new Set<string>();
+  return blogPosts
+    .filter((p) => !seen.has(p.image) && seen.add(p.image))
+    .map((p) => ({ src: p.image, alt: p.imageAlt }));
+}
