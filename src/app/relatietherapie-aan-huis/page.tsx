@@ -1,6 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Home, Clock, Car, Heart } from "lucide-react";
+import {
+  Home,
+  Clock,
+  Calendar,
+  Heart,
+  Users,
+  HeartCrack,
+  MessageCircle,
+  Compass,
+  HelpCircle,
+  Shield,
+} from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LandingHero from "@/components/LandingHero";
@@ -30,27 +41,88 @@ export const metadata: Metadata = {
 const faqs: FAQItem[] = [
   {
     q: "In welke plaatsen kom je aan huis?",
-    a: "Ik werk in Tilburg, de Reeshof, Berkel-Enschot, Enschot, Udenhout, Oisterwijk, Goirle, Dongen, Loon op Zand en omliggende dorpen. Voor iets verder weg gelegen plaatsen kunnen we overleggen.",
+    a: "Ik werk in Tilburg en omliggende plaatsen: de Reeshof, Berkel-Enschot, Enschot, Udenhout, Oisterwijk, Goirle, Dongen, Loon op Zand en nabije dorpen. Voor locaties iets verder weg kunnen we overleggen.",
   },
   {
-    q: "Wat heb ik thuis nodig voor een sessie?",
-    a: "Niets bijzonders. Een rustige plek waar jullie met zijn drieën kunnen zitten, zonder kinderen of huisdieren die afleiden. Een bank en een stoel volstaan. Telefoons uit en geen TV aan, dat werkt het beste.",
+    q: "Wat heb ik van jullie nodig voor een sessie?",
+    a: "Een rustige plek waar we ongestoord kunnen zitten. Als oppas regelen lastig is of een kindje doorslaapt, stemmen we per sessie af wat haalbaar is.",
   },
   {
     q: "Wat kost relatietherapie aan huis?",
-    a: "Een sessie van 90 minuten kost € 150, inclusief reiskosten binnen mijn werkgebied. De prijs is dus gelijk aan een sessie in de praktijk elders, maar jullie sparen tijd en gedoe uit.",
+    a: "De prijs voor een 90-minuten sessie is € 150. Reiskosten binnen het reguliere werkgebied zijn inbegrepen.",
   },
   {
-    q: "Is het wel professioneel om thuis therapie te krijgen?",
-    a: "De kwaliteit zit in de therapeut en de methode, niet in de locatie. IBCT werkt aan huis net zo goed als in een praktijk. Veel koppels vinden thuis juist veiliger, waardoor ze sneller open durven te zijn.",
+    q: "Werkt therapie wel aan huis?",
+    a: "Therapie aan huis is net zo effectief als in een praktijk wanneer de therapeut en methode goed aansluiten. Thuis ervaren veel stellen meer rust, maar we letten er wel op dat de sessie ongestoord kan plaatsvinden.",
   },
   {
     q: "Hoe zit het met privacy?",
-    a: "Alles wat jullie met mij bespreken is vertrouwelijk en valt onder mijn beroepsgeheim. Ik kom in een gewone auto zonder logo, zodat niemand uit de straat weet wie er op bezoek is. Jullie bepalen wat jullie delen.",
+    a: "Jullie privacy is gewaarborgd; gesprekken blijven vertrouwelijk en vallen onder beroepsgeheim. Er wordt niets gedeeld dat naar jullie herleidbaar is.",
   },
   {
-    q: "Kan relatietherapie aan huis ook 's avonds?",
-    a: "Ja. Avondsessies zijn juist waar therapie aan huis zich goed voor leent. Veel koppels kiezen voor 20:00 of 20:30, als de kinderen slapen en de dag tot rust is gekomen. Ook in het weekend kan ik flexibel zijn.",
+    q: "Kan relatietherapie aan huis ook 's avonds en in de weekenden?",
+    a: "Ja, ik plan regelmatig avonden en weekenddagen in zodat therapie goed te combineren is met werk en gezin.",
+  },
+];
+
+const voordelen = [
+  {
+    icon: Home,
+    title: "Vertrouwde setting",
+    text: "Praten op de plek die jullie kennen en waar de relatie zich afspeelt.",
+  },
+  {
+    icon: Clock,
+    title: "Flexibele tijden",
+    text: "Avond- en weekendafspraken zijn mogelijk.",
+  },
+  {
+    icon: Calendar,
+    title: "Minder regelwerk",
+    text: "Ik kom naar jullie toe, plannen wordt eenvoudiger.",
+  },
+  {
+    icon: Heart,
+    title: "Toegankelijk beginnen",
+    text: "Thuis starten voelt voor veel koppels laagdrempeliger.",
+  },
+  {
+    icon: Users,
+    title: "Breed inzetbaar",
+    text: "Geschikt als huwelijkstherapie, koppeltherapie of relatiecoaching.",
+  },
+];
+
+const voorWie = [
+  {
+    icon: HeartCrack,
+    title: "Herstel na ontrouw",
+    text: "Begeleiding bij het verwerken van ontrouw en het vinden van een weg verder, samen of apart.",
+  },
+  {
+    icon: Compass,
+    title: "Uit elkaar groeien",
+    text: "Inzicht in waarom jullie uit elkaar groeien en concrete stappen om weer verbinding te maken.",
+  },
+  {
+    icon: MessageCircle,
+    title: "Communicatieproblemen",
+    text: "Technieken om ruzies te stoppen en gesprekken weer veilig te voeren.",
+  },
+  {
+    icon: Heart,
+    title: "Intimiteit en nabijheid",
+    text: "Werken aan verlangen en emotionele nabijheid.",
+  },
+  {
+    icon: HelpCircle,
+    title: "Twijfels over de relatie",
+    text: "Helderheid over wat jullie willen en welke opties er zijn.",
+  },
+  {
+    icon: Shield,
+    title: "Bindingsangst of terughoudendheid",
+    text: "Inzicht en handvatten bij afstand of terugtrekking.",
   },
 ];
 
@@ -78,18 +150,14 @@ export default function Page() {
             </h2>
             <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
               <p>
-                Als ik eerlijk ben: er is iets wat niet klopt aan een relatieprobleem bespreken
-                in een steriele spreekkamer. Jullie relatie speelt zich niet af in een
-                praktijkruimte. Die speelt zich af thuis. Bij de koffie, bij het avondeten, op de
-                bank na een lange dag, in het gesprek dat niet gevoerd werd toen jullie allebei
-                moe in bed vielen.
+                Thuis zie je de patronen die jullie dagelijks beïnvloeden. Ik vind het waardevol
+                om die context mee te nemen in de therapie: hoe gesprekken verlopen na een
+                drukke dag, welke kleine gewoontes spanning geven en waar afstand of irritatie
+                zichtbaar wordt.
               </p>
               <p>
-                Daarom werk ik vrijwel altijd bij mensen thuis. Jullie eigen omgeving haalt een
-                laag druk weg. De schouders zakken sneller, jullie zitten op de plek waar de
-                dynamiek ook echt ontstaat, en er is geen reisstress vooraf of achteraf. Voor
-                werkende koppels met kinderen maakt dat vaak het verschil tussen wel of niet in
-                therapie kunnen.
+                In jullie eigen omgeving ontstaat vaak sneller rust en openheid, waardoor we
+                concreet kunnen oefenen met wat er in het echte leven gebeurt.
               </p>
             </div>
           </div>
@@ -103,28 +171,7 @@ export default function Page() {
               </h2>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
-              {[
-                {
-                  icon: Home,
-                  title: "Jullie eigen omgeving",
-                  text: "Geen praktijkruimte, geen wachtkamer. Jullie eigen bank, jullie eigen thee, jullie eigen tempo.",
-                },
-                {
-                  icon: Clock,
-                  title: "Avond en weekend mogelijk",
-                  text: "Sessies na werktijd of in het weekend zijn heel gewoon. Handig als jullie overdag niet samen kunnen.",
-                },
-                {
-                  icon: Car,
-                  title: "Geen reistijd, geen oppas",
-                  text: "Ik kom naar jullie toe. Jullie hoeven niet met de auto de stad in, geen parkeerplek te zoeken, geen oppas te regelen.",
-                },
-                {
-                  icon: Heart,
-                  title: "Minder drempel om te beginnen",
-                  text: "Thuis starten voelt voor veel koppels toegankelijker. Dat maakt de stap om hulp te zoeken kleiner.",
-                },
-              ].map((item) => (
+              {voordelen.map((item) => (
                 <div key={item.title} className="bg-white rounded-2xl p-6 md:p-7 flex gap-4">
                   <div className="w-12 h-12 rounded-full bg-[#E8D5D2]/50 flex items-center justify-center flex-shrink-0">
                     <item.icon className="w-5 h-5 text-[#946B66]" />
@@ -133,7 +180,9 @@ export default function Page() {
                     <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg mb-1.5">
                       {item.title}
                     </h3>
-                    <p className="text-[#5E524F] text-sm md:text-base leading-relaxed">{item.text}</p>
+                    <p className="text-[#5E524F] text-sm md:text-base leading-relaxed">
+                      {item.text}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -142,24 +191,31 @@ export default function Page() {
         </section>
 
         <section className="section-padding bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-6 text-center">
-              Hoe een sessie eruitziet
-            </h2>
-            <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
-              <p>
-                Een sessie duurt 90 minuten. Ik kom binnen, we drinken thee en maken even een
-                moment om te landen. Daarna gaan we aan het werk. We werken met de DEEP-analyse
-                om te begrijpen welk patroon tussen jullie speelt, en we zoeken naar zachte
-                emoties onder de hardere reacties. Onder frustratie zit vaak teleurstelling,
-                onder afstand zit vaak gemis.
-              </p>
-              <p>
-                Ik stuur het gesprek actief, zodat het niet verzandt in oude ruzies. Jullie
-                krijgen tussen sessies door geen huiswerk in de vorm van invullijsten, wel soms
-                een kleine observatie-opdracht. De meeste verandering ontstaat in de sessie zelf,
-                op het moment dat jullie elkaar anders zien.
-              </p>
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
+                Voor wie is therapie aan huis geschikt
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {voorWie.map((item) => (
+                <div
+                  key={item.title}
+                  className="bg-[#F5F0EB] rounded-2xl p-6 md:p-7 flex gap-4"
+                >
+                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-5 h-5 text-[#946B66]" />
+                  </div>
+                  <div>
+                    <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg mb-1.5">
+                      {item.title}
+                    </h3>
+                    <p className="text-[#5E524F] text-sm md:text-base leading-relaxed">
+                      {item.text}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -171,9 +227,11 @@ export default function Page() {
             </h2>
             <div className="bg-white rounded-2xl p-8 md:p-10 text-[#5E524F] leading-relaxed space-y-5">
               <p>
-                Ik werk met IBCT, Integrative Behavioral Couple Therapy. Dat is een van de best
-                onderzochte vormen van relatietherapie wereldwijd. IBCT combineert acceptatie van
-                wat moeilijk veranderbaar is met verandering van wat wél bijgesteld kan worden.
+                Ik werk met IBCT (Integrative Behavioral Couple Therapy). Deze
+                evidence-based methode combineert acceptatie van wat moeilijk te veranderen is
+                met gerichte verandering van wat wél bijgesteld kan worden. IBCT helpt koppels
+                om zowel begrip als praktische vaardigheden te ontwikkelen, zodat veranderingen
+                duurzaam worden.
               </p>
               <p>
                 Meer lezen over de methode? Zie{" "}
@@ -184,9 +242,25 @@ export default function Page() {
           </div>
         </section>
 
+        <section className="section-padding bg-white">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-6 text-center">
+              Werkgebied en praktische informatie
+            </h2>
+            <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
+              <p>
+                Ik werk aan huis in Tilburg en directe omgeving. Voor adressen in de regio is
+                een afspraak meestal mogelijk; stuur een bericht om te checken of jullie locatie
+                binnen het werkgebied valt. Sessies zijn ook in de avond en in het weekend te
+                plannen.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <LandingCTA
-          title="Klaar voor een eerste gesprek thuis?"
-          text="Stuur een bericht via het contactformulier voor een intakegesprek, dan stemmen we samen af wanneer het jullie uitkomt."
+          title="Plan een intakegesprek"
+          text="In een intakegesprek bespreken we wat er speelt en welke aanpak bij jullie past."
         />
 
         <LandingFAQ
