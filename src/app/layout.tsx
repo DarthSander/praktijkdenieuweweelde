@@ -108,9 +108,13 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+// Geo: benaderde coördinaten voor Kasteelnijenrodestraat (Reeshof, Tilburg).
+// Verfijn met exacte waarde uit Google Maps indien gewenst.
+// aggregateRating/review bewust weggelaten: toevoegen pas zodra er echte reviews zijn
+// — verzonnen ratings schenden Google's richtlijnen.
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": "MedicalBusiness",
   "@id": "https://www.praktijkdenieuweweelde.nl",
   name: "Relatiepraktijk de Nieuwe Weelde",
   description:
@@ -126,6 +130,23 @@ const jsonLd = {
     addressLocality: "Tilburg",
     postalCode: "5037 TH",
     addressCountry: "NL",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 51.5556,
+    longitude: 5.0089,
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ],
+    description: "Op afspraak",
   },
   areaServed: [
     { "@type": "City", name: "Tilburg" },

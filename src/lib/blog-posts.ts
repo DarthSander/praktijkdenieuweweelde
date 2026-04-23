@@ -8,6 +8,7 @@ export type BlogPost = {
   readingTime: string;
   date: string;
   dateLabel: string;
+  updated?: string;
   related: string[];
   category: string;
 };
