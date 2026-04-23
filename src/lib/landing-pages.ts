@@ -70,14 +70,14 @@ export const landingPages: LandingPage[] = [
   },
   {
     slug: "relatietherapie-aan-huis",
-    title: "Relatietherapie aan huis",
+    title: "Relatietherapie aan huis in Tilburg en omgeving",
     metaTitle: "Relatietherapie aan huis | IBCT in Tilburg en omgeving",
     description:
-      "Relatietherapie aan huis in Tilburg, Reeshof en Berkel-Enschot. Geen wachtkamer, geen praktijkruimte, wel diepgang in jullie eigen vertrouwde sfeer. IBCT door Eva Mulder.",
-    h1: "Relatietherapie aan huis, in jullie eigen vertrouwde omgeving",
+      "Relatietherapie aan huis in Tilburg en omgeving. IBCT in jullie eigen vertrouwde omgeving door Eva Mulder. Avond- en weekendsessies mogelijk.",
+    h1: "Relatietherapie aan huis in Tilburg en omgeving",
     heroKicker: "IBCT thuis bij jullie",
     heroSubtitle:
-      "Geen wachtkamer, geen steriele spreekkamer. Ik kom bij jullie thuis in Tilburg en omgeving, zodat jullie kunnen werken aan jullie relatie op de plek waar jullie leven zich afspeelt.",
+      "Relatietherapie in jullie eigen vertrouwde omgeving. Ik kom bij jullie thuis zodat we kunnen werken aan jullie relatie op de plek waar het leven zich afspeelt: aan tafel, op de bank of in de ruimte waar jullie samen zijn.",
     image: "/pampas-indoor.jpg",
     imageAlt: "Pampasgras in huiselijke sfeer, symbool voor therapie aan huis",
     areaServed: "Tilburg en omgeving",
