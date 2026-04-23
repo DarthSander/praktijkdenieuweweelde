@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock } from "lucide-react";
+import { Calendar, ChevronRight, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/BlogCard";
 import type { BlogPost } from "@/lib/blog-posts";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
 
 type Props = {
   post: BlogPost;
@@ -13,15 +14,16 @@ type Props = {
 };
 
 export default function BlogLayout({ post, related, children }: Props) {
+  const postUrl = `https://www.praktijkdenieuweweelde.nl/blog/${post.slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "@id": `https://www.praktijkdenieuweweelde.nl/blog/${post.slug}`,
+    "@id": postUrl,
     headline: post.title,
     description: post.description,
     image: `https://www.praktijkdenieuweweelde.nl${post.image}`,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updated ?? post.date,
     inLanguage: "nl-NL",
     author: {
       "@type": "Person",
@@ -38,15 +40,25 @@ export default function BlogLayout({ post, related, children }: Props) {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://www.praktijkdenieuweweelde.nl/blog/${post.slug}`,
+      "@id": postUrl,
     },
   };
+
+  const breadcrumbLd = breadcrumbJsonLd([
+    { name: "Home", item: "https://www.praktijkdenieuweweelde.nl" },
+    { name: "Blog", item: "https://www.praktijkdenieuweweelde.nl/blog" },
+    { name: post.title, item: postUrl },
+  ]);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <Navbar />
       <main className="bg-[#F5F0EB] pb-20">
@@ -62,13 +74,22 @@ export default function BlogLayout({ post, related, children }: Props) {
           <div className="absolute inset-0 bg-gradient-to-b from-[#F5F0EB]/40 via-[#F5F0EB]/30 to-[#F5F0EB]" />
           <div className="absolute inset-0 flex items-end pb-16">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-              <Link
-                href="/blog"
-                className="inline-flex items-center gap-2 text-[#946B66] hover:text-[#6B6866] text-sm mb-4 transition bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full"
+              <nav
+                aria-label="Kruimelpad"
+                className="inline-flex items-center gap-1 text-[#5E524F] text-sm mb-4 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full"
               >
-                <ArrowLeft className="w-4 h-4" />
-                Alle blogs
-              </Link>
+                <Link href="/" className="text-[#946B66] hover:text-[#6B6866] transition">
+                  Home
+                </Link>
+                <ChevronRight className="w-3.5 h-3.5 text-[#C4A4A0]" aria-hidden="true" />
+                <Link href="/blog" className="text-[#946B66] hover:text-[#6B6866] transition">
+                  Blog
+                </Link>
+                <ChevronRight className="w-3.5 h-3.5 text-[#C4A4A0]" aria-hidden="true" />
+                <span className="text-[#6B6866] truncate max-w-[12rem] sm:max-w-xs" aria-current="page">
+                  {post.title}
+                </span>
+              </nav>
               <p className="text-[#C4A4A0] font-semibold uppercase tracking-[0.18em] text-xs mb-3">
                 {post.category}
               </p>
