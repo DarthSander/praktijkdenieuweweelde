@@ -21,7 +21,7 @@ export const landingPages: LandingPage[] = [
     h1: "Relatietherapie in Tilburg, gewoon bij jullie thuis",
     heroKicker: "IBCT relatietherapie in Tilburg",
     heroSubtitle:
-      "Wetenschappelijk onderbouwde begeleiding voor koppels in Tilburg en omgeving. Ik kom bij jullie thuis, zodat jullie rustig en in vertrouwde sfeer kunnen werken aan jullie relatie.",
+      "Wetenschappelijk onderbouwde begeleiding voor koppels in Tilburg en omgeving. Ik kom bij jullie thuis, zodat jullie rustig en in een vertrouwde sfeer kunnen werken aan jullie relatie.",
     image: "/pampas-water.jpg",
     imageAlt: "Pampasgras bij kalm water, symbool voor rust en reflectie in Tilburg",
     areaServed: "Tilburg",
