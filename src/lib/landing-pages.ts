@@ -32,10 +32,10 @@ export const landingPages: LandingPage[] = [
     metaTitle: "Relatietherapie Reeshof | IBCT aan huis in Tilburg-West",
     description:
       "Relatietherapie in de Reeshof, aan huis. IBCT-relatietherapeut Eva Mulder woont en werkt in Tilburg-West. Avondsessies mogelijk.",
-    h1: "Relatietherapie in de Reeshof, op jullie eigen bank",
+    h1: "Relatietherapie in de Reeshof, gewoon bij jullie thuis",
     heroKicker: "IBCT relatietherapie in Tilburg-West",
     heroSubtitle:
-      "Voor koppels in de Reeshof en aangrenzende wijken. Ik woon zelf in de Reeshof en ken het ritme van een drukke gezinswijk. Sessies vinden plaats bij jullie thuis, ook in de avond.",
+      "Wetenschappelijk onderbouwde begeleiding voor koppels in Tilburg en omgeving. Ik kom bij jullie thuis in de Reeshof, zodat jullie rustig en in een vertrouwde sfeer kunnen werken aan jullie relatie.",
     image: "/pampas-breeze.jpg",
     imageAlt: "Pampasgras in de bries, symbool voor ruimte en beweging in de Reeshof",
     areaServed: "Reeshof",
@@ -85,13 +85,13 @@ export const landingPages: LandingPage[] = [
   {
     slug: "relatietherapie-jonge-ouders",
     title: "Relatietherapie voor jonge ouders",
-    metaTitle: "Relatietherapie jonge ouders | Relatie na een kind in Tilburg",
+    metaTitle: "Relatieproblemen na kind? Relatietherapie voor jonge ouders in Tilburg",
     description:
       "Relatieproblemen na een kind? IBCT-relatietherapie voor jonge ouders in Tilburg en omgeving. Eva Mulder komt bij jullie thuis, ook 's avonds als de kleine slaapt.",
-    h1: "Relatietherapie voor jonge ouders: jullie relatie na het kind",
+    h1: "Relatietherapie voor jonge ouders: hoe houd je je relatie goed na een kind",
     heroKicker: "IBCT voor jonge ouders",
     heroSubtitle:
-      "Een kind is prachtig en zet tegelijk alles op zijn kop. Minder slaap, andere rollen, minder tijd voor elkaar. Voor jullie samen kan dat zwaar zijn. Ik help jonge ouders in Tilburg om de verbinding terug te vinden.",
+      "Een kind krijgen is prachtig, maar het zet jullie relatie vaak volledig op zijn kop. Minder slaap, nieuwe rollen en weinig tijd samen kunnen spanning geven. Daarom begeleid ik jonge ouders aan huis in Tilburg en omgeving, zodat jullie in jullie eigen vertrouwde omgeving de verbinding weer kunnen voelen en elkaar opnieuw kunnen vinden.",
     image: "/pampas-beige.jpg",
     imageAlt: "Warm pampasgras, symbool voor zachte herverbinding voor jonge ouders",
     areaServed: "Tilburg en omgeving",
