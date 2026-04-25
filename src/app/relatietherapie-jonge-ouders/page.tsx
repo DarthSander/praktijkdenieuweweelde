@@ -74,18 +74,16 @@ export default function Page() {
             </h2>
             <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
               <p>
-                Je krijgt een kind en iemand heeft je van tevoren verteld dat het zwaar zou zijn.
-                Maar dit voelt anders dan jullie hadden verwacht. Niet alleen omdat jullie zelf
-                moe zijn, maar omdat jullie samen niet meer helemaal samen lijken. Waar vroeger
-                een blik of een grap genoeg was om elkaar te vinden, glijden jullie nu steeds net
-                langs elkaar heen.
+                Veel jonge ouders ervaren dat hun relatie onder druk komt te staan na de komst
+                van een kind. De dagen zijn voller, de nachten korter en de aandacht verschuift
+                bijna vanzelf naar jullie baby. Daardoor kan de afstand tussen jullie groeien,
+                soms sneller dan je doorhebt. Het is heel normaal dat dit gebeurt en het is ook
+                iets waar je samen weer uit kunt komen.
               </p>
               <p>
-                Dat is geen teken dat jullie relatie niet deugt. Dat is een teken dat er
-                tegelijkertijd heel veel is veranderd. Rollen, slaap, tijd, lichaam, aandacht,
-                verantwoordelijkheden. In zo&apos;n fase is het logisch dat de dynamiek tussen
-                jullie kraakt. Ik help jullie om dat kraken bespreekbaar te maken, zonder dat het
-                verwijt wordt.
+                En dat geldt niet alleen bij een eerste kind. Ook bij een tweede of derde kindje
+                kan de balans opnieuw verschuiven, waardoor jullie relatie extra aandacht nodig
+                heeft.
               </p>
             </div>
           </div>
@@ -143,42 +141,73 @@ export default function Page() {
         <section className="section-padding bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-6 text-center">
-              Waar ik jullie bij help
+              Functioneren als ouders, minder als partners
             </h2>
             <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
               <p>
-                In IBCT maken we eerst het patroon zichtbaar. Niet wie er gelijk heeft, maar wat
-                er gebeurt tussen jullie als de moeheid hoog is en de lontjes kort. We werken met
-                de DEEP/PEEP-analyse: welke persoonlijke verschillen spelen een rol, welke
-                emotionele gevoeligheden raken jullie sneller dan vroeger, welke externe
-                stressoren doen mee, en welke patronen ontstaan in jullie interactie als het
-                schuurt.
+                Misschien merken jullie dat kleine dingen sneller tot irritatie leiden, of dat
+                jullie vooral functioneren als ouders en minder als partners. De liefde is er,
+                maar de vanzelfsprekendheid niet meer. Dat kan je onzeker maken over waar jullie
+                samen staan.
               </p>
               <p>
-                Vaak ontdekken koppels dat onder de frustratie iets zachters zit. Onder &quot;jij
-                luistert nooit&quot; zit vaak &quot;ik voel me alleen in dit alles&quot;. Onder
-                &quot;je zeikt altijd&quot; zit vaak &quot;ik ben bang dat ik het niet goed
-                doe&quot;. Als die zachte laag tussen jullie weer bespreekbaar wordt, verandert
-                de toon.
-              </p>
-              <p>
-                Ook kijken we naar wat praktisch anders kan. Rollen die opnieuw verdeeld moeten
-                worden, kleine afspraken over rust en steun, en hoe jullie als koppel tijd voor
-                elkaar terugvinden zonder dat het als een extra verplichting voelt. Meer lezen
-                over de methode? Zie <Link href="/ibct-relatietherapie">IBCT relatietherapie</Link>.
+                In zo&apos;n periode kan relatietherapie steun bieden. Niet omdat er iets
+                verkeerd gaat, maar omdat jullie in een intensieve levensfase zitten waarin
+                verbinding soms onder druk komt te staan. Met een beetje begeleiding ontstaat
+                er weer ruimte om elkaar echt te zien.
               </p>
             </div>
           </div>
         </section>
 
         <section className="section-padding bg-[#F5F0EB]">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-6 text-center">
+              Hoe IBCT jullie helpt
+            </h2>
+            <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
+              <p>
+                Ik werk met Integrative Behavioral Couple Therapy (IBCT). Deze methode helpt
+                jullie om te begrijpen waarom jullie reageren zoals jullie reageren, en hoe je
+                samen uit terugkerende momenten van frictie kunt stappen. Het brengt rust,
+                begrip en meer ruimte voor echte verbinding.
+              </p>
+              <p>
+                Tijdens de sessies is er ruimte voor jullie verhaal, jullie emoties en alles
+                wat er tussen jullie speelt. We onderzoeken wat er onder de oppervlakte
+                gebeurt, waar het stroef loopt en wat jullie helpt om weer dichter bij elkaar
+                te komen.
+              </p>
+              <p>
+                Meer lezen over de methode? Zie{" "}
+                <Link href="/ibct-relatietherapie">IBCT relatietherapie</Link>.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-padding bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-10 max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
                 Praktisch voor jonge ouders
               </h2>
+              <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-4 text-left">
+                <p>
+                  Ik kom bij jullie thuis, zodat jullie in jullie eigen vertrouwde omgeving
+                  kunnen werken aan wat er speelt. Dat maakt de sessies laagdrempelig en past
+                  bij hoe het dagelijks leven er nu uitziet met een kleintje.
+                </p>
+                <p>
+                  Een sessie duurt 90 minuten. Voor sommige stellen werkt een langer traject
+                  prettig, voor anderen is een kort en gericht traject juist passend. Daarom
+                  bied ik naast de reguliere sessies ook een relatie-APK aan: drie sessies van
+                  75 minuten waarin we samen scherp krijgen wat er speelt en wat jullie helpt
+                  om weer vooruit te kunnen.
+                </p>
+              </div>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6 mt-12">
               {[
                 {
                   icon: Baby,
@@ -193,7 +222,7 @@ export default function Page() {
                 {
                   icon: Users,
                   title: "Voor elke fase",
-                  text: "Of jullie net een baby hebben, een peuter, of meerdere kinderen, de thema&apos;s verschillen maar het werk past zich aan.",
+                  text: "Of jullie net een baby hebben, een peuter, of meerdere kinderen, de thema's verschillen maar het werk past zich aan.",
                 },
                 {
                   icon: Heart,
@@ -201,7 +230,7 @@ export default function Page() {
                   text: "Na een intakegesprek beslissen jullie zelf of een traject passend is. Zonder druk, op een moment dat past.",
                 },
               ].map((item) => (
-                <div key={item.title} className="bg-white rounded-2xl p-6 md:p-7 flex gap-4">
+                <div key={item.title} className="bg-[#F5F0EB] rounded-2xl p-6 md:p-7 flex gap-4">
                   <div className="w-12 h-12 rounded-full bg-[#E8D5D2]/50 flex items-center justify-center flex-shrink-0">
                     <item.icon className="w-5 h-5 text-[#946B66]" />
                   </div>
@@ -218,8 +247,8 @@ export default function Page() {
         </section>
 
         <LandingCTA
-          title="Een eerste stap, zonder verplichting"
-          text="Stuur een bericht via het contactformulier. Ik neem binnen vierentwintig uur contact op en we plannen een intakegesprek op een avond die jullie uitkomt."
+          title="Aansluiten bij wat jullie zoeken?"
+          text="Benieuwd of relatietherapie aansluit bij wat jullie zoeken? Neem gerust contact op voor een kennismaking. Dan bespreken we wat ik voor jullie kan betekenen."
         />
 
         <LandingFAQ

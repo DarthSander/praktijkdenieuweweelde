@@ -29,24 +29,28 @@ export const metadata: Metadata = {
 
 const faqs: FAQItem[] = [
   {
-    q: "Kom je ook in de andere buurten van de Reeshof?",
-    a: "Ja. Van Heerevelden en Huibeven tot Dalem, Dongewijk en de Gesworen Hoek, ik kom overal binnen de Reeshof. Ook in aangrenzende wijken en buurgemeenten zoals Dongen en Loon op Zand ben ik inzetbaar.",
+    q: "In welke delen van de Reeshof kom je aan huis?",
+    a: "Ik werk door de hele Reeshof en directe omgeving. Van Heerevelden en Huibeven tot Dalem, Dongewijk en de Gesworen Hoek, ik kom overal binnen de wijk. Stuur gerust een bericht als je wilt weten of jullie adres binnen het werkgebied valt.",
   },
   {
-    q: "Kunnen wij 's avonds sessies plannen als de kinderen slapen?",
-    a: "Ja, dat is juist waar therapie aan huis handig voor is. Veel koppels met jonge kinderen kiezen bewust voor een sessie om 20:00 of 20:30, zodra de kinderen naar bed zijn. Geen oppas, geen reistijd, wel volle aandacht voor elkaar.",
+    q: "Wat kost relatietherapie in de Reeshof bij jou?",
+    a: "Een IBCT-sessie van 90 minuten kost €150, inclusief reiskosten binnen het werkgebied. Voor koppels die preventief willen werken bied ik een APK voor relaties aan: drie sessies van 75 minuten voor €325.",
   },
   {
-    q: "Wat kost relatietherapie in de Reeshof?",
-    a: "Een IBCT-sessie van 90 minuten kost € 150, inclusief reiskosten. De APK voor relaties (drie sessies preventief) kost € 325.",
+    q: "Hoe snel kunnen wij starten?",
+    a: "De wachttijd voor een intakegesprek varieert, maar is meestal één tot twee weken. Bij acute situaties probeer ik eerder ruimte te maken.",
   },
   {
-    q: "Wij hebben nog nooit therapie gedaan, hoe gaat dat in zijn werk?",
-    a: "De eerste sessie is een intakegesprek. We drinken thee, maken kennis, en jullie vertellen waar het schuurt. Ik leg uit hoe IBCT werkt en samen kijken we of het past. Jullie zitten nergens aan vast, ook niet na een eerste gesprek.",
+    q: "Wordt relatietherapie vergoed door de zorgverzekeraar?",
+    a: "Relatietherapie valt niet onder de basisverzekering en wordt dus niet vergoed. Sommige aanvullende verzekeringen vergoeden een deel onder systeemtherapie. Steeds meer werkgevers bieden vergoeding via een vitaliteitsbudget of EAP-regeling.",
   },
   {
-    q: "Is het niet ongemakkelijk om een therapeut thuis te ontvangen?",
-    a: "Die vraag krijg ik vaker en mijn ervaring is dat die ongemakkelijkheid bijna altijd binnen tien minuten verdwijnt. Koppels vertellen achteraf dat ze thuis juist sneller open durfden te zijn dan ze in een praktijkruimte hadden gekund.",
+    q: "Wij twijfelen of relatietherapie iets voor ons is.",
+    a: "Twijfel is heel normaal, zeker als jullie al veel hebben geïnvesteerd in jullie relatie. In een intakegesprek onderzoeken we samen of IBCT past bij jullie situatie.",
+  },
+  {
+    q: "Wat als wij verschillend gemotiveerd zijn?",
+    a: "Dat komt vaak voor. Zolang de twijfelende partner bereid is eerlijk te zijn over die aarzeling, kan een traject zinvol zijn.",
   },
 ];
 
@@ -100,86 +104,39 @@ export default function Page() {
         <section id="inhoud" className="section-padding bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-6 text-center">
-              Gewoon hier in de wijk
+              Voor koppels in de Reeshof die elkaar even kwijt zijn
             </h2>
             <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
               <p>
-                Ik woon zelf in de Reeshof, dus ik ken het ritme van de wijk. Ochtenden vol
-                bagage, fietsen naar school, werken, koken, avonduren waarin jullie elkaar pas
-                echt zien als alle kinderen slapen. In zo&apos;n ritme glipt de aandacht voor
-                elkaar soms stilletjes weg. En voordat je het weet, praat je al een tijdje langs
-                elkaar heen.
+                Misschien praten jullie langs elkaar heen. Misschien is er iets gebeurd dat niet
+                meer uit te praten valt. Misschien voelt het anders dan het ooit was en weten
+                jullie niet precies waar het misgaat. In deze situaties is relatietherapie een
+                plek om samen te onderzoeken wat er werkelijk speelt.
               </p>
               <p>
-                Relatietherapie in de Reeshof betekent dat ik bij jullie thuis kom, op een tijd
-                die past. Geen reistijd, geen oppas, geen dure parkeerplek. Gewoon jullie eigen
-                keukentafel of bank, op een moment dat het rustig is in huis.
+                Als IBCT-relatietherapeut kom ik bij jullie thuis in de Reeshof, zodat jullie in
+                een vertrouwde omgeving kunnen werken aan verbinding en helderheid.
               </p>
             </div>
           </div>
         </section>
 
         <section className="section-padding bg-[#F5F0EB]">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
-                Wat ik vaak zie bij koppels in de Reeshof
-              </h2>
-              <p className="text-[#5E524F] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                De Reeshof is een wijk vol werkende gezinnen in verschillende levensfases. De
-                thema&apos;s die ik tegenkom passen bij die drukte.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-5">
-              {[
-                {
-                  title: "Weinig tijd voor elkaar",
-                  text: "Werk, kinderen, mantelzorg, hobby&apos;s. Jullie zien elkaar wel, maar raken elkaar nauwelijks meer. Aandacht voor jullie samen is een luxe geworden.",
-                },
-                {
-                  title: "Verschillende rollen na een kind",
-                  text: "De rolverdeling na een baby of peuter loopt niet altijd soepel. De een voelt zich overvraagd, de ander gepasseerd. Dat schuurt vaker dan jullie uitspreken.",
-                },
-                {
-                  title: "Kort lontje bij stress",
-                  text: "Als de druk hoog is, reageren jullie feller dan jullie willen. Een onschuldige opmerking escaleert. Daarna voelen jullie allebei schuld, maar het patroon blijft.",
-                },
-                {
-                  title: "Langzaam uit elkaar gegroeid",
-                  text: "Er is geen grote ruzie, geen ontrouw. Er is alleen heel veel tijd voorbij en te weinig aandacht. Jullie herkennen elkaar minder dan vroeger.",
-                },
-              ].map((item) => (
-                <div key={item.title} className="bg-white rounded-2xl p-6 md:p-7 card-hover">
-                  <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-[#5E524F] text-sm md:text-base leading-relaxed">{item.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section-padding bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
-                Hoe IBCT helpt
-              </h2>
-            </div>
-            <div className="bg-[#F5F0EB] rounded-2xl p-8 md:p-10 text-[#5E524F] leading-relaxed space-y-5">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-6 text-center">
+              IBCT-relatietherapie aan huis in de Reeshof
+            </h2>
+            <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
               <p>
-                In IBCT werken we aan twee dingen tegelijk: acceptatie van wat in jullie
-                partner niet of moeilijk veranderbaar is, en verandering van wat wél bijstelbaar
-                is. Die combinatie zorgt ervoor dat verandering duurzaam is en niet afhangt van
-                constant willen bijsturen.
+                Ik werk met IBCT (Integrative Behavioral Couple Therapy), een evidence-based
+                methode die bestaat uit vier onderdelen die elkaar versterken: acceptatie,
+                tolerantie, gedragsverandering en communicatie. IBCT combineert twee sporen:
+                onderlinge verschillen accepteren en gedrag veranderen waar dat wél kan.
               </p>
               <p>
-                Vaak ontdekken koppels dat onder de dagelijkse frustratie iets zachters zit.
-                Onder &quot;jij luistert nooit&quot; zit vaak &quot;ik voel dat ik er niet toe
-                doe&quot;. Onder &quot;je zeikt altijd&quot; zit vaak &quot;ik voel me een
-                slechte partner&quot;. Als die zachte laag zichtbaar wordt, verandert de toon
-                fundamenteel.
+                Deze aanpak past goed bij koppels die zoeken naar relatietherapie,
+                huwelijkstherapie of koppeltherapie in de Reeshof en omgeving, en biedt zowel
+                verdieping als praktische handvatten om vastlopende dynamieken te doorbreken.
               </p>
               <p>
                 Meer over hoe IBCT in de praktijk werkt vind je op de pagina over{" "}
@@ -190,11 +147,81 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="section-padding bg-[#F5F0EB]">
+        <section className="section-padding bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
-                Praktisch in de Reeshof
+                In welke situaties werkt IBCT?
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-5">
+              {[
+                {
+                  title: "Vastgelopen communicatie",
+                  text: "Gesprekken eindigen in ruzie of stilte. Jullie zitten vast in een patroon waarin de één fel wordt en de ander zich terugtrekt.",
+                },
+                {
+                  title: "Na vreemdgaan of een vertrouwensbreuk",
+                  text: "Er is iets gebeurd dat hard binnenkwam. Jullie willen onderzoeken of herstel mogelijk is en hoe dat eruit kan zien.",
+                },
+                {
+                  title: "Afstand en eenzaamheid",
+                  text: "Jullie zijn samen, maar zo voelt het niet. Intimiteit is afgenomen en gesprekken gaan vooral over praktische zaken.",
+                },
+                {
+                  title: "Stress door levensfase",
+                  text: "Jonge kinderen, mantelzorg, drukke banen. Externe stress zorgt ervoor dat jullie aan alles toekomen behalve aan elkaar.",
+                },
+                {
+                  title: "Twijfel over de toekomst",
+                  text: "Eén van jullie denkt aan scheiden, of jullie twijfelen beiden. Relatietherapie helpt om helderheid te krijgen, ook als dat betekent bewust loslaten.",
+                },
+                {
+                  title: "Preventief onderhoud",
+                  text: "Geen crisis, wel de wens om verbonden te blijven. Een APK voor relaties is een korte, bewuste check-up.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-[#F5F0EB] rounded-2xl p-6 md:p-7 card-hover">
+                  <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#5E524F] text-sm md:text-base leading-relaxed">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section-padding bg-[#F5F0EB]">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
+                Hoe IBCT werkt
+              </h2>
+            </div>
+            <div className="bg-white rounded-2xl p-8 md:p-10 text-[#5E524F] leading-relaxed space-y-5">
+              <p>
+                IBCT combineert acceptatie en verandering. We onderzoeken eerst jullie dynamiek
+                met emotionele acceptatie en empathische aansluiting, zodat er meer begrip en
+                rust ontstaat. Daarna werken we aan tolerantie, bijvoorbeeld door exposure,
+                zelfzorg en normalisatie, zodat terugkerende verschillen minder snel spanning
+                oproepen.
+              </p>
+              <p>
+                Vanuit die basis bouwen we aan positief gedrag en kleine, haalbare veranderingen
+                die direct effect hebben in het dagelijks leven. Tot slot versterken we jullie
+                communicatie, zodat gesprekken minder snel escaleren en jullie elkaar beter
+                kunnen bereiken.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-padding bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
+                Praktisch: relatietherapie aan huis in de Reeshof
               </h2>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
@@ -202,25 +229,25 @@ export default function Page() {
                 {
                   icon: Home,
                   title: "Bij jullie thuis",
-                  text: "Sessies in jullie eigen huis in de Reeshof. Veilige plek, jullie eigen sfeer.",
-                },
-                {
-                  icon: Clock,
-                  title: "Avondsessies mogelijk",
-                  text: "Handig als er jonge kinderen slapen. Veel koppels kiezen bewust voor 20:00 of 20:30.",
+                  text: "Sessies vinden plaats op jullie eigen bank of aan de keukentafel, laagdrempelig en vertrouwd.",
                 },
                 {
                   icon: MapPin,
-                  title: "Geen reistijd",
-                  text: "Ik kom naar jullie toe. Jullie hoeven niet de auto in of een oppas te regelen.",
+                  title: "Werkgebied",
+                  text: "De hele Reeshof en heel Tilburg, plus omliggende plaatsen zoals Dongen, Goirle, Udenhout en Loon op Zand.",
+                },
+                {
+                  icon: Clock,
+                  title: "Sessieduur",
+                  text: "Een sessie duurt 90 minuten, zodat er genoeg ruimte is om echt de diepte in te gaan.",
                 },
                 {
                   icon: Heart,
                   title: "Op jullie tempo",
-                  text: "Na een intakegesprek beslissen jullie zelf of een traject passend is. Zonder druk, zonder haast.",
+                  text: "Na een intake bepalen jullie zelf of een traject passend is.",
                 },
               ].map((item) => (
-                <div key={item.title} className="bg-white rounded-2xl p-6 md:p-7 flex gap-4">
+                <div key={item.title} className="bg-[#F5F0EB] rounded-2xl p-6 md:p-7 flex gap-4">
                   <div className="w-12 h-12 rounded-full bg-[#E8D5D2]/50 flex items-center justify-center flex-shrink-0">
                     <item.icon className="w-5 h-5 text-[#946B66]" />
                   </div>
@@ -242,7 +269,7 @@ export default function Page() {
         />
 
         <LandingFAQ
-          heading="Veelgestelde vragen over relatietherapie in de Reeshof"
+          heading="Veelgestelde vragen"
           items={faqs}
         />
       </main>
