@@ -49,7 +49,7 @@ export const landingPages: LandingPage[] = [
     h1: "Relatietherapie in Berkel-Enschot, in jullie vertrouwde omgeving",
     heroKicker: "IBCT relatietherapie in Berkel-Enschot",
     heroSubtitle:
-      "Voor koppels in Berkel-Enschot die rust en discretie zoeken. Therapie aan huis betekent geen wachtkamer, geen bekenden in de hal. Gewoon jullie eigen bank, jullie eigen tempo.",
+      "Wetenschappelijk onderbouwde begeleiding voor koppels in Berkel-Enschot en omgeving. Ik kom bij jullie thuis, zodat jullie in alle rust kunnen werken aan wat er speelt tussen jullie.",
     image: "/pampas-mountains.jpg",
     imageAlt: "Weids landschap met pampasgras, symbool voor ruimte in Berkel-Enschot",
     areaServed: "Berkel-Enschot",
