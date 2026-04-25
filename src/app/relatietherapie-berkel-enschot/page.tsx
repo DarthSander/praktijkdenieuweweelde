@@ -30,15 +30,11 @@ export const metadata: Metadata = {
 const faqs: FAQItem[] = [
   {
     q: "Kom je ook in Enschot, Heukelom en Udenhout?",
-    a: "Ja. Ik ben actief in heel Berkel-Enschot inclusief Enschot, Heukelom en de aangrenzende buurten. Ook Udenhout, Oisterwijk en de randen van Tilburg-Noord vallen binnen mijn werkgebied.",
-  },
-  {
-    q: "Ik woon in een klein dorp, hoe zit het met privacy?",
-    a: "Dat snap ik goed. Daarom kom ik in een gewone auto, zonder logo of opvallende kleding. Voor buitenstaanders ben ik gewoon iemand die op bezoek komt. Jullie bepalen zelf wat jullie aan anderen vertellen en wanneer.",
+    a: "Ja. Ik werk in heel Berkel-Enschot en omgeving, inclusief Enschot, Heukelom, Udenhout, Oisterwijk en de randen van Tilburg-Noord.",
   },
   {
     q: "Wat kost relatietherapie in Berkel-Enschot?",
-    a: "Een IBCT-sessie van 90 minuten kost € 150, inclusief reiskosten naar Berkel-Enschot. De APK voor relaties (drie sessies preventief) kost € 325.",
+    a: "Een IBCT-sessie van 90 minuten kost €150, inclusief reiskosten binnen het werkgebied. Voor koppels die preventief willen werken bied ik een APK voor relaties aan: drie sessies van 75 minuten voor €325.",
   },
   {
     q: "Hoeveel sessies zijn er meestal nodig?",
@@ -46,7 +42,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Kunnen wij overdag sessies plannen?",
-    a: "Ja. Voor koppels in Berkel-Enschot die overdag flexibel zijn, zoals bij zzp-werk of wisseldiensten, bied ik ook ochtend- en middagsessies aan. Avondsessies zijn ook mogelijk.",
+    a: "Ja. Voor koppels die overdag flexibel zijn, zoals bij zzp-werk of wisseldiensten, bied ik ook ochtend- en middagsessies aan. Avondsessies zijn ook mogelijk.",
   },
 ];
 
@@ -100,85 +96,38 @@ export default function Page() {
         <section id="inhoud" className="section-padding bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-6 text-center">
-              Rust, ruimte en discretie
+              Voor koppels in Berkel-Enschot die helderheid zoeken
             </h2>
             <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
               <p>
-                Berkel-Enschot heeft iets wat grotere wijken niet hebben: een dorpskarakter waarin
-                mensen elkaar kennen. Dat is fijn, en soms ingewikkeld. Want juist als het in een
-                relatie moeilijker gaat, willen jullie niet dat de buurvrouw ziet dat jullie de
-                zoveelste wachtkamer binnenlopen.
+                Soms lopen gesprekken vast. Soms blijft iets hangen wat jullie niet goed kunnen
+                plaatsen. Soms voelt het alsof jullie elkaar minder goed bereiken dan voorheen.
+                Relatietherapie biedt ruimte om samen te onderzoeken wat er onder de oppervlakte
+                gebeurt.
               </p>
               <p>
-                Relatietherapie aan huis betekent dat jullie nergens naartoe hoeven. Geen
-                praktijkruimte waar je een bekende kunt tegenkomen, geen parkeerplek voor een
-                pand waar iedereen weet wat er achter de deur gebeurt. Gewoon jullie eigen huis,
-                jullie eigen bank, op een tijd die past.
+                Als IBCT-relatietherapeut kom ik bij jullie thuis in Berkel-Enschot, zodat
+                jullie in jullie eigen omgeving kunnen werken aan verbinding en duidelijkheid.
               </p>
             </div>
           </div>
         </section>
 
         <section className="section-padding bg-[#F5F0EB]">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
-                Waar koppels in Berkel-Enschot mee komen
-              </h2>
-              <p className="text-[#5E524F] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                Geen twee relaties zijn hetzelfde, maar een aantal thema&apos;s zie ik vaker
-                terugkomen.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-5">
-              {[
-                {
-                  title: "Praten langs elkaar heen",
-                  text: "Gesprekken lopen vast voordat jullie bij de kern zijn. De een sluit zich af, de ander blijft doorpraten. Niemand voelt zich echt gehoord.",
-                },
-                {
-                  title: "Oude irritaties die blijven hangen",
-                  text: "Kleine dingen die al jaren wringen. Jullie hebben er vaak over gesproken, maar het patroon verandert niet. Dat maakt moedeloos.",
-                },
-                {
-                  title: "Twijfel over verder gaan",
-                  text: "De vraag of jullie nog op dezelfde lijn zitten. Niet per se een crisis, wel een stille onrust die op de achtergrond meespeelt.",
-                },
-                {
-                  title: "Na een breuk in vertrouwen",
-                  text: "Een incident of periode waarin het vertrouwen geraakt is. Jullie willen eruit komen, maar weten niet hoe je van daaruit weer verder bouwt.",
-                },
-              ].map((item) => (
-                <div key={item.title} className="bg-white rounded-2xl p-6 md:p-7 card-hover">
-                  <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-[#5E524F] text-sm md:text-base leading-relaxed">{item.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section-padding bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
-                Hoe IBCT werkt
-              </h2>
-            </div>
-            <div className="bg-[#F5F0EB] rounded-2xl p-8 md:p-10 text-[#5E524F] leading-relaxed space-y-5">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-6 text-center">
+              IBCT-relatietherapie aan huis
+            </h2>
+            <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
               <p>
-                IBCT combineert acceptatie van wat moeilijk veranderbaar is met verandering van
-                wat wél bijgesteld kan worden. We werken met de DEEP/PEEP-analyse om te
-                begrijpen waarom jullie terechtkomen in dezelfde patronen, en hoe jullie er
-                anders in kunnen staan.
+                Ik werk met IBCT (Integrative Behavioral Couple Therapy), een evidence-based
+                methode die acceptatie en verandering combineert. We onderzoeken waarom jullie
+                reageren zoals jullie reageren, welke patronen steeds terugkomen en wat jullie
+                helpt om daar anders mee om te gaan.
               </p>
               <p>
-                Een belangrijk onderdeel is het zichtbaar maken van zachte emoties onder harde.
-                Onder boosheid zit vaak teleurstelling. Onder afstand zit vaak angst om te
-                worden afgewezen. Als die laag bespreekbaar wordt, verandert er iets in de
-                dynamiek tussen jullie.
+                IBCT is geschikt voor koppels die zoeken naar relatietherapie, huwelijkstherapie
+                of koppeltherapie in Berkel-Enschot en omgeving.
               </p>
               <p>
                 Meer over de methode vind je op de pagina over{" "}
@@ -189,11 +138,69 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="section-padding bg-[#F5F0EB]">
+        <section className="section-padding bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
-                Praktisch in Berkel-Enschot
+                Thema&apos;s die ik vaak zie
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-5">
+              {[
+                {
+                  title: "Jullie praten langs elkaar heen",
+                  text: "Gesprekken komen niet bij de kern. De één trekt zich terug, de ander blijft doorgaan.",
+                },
+                {
+                  title: "Irritaties die blijven terugkomen",
+                  text: "Kleine dingen die al langer spelen en steeds opnieuw de kop opsteken.",
+                },
+                {
+                  title: "Twijfel over verder gaan",
+                  text: "Een onderliggende vraag of jullie nog op dezelfde lijn zitten.",
+                },
+                {
+                  title: "Na een breuk in vertrouwen",
+                  text: "Een gebeurtenis die impact heeft gehad en waar jullie samen een weg in zoeken.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-[#F5F0EB] rounded-2xl p-6 md:p-7 card-hover">
+                  <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#5E524F] text-sm md:text-base leading-relaxed">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section-padding bg-[#F5F0EB]">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
+                Hoe IBCT werkt
+              </h2>
+            </div>
+            <div className="bg-white rounded-2xl p-8 md:p-10 text-[#5E524F] leading-relaxed space-y-5">
+              <p>
+                We beginnen met het zichtbaar maken van jullie dynamiek: wat gebeurt er tussen
+                jullie, welke emoties spelen mee en waar raken jullie elkaar kwijt. Vanuit die
+                helderheid ontstaat meer begrip en ruimte.
+              </p>
+              <p>
+                Daarna werken we aan kleine, haalbare veranderingen in gedrag en communicatie,
+                zodat jullie elkaar beter kunnen bereiken in het dagelijks leven.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-padding bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
+                Praktisch: relatietherapie aan huis in Berkel-Enschot
               </h2>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
@@ -201,25 +208,25 @@ export default function Page() {
                 {
                   icon: Home,
                   title: "Aan huis",
-                  text: "Sessies vinden plaats in jullie eigen huis in Berkel-Enschot of omgeving.",
-                },
-                {
-                  icon: Shield,
-                  title: "Discreet",
-                  text: "Geen wachtkamer, geen opvallende auto. Jullie bepalen wat jullie delen met anderen.",
+                  text: "Sessies vinden plaats bij jullie thuis, in een omgeving die voor jullie vertrouwd is.",
                 },
                 {
                   icon: MapPin,
-                  title: "Ik kom naar jullie toe",
-                  text: "Vanuit Tilburg werk ik in heel Berkel-Enschot, Enschot, Heukelom en omstreken.",
+                  title: "Werkgebied",
+                  text: "Berkel-Enschot, Enschot, Heukelom en omliggende plaatsen zoals Udenhout, Oisterwijk en de randen van Tilburg-Noord.",
+                },
+                {
+                  icon: Shield,
+                  title: "Sessieduur",
+                  text: "Een sessie duurt 90 minuten. Willen jullie liever een kort en concreet traject? Dan is er de relatie-APK: drie sessies van 75 minuten.",
                 },
                 {
                   icon: Heart,
                   title: "Op jullie tempo",
-                  text: "Na een intakegesprek beslissen jullie zelf of een traject passend is. Zonder druk, zonder haast.",
+                  text: "Na een intake bepalen jullie zelf of een traject passend is.",
                 },
               ].map((item) => (
-                <div key={item.title} className="bg-white rounded-2xl p-6 md:p-7 flex gap-4">
+                <div key={item.title} className="bg-[#F5F0EB] rounded-2xl p-6 md:p-7 flex gap-4">
                   <div className="w-12 h-12 rounded-full bg-[#E8D5D2]/50 flex items-center justify-center flex-shrink-0">
                     <item.icon className="w-5 h-5 text-[#946B66]" />
                   </div>
@@ -236,12 +243,12 @@ export default function Page() {
         </section>
 
         <LandingCTA
-          title="Een eerste gesprek, zonder verplichting"
-          text="Stuur een bericht via het contactformulier. Ik neem binnen vierentwintig uur contact op en we plannen een intakegesprek op een moment dat voor jullie uitkomt, bij jullie thuis in Berkel-Enschot."
+          title="Kennismaken"
+          text="Stuur een bericht via het contactformulier. Ik neem binnen vierentwintig uur contact op en we plannen een intakegesprek op een moment dat voor jullie past, bij jullie thuis in Berkel-Enschot."
         />
 
         <LandingFAQ
-          heading="Veelgestelde vragen over relatietherapie in Berkel-Enschot"
+          heading="Veelgestelde vragen"
           items={faqs}
         />
       </main>
