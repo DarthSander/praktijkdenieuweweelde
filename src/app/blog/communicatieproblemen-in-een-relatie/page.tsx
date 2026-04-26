@@ -120,8 +120,8 @@ export default function Page() {
         overzicht en rust te brengen. In een intakegesprek kijken we samen wat er nodig is.
       </p>
       <p>
-        Stuur een bericht via het <Link href="/#contact">contactformulier</Link>, dan nemen
-        we binnen een dag contact op.
+        Stuur een bericht via het <Link href="/#contact">contactformulier</Link>, dan neem
+        ik binnen 24 uur contact op.
       </p>
     </BlogLayout>
   );
