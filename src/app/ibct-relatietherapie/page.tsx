@@ -145,7 +145,7 @@ const themas = [
   "vastlopende communicatie",
   "het vraag-en-terugtrek-patroon (de één zet druk, de ander trekt zich terug)",
   "intimiteit en seksualiteit",
-  "vertrouwen na een breuk",
+  "vertrouwen na een breuk (na een ontrouw of een vertrouwensbreuk)",
   "rolverdeling en verwachtingen",
   "grote levensovergangen (kinderen, verhuizing, baanwissel)",
   "vermijding van lastige gesprekken",
