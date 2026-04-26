@@ -27,102 +27,175 @@ export default function Page() {
   return (
     <BlogLayout post={post} related={related}>
       <p>
-        Veel koppels komen in therapie omdat ze merken dat gesprekken steeds dezelfde kant op
-        gaan. Het lukt niet meer om elkaar echt te bereiken, hoe goed de intenties ook zijn.
-        Dat kan verwarrend en vermoeiend zijn, zeker als jullie allebei het gevoel hebben dat
-        jullie al van alles hebben geprobeerd.
-      </p>
-      <p>
-        Communicatieproblemen gaan zelden alleen over woorden. Ze raken aan emoties,
-        verwachtingen en manieren van reageren die zich in de loop van de tijd hebben gevormd.
-        Daardoor kan een klein moment ineens veel groter voelen dan het eigenlijk is.
+        Relatietherapie is geen vaste methode, maar een verzamelnaam voor uiteenlopende
+        benaderingen. Sommige therapeuten werken vooral met emoties en hechting, anderen met
+        gedrag en patronen, weer anderen met systemen en gezinsdynamiek. Niet elke stroming is
+        even goed onderzocht, en juist daarom is het waardevol om te weten welke methoden een
+        stevige wetenschappelijke basis hebben.
       </p>
 
-      <h2>Wat zijn communicatieproblemen eigenlijk?</h2>
+      <h2>Wat betekent IBCT?</h2>
       <p>
-        Wanneer koppels het hebben over &lsquo;communicatieproblemen&rsquo;, bedoelen ze vaak
-        meer dan alleen praten dat niet lukt. Meestal gaat het om terugkerende momenten waarop
-        jullie elkaar niet goed bereiken: gesprekken die steeds dezelfde kant op gaan, het
-        gevoel niet gehoord te worden, of onderwerpen die jullie liever vermijden omdat ze
-        spanning geven. Het zijn geen technische problemen, maar relationele dynamieken.
+        IBCT staat voor Integrative Behavioral Couple Therapy, in het Nederlands vaak
+        omschreven als geïntegreerde gedragstherapie voor partners. Het woord <em>integrative</em>{" "}
+        verwijst naar het samenbrengen van twee doelen die in veel andere methoden los van
+        elkaar staan: acceptatie van wat moeilijk veranderbaar is én gedragsverandering waar
+        dat wél kan. Juist die combinatie maakt IBCT onderscheidend.
       </p>
 
-      <h2>Het demand-withdrawal-patroon</h2>
+      <h2>Waar komt IBCT vandaan?</h2>
       <p>
-        Eén beweging zie ik bij veel koppels terugkomen: het demand-withdrawal-patroon. De één
-        zoekt contact en wil iets bespreken, terwijl de ander juist afstand neemt om het rustig
-        te houden. Hoe harder de één duwt, hoe verder de ander zich terugtrekt. Niet omdat
-        iemand iets verkeerd doet, maar omdat jullie allebei op je eigen manier veiligheid
-        proberen te vinden. Deze wisselwerking is uitgebreid onderzocht en komt in veel
-        relaties voor.
+        IBCT werd in de jaren negentig ontwikkeld door Andrew Christensen en Neil S. Jacobson,
+        beiden ervaren gedragstherapeuten. Hun eerdere methode, TBCT, hielp koppels wel, maar
+        de effecten bleken op langere termijn minder stabiel. Christensen en Jacobson zagen dat
+        duurzame verandering pas mogelijk werd wanneer koppels ook leerden omgaan met
+        verschillen die niet verdwijnen. Vanuit die inzichten ontstond IBCT. Sinds 2020 bestaat
+        er een Nederlandstalig protocol van Pieternel Dijkstra en Aerjen Tamminga, in 2025 in
+        herziene vorm verschenen.
       </p>
 
-      <h2>Waarom &lsquo;beter communiceren&rsquo; vaak niet werkt</h2>
+      <h2>Waarom is IBCT evidence&#8209;based?</h2>
       <p>
-        Veel koppels doen hun best om beter te communiceren, maar merken dat het toch niet
-        lukt. Dat komt meestal doordat communicatie verweven is met alles wat er tussen jullie
-        speelt: spanning, gewoontes, oude gevoeligheden. Pas als die laag duidelijk wordt,
-        kunnen technieken echt helpen.
+        IBCT behoort tot de best onderzochte vormen van relatietherapie. In meerdere grote
+        studies liet IBCT sterke en langdurige effecten zien. Een bekende studie uit 2004
+        vergeleek IBCT met de oudere TBCT&#8209;methode en vond dat IBCT leidde tot grotere
+        verbeteringen in relatietevredenheid. Ook op twee&#8209; en vijfjaarsfollow&#8209;up
+        bleven veel koppels significant vooruitgegaan. Een deel van dit onderzoek valt onder
+        zogeheten RCT&rsquo;s: studies waarin koppels willekeurig worden toegewezen aan
+        verschillende behandelvormen, zodat je eerlijk kunt vergelijken. IBCT staat daarnaast
+        op de lijst van door onderzoek ondersteunde behandelingen van de APA (American
+        Psychological Association), een belangrijke beroepsvereniging voor psychologen in de
+        Verenigde Staten.
       </p>
 
-      <h2>De zachte laag onder de harde reacties</h2>
+      <h2>Het hart van IBCT: acceptatie én verandering</h2>
       <p>
-        Wat je aan de oppervlakte ziet, zoals boosheid, verwijt of afstand, is vaak niet het
-        hele verhaal. Daaronder liggen emoties die minder zichtbaar zijn: verdriet, schaamte
-        of de angst om afgewezen te worden. Die laag raakt aan wat jullie werkelijk bedoelen,
-        maar die is ook het moeilijkst om uit te spreken.
+        In elke relatie is een deel van de strijd verbonden aan dingen die niet werkelijk
+        veranderbaar zijn. Jouw partner is van nature introvert, jij van nature extravert. Jij
+        houdt van structuur, jouw partner van spontaniteit. Die verschillen blijven
+        grotendeels bestaan.
+      </p>
+      <p>
+        Veel van de spanning in relaties ontstaat niet door de verschillen zelf, maar door de
+        manier waarop partners ermee omgaan. Als je vooral probeert de ander te veranderen,
+        ontstaat er al snel weerstand of afstand. Maar alleen accepteren kan voelen alsof je
+        jezelf tekortdoet. IBCT zoekt daarom een middenweg: ruimte maken voor wat niet
+        veranderbaar is, en samen kijken naar gedrag dat wel anders kan.
+      </p>
+      <p>
+        Een belangrijk onderzoek van Doss en collega&rsquo;s (2005) liet zien dat acceptatie
+        als een buffer werkt: als er tijdens de therapie een terugval in doelgedrag optreedt,
+        is dat in IBCT minder schadelijk voor de relatietevredenheid dan in TBCT. Acceptatie
+        maakt veranderingen robuust.
       </p>
 
-      <h2>Wat maakt IBCT effectief bij communicatieproblemen?</h2>
+      <h2>De DEEP/PEEP&#8209;analyse</h2>
       <p>
-        IBCT richt zich niet alleen op hoe jullie praten, maar vooral op wat er onder jullie
-        reacties ligt. Sommige dingen horen bij wie jullie zijn, andere dingen kunnen
-        veranderen. Door beide kanten te onderzoeken ontstaat er meer helderheid en ruimte
-        om anders met elkaar om te gaan.
-      </p>
-      <p>
-        In IBCT kijken we samen naar de manier waarop jullie op elkaar reageren, alsof het
-        iets is dat buiten jullie staat. Dat helpt om afstand te nemen van de verwijten en de
-        emoties van het moment. Je wordt dan niet elkaars tegenstander, maar twee mensen die
-        samen proberen te begrijpen wat er steeds gebeurt. Dat geeft lucht en maakt het
-        makkelijker om iets nieuws te proberen.
-      </p>
-      <p>
-        IBCT helpt om de zachtere laag onder de harde reacties zichtbaar te maken. Dat zorgt
-        vaak meteen voor meer ontspanning en wederzijds begrip. Onderzoek laat zien dat dit
-        een van de belangrijkste factoren is voor blijvende verandering.
+        Conflicten in een relatie ontstaan zelden door één gebeurtenis of één persoon. IBCT
+        werkt met een helder analysemodel, in het Engels DEEP en in het Nederlands ook wel
+        PEEP genoemd. Het helpt koppels om hun conflicten niet als persoonlijk schuldvraagstuk
+        te zien, maar als een samenspel van vier lagen: de persoonlijke verschillen tussen
+        partners, de emotionele gevoeligheden die reacties kleuren, de externe stressoren die
+        druk geven, en de manier waarop jullie op elkaar reageren. Door deze lagen naast
+        elkaar te leggen, verschuift het gesprek van &lsquo;wie heeft schuld&rsquo; naar
+        &lsquo;wat gebeurt er tussen ons&rsquo;. Dat geeft rust, overzicht en vaak ook meer
+        mildheid naar elkaar.
       </p>
 
-      <h2>Wat jullie zelf al kunnen doen</h2>
+      <h2>De vier IBCT&#8209;processen</h2>
       <p>
-        Een traject helpt vaak om gesprekken weer op gang te brengen, maar jullie kunnen zelf
-        al beginnen met kleine dingen. Herken het moment waarop de spanning oploopt, neem
-        even afstand en spreek af wanneer jullie verder praten. Benoem wat er schuilgaat
-        achter je eerste impuls en luister om te begrijpen. Dat kan al verschil maken.
+        IBCT werkt langs vier processen die elkaar versterken. Het begint met acceptatie:
+        zicht krijgen op de gevoeligheden, verwachtingen en kwetsbaarheden die onder reacties
+        liggen, en elkaar weer kunnen bereiken op momenten waarop het lastig wordt. Daarna
+        volgt tolerantie bevorderen, waarin partners leren omgaan met verschillen die niet
+        verdwijnen, bijvoorbeeld door situaties die spanning oproepen minder beladen te maken
+        en zichzelf te beschermen in moeilijke momenten. Vervolgens richten we ons op het
+        uitwisselen van positief gedrag: kleine, haalbare veranderingen die direct effect
+        hebben in het dagelijks leven. Tot slot werken we aan communicatie, zodat gesprekken
+        duidelijker, effectiever en prettiger verlopen en jullie samen problemen kunnen
+        oplossen zonder dat het escaleert.
       </p>
 
-      <h2>Wanneer is professionele hulp zinvol?</h2>
+      <h2>Voor wie werkt IBCT?</h2>
+      <p>IBCT is geschikt voor koppels die te maken hebben met onder andere:</p>
+      <ul>
+        <li>ontrouw of een vertrouwensbreuk, en de vraag hoe je samen verder kunt</li>
+        <li>terugkerende ruzies, vaak over dezelfde onderwerpen</li>
+        <li>
+          communicatieproblemen, zoals elkaar niet meer bereiken of steeds langs elkaar heen
+          praten
+        </li>
+        <li>het gevoel dat jullie afstandelijker van elkaar worden</li>
+        <li>
+          twijfels over de relatie, ook als één van jullie nog niet weet wat hij of zij wil
+        </li>
+        <li>
+          verschillen die botsen, bijvoorbeeld in behoeften, tempo, persoonlijkheid of manier
+          van reageren
+        </li>
+        <li>stress of overbelasting bij een van jullie, die invloed heeft op de relatie</li>
+        <li>
+          een wens om patronen te doorbreken of preventief te werken, bijvoorbeeld in een{" "}
+          <Link href="/#tarieven">APK voor relaties</Link>
+        </li>
+      </ul>
       <p>
-        Soms is het helpend om iemand van buitenaf mee te laten kijken. Zeker wanneer
-        gesprekken steeds vastlopen, onderwerpen worden vermeden of één van jullie zich niet
-        meer vrij voelt om eerlijk te zijn. Ook een afname in intimiteit of terugkerende
-        verwijten kunnen signalen zijn dat begeleiding zinvol is. In een intakegesprek
-        onderzoeken we samen wat er speelt en wat jullie nodig hebben.
-      </p>
-      <p>
-        Meer over de momenten waarop therapie zinvol is, lees je in het artikel{" "}
-        <Link href="/blog/wanneer-is-relatietherapie-zinvol">wanneer is relatietherapie zinvol</Link>.
+        IBCT is niet passend wanneer er sprake is van structureel geweld, onbehandelde
+        verslaving of actueel misbruik. In die situaties is eerst individuele hulp nodig
+        voordat relatietherapie veilig kan plaatsvinden.
       </p>
 
-      <h2>Een gesprek kan verschil maken</h2>
+      <h2>Hoe verschilt IBCT van andere vormen van relatietherapie?</h2>
       <p>
-        Wanneer jullie merken dat het samen niet meer lukt, kan begeleiding helpen om
-        overzicht en rust te brengen. In een intakegesprek kijken we samen wat er nodig is.
+        Veel vormen van relatietherapie richten zich vooral op communicatievaardigheden: beter
+        luisteren, duidelijker spreken, feedback geven. Dat is waardevol, maar vaak niet
+        genoeg wanneer onderliggende gevoeligheden of terugkerende patronen blijven meespelen.
+        IBCT pakt daarom een laag dieper aan. Het helpt koppels begrijpen waar hun reacties
+        vandaan komen, waarom bepaalde situaties steeds opnieuw spanning oproepen en hoe
+        verschillen tussen partners een rol spelen. Door zowel acceptatie als verandering te
+        combineren, ontstaat er meer ruimte, mildheid en verbinding. Pas daarna worden
+        communicatie en probleemoplossing echt effectief.
+      </p>
+
+      <h2>Is IBCT iets voor jullie?</h2>
+      <p>
+        Ik geef mijn sessies bij jullie thuis, in Tilburg en omgeving. Dat is een bewuste
+        keuze: de patronen waar we mee werken spelen zich af in jullie eigen omgeving, en
+        daar kunnen we ze het beste onderzoeken. De meest passende manier om te ontdekken of
+        IBCT bij jullie past, is een intakegesprek. Tijdens dat gesprek verkennen we jullie
+        situatie, leg ik de IBCT&#8209;aanpak uit en kijken we samen of deze methode en mijn
+        manier van werken aansluiten bij wat jullie nodig hebben.
       </p>
       <p>
-        Stuur een bericht via het <Link href="/#contact">contactformulier</Link>, dan neem
-        ik binnen 24 uur contact op.
+        Plan een intakegesprek via het <Link href="/#contact">contactformulier</Link>. Ik neem
+        binnen 24 uur contact op.
       </p>
+
+      <div className="blog-sources">
+        <h3>Bronnen</h3>
+        <ul>
+          <li>
+            Christensen, A., Jacobson, N. S., &amp; Babcock, J. C. (1995).{" "}
+            <em>Integrative Behavioral Couple Therapy.</em>
+          </li>
+          <li>
+            Christensen, A., &amp; Jacobson, N. S. (2000). <em>Reconcilable Differences.</em>
+          </li>
+          <li>
+            Doss, B. D., Thum, Y. M., Sevier, M., Atkins, D. C., &amp; Christensen, A. (2005).
+            Improving relationships: Mechanisms of change in Integrative Behavioral Couple
+            Therapy.
+          </li>
+          <li>
+            Jacobson, N. S., &amp; Christensen, A. (1996).{" "}
+            <em>
+              Acceptance and change in couple therapy: A therapist&rsquo;s guide to
+              transforming relationships.
+            </em>
+          </li>
+          <li>Cordova, J. V. (2001). Acceptance in behavioral couple therapy.</li>
+        </ul>
+      </div>
     </BlogLayout>
   );
 }

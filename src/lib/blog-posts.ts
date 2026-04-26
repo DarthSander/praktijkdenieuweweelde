@@ -111,13 +111,13 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "communicatieproblemen-in-een-relatie",
-    title: "Communicatieproblemen in een relatie: oorzaken, patronen en oplossingen",
+    title: "Wat is IBCT en waarom is het anders dan klassieke relatietherapie?",
     description:
-      "Communicatieproblemen zijn de belangrijkste reden dat koppels hulp zoeken. Leer het vraag-en-terugtrek-patroon herkennen en doorbreken met IBCT-therapie in Tilburg.",
+      "IBCT is een van de best onderzochte vormen van relatietherapie. Ontdek wat Integrative Behavioral Couple Therapy is, hoe het werkt en waarom acceptatie en verandering samengaan.",
     excerpt:
-      "Bijna elk koppel dat zich bij mij meldt, noemt communicatieproblemen als belangrijkste klacht. Maar onder de schijnbare communicatieproblemen ligt bijna altijd iets diepers. Een uitleg over hoe patronen ontstaan, en hoe jullie ze doorbreken.",
+      "Relatietherapie is geen vaste methode, maar een verzamelnaam voor uiteenlopende benaderingen. IBCT combineert acceptatie met gedragsverandering en is een van de best onderbouwde vormen van koppeltherapie.",
     image: "/pampas-beige.jpg",
-    imageAlt: "Warm getint pampasgras, symbool voor luisteren en zachte communicatie",
+    imageAlt: "Warm getint pampasgras, symbool voor rust en wetenschappelijke onderbouwing",
     readingTime: "9 min leestijd",
     date: "2026-04-20",
     dateLabel: "20 april 2026",
@@ -126,7 +126,7 @@ export const blogPosts: BlogPost[] = [
       "relatietherapie-na-vreemdgaan",
       "wanneer-is-relatietherapie-zinvol",
     ],
-    category: "Specifieke thema's",
+    category: "IBCT",
   },
   {
     slug: "wat-is-ibct",
