@@ -146,7 +146,7 @@ export default function AlgemeneVoorwaarden() {
                 </div>
                 <div className="bg-white rounded-xl p-4">
                   <p className="font-semibold mb-1">Stap 3 – Erkende geschilleninstantie</p>
-                  <p>Als ook dat niet tot een oplossing leidt, kunt u uw geschil voorleggen aan een erkende geschilleninstantie (zoals Zorggeschil). De procedure is kosteloos voor cliënten.</p>
+                  <p>Als ook dat niet tot een oplossing leidt, kunt u uw geschil voorleggen aan een erkende geschilleninstantie (zoals Erisietsmisgegaan). De procedure is kosteloos voor cliënten.</p>
                 </div>
               </div>
               <p className="mt-4 text-sm">

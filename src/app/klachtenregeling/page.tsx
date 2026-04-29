@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -7,7 +8,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Klachtenregeling",
   description:
-    "Klachtenregeling van Relatiepraktijk de Nieuwe Weelde conform de Wkkgz. Aangesloten bij Zorggeschil.",
+    "Klachtenregeling van Relatiepraktijk de Nieuwe Weelde conform de Wkkgz. Aangesloten bij Erisietsmisgegaan.",
   alternates: {
     canonical: "https://www.praktijkdenieuweweelde.nl/klachtenregeling",
   },
@@ -64,28 +65,44 @@ export default function Klachtenregeling() {
 
             <section>
               <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">
-                Stap 2 — Onafhankelijke klachtenbehandeling via Zorggeschil
+                Stap 2 — Onafhankelijke klachtenbehandeling via Erisietsmisgegaan
               </h2>
               <p>
-                Komt u er samen met mij niet uit, of geeft u er de voorkeur aan uw klacht onafhankelijk te laten behandelen? Dan kunt u terecht bij <strong>Zorggeschil</strong>, de erkende geschilleninstantie waarbij Relatiepraktijk de Nieuwe Weelde is aangesloten conform de Wkkgz.
+                Komt u er samen met mij niet uit, of geeft u er de voorkeur aan uw klacht onafhankelijk te laten behandelen? Dan kunt u terecht bij <strong>Erisietsmisgegaan</strong>, de erkende klachten- en geschilleninstantie waarbij Relatiepraktijk de Nieuwe Weelde is aangesloten conform de Wkkgz.
               </p>
               <div className="mt-4 bg-white rounded-xl p-5 text-sm space-y-2">
-                <p><strong>Organisatie:</strong> Zorggeschil</p>
+                <p><strong>Organisatie:</strong> Erisietsmisgegaan</p>
                 <p>
                   <strong>Website:</strong>{" "}
                   <a
-                    href="https://www.zorggeschil.nl"
+                    href="https://erisietsmisgegaan.nl"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#946B66] underline underline-offset-2"
                   >
-                    www.zorggeschil.nl
+                    www.erisietsmisgegaan.nl
                   </a>
                 </p>
               </div>
               <p className="mt-4 text-sm">
-                Zorggeschil behandelt klachten onafhankelijk en kosteloos voor de cliënt. U kunt een klacht indienen via hun website.
+                Erisietsmisgegaan behandelt klachten onafhankelijk en kosteloos voor de cliënt. U kunt onvrede melden via de knop hieronder of via hun website.
               </p>
+              <a
+                href="https://erisietsmisgegaan.nl/onvrede-melden/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block"
+                aria-label="Onvrede melden bij Erisietsmisgegaan"
+              >
+                <Image
+                  src="https://erisietsmisgegaan.nl/wp-content/uploads/2018/10/erisietsmisgegaan-onvredemelden1.png"
+                  alt="Onvrede melden"
+                  width={200}
+                  height={60}
+                  unoptimized
+                  style={{ width: "auto", height: "auto", maxWidth: "100%" }}
+                />
+              </a>
             </section>
 
             <section>
@@ -93,7 +110,7 @@ export default function Klachtenregeling() {
                 Geschil
               </h2>
               <p className="text-sm">
-                Indien uw klacht betrekking heeft op een geschil — bijvoorbeeld over een factuur of vergoeding — kunt u dit eveneens voorleggen aan Zorggeschil. De geschillencommissie kan een bindende uitspraak doen.
+                Indien uw klacht betrekking heeft op een geschil — bijvoorbeeld over een factuur of vergoeding — kunt u dit eveneens voorleggen aan Erisietsmisgegaan. De geschillencommissie kan een bindende uitspraak doen.
               </p>
             </section>
 
