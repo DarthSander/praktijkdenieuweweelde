@@ -20,7 +20,7 @@ export default function CookieSettings({ onClose, onAccept }: CookieSettingsProp
           Cookieinstellingen
         </h2>
         <p className="text-sm text-[#B0ADAB] mb-6">
-          Beheer uw cookievoorkeuren voor deze website.
+          Beheer je cookievoorkeuren voor deze website.
         </p>
 
         <div className="space-y-4">
@@ -29,7 +29,7 @@ export default function CookieSettings({ onClose, onAccept }: CookieSettingsProp
             <div>
               <p className="font-semibold text-sm text-[#6B6866] mb-1">Noodzakelijke cookies</p>
               <p className="text-xs text-[#5E524F] leading-relaxed">
-                Vereist voor de basiswerking van de website, zoals het opslaan van uw cookievoorkeuren. Kunnen niet worden uitgeschakeld.
+                Vereist voor de basiswerking van de website, zoals het opslaan van je cookievoorkeuren. Kunnen niet worden uitgeschakeld.
               </p>
             </div>
             <div className="flex-shrink-0">

@@ -42,7 +42,7 @@ export default function Klachtenregeling() {
                 Niet tevreden?
               </h2>
               <p>
-                Ik doe mijn uiterste best om goede zorg te bieden. Toch kan het gebeuren dat u niet tevreden bent over de behandeling, de bejegening of een andere aspect van de dienstverlening. U heeft als cliënt het recht een klacht in te dienen. Ik neem elke klacht serieus.
+                Ik doe mijn uiterste best om goede zorg te bieden. Toch kan het gebeuren dat je niet tevreden bent over de behandeling, de bejegening of een andere aspect van de dienstverlening. Je hebt als cliënt het recht een klacht in te dienen. Ik neem elke klacht serieus.
               </p>
             </section>
 
@@ -51,7 +51,7 @@ export default function Klachtenregeling() {
                 Stap 1 — Bespreek het met mij
               </h2>
               <p>
-                Ik stel het op prijs als u een klacht eerst rechtstreeks met mij bespreekt. Vaak kan een misverstand of onvrede in een open gesprek worden opgelost. U kunt mij bereiken via:
+                Ik stel het op prijs als je een klacht eerst rechtstreeks met mij bespreekt. Vaak kan een misverstand of onvrede in een open gesprek worden opgelost. Je kunt mij bereiken via:
               </p>
               <div className="mt-4 bg-white rounded-xl p-5 text-sm space-y-1">
                 <p><strong>E-mail:</strong>{" "}
@@ -68,7 +68,7 @@ export default function Klachtenregeling() {
                 Stap 2 — Onafhankelijke klachtenbehandeling via Erisietsmisgegaan
               </h2>
               <p>
-                Komt u er samen met mij niet uit, of geeft u er de voorkeur aan uw klacht onafhankelijk te laten behandelen? Dan kunt u terecht bij <strong>Erisietsmisgegaan</strong>, de erkende klachten- en geschilleninstantie waarbij Relatiepraktijk de Nieuwe Weelde is aangesloten conform de Wkkgz.
+                Kom je er samen met mij niet uit, of geef je er de voorkeur aan je klacht onafhankelijk te laten behandelen? Dan kun je terecht bij <strong>Erisietsmisgegaan</strong>, de erkende klachten- en geschilleninstantie waarbij Relatiepraktijk de Nieuwe Weelde is aangesloten conform de Wkkgz.
               </p>
               <div className="mt-4 bg-white rounded-xl p-5 text-sm space-y-2">
                 <p><strong>Organisatie:</strong> Erisietsmisgegaan</p>
@@ -85,7 +85,7 @@ export default function Klachtenregeling() {
                 </p>
               </div>
               <p className="mt-4 text-sm">
-                Erisietsmisgegaan behandelt klachten onafhankelijk en kosteloos voor de cliënt. U kunt onvrede melden via de knop hieronder of via hun website.
+                Erisietsmisgegaan behandelt klachten onafhankelijk en kosteloos voor de cliënt. Je kunt onvrede melden via de knop hieronder of via hun website.
               </p>
               <a
                 href="https://erisietsmisgegaan.nl/onvrede-melden/"
@@ -110,7 +110,7 @@ export default function Klachtenregeling() {
                 Geschil
               </h2>
               <p className="text-sm">
-                Indien uw klacht betrekking heeft op een geschil — bijvoorbeeld over een factuur of vergoeding — kunt u dit eveneens voorleggen aan Erisietsmisgegaan. De geschillencommissie kan een bindende uitspraak doen.
+                Heeft je klacht betrekking op een geschil — bijvoorbeeld over een factuur of vergoeding — dan kun je dit eveneens voorleggen aan Erisietsmisgegaan. De geschillencommissie kan een bindende uitspraak doen.
               </p>
             </section>
 
@@ -119,7 +119,7 @@ export default function Klachtenregeling() {
                 Vertrouwelijkheid
               </h2>
               <p className="text-sm">
-                Uw klacht wordt vertrouwelijk behandeld. Gegevens worden alleen gedeeld voor zover noodzakelijk voor de klachtafhandeling.
+                Je klacht wordt vertrouwelijk behandeld. Gegevens worden alleen gedeeld voor zover noodzakelijk voor de klachtafhandeling.
               </p>
             </section>
 

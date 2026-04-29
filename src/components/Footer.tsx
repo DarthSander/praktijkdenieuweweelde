@@ -53,7 +53,7 @@ export default function Footer() {
 
         <div className="text-center">
           <p className="text-white/30 text-xs mb-6">
-            Kasteelnijenrodestraat 82 &nbsp;&middot;&nbsp; 5037 TH Tilburg
+            Kasteel Nijenrodestraat 82 &nbsp;&middot;&nbsp; 5037 TH Tilburg
           </p>
           <div className="border-t border-white/10 pt-8 text-white/30 text-sm">
             &copy; 2026 Relatiepraktijk de Nieuwe Weelde &nbsp;&middot;&nbsp; KVK 72945699 &nbsp;&middot;&nbsp; BTW NL004848689B38

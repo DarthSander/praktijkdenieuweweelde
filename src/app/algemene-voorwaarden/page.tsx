@@ -133,20 +133,20 @@ export default function AlgemeneVoorwaarden() {
             <section>
               <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">8. Klachtenregeling (Wkkgz)</h2>
               <p className="text-sm mb-4">
-                Heeft u een klacht? We bespreken deze graag direct met u. Als u er samen niet uitkomt, kunt u terecht bij een onafhankelijke instantie.
+                Heb je een klacht? We bespreken deze graag direct met je. Als je er samen niet uitkomt, kun je terecht bij een onafhankelijke instantie.
               </p>
               <div className="space-y-3 text-sm">
                 <div className="bg-white rounded-xl p-4">
-                  <p className="font-semibold mb-1">Stap 1 – Meld uw klacht bij de praktijk</p>
-                  <p>Neem contact op via <a href="mailto:Info@praktijkdenieuweweelde.nl" className="text-[#946B66] underline underline-offset-2">Info@praktijkdenieuweweelde.nl</a>. We streven ernaar uw klacht binnen 10 werkdagen te beantwoorden.</p>
+                  <p className="font-semibold mb-1">Stap 1 – Meld je klacht bij de praktijk</p>
+                  <p>Neem contact op via <a href="mailto:Info@praktijkdenieuweweelde.nl" className="text-[#946B66] underline underline-offset-2">Info@praktijkdenieuweweelde.nl</a>. We streven ernaar je klacht binnen 10 werkdagen te beantwoorden.</p>
                 </div>
                 <div className="bg-white rounded-xl p-4">
                   <p className="font-semibold mb-1">Stap 2 – Onafhankelijke klachtenfunctionaris</p>
-                  <p>Bent u niet tevreden met de uitkomst, dan kunt u terecht bij een onafhankelijke klachtenfunctionaris, aangesloten bij onze beroepsvereniging.</p>
+                  <p>Ben je niet tevreden met de uitkomst, dan kun je terecht bij een onafhankelijke klachtenfunctionaris, aangesloten bij onze beroepsvereniging.</p>
                 </div>
                 <div className="bg-white rounded-xl p-4">
                   <p className="font-semibold mb-1">Stap 3 – Erkende geschilleninstantie</p>
-                  <p>Als ook dat niet tot een oplossing leidt, kunt u uw geschil voorleggen aan een erkende geschilleninstantie (zoals Erisietsmisgegaan). De procedure is kosteloos voor cliënten.</p>
+                  <p>Als ook dat niet tot een oplossing leidt, kun je je geschil voorleggen aan een erkende geschilleninstantie (zoals Erisietsmisgegaan). De procedure is kosteloos voor cliënten.</p>
                 </div>
               </div>
               <p className="mt-4 text-sm">
@@ -172,7 +172,7 @@ export default function AlgemeneVoorwaarden() {
             <section>
               <div className="bg-white rounded-xl p-5 text-sm space-y-1">
                 <p><strong>Relatiepraktijk de Nieuwe Weelde</strong></p>
-                <p>Kasteelnijenrodestraat 82, 5037 TH Tilburg</p>
+                <p>Kasteel Nijenrodestraat 82, 5037 TH Tilburg</p>
                 <p>KVK: 72945699</p>
                 <p>E-mail: <a href="mailto:Info@praktijkdenieuweweelde.nl" className="text-[#946B66] underline underline-offset-2">Info@praktijkdenieuweweelde.nl</a></p>
                 <p>Telefoon: 06 - 10096923</p>
