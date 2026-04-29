@@ -65,7 +65,7 @@ const localBusinessJsonLd = {
   priceRange: "€€",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Kasteelnijenrodestraat 82",
+    streetAddress: "Kasteel Nijenrodestraat 82",
     addressLocality: "Tilburg",
     postalCode: "5037 TH",
     addressCountry: "NL",

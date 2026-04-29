@@ -108,7 +108,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-// Geo: benaderde coördinaten voor Kasteelnijenrodestraat (Reeshof, Tilburg).
+// Geo: benaderde coördinaten voor Kasteel Nijenrodestraat (Reeshof, Tilburg).
 // Verfijn met exacte waarde uit Google Maps indien gewenst.
 // aggregateRating/review bewust weggelaten: toevoegen pas zodra er echte reviews zijn
 // — verzonnen ratings schenden Google's richtlijnen.
@@ -126,7 +126,7 @@ const jsonLd = {
   priceRange: "€€",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Kasteelnijenrodestraat 82",
+    streetAddress: "Kasteel Nijenrodestraat 82",
     addressLocality: "Tilburg",
     postalCode: "5037 TH",
     addressCountry: "NL",

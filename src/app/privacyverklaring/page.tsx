@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Privacyverklaring",
   description:
-    "Privacyverklaring van Relatiepraktijk de Nieuwe Weelde – hoe Eva Mulder omgaat met uw persoonsgegevens conform AVG en WGBO.",
+    "Privacyverklaring van Relatiepraktijk de Nieuwe Weelde – hoe Eva Mulder omgaat met je persoonsgegevens conform AVG en WGBO.",
   alternates: {
     canonical: "https://www.praktijkdenieuweweelde.nl/privacyverklaring",
   },
@@ -37,7 +37,7 @@ export default function Privacyverklaring() {
             <section>
               <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">1. Wie zijn wij?</h2>
               <p>
-                Relatiepraktijk de Nieuwe Weelde is een eenmanszaak, gedreven door Eva Mulder, gespecialiseerd in IBCT-relatietherapie aan huis in Tilburg en omgeving. Als verwerkingsverantwoordelijke ben ik verantwoordelijk voor de zorgvuldige omgang met uw persoonsgegevens.
+                Relatiepraktijk de Nieuwe Weelde is een eenmanszaak, gedreven door Eva Mulder, gespecialiseerd in IBCT-relatietherapie aan huis in Tilburg en omgeving. Als verwerkingsverantwoordelijke ben ik verantwoordelijk voor de zorgvuldige omgang met je persoonsgegevens.
               </p>
               <div className="mt-4 bg-white rounded-xl p-5 text-sm space-y-1">
                 <p><strong>Naam:</strong> Relatiepraktijk de Nieuwe Weelde</p>
@@ -58,7 +58,7 @@ export default function Privacyverklaring() {
                 <li>Naam en naam van de partner</li>
                 <li>E-mailadres</li>
                 <li>Telefoonnummer</li>
-                <li>De inhoud van uw bericht</li>
+                <li>De inhoud van je bericht</li>
               </ul>
 
               <h3 className="font-semibold text-[#6B6866] mt-4 mb-2">In het kader van de therapie</h3>
@@ -80,12 +80,12 @@ export default function Privacyverklaring() {
               <div className="space-y-3">
                 <div className="bg-white rounded-xl p-4 text-sm">
                   <p className="font-semibold mb-1">Contactformulier</p>
-                  <p>Om uw vraag of aanmeldverzoek te beantwoorden en een intake in te plannen.</p>
-                  <p className="text-[#B0ADAB] mt-1">Grondslag: toestemming (u vult het formulier zelf in)</p>
+                  <p>Om je vraag of aanmeldverzoek te beantwoorden en een intake in te plannen.</p>
+                  <p className="text-[#B0ADAB] mt-1">Grondslag: toestemming (je vult het formulier zelf in)</p>
                 </div>
                 <div className="bg-white rounded-xl p-4 text-sm">
                   <p className="font-semibold mb-1">Therapiedossier</p>
-                  <p>Voor het leveren van verantwoorde relatietherapie en het bijhouden van uw dossier conform de WGBO.</p>
+                  <p>Voor het leveren van verantwoorde relatietherapie en het bijhouden van je dossier conform de WGBO.</p>
                   <p className="text-[#B0ADAB] mt-1">Grondslag: wettelijke verplichting (WGBO) en noodzakelijkheid voor goede zorgverlening (AVG art. 9 lid 2h)</p>
                 </div>
                 <div className="bg-white rounded-xl p-4 text-sm">
@@ -97,7 +97,7 @@ export default function Privacyverklaring() {
             </section>
 
             <section>
-              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">4. Hoe lang bewaren wij uw gegevens?</h2>
+              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">4. Hoe lang bewaren wij je gegevens?</h2>
               <div className="space-y-3 text-sm">
                 <div className="bg-white rounded-xl p-4">
                   <p className="font-semibold mb-1">Therapiedossier</p>
@@ -105,7 +105,7 @@ export default function Privacyverklaring() {
                 </div>
                 <div className="bg-white rounded-xl p-4">
                   <p className="font-semibold mb-1">Contactformulier</p>
-                  <p>Zolang als noodzakelijk voor de afhandeling van uw verzoek. Als geen therapietraject volgt, worden de gegevens na 6 maanden verwijderd.</p>
+                  <p>Zolang als noodzakelijk voor de afhandeling van je verzoek. Als geen therapietraject volgt, worden de gegevens na 6 maanden verwijderd.</p>
                 </div>
                 <div className="bg-white rounded-xl p-4">
                   <p className="font-semibold mb-1">Factuurgegevens</p>
@@ -115,16 +115,16 @@ export default function Privacyverklaring() {
             </section>
 
             <section>
-              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">5. Delen wij uw gegevens met anderen?</h2>
+              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">5. Delen wij je gegevens met anderen?</h2>
               <p>
-                Uw gegevens worden niet verkocht of gedeeld met derden voor commerciële doeleinden. In de volgende situaties kunnen gegevens gedeeld worden:
+                Je gegevens worden niet verkocht of gedeeld met derden voor commerciële doeleinden. In de volgende situaties kunnen gegevens gedeeld worden:
               </p>
               <ul className="list-disc list-inside space-y-2 mt-3 text-sm">
-                <li>Met uw uitdrukkelijke toestemming (bijvoorbeeld verwijzing naar een andere zorgverlener)</li>
+                <li>Met je uitdrukkelijke toestemming (bijvoorbeeld verwijzing naar een andere zorgverlener)</li>
                 <li>Wanneer dit wettelijk verplicht is (bijvoorbeeld bij een rechterlijk bevel)</li>
                 <li>Met de e-mailhostingprovider (Strato) voor de afhandeling van contactverzoeken — hiermee is een verwerkersovereenkomst gesloten</li>
               </ul>
-              <p className="mt-3 text-sm">Uw gegevens worden niet buiten de Europese Economische Ruimte (EER) opgeslagen of verwerkt.</p>
+              <p className="mt-3 text-sm">Je gegevens worden niet buiten de Europese Economische Ruimte (EER) opgeslagen of verwerkt.</p>
             </section>
 
             <section>
@@ -140,16 +140,16 @@ export default function Privacyverklaring() {
             </section>
 
             <section>
-              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">7. Uw rechten</h2>
-              <p className="mb-3 text-sm">Op grond van de AVG heeft u de volgende rechten:</p>
+              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">7. Je rechten</h2>
+              <p className="mb-3 text-sm">Op grond van de AVG heb je de volgende rechten:</p>
               <div className="grid sm:grid-cols-2 gap-3 text-sm">
                 {[
-                  ["Recht op inzage", "U kunt opvragen welke gegevens wij van u verwerken."],
-                  ["Recht op rectificatie", "U kunt onjuiste of onvolledige gegevens laten corrigeren."],
-                  ["Recht op vergetelheid", "U kunt verzoeken uw gegevens te verwijderen, tenzij een wettelijke bewaarplicht van toepassing is (zoals de WGBO)."],
-                  ["Recht op beperking", "U kunt verzoeken de verwerking van uw gegevens tijdelijk te beperken."],
-                  ["Recht op overdraagbaarheid", "U kunt uw gegevens opvragen in een gestructureerd, gangbaar formaat."],
-                  ["Recht op bezwaar", "U kunt bezwaar maken tegen de verwerking van uw gegevens."],
+                  ["Recht op inzage", "Je kunt opvragen welke gegevens wij van je verwerken."],
+                  ["Recht op rectificatie", "Je kunt onjuiste of onvolledige gegevens laten corrigeren."],
+                  ["Recht op vergetelheid", "Je kunt verzoeken je gegevens te verwijderen, tenzij een wettelijke bewaarplicht van toepassing is (zoals de WGBO)."],
+                  ["Recht op beperking", "Je kunt verzoeken de verwerking van je gegevens tijdelijk te beperken."],
+                  ["Recht op overdraagbaarheid", "Je kunt je gegevens opvragen in een gestructureerd, gangbaar formaat."],
+                  ["Recht op bezwaar", "Je kunt bezwaar maken tegen de verwerking van je gegevens."],
                 ].map(([title, desc]) => (
                   <div key={title} className="bg-white rounded-xl p-4">
                     <p className="font-semibold mb-1">{title}</p>
@@ -158,17 +158,17 @@ export default function Privacyverklaring() {
                 ))}
               </div>
               <p className="mt-4 text-sm">
-                U kunt uw verzoek indienen via <a href="mailto:Info@praktijkdenieuweweelde.nl" className="text-[#946B66] underline underline-offset-2">Info@praktijkdenieuweweelde.nl</a>. Ik reageer binnen 30 dagen.
+                Je kunt je verzoek indienen via <a href="mailto:Info@praktijkdenieuweweelde.nl" className="text-[#946B66] underline underline-offset-2">Info@praktijkdenieuweweelde.nl</a>. Ik reageer binnen 30 dagen.
               </p>
               <p className="mt-2 text-sm">
-                Heeft u een klacht over de verwerking van uw gegevens? Dan kunt u ook een klacht indienen bij de <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener noreferrer" className="text-[#946B66] underline underline-offset-2">Autoriteit Persoonsgegevens</a>.
+                Heb je een klacht over de verwerking van je gegevens? Dan kun je ook een klacht indienen bij de <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener noreferrer" className="text-[#946B66] underline underline-offset-2">Autoriteit Persoonsgegevens</a>.
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">8. Beveiliging</h2>
               <p className="text-sm">
-                Ik neem passende technische en organisatorische maatregelen om uw persoonsgegevens te beveiligen tegen verlies, misbruik of onbevoegde toegang. Dit omvat onder meer versleutelde e-mailcommunicatie, beveiligde opslag van dossiers en een geheimhoudingsplicht als therapeut.
+                Ik neem passende technische en organisatorische maatregelen om je persoonsgegevens te beveiligen tegen verlies, misbruik of onbevoegde toegang. Dit omvat onder meer versleutelde e-mailcommunicatie, beveiligde opslag van dossiers en een geheimhoudingsplicht als therapeut.
               </p>
             </section>
 
@@ -178,11 +178,11 @@ export default function Privacyverklaring() {
                 Op deze website staat Bea, een chatbot die wordt aangedreven door een AI-model van <strong>Anthropic</strong> (Claude). Bea beantwoordt vragen over relatietherapie, IBCT en de werkwijze van de praktijk.
               </p>
               <div className="bg-white rounded-xl p-4 text-sm space-y-2">
-                <p><strong>Welke gegevens worden naar Anthropic gestuurd?</strong> Alleen de tekst die u zelf in het chatvenster typt. <em>Voordat</em> uw bericht wordt verstuurd, verwijdert onze server automatisch e-mailadressen en telefoonnummers uit de tekst.</p>
-                <p><strong>Welke gegevens gaan NIET naar Anthropic?</strong> Uw naam, contactgegevens, IP-adres en factuurgegevens.</p>
+                <p><strong>Welke gegevens worden naar Anthropic gestuurd?</strong> Alleen de tekst die je zelf in het chatvenster typt. <em>Voordat</em> je bericht wordt verstuurd, verwijdert onze server automatisch e-mailadressen en telefoonnummers uit de tekst.</p>
+                <p><strong>Welke gegevens gaan NIET naar Anthropic?</strong> Je naam, contactgegevens, IP-adres en factuurgegevens.</p>
                 <p><strong>Hoe lang bewaren wij chat-gesprekken?</strong> Maximaal 30 dagen, daarna worden ze automatisch verwijderd.</p>
                 <p><strong>Waar staan de gegevens?</strong> In een Supabase-database (regio Frankfurt, EU). Anthropic verwerkt aanvragen binnen de EU/VS, op basis van een Data Processing Addendum en (waar van toepassing) het EU-VS Data Privacy Framework.</p>
-                <p><strong>Toestemming.</strong> Voordat Bea start, vragen wij uw expliciete toestemming. Zonder die toestemming kunt u de website gewoon gebruiken en kunt u via het contactformulier of telefonisch contact opnemen.</p>
+                <p><strong>Toestemming.</strong> Voordat Bea start, vragen wij je expliciete toestemming. Zonder die toestemming kun je de website gewoon gebruiken en kun je via het contactformulier of telefonisch contact opnemen.</p>
                 <p><strong>Geen medisch advies.</strong> Bea geeft geen diagnoses en is geen vervanging voor een gesprek met Eva. Bij acute nood: bel 112 of 113 Zelfmoordpreventie (0800-0113).</p>
               </div>
               <p className="text-sm mt-3">
@@ -193,14 +193,14 @@ export default function Privacyverklaring() {
             <section id="cookies">
               <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">10. Cookies</h2>
               <p className="text-sm">
-                Deze website maakt alleen gebruik van functionele cookies die noodzakelijk zijn voor een goede werking van de site. Er worden geen tracking- of marketingcookies geplaatst. Uw cookievoorkeuren worden lokaal in uw browser opgeslagen en kunt u opnieuw instellen via de cookie-instellingen onderaan deze pagina.
+                Deze website maakt alleen gebruik van functionele cookies die noodzakelijk zijn voor een goede werking van de site. Er worden geen tracking- of marketingcookies geplaatst. Je cookievoorkeuren worden lokaal in je browser opgeslagen en kun je opnieuw instellen via de cookie-instellingen onderaan deze pagina.
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">11. Wijzigingen</h2>
               <p className="text-sm">
-                Deze privacyverklaring kan worden aangepast. De meest actuele versie is altijd te vinden op deze pagina. Bij wezenlijke wijzigingen word ik u hierover informeren.
+                Deze privacyverklaring kan worden aangepast. De meest actuele versie is altijd te vinden op deze pagina. Bij wezenlijke wijzigingen zal ik je hierover informeren.
               </p>
             </section>
 

@@ -86,7 +86,7 @@ export default function Tarieven() {
         </div>
 
         <p className="text-center text-xs text-[#C4A4A0] mt-8">
-          * Relatietherapie wordt doorgaans niet vergoed door de basisverzekering. Raadpleeg uw aanvullende verzekering.
+          * Relatietherapie wordt doorgaans niet vergoed door de basisverzekering. Raadpleeg je aanvullende verzekering.
         </p>
       </div>
     </section>
