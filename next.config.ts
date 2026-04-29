@@ -17,6 +17,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "img.wobbio.com",
       },
+      {
+        protocol: "https",
+        hostname: "erisietsmisgegaan.nl",
+      },
     ],
   },
   async headers() {
