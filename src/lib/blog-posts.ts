@@ -66,7 +66,7 @@ export const blogPosts: BlogPost[] = [
     dateLabel: "20 april 2026",
     related: [
       "hoe-lang-duurt-relatietherapie",
-      "wat-is-ibct",
+      "communicatieproblemen-in-een-relatie",
       "wanneer-is-relatietherapie-zinvol",
     ],
     category: "Werkwijze",
@@ -103,7 +103,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-20",
     dateLabel: "20 april 2026",
     related: [
-      "wat-is-ibct",
+      "communicatieproblemen-in-een-relatie",
       "relatietherapie-aan-huis",
       "wanneer-is-relatietherapie-zinvol",
     ],
@@ -122,27 +122,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-20",
     dateLabel: "20 april 2026",
     related: [
-      "wat-is-ibct",
-      "relatietherapie-na-vreemdgaan",
-      "wanneer-is-relatietherapie-zinvol",
-    ],
-    category: "IBCT",
-  },
-  {
-    slug: "wat-is-ibct",
-    title: "Wat is IBCT en waarom is het anders dan klassieke relatietherapie?",
-    description:
-      "IBCT is een van de best onderzochte vormen van relatietherapie. Ontdek wat Integrative Behavioral Couple Therapy is, hoe het werkt en waarom het zo effectief is.",
-    excerpt:
-      "Relatietherapie kent veel stromingen, maar niet elke methode is even goed onderzocht. IBCT combineert acceptatie en verandering, en is een van de best onderbouwde vormen van koppeltherapie wereldwijd.",
-    image: "/pampas-mountains.jpg",
-    imageAlt: "Bergen en pampasgras, symbool voor wetenschap en ruimte in de relatie",
-    readingTime: "10 min leestijd",
-    date: "2026-04-20",
-    dateLabel: "20 april 2026",
-    related: [
-      "communicatieproblemen-in-een-relatie",
       "hoe-lang-duurt-relatietherapie",
+      "relatietherapie-na-vreemdgaan",
       "wanneer-is-relatietherapie-zinvol",
     ],
     category: "IBCT",

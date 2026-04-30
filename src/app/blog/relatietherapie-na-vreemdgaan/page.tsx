@@ -103,7 +103,7 @@ export default function Page() {
         Twee werkwijzen zijn hierbij bijzonder krachtig. Ten eerste: onder de harde emoties (woede, minachting) de zachte emoties (angst, pijn, schaamte) zichtbaar maken, zodat partners elkaar weer zien als mens in plaats van als dader of slachtoffer. Ten tweede: samen kijken naar het patroon waarin jullie vast zijn geraakt, zoals je naar een film kijkt — beschrijvend, zonder direct schuld toe te wijzen. Dit haalt de hitte uit het gesprek en creëert ruimte voor begrip.
       </p>
       <p>
-        Wil je meer lezen over hoe IBCT werkt, bekijk dan het artikel over <Link href="/blog/wat-is-ibct">wat IBCT is en waarom het anders is</Link>.
+        Wil je meer lezen over hoe IBCT werkt, bekijk dan het artikel over <Link href="/blog/communicatieproblemen-in-een-relatie">wat IBCT is en waarom het anders is</Link>.
       </p>
 
       <h2>Wanneer is herstel niet realistisch?</h2>

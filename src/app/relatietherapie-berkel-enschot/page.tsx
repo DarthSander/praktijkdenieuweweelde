@@ -132,7 +132,7 @@ export default function Page() {
               <p>
                 Meer over de methode vind je op de pagina over{" "}
                 <Link href="/ibct-relatietherapie">IBCT relatietherapie</Link> of in het artikel{" "}
-                <Link href="/blog/wat-is-ibct">wat is IBCT</Link>.
+                <Link href="/blog/communicatieproblemen-in-een-relatie">wat is IBCT</Link>.
               </p>
             </div>
           </div>

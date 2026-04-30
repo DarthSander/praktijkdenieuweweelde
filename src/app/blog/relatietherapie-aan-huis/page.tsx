@@ -93,7 +93,7 @@ export default function Page() {
 
       <h2>Een intakegesprek begint met een bericht</h2>
       <p>
-        Een intakegesprek vindt plaats bij jullie thuis. Tijdens dit gesprek verkennen we waar jullie tegenaan lopen, of <Link href="/blog/wat-is-ibct">IBCT</Link> passend is, en welke stappen zinvol zijn.
+        Een intakegesprek vindt plaats bij jullie thuis. Tijdens dit gesprek verkennen we waar jullie tegenaan lopen, of <Link href="/blog/communicatieproblemen-in-een-relatie">IBCT</Link> passend is, en welke stappen zinvol zijn.
       </p>
       <p>
         Stuur een bericht via het <Link href="/#contact">contactformulier</Link> en ik neem binnen vierentwintig uur contact op.
