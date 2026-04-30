@@ -141,7 +141,7 @@ export default function Page() {
               <p>
                 Meer over hoe IBCT in de praktijk werkt vind je op de pagina over{" "}
                 <Link href="/ibct-relatietherapie">IBCT relatietherapie</Link> of in het
-                artikel <Link href="/blog/wat-is-ibct">wat is IBCT</Link>.
+                artikel <Link href="/blog/communicatieproblemen-in-een-relatie">wat is IBCT</Link>.
               </p>
             </div>
           </div>
