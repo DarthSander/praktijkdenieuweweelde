@@ -89,14 +89,14 @@ export default function OverMij() {
               {/* Eva foto — klik om te vergroten */}
               <button
                 onClick={() => setLightboxOpen(true)}
-                className="flex-shrink-0 w-16 h-16 rounded-full overflow-hidden ring-2 ring-[#C4A4A0]/40 hover:ring-[#946B66] transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-[#946B66]"
+                className="flex-shrink-0 w-20 h-20 rounded-full overflow-hidden ring-2 ring-[#C4A4A0]/40 hover:ring-[#946B66] transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-[#946B66] mr-6"
                 aria-label="Foto van Eva vergroten"
               >
                 <Image
                   src="/eva-goto.webp"
                   alt="Eva Mulder"
-                  width={64}
-                  height={64}
+                  width={80}
+                  height={80}
                   className="object-cover object-top w-full h-full"
                 />
               </button>
