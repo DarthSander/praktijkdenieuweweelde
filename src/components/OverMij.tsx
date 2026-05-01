@@ -49,8 +49,8 @@ export default function OverMij() {
                 nodig is om echt naar elkaar te luisteren.
               </p>
             </div>
-            <div className="mt-8 flex items-start gap-4">
-              <div className="space-y-4 flex-1">
+            <div className="mt-8 flex items-start">
+              <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Heart className="w-5 h-5 fill-[#B0ADAB] text-[#B0ADAB]" />
                   <div>
@@ -87,19 +87,21 @@ export default function OverMij() {
               </div>
 
               {/* Eva foto — klik om te vergroten */}
-              <button
-                onClick={() => setLightboxOpen(true)}
-                className="flex-shrink-0 w-20 h-20 rounded-full overflow-hidden ring-2 ring-[#C4A4A0]/40 hover:ring-[#946B66] transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-[#946B66] mr-6"
-                aria-label="Foto van Eva vergroten"
-              >
-                <Image
-                  src="/eva-goto.webp"
-                  alt="Eva Mulder"
-                  width={80}
-                  height={80}
-                  className="object-cover object-top w-full h-full"
-                />
-              </button>
+              <div className="flex-1 flex justify-center pt-1">
+                <button
+                  onClick={() => setLightboxOpen(true)}
+                  className="w-24 h-24 rounded-full overflow-hidden ring-2 ring-[#C4A4A0]/40 hover:ring-[#946B66] transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-[#946B66]"
+                  aria-label="Foto van Eva vergroten"
+                >
+                  <Image
+                    src="/eva-goto.webp"
+                    alt="Eva Mulder"
+                    width={96}
+                    height={96}
+                    className="object-cover object-top w-full h-full"
+                  />
+                </button>
+              </div>
             </div>
 
             {/* Lightbox */}
