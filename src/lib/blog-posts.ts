@@ -128,6 +128,25 @@ export const blogPosts: BlogPost[] = [
     ],
     category: "IBCT",
   },
+  {
+    slug: "jaloezie-in-je-relatie",
+    title: "Jaloezie in je relatie: wat het écht zegt (en hoe je er samen mee om kunt gaan)",
+    description:
+      "Jaloezie in je relatie hoeft geen probleem te zijn. Ontdek wat jaloezie écht betekent, welke vormen het meest voorkomen en hoe je er samen op een verbindende manier mee omgaat.",
+    excerpt:
+      "Jaloezie wordt vaak gezien als iets dat je niet zou mogen voelen, terwijl het juist iets vertelt over wat er geraakt wordt. Een zachte, verdiepende blik op een van de meest gelaagde emoties in een relatie en hoe je er samen mee om kunt gaan.",
+    image: "/pampas-water.jpg",
+    imageAlt: "Pampasgras bij stil water, symbool voor reflectie en de gelaagdheid van emoties",
+    readingTime: "8 min leestijd",
+    date: "2026-05-02",
+    dateLabel: "2 mei 2026",
+    related: [
+      "communicatieproblemen-in-een-relatie",
+      "relatietherapie-na-vreemdgaan",
+      "wanneer-is-relatietherapie-zinvol",
+    ],
+    category: "Specifieke thema's",
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
