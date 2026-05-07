@@ -7,16 +7,16 @@ import BlogCard from "@/components/BlogCard";
 import { blogPosts } from "@/lib/blog-posts";
 
 export const metadata: Metadata = {
-  title: "Blog over relatietherapie en IBCT",
+  title: { absolute: "Relatietherapie blog | Inzichten over ruzie, jaloezie & verbinding" },
   description:
-    "Wetenschappelijk onderbouwde artikelen over relatietherapie, IBCT, communicatie en herstel. Geschreven door Eva Mulder, IBCT-relatietherapeut in Tilburg.",
+    "Wetenschappelijk onderbouwde artikelen van Eva Mulder over ruzie, jaloezie, communicatie en verbinding. Professionele inzichten voor koppels die willen groeien. Tilburg.",
   alternates: {
     canonical: "https://www.praktijkdenieuweweelde.nl/blog",
   },
   openGraph: {
-    title: "Blog over relatietherapie en IBCT | Relatiepraktijk de Nieuwe Weelde",
+    title: "Relatietherapie blog | Inzichten over ruzie, jaloezie & verbinding",
     description:
-      "Wetenschappelijk onderbouwde artikelen over relatietherapie, IBCT, communicatie en herstel.",
+      "Wetenschappelijk onderbouwde artikelen van Eva Mulder over ruzie, jaloezie, communicatie en verbinding. Professionele inzichten voor koppels die willen groeien. Tilburg.",
     url: "https://www.praktijkdenieuweweelde.nl/blog",
     type: "website",
   },
