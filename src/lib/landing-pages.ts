@@ -15,9 +15,9 @@ export const landingPages: LandingPage[] = [
   {
     slug: "relatietherapie-tilburg",
     title: "Relatietherapie in Tilburg",
-    metaTitle: "Relatietherapie Tilburg | IBCT aan huis door Eva Mulder",
+    metaTitle: "Relatietherapie Tilburg aan huis | Reeshof & omgeving",
     description:
-      "Relatietherapie in Tilburg aan huis. IBCT-relatietherapeut Eva Mulder begeleidt koppels in Tilburg en omgeving.",
+      "Relatietherapie aan huis in Tilburg. Begeleiding in Reeshof, Berkel‑Enschot, Centrum en omliggende wijken. Voor koppels die vastlopen in patronen en weer verbinding willen.",
     h1: "Relatietherapie in Tilburg, gewoon bij jullie thuis",
     heroKicker: "IBCT relatietherapie in Tilburg",
     heroSubtitle:
@@ -29,9 +29,9 @@ export const landingPages: LandingPage[] = [
   {
     slug: "relatietherapie-reeshof",
     title: "Relatietherapie in de Reeshof",
-    metaTitle: "Relatietherapie Reeshof | IBCT aan huis in Tilburg-West",
+    metaTitle: "Relatietherapie Reeshof Tilburg | Aan huis & persoonlijk",
     description:
-      "Relatietherapie in de Reeshof, aan huis. IBCT-relatietherapeut Eva Mulder woont en werkt in Tilburg-West. Avondsessies mogelijk.",
+      "Wetenschappelijk onderbouwde relatietherapie aan huis in de Reeshof. Voor koppels die vastlopen in terugkerende patronen en weer rust, begrip en verbinding willen.",
     h1: "Relatietherapie in de Reeshof, gewoon bij jullie thuis",
     heroKicker: "IBCT relatietherapie in Tilburg-West",
     heroSubtitle:
@@ -43,9 +43,9 @@ export const landingPages: LandingPage[] = [
   {
     slug: "relatietherapie-berkel-enschot",
     title: "Relatietherapie in Berkel-Enschot",
-    metaTitle: "Relatietherapie Berkel-Enschot | IBCT aan huis",
+    metaTitle: "Relatietherapie Berkel‑Enschot Tilburg | Aan huis & vertrouwd",
     description:
-      "Relatietherapie in Berkel-Enschot aan huis. IBCT-relatietherapeut Eva Mulder begeleidt koppels in Berkel-Enschot discreet en respectvol.",
+      "Relatietherapie aan huis in Berkel‑Enschot. Professionele, wetenschappelijk onderbouwde begeleiding voor koppels die patronen willen doorbreken en meer rust en nabijheid zoeken.",
     h1: "Relatietherapie in Berkel-Enschot, in jullie vertrouwde omgeving",
     heroKicker: "IBCT relatietherapie in Berkel-Enschot",
     heroSubtitle:
@@ -57,9 +57,9 @@ export const landingPages: LandingPage[] = [
   {
     slug: "ibct-relatietherapie",
     title: "IBCT relatietherapie",
-    metaTitle: "IBCT relatietherapie | Wetenschappelijk onderbouwd in Tilburg",
+    metaTitle: "IBCT relatietherapie Tilburg | Evidence-based",
     description:
-      "IBCT relatietherapie in Tilburg door Eva Mulder. Integrative Behavioral Couple Therapy is een van de best onderzochte vormen van relatietherapie. Lees hoe het werkt.",
+      "IBCT relatietherapie in Tilburg. Wetenschappelijk onderbouwde aanpak voor koppels die vastgelopen patronen willen begrijpen, verzachten en duurzaam doorbreken.",
     h1: "IBCT relatietherapie, acceptatie en verandering in balans",
     heroKicker: "Integrative Behavioral Couple Therapy",
     heroSubtitle:
@@ -71,9 +71,9 @@ export const landingPages: LandingPage[] = [
   {
     slug: "relatietherapie-aan-huis",
     title: "Relatietherapie aan huis in Tilburg en omgeving",
-    metaTitle: "Relatietherapie aan huis | IBCT in Tilburg en omgeving",
+    metaTitle: "Relatietherapie aan huis Tilburg | Rust & veiligheid thuis",
     description:
-      "Relatietherapie aan huis in Tilburg en omgeving. IBCT in jullie eigen vertrouwde omgeving door Eva Mulder. Avond- en weekendsessies mogelijk.",
+      "Relatietherapie aan huis in Tilburg. In jullie vertrouwde omgeving werken aan rust en duurzame verandering. Deskundig, persoonlijk en wetenschappelijk onderbouwd.",
     h1: "Relatietherapie aan huis in Tilburg en omgeving",
     heroKicker: "IBCT thuis bij jullie",
     heroSubtitle:
@@ -85,9 +85,9 @@ export const landingPages: LandingPage[] = [
   {
     slug: "relatietherapie-jonge-ouders",
     title: "Relatietherapie voor jonge ouders",
-    metaTitle: "Relatieproblemen na kind? Relatietherapie voor jonge ouders in Tilburg",
+    metaTitle: "Relatietherapie jonge ouders Tilburg | Stress, baby & slaaptekort",
     description:
-      "Relatieproblemen na een kind? IBCT-relatietherapie voor jonge ouders in Tilburg en omgeving. Eva Mulder komt bij jullie thuis, ook 's avonds als de kleine slaapt.",
+      "Relatietherapie aan huis voor jonge ouders in Tilburg. Ik kom bij jullie thuis: vertrouwd, rustig en op jullie eigen plek. Relatiepraktijk De Nieuwe Weelde.",
     h1: "Relatietherapie voor jonge ouders: hoe houd je je relatie goed na een kind",
     heroKicker: "IBCT voor jonge ouders",
     heroSubtitle:

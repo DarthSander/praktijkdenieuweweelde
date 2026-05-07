@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.praktijkdenieuweweelde.nl"),
 
   title: {
-    default: "Relatiepraktijk de Nieuwe Weelde | IBCT Relatietherapeut Tilburg",
+    default: "Relatietherapie Tilburg | Aan huis met IBCT‑begeleiding",
     template: "%s | Relatiepraktijk de Nieuwe Weelde",
   },
   description:
-    "IBCT relatietherapie aan huis in Tilburg door Eva Mulder. Wetenschappelijk onderbouwde begeleiding voor koppels in de Reeshof, Centrum en Berkel-Enschot.",
+    "Wetenschappelijk onderbouwde relatietherapie bij jullie thuis in Tilburg. Eva Mulder biedt betrokken, professionele begeleiding voor koppels die rust, helderheid en verbinding zoeken.",
   keywords: [
     "relatietherapie Tilburg",
     "relatietherapeut Tilburg",
@@ -63,9 +63,9 @@ export const metadata: Metadata = {
     locale: "nl_NL",
     url: "https://www.praktijkdenieuweweelde.nl",
     siteName: "Relatiepraktijk de Nieuwe Weelde",
-    title: "Relatiepraktijk de Nieuwe Weelde | IBCT Relatietherapeut Tilburg",
+    title: "Relatietherapie Tilburg | Aan huis met IBCT‑begeleiding",
     description:
-      "IBCT relatietherapie aan huis in Tilburg door Eva Mulder. Wetenschappelijk onderbouwde begeleiding voor koppels.",
+      "Wetenschappelijk onderbouwde relatietherapie bij jullie thuis in Tilburg. Eva Mulder biedt betrokken, professionele begeleiding voor koppels die rust, helderheid en verbinding zoeken.",
     images: [
       {
         url: "/pampas-water.jpg",
@@ -79,9 +79,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Relatiepraktijk de Nieuwe Weelde | IBCT Relatietherapeut Tilburg",
+    title: "Relatietherapie Tilburg | Aan huis met IBCT‑begeleiding",
     description:
-      "IBCT relatietherapie aan huis in Tilburg door Eva Mulder. Wetenschappelijk onderbouwde begeleiding voor koppels.",
+      "Wetenschappelijk onderbouwde relatietherapie bij jullie thuis in Tilburg. Eva Mulder biedt betrokken, professionele begeleiding voor koppels die rust, helderheid en verbinding zoeken.",
     images: ["/pampas-water.jpg"],
   },
 
