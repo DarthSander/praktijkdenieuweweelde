@@ -129,6 +129,25 @@ export const blogPosts: BlogPost[] = [
     category: "IBCT",
   },
   {
+    slug: "steeds-dezelfde-ruzie-in-je-relatie",
+    title: "Steeds dezelfde ruzie in je relatie? Zo doorbreek je het patroon",
+    description:
+      "Lees waarom ruzies zich herhalen en hoe je het patroon kunt doorbreken. Praktische inzichten uit IBCT en onderzoek naar relatiepatronen. Relatiepraktijk De Nieuwe Weelde.",
+    excerpt:
+      "Steeds weer dezelfde ruzie? Vaak gaat het niet om het onderwerp, maar om een patroon dat zichzelf herhaalt. Een blik op wat er onder de harde emoties ligt en hoe je samen een nieuwe weg kunt vinden.",
+    image: "/pampas-beige.jpg",
+    imageAlt: "Warm pampasgras in zacht licht, symbool voor rust na een conflict",
+    readingTime: "8 min leestijd",
+    date: "2026-05-07",
+    dateLabel: "7 mei 2026",
+    related: [
+      "communicatieproblemen-in-een-relatie",
+      "jaloezie-in-je-relatie",
+      "wanneer-is-relatietherapie-zinvol",
+    ],
+    category: "Specifieke thema's",
+  },
+  {
     slug: "jaloezie-in-je-relatie",
     title: "Jaloezie in je relatie: wat het écht zegt (en hoe je er samen mee om kunt gaan)",
     description:
