@@ -32,8 +32,8 @@ export default function OverMij() {
             <div className="text-[#5E524F] text-base leading-relaxed space-y-5">
               <p>
                 Ik ben Eva Mulder, relatietherapeut, gespecialiseerd in IBCT.
-                Ik raak nooit uitgekeken op de complexiteit en de
-                veelzijdigheid en kwetsbaarheid van relaties. Tijdens mijn
+                Ik raak nooit uitgekeken op de veelzijdigheid en kwetsbaarheid
+                van relaties. Tijdens mijn
                 sessies begeleid ik koppels die elkaar even kwijt zijn, maar de
                 weg naar elkaar terug willen vinden. We onderzoeken wat er is
                 vastgelopen, wat er nog wel werkt en hoe jullie opnieuw in
