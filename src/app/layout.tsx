@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Lato } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import ChatWidget from "@/components/chat/ChatWidget";
 
@@ -205,6 +206,16 @@ export default function RootLayout({
       <body>
         {children}
         <ChatWidget />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-HRJJ0SLP3D"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HRJJ0SLP3D');
+        `}</Script>
       </body>
     </html>
   );
