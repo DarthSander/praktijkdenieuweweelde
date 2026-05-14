@@ -221,7 +221,27 @@ export default function Page() {
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
-              {bouwstenen.map((b) => (
+              {bouwstenen.slice(0, 4).map((b) => (
+                <div key={b.number} className="bg-[#F5F0EB] rounded-2xl p-6 md:p-7">
+                  <div className="flex gap-4 mb-3">
+                    <div className="w-12 h-12 rounded-full bg-[#E8D5D2]/60 flex items-center justify-center flex-shrink-0">
+                      <b.icon className="w-5 h-5 text-[#946B66]" />
+                    </div>
+                    <div>
+                      <p className="text-[#C4A4A0] text-xs font-semibold uppercase tracking-wider mb-1">
+                        Bouwsteen {b.number}
+                      </p>
+                      <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] text-lg">
+                        {b.title}
+                      </h3>
+                    </div>
+                  </div>
+                  <p className="text-[#5E524F] text-sm md:text-base leading-relaxed">{b.text}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 md:w-1/2 md:mx-auto">
+              {bouwstenen.slice(4).map((b) => (
                 <div key={b.number} className="bg-[#F5F0EB] rounded-2xl p-6 md:p-7">
                   <div className="flex gap-4 mb-3">
                     <div className="w-12 h-12 rounded-full bg-[#E8D5D2]/60 flex items-center justify-center flex-shrink-0">
