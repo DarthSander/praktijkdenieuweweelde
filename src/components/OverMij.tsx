@@ -33,7 +33,7 @@ export default function OverMij() {
               <p>
                 Ik ben Eva Mulder, relatietherapeut, gespecialiseerd in IBCT.
                 Ik raak nooit uitgekeken op de complexiteit en de
-                kwetsbare schoonheid van menselijke relaties. Tijdens mijn
+                veelzijdigheid en kwetsbaarheid van relaties. Tijdens mijn
                 sessies begeleid ik koppels die elkaar even kwijt zijn, maar de
                 weg naar elkaar terug willen vinden. We onderzoeken wat er is
                 vastgelopen, wat er nog wel werkt en hoe jullie opnieuw in
@@ -43,10 +43,9 @@ export default function OverMij() {
               <p>
                 Ook koppels die besluiten uit elkaar te gaan, of twijfelen over
                 hun toekomst samen, zijn welkom. Ik help jullie om dit proces op
-                een respectvolle en zorgzame manier vorm te geven. Goed om te
-                weten: ik kom naar jullie toe. In jullie eigen veilige haven in
-                Tilburg en omgeving cre&euml;ren we samen de rust en ruimte die
-                nodig is om echt naar elkaar te luisteren.
+                een respectvolle en zorgzame manier vorm te geven. Ik kom naar
+                jullie toe, zodat jullie in je eigen omgeving de rust hebben om
+                echt naar elkaar te luisteren.
               </p>
             </div>
             <div className="mt-8 flex items-center">
