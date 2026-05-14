@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Heart, HandHeart, Sparkles, MessageCircle, Compass } from "lucide-react";
+import { Heart, HandHeart, Sparkles, MessageCircle, Compass, Target } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LandingHero from "@/components/LandingHero";
@@ -44,8 +44,8 @@ const faqs: FAQItem[] = [
     a: "Er worden 10 sessies per koppel ingericht voor het gehele traject. De meeste koppels volgen tussen de 8 en 15 sessies. De duur hangt af van jullie situatie, de intensiteit van de patronen en wat jullie willen bereiken. Tijdens de intake bespreken we wat voor jullie passend lijkt en evalueren we regelmatig het tempo.",
   },
   {
-    q: "Wat is de DEEP/PEEP-analyse?",
-    a: "De DEEP/PEEP-analyse is een manier om jullie interactiepatroon helder te krijgen. We kijken naar persoonlijke verschillen, emotionele gevoeligheden, externe stressoren en patronen in de interactie. Dit geeft snel inzicht in waar jullie vastlopen en waar ruimte zit voor verandering.",
+    q: "Wat is de PEEP-analyse?",
+    a: "De PEEP-analyse is een manier om jullie interactiepatroon helder te krijgen. We kijken naar persoonlijke verschillen, emotionele gevoeligheden, externe stressoren en patronen in de interactie. Dit geeft inzicht in waar jullie vastlopen en waar ruimte zit voor verandering.",
   },
   {
     q: "Is IBCT geschikt voor elk koppel?",
@@ -58,13 +58,13 @@ const bouwstenen = [
     number: "1",
     icon: Heart,
     title: "Onderlinge verschillen accepteren",
-    text: "We onderzoeken de gevoeligheden, verwachtingen en achtergronden die onder jullie reacties liggen. Hierdoor ontstaat meer begrip en zachtheid, wat ruimte geeft om elkaar weer te bereiken.",
+    text: "We onderzoeken welke gevoeligheden, verwachtingen en emoties er onder jullie reacties liggen. Hierdoor ontstaat meer begrip en zachtheid, wat ruimte geeft om elkaar weer te bereiken.",
   },
   {
     number: "2",
     icon: HandHeart,
     title: "Verschillen en spanningen leren verdragen",
-    text: "Niet alle verschillen verdwijnen. Met technieken zoals exposure, normalisatie en zelfzorg leren jullie omgaan met terugkerende thema’s zonder dat ze steeds opnieuw escaleren.",
+    text: "Niet alle verschillen verdwijnen. Met technieken zoals exposure en zelfzorg leren jullie omgaan met terugkerende spanningen zonder dat ze steeds opnieuw escaleren.",
   },
   {
     number: "3",
@@ -76,7 +76,13 @@ const bouwstenen = [
     number: "4",
     icon: MessageCircle,
     title: "Communicatie verbeteren",
-    text: "We oefenen met duidelijkheid, luisteren zonder te onderbreken, het stoppen van escalatie en het voeren van gesprekken die helderheid geven. Binnen dit onderdeel leren koppels ook samen problemen oplossen op een manier die veilig en constructief blijft.",
+    text: "We oefenen met duidelijk aangeven wat je bedoelt, luisteren zonder te onderbreken en escalatie tijdig stoppen.",
+  },
+  {
+    number: "5",
+    icon: Target,
+    title: "Samen problemen oplossen",
+    text: "Niet elk probleem verdwijnt vanzelf door meer begrip of acceptatie. In dit onderdeel nemen we de huidige manier van problemen oplossen onder de loep en oefenen we met een gestructureerde aanpak via het TOP-plan.",
   },
 ];
 
@@ -117,13 +123,10 @@ const fasen = [
     label: "Fase 2",
     sessions: "5–15 sessies",
     title: "Acceptatie en verandering",
-    intro: "Dit is het hart van de therapie. We werken met:",
-    bullets: [
-      "empathische aansluiting",
-      "gezamenlijke onthechting (samen naar het patroon kijken)",
-    ],
+    intro: "Dit is het hart van de therapie. We werken aan acceptatie, verdraagzaamheid, gedragsverandering en communicatie. Steeds afgestemd op wat jullie op dat moment nodig hebben.",
+    bullets: [],
     outro:
-      "In deze fase zie je vaak beweging: de ene week voelt het lichter, de volgende week schuurt het weer. Dat hoort bij het proces.",
+      "In deze fase zie je vaak beweging: de ene week voelt het lichter, de volgende week is het weer moeilijker. Dat hoort bij het proces.",
   },
   {
     label: "Fase 3",
@@ -143,9 +146,9 @@ const fasen = [
 
 const themas = [
   "vastlopende communicatie",
-  "het vraag-en-terugtrek-patroon (de één zet druk, de ander trekt zich terug)",
+  "het aandringen-terugtrekken patroon (de één dringt aan, de ander trekt zich terug)",
   "intimiteit en seksualiteit",
-  "vertrouwen na een breuk (na een ontrouw of een vertrouwensbreuk)",
+  "vertrouwen herstellen na ontrouw of een andere vertrouwensbreuk",
   "rolverdeling en verwachtingen",
   "grote levensovergangen (kinderen, verhuizing, baanwissel)",
   "vermijding van lastige gesprekken",
@@ -199,8 +202,9 @@ export default function Page() {
                 <li>haalbare gedragsveranderingen aanbrengen die de relatie versterken.</li>
               </ul>
               <p>
-                Alleen inzetten op verandering put een relatie uit. Alleen inzetten op acceptatie
-                laat te veel pijn liggen. IBCT brengt die twee in balans.
+                Als je alleen op verandering inzet, ontstaat er druk die de relatie verder onder
+                spanning zet. Alleen investeren in acceptatie betekent dat gedragspatronen die
+                schaden onveranderd blijven. IBCT brengt die twee in balans.
               </p>
             </div>
           </div>
@@ -210,10 +214,10 @@ export default function Page() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
-                De vier bouwstenen van IBCT
+                De vijf bouwstenen van IBCT
               </h2>
               <p className="text-[#5E524F] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                IBCT werkt met vier interventiegebieden die elkaar versterken.
+                IBCT werkt met vijf interventiegebieden die elkaar versterken.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
@@ -246,14 +250,14 @@ export default function Page() {
                 <Compass className="w-6 h-6 text-[#946B66]" />
               </div>
               <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">
-                De DEEP/PEEP-analyse
+                De PEEP-analyse
               </h2>
               <p className="text-[#5E524F] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                In IBCT gebruiken we de DEEP/PEEP-analyse om snel zicht te krijgen op wat er
-                tussen jullie gebeurt. We kijken naar jullie persoonlijke verschillen, de
-                emotionele gevoeligheden die onder reacties liggen, de externe stressoren die
-                druk geven en de patronen in de interactie die zich herhalen. Dit geeft een
-                helder beeld van waar jullie vastlopen en waar ruimte zit voor verandering.
+                In IBCT gebruiken we de PEEP-analyse om zicht te krijgen op wat er tussen jullie
+                gebeurt. We kijken naar jullie persoonlijke verschillen, de emotionele
+                gevoeligheden die onder reacties liggen, de externe stressoren die druk geven en
+                de patronen in de interactie die zich herhalen. Dit geeft een helder beeld van
+                waar jullie vastlopen en waar ruimte zit voor verandering.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-5">
@@ -293,11 +297,13 @@ export default function Page() {
                   </div>
                   <div className="text-[#5E524F] text-sm md:text-base leading-relaxed space-y-3">
                     <p>{fase.intro}</p>
-                    <ul className="list-disc pl-6 space-y-1.5">
-                      {fase.bullets.map((b) => (
-                        <li key={b}>{b}</li>
-                      ))}
-                    </ul>
+                    {fase.bullets.length > 0 && (
+                      <ul className="list-disc pl-6 space-y-1.5">
+                        {fase.bullets.map((b) => (
+                          <li key={b}>{b}</li>
+                        ))}
+                      </ul>
+                    )}
                     <p>{fase.outro}</p>
                   </div>
                 </div>
@@ -308,11 +314,8 @@ export default function Page() {
 
         <section className="section-padding bg-[#F5F0EB]">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-6 text-center">
-              Voor welke thema&apos;s werkt IBCT?
-            </h2>
             <div className="bg-white rounded-2xl p-8 md:p-10 text-[#5E524F] text-base md:text-lg leading-relaxed space-y-4">
-              <p>IBCT is geschikt voor een brede waaier aan relatievraagstukken, zoals:</p>
+              <p>IBCT is inzetbaar bij uiteenlopende relatievraagstukken, zoals:</p>
               <ul className="list-disc pl-6 space-y-2">
                 {themas.map((t) => (
                   <li key={t}>{t}</li>
