@@ -5,8 +5,8 @@ import { Heart, HandHeart, Sparkles, MessageCircle } from "lucide-react";
 const pillars = [
   {
     icon: Heart,
-    title: "Acceptatie",
-    text: "Het eerste spoor van IBCT: onderlinge verschillen leren accepteren. Inzicht in elkaars belevingswereld en gevoeligheden.",
+    title: "Emotionele acceptatie",
+    text: "Via empathische aansluiting en gezamenlijke onthechting: begrijpen hoe jullie patronen ontstaan en wat ze bij de ander losmaken, om ruimte te maken voor echte verbinding.",
     delay: "100",
   },
   {

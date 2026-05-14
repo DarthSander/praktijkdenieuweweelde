@@ -30,10 +30,9 @@ export default function QuoteBanner() {
             &ldquo;
           </span>
           <span className={`text-highlight ${visible ? "animate" : ""}`}>
-            Intimiteit ontstaat wanneer twee mensen de moed vinden
+            Intimiteit vraagt niet om perfectie.
           </span>{" "}
-          om hun verdedigingsmechanismen te laten zakken, zonder te verwachten dat de
-          ander perfect opvangt.
+          Het vraagt om de bereidheid om je zachte kant te laten zien, ook als je gewend bent je te beschermen met boosheid of afstand.
           <span
             className="quote-mark-animated absolute -bottom-8 -right-2 md:-right-6 font-serif"
             style={{ animationDelay: visible ? "0.5s" : "99s", color: "#C4A4A0" }}

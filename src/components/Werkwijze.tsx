@@ -7,7 +7,7 @@ const features = [
   {
     icon: Home,
     title: "Vertrouwde omgeving",
-    text: "Jullie eigen bank praat makkelijker dan een stoel in een praktijkruimte.",
+    text: "Op jullie eigen bank kom je makkelijker tot een open gesprek dan in een onbekende omgeving.",
   },
   {
     icon: Clock,
