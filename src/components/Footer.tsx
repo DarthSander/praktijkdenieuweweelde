@@ -35,6 +35,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5">
               <li><Link href="/ibct-relatietherapie" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">IBCT relatietherapie</Link></li>
+              <li><Link href="/individuele-relatietherapie" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Individuele relatietherapie</Link></li>
               <li><Link href="/relatietherapie-jonge-ouders" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Voor jonge ouders</Link></li>
               <li><Link href="/blog" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Blog</Link></li>
             </ul>

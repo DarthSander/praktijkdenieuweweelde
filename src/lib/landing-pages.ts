@@ -96,6 +96,20 @@ export const landingPages: LandingPage[] = [
     imageAlt: "Warm pampasgras, symbool voor zachte herverbinding voor jonge ouders",
     areaServed: "Tilburg en omgeving",
   },
+  {
+    slug: "individuele-relatietherapie",
+    title: "Individuele relatietherapie",
+    metaTitle: "Individuele relatietherapie Tilburg | Praktijk de Nieuwe Weelde",
+    description:
+      "Wil je werken aan je relatie, maar wil je partner (nog) niet mee? Individuele relatietherapie in Tilburg, aan huis. Op basis van IBCT-principes onderzoek je jouw aandeel in terugkerende patronen.",
+    h1: "Individuele relatietherapie Tilburg",
+    heroKicker: "Werken aan jezelf, voor jullie relatie",
+    heroSubtitle:
+      "Soms wil je zelf aan de slag, zonder dat je partner er klaar voor is. Of wil je beter begrijpen wat jij meebrengt in jullie relatie. In individuele sessies verkennen we jouw aandeel in terugkerende patronen, aan de hand van IBCT-principes.",
+    image: "/pampas-water.jpg",
+    imageAlt: "Pampasgras bij kalm water, symbool voor persoonlijke reflectie",
+    areaServed: "Tilburg",
+  },
 ];
 
 export function getLandingBySlug(slug: string): LandingPage | undefined {
