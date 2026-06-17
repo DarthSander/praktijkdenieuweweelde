@@ -14,12 +14,11 @@ const plans = [
       "Praktische oefeningen voor thuis",
     ],
     cta: "Afspraak maken",
-    primary: true,
     delay: "100",
   },
   {
     title: "APK voor Relaties",
-    subtitle: "Preventieve check-up (3 sessies)",
+    subtitle: "Preventieve check-up (3 sessies van 60 minuten)",
     sessions: null,
     price: 325,
     priceSuffix: ",-",
@@ -29,8 +28,7 @@ const plans = [
       "Versterken wat goed gaat",
       "Voorkomen van relatieproblemen",
     ],
-    cta: "Meer informatie",
-    primary: false,
+    cta: "Afspraak maken",
     delay: "200",
   },
   {
@@ -46,7 +44,6 @@ const plans = [
       "Werken aan gedrag en reacties die jij wilt veranderen",
     ],
     cta: "Afspraak maken",
-    primary: false,
     delay: "300",
   },
 ];
@@ -91,9 +88,7 @@ export default function Tarieven() {
               </ul>
               <a
                 href="#contact"
-                className={`block text-center px-6 py-3 rounded-full font-semibold transition-all duration-300 mt-auto ${
-                  plan.primary ? "btn-primary" : "btn-secondary"
-                }`}
+                className="block text-center px-6 py-3 rounded-full font-semibold transition-all duration-300 mt-auto btn-primary"
               >
                 {plan.cta}
               </a>
