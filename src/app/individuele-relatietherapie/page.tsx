@@ -106,7 +106,7 @@ export default function Page() {
 
         <LandingCTA
           title="Tarief: €100 per sessie · 60 minuten"
-          text="Een sessie duurt 60 minuten en vindt plaats bij jou thuis. Plan een intakegesprek om te bespreken of individuele relatietherapie passend is voor jouw situatie."
+          text="Een sessie duurt 60 minuten en vindt plaats bij jou thuis. Neem contact op om te bespreken of individuele relatietherapie passend is voor jouw situatie of plan direct een intakegesprek."
         />
 
         <LandingFAQ items={faqs} />
