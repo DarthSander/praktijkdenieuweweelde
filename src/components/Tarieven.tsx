@@ -33,6 +33,22 @@ const plans = [
     primary: false,
     delay: "200",
   },
+  {
+    title: "Individuele relatietherapie",
+    subtitle: "Individuele begeleiding",
+    sessions: "Voor wie zelf aan de slag wil gaan",
+    price: 100,
+    priceSuffix: ",-",
+    per: "/ 60 minuten",
+    features: [
+      "Inzicht in je eigen aandeel in terugkerende relatiepatronen",
+      "Leren omgaan met verschillen en dat wat niet verandert",
+      "Werken aan gedrag en reacties die jij wilt veranderen",
+    ],
+    cta: "Afspraak maken",
+    primary: false,
+    delay: "300",
+  },
 ];
 
 export default function Tarieven() {
@@ -44,7 +60,7 @@ export default function Tarieven() {
             Tarieven
           </h2>
         </div>
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12">
           {plans.map((plan) => (
             <div
               key={plan.title}
