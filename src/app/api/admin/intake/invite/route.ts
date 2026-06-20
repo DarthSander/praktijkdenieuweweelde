@@ -1,7 +1,7 @@
 import type { NextRequest } from "next/server";
 import { getAdminUser } from "@/lib/supabase-server";
 import { createInvite } from "@/lib/intake";
-import { sendIntakeMagicLink } from "@/lib/resend";
+import { sendIntakeMagicLink } from "@/lib/intake-mail";
 
 export const runtime = "nodejs";
 

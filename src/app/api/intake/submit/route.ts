@@ -1,6 +1,6 @@
 import type { NextRequest } from "next/server";
 import { recordSubmission } from "@/lib/intake";
-import { sendIntakeSubmittedNotice } from "@/lib/resend";
+import { sendIntakeSubmittedNotice } from "@/lib/intake-mail";
 
 export const runtime = "nodejs";
 
