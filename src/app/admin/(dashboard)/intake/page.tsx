@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getServerSupabase } from "@/lib/supabase";
 import InviteForm from "./InviteForm";
 
@@ -10,6 +11,7 @@ type InviteListRow = {
   client_email: string;
   expires_at: string;
   used_at: string | null;
+  submission_id: string | null;
 };
 
 function statusLabel(row: InviteListRow): { text: string; className: string } {
@@ -25,7 +27,7 @@ export default async function AdminIntakePage() {
     const supabase = getServerSupabase();
     const { data } = await supabase
       .from("intake_invites")
-      .select("id, created_at, client_name, client_email, expires_at, used_at")
+      .select("id, created_at, client_name, client_email, expires_at, used_at, submission_id")
       .order("created_at", { ascending: false })
       .limit(25);
     invites = data ?? [];
@@ -63,6 +65,7 @@ export default async function AdminIntakePage() {
                   <th className="px-4 py-3 font-medium">E-mail</th>
                   <th className="px-4 py-3 font-medium">Verstuurd</th>
                   <th className="px-4 py-3 font-medium">Status</th>
+                  <th className="px-4 py-3 font-medium"></th>
                 </tr>
               </thead>
               <tbody>
@@ -81,6 +84,18 @@ export default async function AdminIntakePage() {
                         <span className={`inline-block px-2.5 py-1 rounded-full text-xs font-medium ${s.className}`}>
                           {s.text}
                         </span>
+                      </td>
+                      <td className="px-4 py-3 text-right">
+                        {row.used_at && row.submission_id ? (
+                          <Link
+                            href={`/admin/intake/${row.submission_id}`}
+                            className="text-[#946B66] font-medium hover:underline whitespace-nowrap"
+                          >
+                            Bekijken →
+                          </Link>
+                        ) : (
+                          <span className="text-[#5E524F]/30">—</span>
+                        )}
                       </td>
                     </tr>
                   );

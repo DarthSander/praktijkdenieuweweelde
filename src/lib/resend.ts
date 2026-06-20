@@ -32,22 +32,84 @@ export async function sendIntakeMagicLink(args: {
   const greeting = args.name ? `Beste ${escapeHtml(args.name)},` : "Beste,";
   const safeLink = escapeHtml(args.link);
 
+  // E-mail in de huisstijl van de website (crème achtergrond, witte kaart,
+  // Playfair-achtige serif kop, sage CTA-knop). Tabel-gebaseerd en met inline
+  // styles voor betrouwbare weergave in e-mailclients.
   const html = `
-    <div style="font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color:#1f2937; line-height:1.6;">
-      <p>${greeting}</p>
-      <p>Fijn dat jullie aan de slag willen. Via onderstaande knop vul je het
-      intake-formulier in. Zo kan ik onze eerste afspraak goed voorbereiden.</p>
-      <p style="margin:28px 0;">
-        <a href="${safeLink}"
-           style="background:#946B66;color:#fff;text-decoration:none;padding:12px 22px;border-radius:9999px;display:inline-block;font-weight:600;">
-          Open het intake-formulier
-        </a>
-      </p>
-      <p>Werkt de knop niet? Kopieer dan deze link in je browser:<br>
-        <a href="${safeLink}">${safeLink}</a></p>
-      <p>Deze link is persoonlijk en blijft een beperkte tijd geldig.</p>
-      <p>Hartelijke groet,<br>Eva Mulder<br>Relatiepraktijk de Nieuwe Weelde</p>
-    </div>
+  <!doctype html>
+  <html lang="nl">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+  <body style="margin:0;padding:0;background:#F5F0EB;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F5F0EB;">
+      <tr>
+        <td align="center" style="padding:32px 16px;">
+          <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:100%;">
+            <!-- merkkop -->
+            <tr>
+              <td align="center" style="padding:8px 0 22px;">
+                <div style="font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:bold;color:#946B66;letter-spacing:.3px;">
+                  Relatiepraktijk de Nieuwe Weelde
+                </div>
+                <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#8A7F7C;letter-spacing:.08em;text-transform:uppercase;margin-top:6px;">
+                  Relatietherapie aan huis · Tilburg
+                </div>
+              </td>
+            </tr>
+            <!-- kaart -->
+            <tr>
+              <td style="background:#ffffff;border-radius:16px;box-shadow:0 8px 30px rgba(94,82,79,.08);padding:40px 40px 36px;">
+                <h1 style="margin:0 0 18px;font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:bold;color:#6B6866;line-height:1.25;">
+                  Je intakeformulier
+                </h1>
+                <p style="margin:0 0 16px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.65;color:#5E524F;">
+                  ${greeting}
+                </p>
+                <p style="margin:0 0 16px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.65;color:#5E524F;">
+                  Fijn dat jullie aan de slag willen. Via onderstaande knop open je
+                  jouw persoonlijke intakeformulier. Vul het rustig en zelfstandig in
+                  &mdash; zo kan ik onze eerste afspraak goed voorbereiden.
+                </p>
+                <!-- CTA -->
+                <table role="presentation" cellpadding="0" cellspacing="0" style="margin:28px 0;">
+                  <tr>
+                    <td align="center" bgcolor="#946B66" style="border-radius:9999px;">
+                      <a href="${safeLink}" target="_blank"
+                         style="display:inline-block;padding:14px 30px;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:bold;color:#ffffff;text-decoration:none;border-radius:9999px;">
+                        Open het intakeformulier
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+                <p style="margin:0 0 14px;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:#8A7F7C;">
+                  Werkt de knop niet? Kopieer dan deze link in je browser:<br>
+                  <a href="${safeLink}" target="_blank" style="color:#946B66;word-break:break-all;">${safeLink}</a>
+                </p>
+                <p style="margin:0 0 22px;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:#8A7F7C;">
+                  Deze link is persoonlijk en blijft een beperkte tijd geldig.
+                </p>
+                <div style="border-top:1px solid #EDE6DD;padding-top:20px;">
+                  <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.65;color:#5E524F;">
+                    Hartelijke groet,<br>
+                    <span style="font-family:Georgia,'Times New Roman',serif;font-size:18px;color:#6B6866;">Eva Mulder</span><br>
+                    <span style="font-size:14px;color:#8A7F7C;">Relatietherapeut · de Nieuwe Weelde</span>
+                  </p>
+                </div>
+              </td>
+            </tr>
+            <!-- voettekst -->
+            <tr>
+              <td align="center" style="padding:24px 16px 8px;font-family:Arial,Helvetica,sans-serif;font-size:12.5px;line-height:1.7;color:#A19890;">
+                Relatiepraktijk de Nieuwe Weelde · Tilburg e.o.<br>
+                <a href="mailto:info@praktijkdenieuweweelde.nl" style="color:#946B66;text-decoration:none;">info@praktijkdenieuweweelde.nl</a>
+                &nbsp;·&nbsp; 06 10096923
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+  </html>
   `;
 
   const text = `${args.name ? `Beste ${args.name},` : "Beste,"}
