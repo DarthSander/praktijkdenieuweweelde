@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getServerSupabase } from "@/lib/supabase";
 import SubmissionActions from "./SubmissionActions";
+import SubmissionManage from "./SubmissionManage";
 
 export const dynamic = "force-dynamic";
 
@@ -202,17 +203,27 @@ export default async function SubmissionDetailPage({
         </Link>
       </div>
 
-      <div className="flex flex-wrap items-end justify-between gap-4">
+      <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-[family-name:var(--font-playfair)] font-bold text-[#5E524F]">
-            Intake — {naam}
-          </h1>
+          <div className="flex items-center gap-3">
+            <h1 className="text-2xl font-[family-name:var(--font-playfair)] font-bold text-[#5E524F]">
+              Intake — {naam}
+            </h1>
+            {submission.status === "archived" && (
+              <span className="inline-block px-2.5 py-1 rounded-full text-xs font-medium bg-gray-200 text-gray-600 print:hidden">
+                Gearchiveerd
+              </span>
+            )}
+          </div>
           <p className="text-[#5E524F]/60 text-sm mt-1">
-            {submission.client_email || answers["email"] as string || "—"} ·
+            {submission.client_email || (answers["email"] as string) || "—"} ·
             ingevuld op {ingevuldOp}
           </p>
         </div>
-        <SubmissionActions filename={filename} data={submission} />
+        <div className="flex flex-col items-end gap-3">
+          <SubmissionActions filename={filename} data={submission} />
+          <SubmissionManage id={submission.id} status={submission.status} />
+        </div>
       </div>
 
       <div className="space-y-4">

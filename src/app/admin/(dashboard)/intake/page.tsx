@@ -14,8 +14,15 @@ type InviteListRow = {
   submission_id: string | null;
 };
 
-function statusLabel(row: InviteListRow): { text: string; className: string } {
-  if (row.used_at) return { text: "Ingevuld", className: "bg-green-100 text-green-800" };
+function statusLabel(
+  row: InviteListRow,
+  submissionStatus?: string
+): { text: string; className: string } {
+  if (row.used_at) {
+    if (submissionStatus === "archived")
+      return { text: "Gearchiveerd", className: "bg-gray-200 text-gray-600" };
+    return { text: "Ingevuld", className: "bg-green-100 text-green-800" };
+  }
   if (new Date(row.expires_at).getTime() <= Date.now())
     return { text: "Verlopen", className: "bg-gray-200 text-gray-600" };
   return { text: "Verstuurd", className: "bg-amber-100 text-amber-800" };
@@ -23,6 +30,7 @@ function statusLabel(row: InviteListRow): { text: string; className: string } {
 
 export default async function AdminIntakePage() {
   let invites: InviteListRow[] = [];
+  const submissionStatus = new Map<string, string>();
   try {
     const supabase = getServerSupabase();
     const { data } = await supabase
@@ -31,6 +39,18 @@ export default async function AdminIntakePage() {
       .order("created_at", { ascending: false })
       .limit(25);
     invites = data ?? [];
+
+    // Status van de bijbehorende inzendingen ophalen (voor "Gearchiveerd").
+    const ids = invites
+      .map((r) => r.submission_id)
+      .filter((v): v is string => Boolean(v));
+    if (ids.length) {
+      const { data: subs } = await supabase
+        .from("intake_submissions")
+        .select("id, status")
+        .in("id", ids);
+      for (const s of subs ?? []) submissionStatus.set(s.id, s.status);
+    }
   } catch (err) {
     console.error("Kon uitnodigingen niet laden", err);
   }
@@ -70,7 +90,12 @@ export default async function AdminIntakePage() {
               </thead>
               <tbody>
                 {invites.map((row) => {
-                  const s = statusLabel(row);
+                  const s = statusLabel(
+                    row,
+                    row.submission_id
+                      ? submissionStatus.get(row.submission_id)
+                      : undefined
+                  );
                   return (
                     <tr key={row.id} className="border-b border-[#F5F0EB] last:border-0">
                       <td className="px-4 py-3 text-[#5E524F]">
