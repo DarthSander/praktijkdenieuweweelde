@@ -166,6 +166,25 @@ export const blogPosts: BlogPost[] = [
     ],
     category: "Specifieke thema's",
   },
+  {
+    slug: "uit-elkaar-groeien-in-je-relatie",
+    title: "Uit elkaar groeien in je relatie: wat betekent het en wat kun je doen?",
+    description:
+      "Herken je het gevoel dat jullie uit elkaar zijn gegroeid? Lees wat dit betekent, hoe het ontstaat en wat jullie kunnen doen vanuit de relatiewetenschap.",
+    excerpt:
+      "Veel stellen herkennen het gevoel dat ze uit elkaar zijn gegroeid, zonder dat daar een duidelijke aanleiding voor is. Een blik op wat er dan precies gebeurt volgens de relatiewetenschap, en wat helpt om weer dichter bij elkaar te komen.",
+    image: "/pampas-mountains.jpg",
+    imageAlt: "Weids landschap met pampasgras, symbool voor groeiende afstand tussen twee mensen",
+    readingTime: "9 min leestijd",
+    date: "2026-06-21",
+    dateLabel: "21 juni 2026",
+    related: [
+      "steeds-dezelfde-ruzie-in-je-relatie",
+      "wanneer-is-relatietherapie-zinvol",
+      "communicatieproblemen-in-een-relatie",
+    ],
+    category: "Specifieke thema's",
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
