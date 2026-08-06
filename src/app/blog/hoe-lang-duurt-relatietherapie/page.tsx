@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BlogLayout from "@/components/BlogLayout";
 import { getPostBySlug, getRelatedPosts } from "@/lib/blog-posts";
+import type { FAQItem } from "@/lib/faq-schema";
 
 const slug = "hoe-lang-duurt-relatietherapie";
 const post = getPostBySlug(slug)!;
@@ -22,10 +23,30 @@ export const metadata: Metadata = {
   },
 };
 
+// Antwoorden zijn samengevat uit de tekst hieronder; niets nieuws toegevoegd.
+const faqs: FAQItem[] = [
+  {
+    q: "Hoe lang duurt relatietherapie?",
+    a: "IBCT werkt met een kerntraject van tien sessies, het aantal dat in onderzoek en praktijk het meest effectief blijkt. Voor sommige koppels zijn acht sessies voldoende, terwijl anderen richting de vijftien tot twintig sessies gaan, bijvoorbeeld wanneer er langdurige conflicten, terugkerende patronen of bijkomende stressoren spelen.",
+  },
+  {
+    q: "Hoe vaak zien we elkaar tijdens een traject?",
+    a: "In de meeste trajecten zie ik koppels één keer per twee weken en soms één keer per week. In het begin kiezen veel koppels voor wekelijkse sessies, omdat dat helpt om sneller inzicht te krijgen in patronen. Naarmate jullie meer grip krijgen op wat er tussen jullie gebeurt, kan de frequentie omlaag.",
+  },
+  {
+    q: "Hoe lang duurt één sessie relatietherapie?",
+    a: "Een sessie duurt meestal 90 minuten. We beginnen met een korte check-in over hoe het sinds de vorige keer is gegaan en werken daarna aan het thema dat op dat moment centraal staat. Aan het einde kiezen we samen een haalbare stap voor thuis.",
+  },
+  {
+    q: "Wat als relatietherapie niet werkt?",
+    a: "Soms is de pijn te groot, zijn de verschillen te fundamenteel of is er te weinig energie om verder te investeren. IBCT is geen therapievorm die koppels koste wat kost bij elkaar wil houden, maar therapie die helpt om helderheid te krijgen, ook als die helderheid betekent dat uit elkaar gaan beter werkt dan doorgaan.",
+  },
+];
+
 export default function Page() {
   const related = getRelatedPosts(slug);
   return (
-    <BlogLayout post={post} related={related}>
+    <BlogLayout post={post} related={related} faqs={faqs}>
       <p>
         IBCT werkt met een kerntraject van tien sessies. Dat is het aantal dat in onderzoek en praktijk het meest effectief blijkt. Afhankelijk van jullie dynamiek, geschiedenis en hulpvraag kan het traject korter of langer zijn. Het is dan ook logisch dat veel koppels in het eerste gesprek willen weten hoe lang relatietherapie in hun situatie zal duren. Een exact aantal valt vooraf niet te geven, maar op basis van wetenschappelijk onderzoek én mijn ervaring kan ik wel een realistisch beeld schetsen van wat jullie mogen verwachten. Voor sommige koppels zijn acht sessies voldoende, terwijl anderen richting de vijftien tot twintig sessies gaan, bijvoorbeeld wanneer er langdurige conflicten, terugkerende patronen of bijkomende stressoren spelen. Dat sluit aan bij zowel het Nederlandstalige protocol van Dijkstra en Tamminga (2025) als bij internationaal onderzoek, waaruit blijkt dat de meeste koppels tussen de tien en vijftien sessies nodig hebben, met uitschieters wanneer de problematiek complexer is.
       </p>

@@ -6,6 +6,7 @@
 // database-wijziging: geef nieuwe velden simpelweg een `name`.
 import { useEffect, useRef, useState } from "react";
 import styles from "./IntakeForm.module.css";
+import { trackLead } from "@/lib/analytics";
 
 const TOPICS = [
   "Financiën",
@@ -102,6 +103,7 @@ export default function IntakeForm({
         return;
       }
       setStatus("success");
+      trackLead("intake");
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch {
       setError("Netwerkfout. Probeer het opnieuw.");

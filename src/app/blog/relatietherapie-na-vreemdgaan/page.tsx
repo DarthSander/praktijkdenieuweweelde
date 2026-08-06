@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BlogLayout from "@/components/BlogLayout";
 import { getPostBySlug, getRelatedPosts } from "@/lib/blog-posts";
+import type { FAQItem } from "@/lib/faq-schema";
 
 const slug = "relatietherapie-na-vreemdgaan";
 const post = getPostBySlug(slug)!;
@@ -22,10 +23,30 @@ export const metadata: Metadata = {
   },
 };
 
+// Antwoorden zijn samengevat uit de tekst hieronder; niets nieuws toegevoegd.
+const faqs: FAQItem[] = [
+  {
+    q: "Kan een relatie herstellen na vreemdgaan?",
+    a: "Ja, en niet alleen in uitzonderlijke gevallen. Atkins, Eldridge, Baucom en Christensen (2005) volgden koppels in IBCT-therapie waarvan een deel te maken had met ontrouw. Koppels die de ontrouw hadden gedeeld, begonnen met meer stress en minder vertrouwen, maar maakten op termijn grotere stappen dan koppels zonder ontrouw en eindigden even tevreden of zelfs tevredener. Voorwaarde is wel dat de ontrouw gedeeld en besproken wordt.",
+  },
+  {
+    q: "Hoe lang duurt herstel na ontrouw?",
+    a: "Waarschijnlijk langer dan waar je op hoopt. Gemiddeld werken koppels die na ontrouw in therapie gaan vijftien tot twintig sessies aan herstel, verspreid over ongeveer een jaar. De echte integratie duurt vaak langer, soms twee tot drie jaar. Wat zich verankert is duurzaam: vijf jaar na IBCT-therapie ging het veel beter met vijftig procent van de onderzochte koppels.",
+  },
+  {
+    q: "Wanneer is herstel na vreemdgaan niet realistisch?",
+    a: "Wanneer er sprake is van een andere relatie of contact dat blijft doorgaan, van structureel misleidend gedrag, of wanneer een of beide partners niet bereid zijn tot werkelijke eerlijkheid. In zulke gevallen is onderzoeken of bewust uit elkaar gaan soms de eerlijkere keuze.",
+  },
+  {
+    q: "Welke fasen doorloop je bij herstel na ontrouw?",
+    a: "In IBCT werken we bij ontrouw in drie herkenbare fasen. Eerst stabiliseren: rust creëren en afspraken maken over hoe jullie in de tussentijd samen functioneren. Daarna begrijpen: onderzoeken welke verschillen, kwetsbaarheden, stressoren en patronen zich hebben opgebouwd. Tot slot heropbouwen: vertrouwen laten groeien door voorspelbaar en transparant gedrag, en samen een bewuste nieuwe relatie vormen.",
+  },
+];
+
 export default function Page() {
   const related = getRelatedPosts(slug);
   return (
-    <BlogLayout post={post} related={related}>
+    <BlogLayout post={post} related={related} faqs={faqs}>
       <p>
         Weinig dingen in een relatie komen zo hard binnen als het moment waarop duidelijk wordt dat er sprake is van ontrouw. De grond zakt onder jullie weg. Alles voelt ineens onzeker. Je kijkt met andere ogen naar wat er was, en de toekomst voelt onduidelijk. En toch rijst juist dan de vraag: is er nog iets te redden? Het antwoord is: vaker dan je denkt.
       </p>

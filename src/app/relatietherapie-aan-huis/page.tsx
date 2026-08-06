@@ -17,6 +17,7 @@ import Footer from "@/components/Footer";
 import LandingHero from "@/components/LandingHero";
 import LandingCTA from "@/components/LandingCTA";
 import LandingFAQ from "@/components/LandingFAQ";
+import RelatedLinks from "@/components/RelatedLinks";
 import { faqJsonLd, type FAQItem } from "@/lib/faq-schema";
 import { getLandingBySlug } from "@/lib/landing-pages";
 
@@ -266,6 +267,14 @@ export default function Page() {
         <LandingFAQ
           heading="Veelgestelde vragen over relatietherapie aan huis"
           items={faqs}
+        />
+
+        <RelatedLinks
+          heading="Waar ik aan huis kom"
+          intro="Het werkgebied per wijk, en wat therapie thuis in de praktijk betekent."
+          landings={page.relatedLandings}
+          posts={page.relatedPosts}
+          background="beige"
         />
       </main>
       <Footer />

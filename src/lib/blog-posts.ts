@@ -10,6 +10,8 @@ export type BlogPost = {
   dateLabel: string;
   updated?: string;
   related: string[];
+  /** Slugs uit landing-pages.ts: dienstpagina's die inhoudelijk aansluiten. */
+  relatedLandings: string[];
   category: string;
 };
 
@@ -31,6 +33,10 @@ export const blogPosts: BlogPost[] = [
       "communicatieproblemen-in-een-relatie",
       "hoe-lang-duurt-relatietherapie",
     ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "ibct-relatietherapie",
+    ],
     category: "Relatietherapie",
   },
   {
@@ -49,6 +55,10 @@ export const blogPosts: BlogPost[] = [
       "communicatieproblemen-in-een-relatie",
       "wanneer-is-relatietherapie-zinvol",
       "relatietherapie-of-scheiden",
+    ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "ibct-relatietherapie",
     ],
     category: "Specifieke thema's",
   },
@@ -69,6 +79,10 @@ export const blogPosts: BlogPost[] = [
       "communicatieproblemen-in-een-relatie",
       "wanneer-is-relatietherapie-zinvol",
     ],
+    relatedLandings: [
+      "relatietherapie-aan-huis",
+      "relatietherapie-tilburg",
+    ],
     category: "Werkwijze",
   },
   {
@@ -87,6 +101,10 @@ export const blogPosts: BlogPost[] = [
       "wanneer-is-relatietherapie-zinvol",
       "relatietherapie-na-vreemdgaan",
       "hoe-lang-duurt-relatietherapie",
+    ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "individuele-relatietherapie",
     ],
     category: "Relatietherapie",
   },
@@ -107,6 +125,10 @@ export const blogPosts: BlogPost[] = [
       "relatietherapie-aan-huis",
       "wanneer-is-relatietherapie-zinvol",
     ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "ibct-relatietherapie",
+    ],
     category: "Praktische informatie",
   },
   {
@@ -125,6 +147,10 @@ export const blogPosts: BlogPost[] = [
       "hoe-lang-duurt-relatietherapie",
       "relatietherapie-na-vreemdgaan",
       "wanneer-is-relatietherapie-zinvol",
+    ],
+    relatedLandings: [
+      "ibct-relatietherapie",
+      "relatietherapie-tilburg",
     ],
     category: "IBCT",
   },
@@ -145,6 +171,10 @@ export const blogPosts: BlogPost[] = [
       "jaloezie-in-je-relatie",
       "wanneer-is-relatietherapie-zinvol",
     ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "ibct-relatietherapie",
+    ],
     category: "Specifieke thema's",
   },
   {
@@ -164,6 +194,10 @@ export const blogPosts: BlogPost[] = [
       "relatietherapie-na-vreemdgaan",
       "wanneer-is-relatietherapie-zinvol",
     ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "individuele-relatietherapie",
+    ],
     category: "Specifieke thema's",
   },
   {
@@ -182,6 +216,10 @@ export const blogPosts: BlogPost[] = [
       "steeds-dezelfde-ruzie-in-je-relatie",
       "wanneer-is-relatietherapie-zinvol",
       "communicatieproblemen-in-een-relatie",
+    ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "relatietherapie-jonge-ouders",
     ],
     category: "Specifieke thema's",
   },

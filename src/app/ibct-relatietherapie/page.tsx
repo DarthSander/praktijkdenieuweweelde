@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import LandingHero from "@/components/LandingHero";
 import LandingCTA from "@/components/LandingCTA";
 import LandingFAQ from "@/components/LandingFAQ";
+import RelatedLinks from "@/components/RelatedLinks";
 import { faqJsonLd, type FAQItem } from "@/lib/faq-schema";
 import { getLandingBySlug } from "@/lib/landing-pages";
 
@@ -351,6 +352,14 @@ export default function Page() {
         />
 
         <LandingFAQ heading="Veelgestelde vragen" items={faqs} />
+
+        <RelatedLinks
+          heading="IBCT in de praktijk"
+          intro="Waar ik aan huis kom en hoe een traject er in de praktijk uitziet."
+          landings={page.relatedLandings}
+          posts={page.relatedPosts}
+          background="beige"
+        />
       </main>
       <Footer />
     </>

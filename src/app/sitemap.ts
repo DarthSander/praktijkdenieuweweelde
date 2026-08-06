@@ -6,7 +6,7 @@ const BASE_URL = "https://www.praktijkdenieuweweelde.nl";
 
 // Stable reference dates. Bump only when the underlying content materially
 // changes so crawlers don't refetch unchanged pages every deploy.
-const LANDING_LAST_UPDATED = new Date("2026-04-20");
+const LANDING_LAST_UPDATED = new Date("2026-08-06");
 const LEGAL_LAST_UPDATED = new Date("2026-04-20");
 const SITE_LAUNCH_DATE = new Date("2026-04-20");
 

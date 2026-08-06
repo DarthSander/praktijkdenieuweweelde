@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import LandingHero from "@/components/LandingHero";
 import LandingCTA from "@/components/LandingCTA";
 import LandingFAQ from "@/components/LandingFAQ";
+import RelatedLinks from "@/components/RelatedLinks";
 import { faqJsonLd, type FAQItem } from "@/lib/faq-schema";
 import { getLandingBySlug } from "@/lib/landing-pages";
 
@@ -254,6 +255,14 @@ export default function Page() {
         <LandingFAQ
           heading="Veelgestelde vragen van jonge ouders"
           items={faqs}
+        />
+
+        <RelatedLinks
+          heading="Meer over de praktijk"
+          intro="Het werkgebied, de methode en artikelen die aansluiten bij deze levensfase."
+          landings={page.relatedLandings}
+          posts={page.relatedPosts}
+          background="beige"
         />
       </main>
       <Footer />
