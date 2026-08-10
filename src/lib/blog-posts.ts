@@ -17,6 +17,29 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "relatiecoach-of-relatietherapeut",
+    title: "Relatiecoach of relatietherapeut: wat is het verschil?",
+    description:
+      "Wat is het verschil tussen een relatiecoach en een relatietherapeut? Geen van beide titels is in Nederland beschermd. Waar je dan wel op kunt letten bij het kiezen van begeleiding.",
+    excerpt:
+      "Wie hulp zoekt voor de relatie komt beide woorden tegen, zonder dat duidelijk is wat ze onderscheidt. Het eerlijke antwoord is dat de grens minder scherp is dan veel mensen verwachten. Juist daarom is het nuttig om te weten waar je wel op kunt letten.",
+    image: "/pampas-water.jpg",
+    imageAlt: "Pampasgras bij stil water, symbool voor bezinning bij het maken van een keuze",
+    readingTime: "8 min leestijd",
+    date: "2026-08-06",
+    dateLabel: "6 augustus 2026",
+    related: [
+      "wanneer-is-relatietherapie-zinvol",
+      "hoe-lang-duurt-relatietherapie",
+      "communicatieproblemen-in-een-relatie",
+    ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "ibct-relatietherapie",
+    ],
+    category: "Praktische informatie",
+  },
+  {
     slug: "wanneer-is-relatietherapie-zinvol",
     title: "Wanneer is relatietherapie zinvol? 7 signalen die wijzen op meer dan een dipje",
     description:
@@ -30,7 +53,7 @@ export const blogPosts: BlogPost[] = [
     dateLabel: "20 april 2026",
     related: [
       "relatietherapie-of-scheiden",
-      "communicatieproblemen-in-een-relatie",
+      "relatiecoach-of-relatietherapeut",
       "hoe-lang-duurt-relatietherapie",
     ],
     relatedLandings: [
@@ -121,7 +144,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-20",
     dateLabel: "20 april 2026",
     related: [
-      "communicatieproblemen-in-een-relatie",
+      "relatiecoach-of-relatietherapeut",
       "relatietherapie-aan-huis",
       "wanneer-is-relatietherapie-zinvol",
     ],

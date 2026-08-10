@@ -35,7 +35,11 @@ export const landingPages: LandingPage[] = [
       "relatietherapie-berkel-enschot",
       "ibct-relatietherapie",
     ],
-    relatedPosts: ["wanneer-is-relatietherapie-zinvol", "hoe-lang-duurt-relatietherapie"],
+    relatedPosts: [
+      "wanneer-is-relatietherapie-zinvol",
+      "relatiecoach-of-relatietherapeut",
+      "hoe-lang-duurt-relatietherapie",
+    ],
   },
   {
     slug: "relatietherapie-reeshof",
@@ -95,7 +99,11 @@ export const landingPages: LandingPage[] = [
       "relatietherapie-aan-huis",
       "individuele-relatietherapie",
     ],
-    relatedPosts: ["communicatieproblemen-in-een-relatie", "hoe-lang-duurt-relatietherapie"],
+    relatedPosts: [
+      "communicatieproblemen-in-een-relatie",
+      "relatiecoach-of-relatietherapeut",
+      "hoe-lang-duurt-relatietherapie",
+    ],
   },
   {
     slug: "relatietherapie-aan-huis",

@@ -185,6 +185,7 @@ keuze om geen verzonnen `aggregateRating` te plaatsen.
 | P8 | GA4-gebeurtenis `generate_lead` bij een succesvolle inzending, met onderscheid tussen contact- en intakeformulier | `src/lib/analytics.ts`, `src/components/Contact.tsx`, `src/components/IntakeForm.tsx` |
 | P9 | Volwaardig `Person`-schema voor Eva Mulder plus een zichtbare verwijzing naar het register "De competente relatietherapeut" in de sectie Over mij en in de footer | `src/app/layout.tsx`, `src/components/OverMij.tsx`, `src/components/Footer.tsx` |
 | — | `LANDING_LAST_UPDATED` opgehoogd naar 2026-08-06 | `src/app/sitemap.ts` |
+| P4 | Nieuw artikel over het verschil tussen een relatiecoach en een relatietherapeut, met FAQ-schema en vijf inkomende interne links | `src/app/blog/relatiecoach-of-relatietherapeut/page.tsx`, `src/lib/blog-posts.ts`, `src/lib/landing-pages.ts` |
 
 Resultaat na de wijziging: alle pagina's hebben precies één `<h1>`, alle JSON-LD is
 valide, en het aantal contextuele interne links per pagina liep van nul tot twee naar
@@ -206,7 +207,6 @@ echte reviews zijn kan `aggregateRating` alsnog in het schema, en pas dan.
 
 | Onderwerp | Onderbouwing |
 |---|---|
-| Nieuwe pagina over het verschil tussen relatiecoach en relatietherapeut in Tilburg | 545 vertoningen (17,4%) en nul klikken; geen enkele pagina targeteert het woord "relatiecoach". Expliciete vraag zichtbaar in "verschil relatiecoach en relatietherapeut" (19 vertoningen). Grootste onbenutte kans. |
 | Vreemdgaan-cluster uitbouwen tot hub | 530 vertoningen en één klik. `/blog/relatietherapie-na-vreemdgaan` wordt de pillar, met ondersteunende artikelen over de fasen na vreemdgaan (27 vertoningen), vertrouwen herstellen en kans van slagen (34), en trauma en PTSS na vreemdgaan (34). |
 | `/blog/wanneer-is-relatietherapie-zinvol` aanvullen | Secties "Wanneer heeft relatietherapie geen zin?" en "Hoe groot is de slagingskans?" dekken ongeveer 166 vertoningen die nu op positie 65 tot 93 staan. Onderbouwing staat in `docs/ibct-literatuur.md`. |
 | Landingspagina-copy ontdubbelen | `/relatietherapie-tilburg` en `/relatietherapie-aan-huis` overlappen inhoudelijk met de homepage. Unieke lokale inhoud per wijk zou de kannibalisatie verder terugdringen. |
