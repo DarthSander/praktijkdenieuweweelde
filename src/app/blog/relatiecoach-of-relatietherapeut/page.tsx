@@ -31,7 +31,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Is de titel relatietherapeut beschermd in Nederland?",
-    a: "Nee. Noch relatietherapeut noch relatiecoach is een wettelijk beschermde titel. Wettelijke bescherming loopt via de Wet BIG en geldt voor titels als psychotherapeut en gezondheidszorgpsycholoog. Het losse woord psycholoog is evenmin beschermd. Dit zegt niets over de kwaliteit van een individuele begeleider, wel dat de titel op zichzelf weinig informatie geeft.",
+    a: "Nee. Noch relatietherapeut noch relatiecoach is een wettelijk beschermde titel. Wettelijke bescherming loopt via de Wet BIG en geldt voor titels als psychotherapeut en gezondheidszorgpsycholoog. Dit zegt niets over de kwaliteit van een individuele begeleider, wel dat de titel op zichzelf weinig informatie geeft.",
   },
   {
     q: "Waar let je op bij het kiezen van een relatietherapeut of relatiecoach?",
@@ -69,8 +69,7 @@ export default function Page() {
         Wettelijke titelbescherming loopt in Nederland via de Wet op de beroepen in de
         individuele gezondheidszorg, kortweg de Wet BIG. Aanduidingen als psychotherapeut en
         gezondheidszorgpsycholoog vallen daar wel onder: wie zich zo noemt zonder inschrijving in
-        het BIG-register, is in overtreding. Het losse woord psycholoog is overigens weer niet
-        beschermd.
+        het BIG-register, is in overtreding.
       </p>
       <p>
         Dit zegt op zichzelf niets over de kwaliteit van een individuele begeleider. Er zijn
