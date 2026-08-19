@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Wat is het verschil tussen een relatiecoach en een relatietherapeut? Geen van beide titels is in Nederland beschermd. Waar je dan wel op kunt letten bij het kiezen van begeleiding.",
     excerpt:
-      "Wie hulp zoekt voor de relatie komt beide woorden tegen, zonder dat duidelijk is wat ze onderscheidt. Het eerlijke antwoord is dat de grens minder scherp is dan veel mensen verwachten. Juist daarom is het nuttig om te weten waar je wel op kunt letten.",
+      "Geen van beide titels is in Nederland wettelijk beschermd, en het verschil in werkwijze is een tendens en geen scheidslijn. Vijf vragen die je aan iedere begeleider kunt stellen, en wanneer welke vorm van begeleiding passend is.",
     image: "/pampas-water.jpg",
     imageAlt: "Pampasgras bij stil water, symbool voor bezinning bij het maken van een keuze",
     readingTime: "8 min leestijd",

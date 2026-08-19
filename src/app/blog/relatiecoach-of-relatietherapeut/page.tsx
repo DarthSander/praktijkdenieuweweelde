@@ -35,7 +35,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Waar let je op bij het kiezen van een relatietherapeut of relatiecoach?",
-    a: "Nuttiger dan de titel zijn vijf vragen die je aan iedere begeleider kunt stellen: welke opleiding is gevolgd en hoe lang die duurde, met welke methode wordt gewerkt, of die methode is onderzocht, in welk register de begeleider staat, en hoe de intervisie of supervisie is geregeld.",
+    a: "Nuttiger dan de titel zijn vijf vragen die je aan iedere begeleider kunt stellen: welke opleiding is gevolgd en waar die op gericht was, met welke methode wordt gewerkt, of die methode is onderzocht, in welk register de begeleider staat, en hoe de intervisie of supervisie is geregeld.",
   },
   {
     q: "Wanneer kies je coaching en wanneer relatietherapie?",
@@ -48,23 +48,20 @@ export default function Page() {
   return (
     <BlogLayout post={post} related={related} faqs={faqs}>
       <p>
-        Wie hulp zoekt voor de relatie komt al snel beide woorden tegen. De een noemt zich
+        Wie hulp zoekt bij zijn relatie komt al snel beide titels tegen. De een noemt zich
         relatiecoach, de ander relatietherapeut, en op het eerste gezicht bieden ze iets
-        vergelijkbaars aan. De vraag welke van de twee bij jullie past is dan ook begrijpelijk,
-        zeker omdat het gaat om iets kwetsbaars en om een investering in tijd, geld en
-        vertrouwen.
+        vergelijkbaars aan. De vraag welke van de twee past is dan ook begrijpelijk, zeker omdat
+        het gaat om iets kwetsbaars en om een investering in tijd, geld en vertrouwen.
       </p>
       <p>
         Het eerlijke antwoord is dat de grens tussen beide minder scherp is dan veel mensen
-        verwachten. Dat klinkt onbevredigend, maar het is juist bruikbaar om te weten. Zodra
-        helder is waar het onderscheid niet in zit, wordt namelijk ook zichtbaar waar je wel op
-        kunt letten.
+        verwachten. Dat klinkt onbevredigend, maar zodra helder is waar het onderscheid niet in
+        zit, wordt ook zichtbaar waar je wel op kunt letten.
       </p>
 
       <h2>In Nederland zijn beide titels niet beschermd</h2>
       <p>
-        Om te beginnen een gegeven dat veel mensen verrast: noch{" "}
-        <em>relatietherapeut</em> noch <em>relatiecoach</em> is in Nederland een wettelijk
+        Noch <em>relatietherapeut</em> noch <em>relatiecoach</em> is in Nederland een wettelijk
         beschermde titel. Iedereen mag zich zo noemen, ongeacht opleiding, ervaring of
         achtergrond.
       </p>
@@ -79,8 +76,8 @@ export default function Page() {
         Dit zegt op zichzelf niets over de kwaliteit van een individuele begeleider. Er zijn
         relatiecoaches met een gedegen opleiding en jarenlange ervaring, en er zijn mensen die
         zich therapeut noemen na een korte cursus. Wat het wel zegt, is dat de titel als zodanig
-        weinig informatie geeft. Wie een keuze wil maken, kijkt dus verder dan het woord dat
-        boven de website staat.
+        weinig informatie geeft. Wie een keuze wil maken, kijkt dus verder dan de titel die
+        iemand voor zijn werk gebruikt.
       </p>
 
       <h2>Waar het onderscheid in de praktijk vaak op neerkomt</h2>
@@ -118,10 +115,10 @@ export default function Page() {
       </p>
       <ul>
         <li>
-          <strong>Welke opleiding is gevolgd, en hoe lang duurde die?</strong> Een meerjarige
-          opleiding met toetsing en praktijkbegeleiding is iets anders dan een cursus van enkele
-          dagen. Allebei kunnen waardevol zijn, maar het scheelt voor het soort vragen waarmee
-          iemand uit de voeten kan.
+          <strong>Welke opleiding is gevolgd?</strong> Interessanter dan de duur is waar de
+          opleiding op gericht was. Werken met twee mensen tegelijk vraagt iets anders dan
+          begeleiding van één persoon, en een opleiding die specifiek over relaties gaat,
+          bereidt daar gerichter op voor dan een algemene.
         </li>
         <li>
           <strong>Met welke methode wordt gewerkt?</strong> Relatiebegeleiding is geen vaste
@@ -227,10 +224,6 @@ export default function Page() {
             satisfaction five years following a randomized clinical trial comparing traditional
             versus integrative behavioral couple therapy.{" "}
             <em>Journal of Consulting and Clinical Psychology, 78</em>(2), 225&ndash;235.
-          </li>
-          <li>
-            Lebow, J. L., &amp; Snyder, D. K. (2022). Couple therapy in the 2020s: Current status
-            and emerging developments. <em>Family Process, 61</em>(4), 1359&ndash;1385.
           </li>
           <li>
             Nederlandse Vereniging voor Relatie- en Gezinstherapie. Kwaliteitsregister
