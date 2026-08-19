@@ -37,7 +37,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Hoeveel sessies heb ik nodig?",
-    a: "Dat verschilt per persoon en situatie. Er is geen vast traject. Na het kennismakingsgesprek kijken we samen wat passend is.",
+    a: "Dat verschilt per persoon en situatie. Er is geen vast traject. Na het intakegesprek kijken we samen wat passend is.",
   },
   {
     q: "Wordt individuele relatietherapie vergoed?",

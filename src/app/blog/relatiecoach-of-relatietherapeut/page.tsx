@@ -209,8 +209,8 @@ export default function Page() {
         .
       </p>
       <p>
-        Twijfelen jullie welke vorm van begeleiding past? Leg die vraag gerust voor tijdens een
-        kennismakingsgesprek via het <Link href="/#contact">contactformulier</Link>.
+        Twijfelen jullie welke vorm van begeleiding past? Neem die vraag gerust mee wanneer
+        jullie contact opnemen via het <Link href="/#contact">contactformulier</Link>.
       </p>
 
       <div className="blog-sources">

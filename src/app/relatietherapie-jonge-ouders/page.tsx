@@ -249,7 +249,7 @@ export default function Page() {
 
         <LandingCTA
           title="Aansluiten bij wat jullie zoeken?"
-          text="Benieuwd of relatietherapie aansluit bij wat jullie zoeken? Neem gerust contact op voor een kennismaking. Dan bespreken we wat ik voor jullie kan betekenen."
+          text="Benieuwd of relatietherapie aansluit bij wat jullie zoeken? Neem gerust contact op. Dan bespreken we wat ik voor jullie kan betekenen."
         />
 
         <LandingFAQ

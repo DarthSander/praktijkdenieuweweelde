@@ -100,7 +100,7 @@ export default function Page() {
       </p>
 
       <p>
-        IBCT vraagt moed en bereidheid om samen te kijken naar wat er tussen jullie gebeurt. Het is geen snelle oplossing, maar een proces dat helderheid en beweging brengt. Als jullie willen onderzoeken of dit traject bij jullie past, kunnen jullie via het <Link href="/#contact">contactformulier</Link> eenvoudig een kennismaking plannen. Dan kijken we rustig wat er nodig is om verder te kunnen.
+        IBCT vraagt moed en bereidheid om samen te kijken naar wat er tussen jullie gebeurt. Het is geen snelle oplossing, maar een proces dat helderheid en beweging brengt. Als jullie willen onderzoeken of dit traject bij jullie past, neem dan gerust contact op via het <Link href="/#contact">contactformulier</Link>. Dan kijken we rustig wat er nodig is om verder te kunnen.
       </p>
 
       <div className="blog-sources">
