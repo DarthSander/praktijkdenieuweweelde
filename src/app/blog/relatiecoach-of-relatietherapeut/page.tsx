@@ -178,7 +178,7 @@ export default function Page() {
         </Link>
       </p>
 
-      <h2>Wanneer allebei niet volstaat</h2>
+      <h2>Wanneer allebei niet volstaan</h2>
       <p>
         Er zijn situaties waarin noch coaching noch relatietherapie de aangewezen hulp is. Bij
         structureel geweld, bij ernstige verslavingsproblematiek en bij acute psychische
@@ -207,8 +207,7 @@ export default function Page() {
         >
           De competente relatietherapeut
         </a>
-        . Dat maakt mijn werk niet beter dan dat van een ander, maar het maakt wel controleerbaar
-        wat ik doe, en dat is precies waar dit artikel over gaat.
+        .
       </p>
       <p>
         Twijfelen jullie welke vorm van begeleiding past? Leg die vraag gerust voor tijdens een
@@ -219,16 +218,6 @@ export default function Page() {
       <div className="blog-sources">
         <h3>Bronnen</h3>
         <ul>
-          <li>
-            Christensen, A., Atkins, D. C., Baucom, B., &amp; Yi, J. (2010). Marital status and
-            satisfaction five years following a randomized clinical trial comparing traditional
-            versus integrative behavioral couple therapy.{" "}
-            <em>Journal of Consulting and Clinical Psychology, 78</em>(2), 225&ndash;235.
-          </li>
-          <li>
-            Nederlandse Vereniging voor Relatie- en Gezinstherapie. Kwaliteitsregister
-            systeemtherapeuten. https://www.nvrg.nl
-          </li>
           <li>
             Roddy, M. K., Nowlan, K. M., Doss, B. D., &amp; Christensen, A. (2016). Integrative
             behavioral couple therapy: Theoretical background, empirical research, and dissemination.{" "}
