@@ -4,16 +4,20 @@ import { Calendar, ChevronRight, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/BlogCard";
+import RelatedLinks from "@/components/RelatedLinks";
 import type { BlogPost } from "@/lib/blog-posts";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
+import { faqJsonLd, type FAQItem } from "@/lib/faq-schema";
 
 type Props = {
   post: BlogPost;
   related: BlogPost[];
+  /** Vragen die het artikel zelf beantwoordt; alleen voor FAQPage-schema. */
+  faqs?: FAQItem[];
   children: React.ReactNode;
 };
 
-export default function BlogLayout({ post, related, children }: Props) {
+export default function BlogLayout({ post, related, faqs, children }: Props) {
   const postUrl = `https://www.praktijkdenieuweweelde.nl/blog/${post.slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
@@ -60,6 +64,12 @@ export default function BlogLayout({ post, related, children }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
+      {faqs && faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }}
+        />
+      )}
       <Navbar />
       <main className="bg-[#F5F0EB] pb-20">
         <div className="relative h-[50vh] min-h-[340px] w-full overflow-hidden">
@@ -130,6 +140,13 @@ export default function BlogLayout({ post, related, children }: Props) {
             </Link>
           </div>
         </article>
+
+        <RelatedLinks
+          heading="Werken aan jullie relatie"
+          intro="De praktijkpagina's waar dit artikel bij aansluit."
+          landings={post.relatedLandings}
+          background="beige"
+        />
 
         {related.length > 0 && (
           <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">

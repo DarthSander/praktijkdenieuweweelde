@@ -192,7 +192,7 @@ export default function Page() {
         speelt en wat jullie nodig hebben om verder te kunnen.
       </p>
       <p>
-        Plan een kennismaking via het{" "}
+        Neem gerust contact op via het{" "}
         <Link href="/#contact">contactformulier</Link>, dan onderzoeken we samen wat passend
         is voor jullie situatie.
       </p>

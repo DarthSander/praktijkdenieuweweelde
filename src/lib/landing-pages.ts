@@ -9,6 +9,10 @@ export type LandingPage = {
   image: string;
   imageAlt: string;
   areaServed: string;
+  /** Slugs van andere landingspagina's om contextueel naar te linken. */
+  relatedLandings: string[];
+  /** Slugs uit blog-posts.ts om contextueel naar te linken. */
+  relatedPosts: string[];
 };
 
 export const landingPages: LandingPage[] = [
@@ -25,6 +29,17 @@ export const landingPages: LandingPage[] = [
     image: "/pampas-water.jpg",
     imageAlt: "Pampasgras bij kalm water, symbool voor rust en reflectie in Tilburg",
     areaServed: "Tilburg",
+    relatedLandings: [
+      "relatietherapie-aan-huis",
+      "relatietherapie-reeshof",
+      "relatietherapie-berkel-enschot",
+      "ibct-relatietherapie",
+    ],
+    relatedPosts: [
+      "wanneer-is-relatietherapie-zinvol",
+      "relatiecoach-of-relatietherapeut",
+      "hoe-lang-duurt-relatietherapie",
+    ],
   },
   {
     slug: "relatietherapie-reeshof",
@@ -39,6 +54,12 @@ export const landingPages: LandingPage[] = [
     image: "/pampas-breeze.jpg",
     imageAlt: "Pampasgras in de bries, symbool voor ruimte en beweging in de Reeshof",
     areaServed: "Reeshof",
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "relatietherapie-aan-huis",
+      "ibct-relatietherapie",
+    ],
+    relatedPosts: ["steeds-dezelfde-ruzie-in-je-relatie"],
   },
   {
     slug: "relatietherapie-berkel-enschot",
@@ -53,6 +74,12 @@ export const landingPages: LandingPage[] = [
     image: "/pampas-mountains.jpg",
     imageAlt: "Weids landschap met pampasgras, symbool voor ruimte in Berkel-Enschot",
     areaServed: "Berkel-Enschot",
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "relatietherapie-aan-huis",
+      "ibct-relatietherapie",
+    ],
+    relatedPosts: ["wanneer-is-relatietherapie-zinvol"],
   },
   {
     slug: "ibct-relatietherapie",
@@ -67,6 +94,16 @@ export const landingPages: LandingPage[] = [
     image: "/pampas-mountains.jpg",
     imageAlt: "Pampasgras voor weids landschap, symbool voor ruimte en wetenschap",
     areaServed: "Tilburg",
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "relatietherapie-aan-huis",
+      "individuele-relatietherapie",
+    ],
+    relatedPosts: [
+      "communicatieproblemen-in-een-relatie",
+      "relatiecoach-of-relatietherapeut",
+      "hoe-lang-duurt-relatietherapie",
+    ],
   },
   {
     slug: "relatietherapie-aan-huis",
@@ -81,6 +118,12 @@ export const landingPages: LandingPage[] = [
     image: "/pampas-indoor.jpg",
     imageAlt: "Pampasgras in huiselijke sfeer, symbool voor therapie aan huis",
     areaServed: "Tilburg en omgeving",
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "relatietherapie-reeshof",
+      "relatietherapie-berkel-enschot",
+    ],
+    relatedPosts: ["relatietherapie-aan-huis", "hoe-lang-duurt-relatietherapie"],
   },
   {
     slug: "relatietherapie-jonge-ouders",
@@ -95,6 +138,12 @@ export const landingPages: LandingPage[] = [
     image: "/pampas-beige.jpg",
     imageAlt: "Warm pampasgras, symbool voor zachte herverbinding voor jonge ouders",
     areaServed: "Tilburg en omgeving",
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "relatietherapie-aan-huis",
+      "ibct-relatietherapie",
+    ],
+    relatedPosts: ["steeds-dezelfde-ruzie-in-je-relatie", "uit-elkaar-groeien-in-je-relatie"],
   },
   {
     slug: "individuele-relatietherapie",
@@ -109,6 +158,12 @@ export const landingPages: LandingPage[] = [
     image: "/pampas-water.jpg",
     imageAlt: "Pampasgras bij kalm water, symbool voor persoonlijke reflectie",
     areaServed: "Tilburg",
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "ibct-relatietherapie",
+      "relatietherapie-aan-huis",
+    ],
+    relatedPosts: ["wanneer-is-relatietherapie-zinvol", "relatietherapie-of-scheiden"],
   },
 ];
 

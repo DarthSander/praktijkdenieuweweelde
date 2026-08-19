@@ -152,8 +152,7 @@ export default function Page() {
       </p>
       <p>
         Herkennen jullie wat jullie hier hebben gelezen? Neem gerust contact op via het{" "}
-        <Link href="/#contact">contactformulier</Link> voor een vrijblijvend
-        kennismakingsgesprek.
+        <Link href="/#contact">contactformulier</Link>.
       </p>
 
       <div className="blog-sources">

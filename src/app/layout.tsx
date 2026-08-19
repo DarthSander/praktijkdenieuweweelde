@@ -156,9 +156,36 @@ const jsonLd = {
   ],
   founder: {
     "@type": "Person",
+    "@id": "https://www.praktijkdenieuweweelde.nl/#eva-mulder",
     name: "Eva Mulder",
-    jobTitle: "Relatietherapeut",
-    knowsAbout: ["IBCT", "Integrative Behavioral Couple Therapy", "Relatietherapie"],
+    jobTitle: "IBCT-relatietherapeut",
+    image: "https://www.praktijkdenieuweweelde.nl/eva-goto.webp",
+    url: "https://www.praktijkdenieuweweelde.nl",
+    knowsAbout: [
+      "IBCT",
+      "Integrative Behavioral Couple Therapy",
+      "Relatietherapie",
+      "Koppeltherapie",
+      "Herstel na ontrouw",
+    ],
+    // Opleiding gevolgd bij dr. Pieternel Dijkstra en drs. Aerjen Tamminga via
+    // Relatie Guide, geaccrediteerd door de NVRG.
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: "Relatie Guide",
+      url: "https://relatieguide.nl",
+    },
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Opleiding IBCT-relatietherapie",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "NVRG",
+        alternateName: "Nederlandse Vereniging voor Relatie- en Gezinstherapie",
+      },
+    },
+    worksFor: { "@id": "https://www.praktijkdenieuweweelde.nl" },
+    sameAs: ["https://relatieguide.nl/de-competente-relatietherapeut/"],
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -187,7 +214,8 @@ const jsonLd = {
       },
     ],
   },
-  sameAs: ["https://relatieguide.nl"],
+  // Vermelding in het register van competente IBCT-relatietherapeuten.
+  sameAs: ["https://relatieguide.nl/de-competente-relatietherapeut/"],
 };
 
 export default function RootLayout({

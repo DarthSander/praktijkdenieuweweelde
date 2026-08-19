@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import LandingHero from "@/components/LandingHero";
 import LandingCTA from "@/components/LandingCTA";
 import LandingFAQ from "@/components/LandingFAQ";
+import RelatedLinks from "@/components/RelatedLinks";
 import { faqJsonLd, type FAQItem } from "@/lib/faq-schema";
 import { getLandingBySlug } from "@/lib/landing-pages";
 
@@ -248,12 +249,20 @@ export default function Page() {
 
         <LandingCTA
           title="Aansluiten bij wat jullie zoeken?"
-          text="Benieuwd of relatietherapie aansluit bij wat jullie zoeken? Neem gerust contact op voor een kennismaking. Dan bespreken we wat ik voor jullie kan betekenen."
+          text="Benieuwd of relatietherapie aansluit bij wat jullie zoeken? Neem gerust contact op. Dan bespreken we wat ik voor jullie kan betekenen."
         />
 
         <LandingFAQ
           heading="Veelgestelde vragen van jonge ouders"
           items={faqs}
+        />
+
+        <RelatedLinks
+          heading="Meer over de praktijk"
+          intro="Het werkgebied, de methode en artikelen die aansluiten bij deze levensfase."
+          landings={page.relatedLandings}
+          posts={page.relatedPosts}
+          background="beige"
         />
       </main>
       <Footer />

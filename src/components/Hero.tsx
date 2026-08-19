@@ -1,15 +1,27 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 import { ChevronDown } from "lucide-react";
 import HeroCarousel from "./HeroCarousel";
 import MagneticButton from "./MagneticButton";
 import { getUniqueBlogImages } from "@/lib/blog-posts";
 
-function WordReveal({ text, baseDelay, className }: { text: string; baseDelay: number; className: string }) {
+// `as` bepaalt het tag-type: de pagina hoort precies één <h1> te hebben, dus de
+// vervolgregels renderen als <p>.
+function WordReveal({
+  text,
+  baseDelay,
+  className,
+  as: Tag = "h1",
+}: {
+  text: string;
+  baseDelay: number;
+  className: string;
+  as?: "h1" | "p";
+}) {
   const [visible, setVisible] = useState(false);
-  const ref = useRef<HTMLHeadingElement>(null);
+  const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -21,23 +33,25 @@ function WordReveal({ text, baseDelay, className }: { text: string; baseDelay: n
   }, []);
 
   return (
-    <h1 ref={ref} className={className}>
+    <Tag ref={ref as React.Ref<HTMLHeadingElement & HTMLParagraphElement>} className={className}>
       {text.split(" ").map((word, i) => (
-        <span
-          key={i}
-          style={{
-            display: "inline-block",
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(20px)",
-            filter: visible ? "blur(0)" : "blur(4px)",
-            transition: `all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) ${baseDelay + i * 0.1}s`,
-            marginRight: "0.3em",
-          }}
-        >
-          {word}
-        </span>
+        // De spatie staat als los tekstknooppunt tússen de spans, niet als
+        // marge: anders leest de kop in de DOM als één aaneengeschreven woord.
+        <Fragment key={i}>
+          <span
+            style={{
+              display: "inline-block",
+              opacity: visible ? 1 : 0,
+              transform: visible ? "translateY(0)" : "translateY(20px)",
+              filter: visible ? "blur(0)" : "blur(4px)",
+              transition: `all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) ${baseDelay + i * 0.1}s`,
+            }}
+          >
+            {word}
+          </span>{" "}
+        </Fragment>
       ))}
-    </h1>
+    </Tag>
   );
 }
 
@@ -125,18 +139,19 @@ export default function Hero() {
           data-aos-delay="100"
           className="text-[#C4A4A0] font-semibold uppercase tracking-[0.2em] text-sm mb-6"
         >
-          IBCT Relatietherapie in Tilburg
+          Eva Mulder · IBCT-relatietherapeut
         </p>
 
         <WordReveal
-          text="Herstel de verbinding in"
+          text="Relatietherapie in Tilburg,"
           baseDelay={0.3}
           className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] leading-tight mb-2"
         />
         <WordReveal
-          text="vertrouwde sfeer"
+          as="p"
+          text="herstel de verbinding in vertrouwde sfeer"
           baseDelay={0.7}
-          className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-playfair)] italic text-[#6B6866] leading-tight mb-8"
+          className="text-3xl md:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)] italic text-[#6B6866] leading-tight mb-8"
         />
 
         <p

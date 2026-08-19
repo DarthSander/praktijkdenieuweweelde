@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LandingHero from "@/components/LandingHero";
 import LandingFAQ from "@/components/LandingFAQ";
+import RelatedLinks from "@/components/RelatedLinks";
 import { faqJsonLd, type FAQItem } from "@/lib/faq-schema";
 import { getLandingBySlug } from "@/lib/landing-pages";
 
@@ -260,6 +261,14 @@ export default function Page() {
         <LandingFAQ
           heading="Veelgestelde vragen"
           items={faqs}
+        />
+
+        <RelatedLinks
+          heading="Ook interessant voor koppels in Tilburg"
+          intro="Waar we aan huis komen, hoe IBCT werkt en wat jullie kunnen verwachten."
+          landings={page.relatedLandings}
+          posts={page.relatedPosts}
+          background="beige"
         />
       </main>
       <Footer />

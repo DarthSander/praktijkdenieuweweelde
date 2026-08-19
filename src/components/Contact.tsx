@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { MapPin, Mail, Phone } from "lucide-react";
+import { trackLead } from "@/lib/analytics";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -39,6 +40,7 @@ export default function Contact() {
 
       if (json.success) {
         setStatus("success");
+        trackLead("contact");
         form.reset();
       } else {
         setErrorMsg(json.message || "Er ging iets mis. Probeer het later opnieuw.");

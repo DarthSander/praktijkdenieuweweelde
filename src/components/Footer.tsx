@@ -54,6 +54,17 @@ export default function Footer() {
         </div>
 
         <div className="text-center">
+          <p className="text-white/40 text-xs mb-3">
+            Opgenomen in het register{" "}
+            <a
+              href="https://relatieguide.nl/de-competente-relatietherapeut/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-[#E8D5D2] transition"
+            >
+              De competente relatietherapeut
+            </a>
+          </p>
           <p className="text-white/30 text-xs mb-6">
             Kasteel Nijenrodestraat 82 &nbsp;&middot;&nbsp; 5037 TH Tilburg
           </p>

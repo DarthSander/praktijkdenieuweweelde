@@ -10,10 +10,35 @@ export type BlogPost = {
   dateLabel: string;
   updated?: string;
   related: string[];
+  /** Slugs uit landing-pages.ts: dienstpagina's die inhoudelijk aansluiten. */
+  relatedLandings: string[];
   category: string;
 };
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "relatiecoach-of-relatietherapeut",
+    title: "Relatiecoach of relatietherapeut: wat is het verschil?",
+    description:
+      "Wat is het verschil tussen een relatiecoach en een relatietherapeut? Geen van beide titels is in Nederland beschermd. Waar je dan wel op kunt letten bij het kiezen van begeleiding.",
+    excerpt:
+      "Geen van beide titels is in Nederland wettelijk beschermd, en het verschil in werkwijze is een tendens en geen scheidslijn. Vijf vragen die je aan iedere begeleider kunt stellen, en wanneer welke vorm van begeleiding passend is.",
+    image: "/pampas-water.jpg",
+    imageAlt: "Pampasgras bij stil water, symbool voor bezinning bij het maken van een keuze",
+    readingTime: "8 min leestijd",
+    date: "2026-08-06",
+    dateLabel: "6 augustus 2026",
+    related: [
+      "wanneer-is-relatietherapie-zinvol",
+      "hoe-lang-duurt-relatietherapie",
+      "communicatieproblemen-in-een-relatie",
+    ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "ibct-relatietherapie",
+    ],
+    category: "Praktische informatie",
+  },
   {
     slug: "wanneer-is-relatietherapie-zinvol",
     title: "Wanneer is relatietherapie zinvol? 7 signalen die wijzen op meer dan een dipje",
@@ -28,8 +53,12 @@ export const blogPosts: BlogPost[] = [
     dateLabel: "20 april 2026",
     related: [
       "relatietherapie-of-scheiden",
-      "communicatieproblemen-in-een-relatie",
+      "relatiecoach-of-relatietherapeut",
       "hoe-lang-duurt-relatietherapie",
+    ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "ibct-relatietherapie",
     ],
     category: "Relatietherapie",
   },
@@ -50,6 +79,10 @@ export const blogPosts: BlogPost[] = [
       "wanneer-is-relatietherapie-zinvol",
       "relatietherapie-of-scheiden",
     ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "ibct-relatietherapie",
+    ],
     category: "Specifieke thema's",
   },
   {
@@ -68,6 +101,10 @@ export const blogPosts: BlogPost[] = [
       "hoe-lang-duurt-relatietherapie",
       "communicatieproblemen-in-een-relatie",
       "wanneer-is-relatietherapie-zinvol",
+    ],
+    relatedLandings: [
+      "relatietherapie-aan-huis",
+      "relatietherapie-tilburg",
     ],
     category: "Werkwijze",
   },
@@ -88,6 +125,10 @@ export const blogPosts: BlogPost[] = [
       "relatietherapie-na-vreemdgaan",
       "hoe-lang-duurt-relatietherapie",
     ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "individuele-relatietherapie",
+    ],
     category: "Relatietherapie",
   },
   {
@@ -103,9 +144,13 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-20",
     dateLabel: "20 april 2026",
     related: [
-      "communicatieproblemen-in-een-relatie",
+      "relatiecoach-of-relatietherapeut",
       "relatietherapie-aan-huis",
       "wanneer-is-relatietherapie-zinvol",
+    ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "ibct-relatietherapie",
     ],
     category: "Praktische informatie",
   },
@@ -126,6 +171,10 @@ export const blogPosts: BlogPost[] = [
       "relatietherapie-na-vreemdgaan",
       "wanneer-is-relatietherapie-zinvol",
     ],
+    relatedLandings: [
+      "ibct-relatietherapie",
+      "relatietherapie-tilburg",
+    ],
     category: "IBCT",
   },
   {
@@ -144,6 +193,10 @@ export const blogPosts: BlogPost[] = [
       "communicatieproblemen-in-een-relatie",
       "jaloezie-in-je-relatie",
       "wanneer-is-relatietherapie-zinvol",
+    ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "ibct-relatietherapie",
     ],
     category: "Specifieke thema's",
   },
@@ -164,6 +217,10 @@ export const blogPosts: BlogPost[] = [
       "relatietherapie-na-vreemdgaan",
       "wanneer-is-relatietherapie-zinvol",
     ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "individuele-relatietherapie",
+    ],
     category: "Specifieke thema's",
   },
   {
@@ -182,6 +239,10 @@ export const blogPosts: BlogPost[] = [
       "steeds-dezelfde-ruzie-in-je-relatie",
       "wanneer-is-relatietherapie-zinvol",
       "communicatieproblemen-in-een-relatie",
+    ],
+    relatedLandings: [
+      "relatietherapie-tilburg",
+      "relatietherapie-jonge-ouders",
     ],
     category: "Specifieke thema's",
   },

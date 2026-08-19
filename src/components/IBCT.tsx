@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Heart, HandHeart, Sparkles, MessageCircle } from "lucide-react";
 
 const pillars = [
@@ -40,7 +41,14 @@ export default function IBCT() {
           <p className="text-[#5E524F] text-lg max-w-2xl mx-auto leading-relaxed">
             Integrative Behavioral Couple Therapy (IBCT) is een wetenschappelijk onderbouwde
             vorm van relatietherapie die de balans zoekt tussen acceptatie en verandering. We
-            werken langs vier samenhangende processen.
+            werken langs vier samenhangende processen. Lees meer over{" "}
+            <Link
+              href="/ibct-relatietherapie"
+              className="text-[#946B66] underline underline-offset-2 hover:text-[#6B6866] transition"
+            >
+              IBCT relatietherapie
+            </Link>{" "}
+            en de wetenschappelijke onderbouwing ervan.
           </p>
         </div>
 

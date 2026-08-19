@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Heart, BookOpen, X } from "lucide-react";
+import Link from "next/link";
+import { Heart, BookOpen, BadgeCheck, X } from "lucide-react";
 import { useState } from "react";
 
 export default function OverMij() {
@@ -47,6 +48,24 @@ export default function OverMij() {
                 jullie toe, zodat jullie in je eigen omgeving de rust hebben om
                 echt naar elkaar te luisteren.
               </p>
+              <p>
+                Wil je weten hoe dat er in de praktijk uitziet? Op de pagina over{" "}
+                <Link
+                  href="/relatietherapie-tilburg"
+                  className="text-[#946B66] underline underline-offset-2 hover:text-[#6B6866] transition"
+                >
+                  relatietherapie in Tilburg
+                </Link>{" "}
+                lees je in welke wijken ik kom en hoe een traject verloopt. Voor
+                wie er alleen voor staat is er ook{" "}
+                <Link
+                  href="/individuele-relatietherapie"
+                  className="text-[#946B66] underline underline-offset-2 hover:text-[#6B6866] transition"
+                >
+                  individuele relatietherapie
+                </Link>
+                .
+              </p>
             </div>
             <div className="mt-8 flex items-center">
               <div className="space-y-4">
@@ -80,6 +99,25 @@ export default function OverMij() {
                         Relatie Guide
                       </a>
                       {" "}· geaccrediteerd door NVRG
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <BadgeCheck className="w-5 h-5 text-[#B0ADAB] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-sm text-[#6B6866]">
+                      Opgenomen in het register
+                    </p>
+                    <p className="text-xs text-[#C4A4A0]">
+                      <a
+                        href="https://relatieguide.nl/de-competente-relatietherapeut/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline underline-offset-2 hover:text-[#946B66] transition"
+                      >
+                        De competente relatietherapeut
+                      </a>
+                      {" "}· overzicht van IBCT-relatietherapeuten
                     </p>
                   </div>
                 </div>

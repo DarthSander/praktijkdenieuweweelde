@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import LandingHero from "@/components/LandingHero";
 import LandingCTA from "@/components/LandingCTA";
 import LandingFAQ from "@/components/LandingFAQ";
+import RelatedLinks from "@/components/RelatedLinks";
 import { faqJsonLd, type FAQItem } from "@/lib/faq-schema";
 import { getLandingBySlug } from "@/lib/landing-pages";
 
@@ -36,7 +37,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Hoeveel sessies heb ik nodig?",
-    a: "Dat verschilt per persoon en situatie. Er is geen vast traject. Na het kennismakingsgesprek kijken we samen wat passend is.",
+    a: "Dat verschilt per persoon en situatie. Er is geen vast traject. Na het intakegesprek kijken we samen wat passend is.",
   },
   {
     q: "Wordt individuele relatietherapie vergoed?",
@@ -110,6 +111,14 @@ export default function Page() {
         />
 
         <LandingFAQ items={faqs} />
+
+        <RelatedLinks
+          heading="Meer over de praktijk"
+          intro="De methode, het werkgebied en artikelen die hierbij aansluiten."
+          landings={page.relatedLandings}
+          posts={page.relatedPosts}
+          background="beige"
+        />
       </main>
       <Footer />
     </>

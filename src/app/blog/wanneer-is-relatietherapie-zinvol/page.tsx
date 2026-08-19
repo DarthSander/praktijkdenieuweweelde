@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BlogLayout from "@/components/BlogLayout";
 import { getPostBySlug, getRelatedPosts } from "@/lib/blog-posts";
+import type { FAQItem } from "@/lib/faq-schema";
 
 const slug = "wanneer-is-relatietherapie-zinvol";
 const post = getPostBySlug(slug)!;
@@ -22,10 +23,26 @@ export const metadata: Metadata = {
   },
 };
 
+// Antwoorden zijn samengevat uit de tekst hieronder; niets nieuws toegevoegd.
+const faqs: FAQItem[] = [
+  {
+    q: "Wanneer is relatietherapie zinvol?",
+    a: "Als jullie twee of meer signalen herkennen, is een intakegesprek zinvol: gesprekken die steeds over hetzelfde gaan, een patroon dat zich blijft herhalen, meer stilte dan gesprek, nauwelijks nog aanraking, eenzaamheid terwijl jullie samen zijn, ontrouw of andere vertrouwensproblemen, of gedachten aan uit elkaar gaan.",
+  },
+  {
+    q: "Zijn onze problemen wel ernstig genoeg voor relatietherapie?",
+    a: "Waarschijnlijk wel. Juist wachten tot de emmer overloopt maakt problemen erger. Onderzoek toont aan dat ook koppels die al jaren worstelen aanzienlijk vooruitgang kunnen boeken. Vroeg starten betekent meestal korter, minder pijnlijk en met meer energie werken aan jullie relatie.",
+  },
+  {
+    q: "Wanneer heeft relatietherapie geen zin?",
+    a: "Er zijn situaties waarin ik als relatietherapeut niet de juiste hulp kan bieden. Bij structureel geweld, ernstige verslavingsproblematiek of acute psychische problematiek is gespecialiseerde zorg nodig. In een intakegesprek schatten we samen in wat op dit moment het beste helpt en waar je wel terechtkunt.",
+  },
+];
+
 export default function Page() {
   const related = getRelatedPosts(slug);
   return (
-    <BlogLayout post={post} related={related}>
+    <BlogLayout post={post} related={related} faqs={faqs}>
       <p>
         Onderzoek laat zien dat veel koppels een aantal jaar worstelen met relationele problemen voordat zij professionele hulp zoeken. Dat is jammer, want hoe eerder je hulp zoekt, hoe meer ruimte er is voor herstel.
       </p>
