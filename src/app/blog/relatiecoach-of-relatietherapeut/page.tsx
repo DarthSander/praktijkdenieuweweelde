@@ -39,7 +39,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Wanneer kies je coaching en wanneer relatietherapie?",
-    a: "Coaching kan passend zijn bij een afgebakende vraag in een relatie die in de kern stabiel is, bijvoorbeeld beter leren overleggen of opnieuw tijd voor elkaar inruimen. Therapie ligt meer voor de hand wanneer hetzelfde gesprek zich blijft herhalen, wanneer er ontrouw of een andere vertrouwensbreuk speelt, wanneer een van beiden aan uit elkaar gaan denkt, of wanneer er klachten als somberheid of spanning meespelen.",
+    a: "Coaching kan passend zijn bij een afgebakende vraag in een relatie die in de kern stabiel is, bijvoorbeeld beter leren overleggen of opnieuw tijd voor elkaar maken. Therapie ligt meer voor de hand wanneer hetzelfde gesprek zich blijft herhalen, wanneer er ontrouw of een andere vertrouwensbreuk speelt, wanneer een van beiden aan uit elkaar gaan denkt, of wanneer er klachten als somberheid of spanning meespelen.",
   },
 ];
 
@@ -86,7 +86,7 @@ export default function Page() {
       <p>
         Coaching richt zich doorgaans op het heden en op wat er hierna komt. Het vertrekpunt is
         meestal een concrete vraag: beter leren overleggen, afspraken maken over de taakverdeling,
-        opnieuw tijd voor elkaar inruimen. Er wordt gewerkt met doelen, oefeningen en
+        opnieuw tijd voor elkaar maken. Er wordt gewerkt met doelen, oefeningen en
         vaardigheden, en zulke trajecten zijn vaak kort en overzichtelijk van opzet.
       </p>
       <p>
@@ -148,7 +148,8 @@ export default function Page() {
         Coaching kan een goede keuze zijn wanneer de relatie in de kern stabiel is en de vraag
         afgebakend. Denk aan een stel dat merkt dat overleggen over de dagelijkse gang van zaken
         stroef verloopt, of dat na de geboorte van een kind opnieuw wil ontdekken hoe het samen
-        tijd inruimt. Ook als onderhoud, zonder dat er iets ernstigs speelt, kan een korte reeks
+        tijd voor elkaar maakt. Ook als onderhoud, zonder dat er iets ernstigs speelt, kan een
+        korte reeks
         gesprekken veel opleveren.
       </p>
       <p>
@@ -188,8 +189,7 @@ export default function Page() {
 
       <h2>Hoe ik werk</h2>
       <p>
-        Voor de volledigheid, zodat jullie mijn eigen positie in dit verhaal kunnen wegen. Ik
-        werk volgens IBCT, voluit Integrative Behavioral Couple Therapy, een van de best
+        Ik werk volgens IBCT, voluit Integrative Behavioral Couple Therapy, een van de best
         onderzochte vormen van relatietherapie. Wat die methode inhoudt staat beschreven op de
         pagina over <Link href="/ibct-relatietherapie">IBCT relatietherapie</Link>, en hoe een
         traject bij jullie thuis verloopt lezen jullie op de pagina over{" "}
@@ -210,8 +210,7 @@ export default function Page() {
       </p>
       <p>
         Twijfelen jullie welke vorm van begeleiding past? Leg die vraag gerust voor tijdens een
-        kennismakingsgesprek via het <Link href="/#contact">contactformulier</Link>. Als
-        relatietherapie niet het passende antwoord is, zeg ik dat ook.
+        kennismakingsgesprek via het <Link href="/#contact">contactformulier</Link>.
       </p>
 
       <div className="blog-sources">
