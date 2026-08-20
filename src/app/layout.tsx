@@ -214,8 +214,12 @@ const jsonLd = {
       },
     ],
   },
-  // Vermelding in het register van competente IBCT-relatietherapeuten.
-  sameAs: ["https://relatieguide.nl/de-competente-relatietherapeut/"],
+  // Vermelding in het register van competente IBCT-relatietherapeuten, en het
+  // Google Bedrijfsprofiel van de praktijk.
+  sameAs: [
+    "https://relatieguide.nl/de-competente-relatietherapeut/",
+    "https://share.google/gZ2qB8hrMwn3SsgJ6",
+  ],
 };
 
 export default function RootLayout({
