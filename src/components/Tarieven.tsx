@@ -18,7 +18,7 @@ const plans = [
   },
   {
     title: "APK voor Relaties",
-    subtitle: "Preventieve check-up (3 sessies van 60 minuten plus voorwerk)",
+    subtitle: "Preventieve check-up (3 sessies van 60 minuten)",
     sessions: null,
     price: 495,
     priceSuffix: ",-",
@@ -97,7 +97,7 @@ export default function Tarieven() {
         </div>
 
         <p className="text-center text-sm text-[#5E524F] mt-8">
-          Deze tarieven gelden vanaf 1 oktober 2026. Voor cliënten die reeds in behandeling zijn, blijven de oude tarieven van kracht.
+          Deze tarieven en de sessieduur van 75 minuten gelden vanaf 1 oktober 2026. Voor cliënten die reeds in behandeling zijn, blijven de oude tarieven van kracht.
         </p>
 
         <p className="text-center text-xs text-[#C4A4A0] mt-3">

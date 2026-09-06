@@ -200,7 +200,7 @@ export default function Page() {
                   bij hoe het dagelijks leven er nu uitziet met een kleintje.
                 </p>
                 <p>
-                  Een sessie duurt 75 minuten. Voor sommige stellen werkt een langer traject
+                  Vanaf 1 oktober 2026 duurt een sessie 75 minuten. Voor sommige stellen werkt een langer traject
                   prettig, voor anderen is een kort en gericht traject juist passend. Daarom
                   bied ik naast de reguliere sessies ook een relatie-APK aan: drie sessies van
                   60 minuten waarin we samen scherp krijgen wat er speelt en wat jullie helpt

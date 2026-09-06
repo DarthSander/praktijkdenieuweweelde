@@ -50,7 +50,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Wat kost relatietherapie aan huis?",
-    a: "De prijs voor een sessie van 75 minuten is € 155 exclusief btw. Reiskosten binnen het reguliere werkgebied zijn inbegrepen. Deze tarieven gelden vanaf 1 oktober 2026. Voor cliënten die reeds in behandeling zijn, blijven de oude tarieven van kracht.",
+    a: "De prijs voor een sessie van 75 minuten is € 155 exclusief btw. Reiskosten binnen het reguliere werkgebied zijn inbegrepen. Deze tarieven en de sessieduur van 75 minuten gelden vanaf 1 oktober 2026. Voor cliënten die reeds in behandeling zijn, blijven de oude tarieven van kracht.",
   },
   {
     q: "Werkt therapie wel aan huis?",

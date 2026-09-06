@@ -208,7 +208,7 @@ const jsonLd = {
           "@type": "Service",
           name: "APK voor Relaties",
           description:
-            "Preventieve relatie-check-up (3 sessies van 60 minuten plus voorwerk).",
+            "Preventieve relatie-check-up (3 sessies van 60 minuten, inclusief 75 minuten voorbereiding).",
         },
         price: "495",
         priceCurrency: "EUR",

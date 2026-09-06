@@ -44,12 +44,12 @@ const PRACTICE_INFO = `
 ## Werkdagen
 - Maandag t/m vrijdag: 18:00 - 21:00 (avondsessies)
 - Zaterdag: 13:00 - 17:00
-- Sessies duren 75 minuten
+- Sessies duren 75 minuten (vanaf 1 oktober 2026; daarvoor 90 minuten)
 
 ## Tarieven (vanaf 1 oktober 2026, exclusief btw)
 - IBCT-sessie: € 155 (75 min, aan huis, inclusief reiskosten binnen werkgebied)
 - Individuele relatietherapie: € 125 (60 min)
-- APK voor Relaties (preventief, 3 sessies van 60 min plus voorwerk): € 495
+- APK voor Relaties (preventief, 3 sessies van 60 min, inclusief 75 min voorbereiding): € 495
 - Voor cliënten die reeds in behandeling zijn, blijven de oude tarieven van kracht
 
 ## Werkwijze
