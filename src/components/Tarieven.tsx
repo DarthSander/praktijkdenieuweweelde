@@ -5,9 +5,9 @@ const plans = [
     title: "Relatietherapie Sessie",
     subtitle: "Intake of vervolgsessie bij jullie thuis",
     sessions: "Gemiddeld 10 sessies",
-    price: 150,
+    price: 155,
     priceSuffix: ",-",
-    per: "/ 90 minuten",
+    per: "/ 75 minuten",
     features: [
       "Inclusief reiskosten binnen Tilburg",
       "IBCT methode",
@@ -18,9 +18,9 @@ const plans = [
   },
   {
     title: "APK voor Relaties",
-    subtitle: "Preventieve check-up (3 sessies van 60 minuten)",
+    subtitle: "Preventieve check-up (3 sessies van 60 minuten plus voorwerk)",
     sessions: null,
-    price: 325,
+    price: 495,
     priceSuffix: ",-",
     per: "/ totaal",
     features: [
@@ -35,7 +35,7 @@ const plans = [
     title: "Individuele relatietherapie",
     subtitle: "Individuele begeleiding",
     sessions: "Voor wie zelf aan de slag wil gaan",
-    price: 100,
+    price: 125,
     priceSuffix: ",-",
     per: "/ 60 minuten",
     features: [
@@ -96,7 +96,11 @@ export default function Tarieven() {
           ))}
         </div>
 
-        <p className="text-center text-xs text-[#C4A4A0] mt-8">
+        <p className="text-center text-sm text-[#5E524F] mt-8">
+          Deze tarieven gelden vanaf 1 oktober 2026. Voor cliënten die reeds in behandeling zijn, blijven de oude tarieven van kracht.
+        </p>
+
+        <p className="text-center text-xs text-[#C4A4A0] mt-3">
           * Relatietherapie wordt doorgaans niet vergoed door de basisverzekering. Raadpleeg je aanvullende verzekering. Tarieven zijn exclusief 21% btw.
         </p>
       </div>

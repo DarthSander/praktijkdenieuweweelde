@@ -35,7 +35,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Hoe lang duurt één sessie relatietherapie?",
-    a: "Een sessie duurt meestal 90 minuten. We beginnen met een korte check-in over hoe het sinds de vorige keer is gegaan en werken daarna aan het thema dat op dat moment centraal staat. Aan het einde kiezen we samen een haalbare stap voor thuis.",
+    a: "Een sessie duurt meestal 75 minuten. We beginnen met een korte check-in over hoe het sinds de vorige keer is gegaan en werken daarna aan het thema dat op dat moment centraal staat. Aan het einde kiezen we samen een haalbare stap voor thuis.",
   },
   {
     q: "Wat als relatietherapie niet werkt?",
@@ -86,7 +86,7 @@ export default function Page() {
 
       <h2>Hoe ziet een sessie eruit?</h2>
       <p>
-        Een sessie duurt meestal 90 minuten. We beginnen met een korte check-in: hoe is het sinds de vorige keer gegaan, wat viel op, waar liepen jullie tegenaan? Daarna werken we aan het thema dat op dat moment centraal staat. Soms gaat het om inzicht krijgen in het patroon tussen jullie, soms om het oefenen van nieuw gedrag of het verdiepen van begrip voor elkaar. Een belangrijk onderdeel van IBCT is dat jullie tussen de sessies door thuis zelfstandig en gezamenlijk opdrachten doen. Die &lsquo;huiswerkopdrachten&rsquo; zijn geen &lsquo;extra werk&rsquo;, maar vormen de cruciale basis voor verandering. In de sessie bespreken we wat jullie hebben geprobeerd, wat hielp en wat lastig was. Aan het einde van de sessie kiezen we samen een haalbare stap voor thuis, zodat jullie steeds meer grip krijgen op het patroon. Elke sessie bouwt voort op de vorige, maar er is altijd ruimte voor wat er op dat moment speelt.
+        Een sessie duurt meestal 75 minuten. We beginnen met een korte check-in: hoe is het sinds de vorige keer gegaan, wat viel op, waar liepen jullie tegenaan? Daarna werken we aan het thema dat op dat moment centraal staat. Soms gaat het om inzicht krijgen in het patroon tussen jullie, soms om het oefenen van nieuw gedrag of het verdiepen van begrip voor elkaar. Een belangrijk onderdeel van IBCT is dat jullie tussen de sessies door thuis zelfstandig en gezamenlijk opdrachten doen. Die &lsquo;huiswerkopdrachten&rsquo; zijn geen &lsquo;extra werk&rsquo;, maar vormen de cruciale basis voor verandering. In de sessie bespreken we wat jullie hebben geprobeerd, wat hielp en wat lastig was. Aan het einde van de sessie kiezen we samen een haalbare stap voor thuis, zodat jullie steeds meer grip krijgen op het patroon. Elke sessie bouwt voort op de vorige, maar er is altijd ruimte voor wat er op dat moment speelt.
       </p>
 
       <h2>Hoe weet je of relatietherapie werkt?</h2>

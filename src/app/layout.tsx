@@ -197,9 +197,9 @@ const jsonLd = {
           "@type": "Service",
           name: "IBCT relatiesessie",
           description:
-            "Integrative Behavioral Couple Therapy sessie aan huis in Tilburg en omgeving (90 minuten).",
+            "Integrative Behavioral Couple Therapy sessie aan huis in Tilburg en omgeving (75 minuten).",
         },
-        price: "150",
+        price: "155",
         priceCurrency: "EUR",
       },
       {
@@ -207,9 +207,10 @@ const jsonLd = {
         itemOffered: {
           "@type": "Service",
           name: "APK voor Relaties",
-          description: "Preventieve relatie-check-up (3 sessies).",
+          description:
+            "Preventieve relatie-check-up (3 sessies van 60 minuten plus voorwerk).",
         },
-        price: "325",
+        price: "495",
         priceCurrency: "EUR",
       },
     ],

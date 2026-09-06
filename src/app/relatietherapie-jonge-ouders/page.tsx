@@ -200,10 +200,10 @@ export default function Page() {
                   bij hoe het dagelijks leven er nu uitziet met een kleintje.
                 </p>
                 <p>
-                  Een sessie duurt 90 minuten. Voor sommige stellen werkt een langer traject
+                  Een sessie duurt 75 minuten. Voor sommige stellen werkt een langer traject
                   prettig, voor anderen is een kort en gericht traject juist passend. Daarom
                   bied ik naast de reguliere sessies ook een relatie-APK aan: drie sessies van
-                  75 minuten waarin we samen scherp krijgen wat er speelt en wat jullie helpt
+                  60 minuten waarin we samen scherp krijgen wat er speelt en wat jullie helpt
                   om weer vooruit te kunnen.
                 </p>
               </div>

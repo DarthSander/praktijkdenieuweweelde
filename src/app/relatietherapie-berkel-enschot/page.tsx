@@ -35,7 +35,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Wat kost relatietherapie in Berkel-Enschot?",
-    a: "Een IBCT-sessie van 90 minuten kost €150, inclusief reiskosten binnen het werkgebied. Voor koppels die preventief willen werken bied ik een APK voor relaties aan: drie sessies van 75 minuten voor €325.",
+    a: "Een IBCT-sessie van 75 minuten kost €155 exclusief btw, inclusief reiskosten binnen het werkgebied. Voor koppels die preventief willen werken bied ik een APK voor relaties aan: drie sessies van 60 minuten met voorwerk voor €495. Deze tarieven gelden vanaf 1 oktober 2026. Voor cliënten die reeds in behandeling zijn, blijven de oude tarieven van kracht.",
   },
   {
     q: "Hoeveel sessies zijn er meestal nodig?",
@@ -219,7 +219,7 @@ export default function Page() {
                 {
                   icon: Shield,
                   title: "Sessieduur",
-                  text: "Een sessie duurt 90 minuten. Willen jullie liever een kort en concreet traject? Dan is er de relatie-APK: drie sessies van 75 minuten.",
+                  text: "Een sessie duurt 75 minuten. Willen jullie liever een kort en concreet traject? Dan is er de relatie-APK: drie sessies van 75 minuten.",
                 },
                 {
                   icon: Heart,
