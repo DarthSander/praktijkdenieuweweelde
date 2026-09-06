@@ -30,7 +30,7 @@ export default function AlgemeneVoorwaarden() {
           <h1 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-2">
             Algemene Voorwaarden
           </h1>
-          <p className="text-[#B0ADAB] text-sm mb-12">Laatst bijgewerkt: april 2026</p>
+          <p className="text-[#B0ADAB] text-sm mb-12">Laatst bijgewerkt: september 2026</p>
 
           <div className="prose prose-sm max-w-none text-[#5E524F] space-y-10">
 
@@ -100,7 +100,7 @@ export default function AlgemeneVoorwaarden() {
               <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">5. Tarieven &amp; betaling</h2>
 
               <h3 className="font-semibold text-[#6B6866] mt-4 mb-2">Tarieven</h3>
-              <p className="text-sm">De actuele tarieven staan vermeld op de website van de praktijk. De therapeut behoudt het recht de tarieven jaarlijks aan te passen. Cliënten worden hierover tijdig geïnformeerd.</p>
+              <p className="text-sm">De actuele tarieven staan vermeld op de website van de praktijk en zijn exclusief 21% btw. De therapeut behoudt het recht de tarieven jaarlijks aan te passen. Cliënten worden hierover tijdig geïnformeerd.</p>
 
               <h3 className="font-semibold text-[#6B6866] mt-5 mb-2">Betaling</h3>
               <ul className="list-disc list-inside space-y-2 text-sm">
