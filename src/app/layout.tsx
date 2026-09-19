@@ -149,10 +149,19 @@ const jsonLd = {
     ],
     description: "Op afspraak",
   },
+  // Werkgebied: Tilburg en omliggende plaatsen tot ongeveer 20 km.
   areaServed: [
     { "@type": "City", name: "Tilburg" },
     { "@type": "AdministrativeArea", name: "Reeshof" },
     { "@type": "City", name: "Berkel-Enschot" },
+    { "@type": "City", name: "Goirle" },
+    { "@type": "City", name: "Udenhout" },
+    { "@type": "City", name: "Oisterwijk" },
+    { "@type": "City", name: "Loon op Zand" },
+    { "@type": "City", name: "Dongen" },
+    { "@type": "City", name: "Hilvarenbeek" },
+    { "@type": "City", name: "Kaatsheuvel" },
+    { "@type": "City", name: "Waalwijk" },
   ],
   founder: {
     "@type": "Person",

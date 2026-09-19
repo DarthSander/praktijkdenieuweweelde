@@ -33,7 +33,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Wat kost relatietherapie in Tilburg bij jou?",
-    a: "Een IBCT-sessie van 75 minuten kost €155 exclusief btw, inclusief reiskosten binnen het werkgebied. Voor koppels die preventief willen werken bied ik een APK voor relaties aan: drie sessies van 60 minuten inclusief 75 minuten voorbereiding voor €495. Deze tarieven en de sessieduur van 75 minuten gelden vanaf 1 oktober 2026. Voor cliënten die reeds in behandeling zijn, blijven de oude tarieven van kracht.",
+    a: "Een IBCT-sessie van 75 minuten kost €155 exclusief btw, inclusief reiskosten binnen 10 km. Daarbuiten geldt een vaste toeslag van €25 per sessie. Ik kom tot ongeveer 20 km rond Tilburg. Voor koppels die preventief willen werken bied ik een APK voor relaties aan: drie sessies van 60 minuten inclusief 75 minuten voorbereiding voor €495. Deze tarieven en de sessieduur van 75 minuten gelden vanaf 1 oktober 2026. Voor cliënten die reeds in behandeling zijn, blijven de oude tarieven van kracht.",
   },
   {
     q: "Hoe snel kunnen wij starten?",
