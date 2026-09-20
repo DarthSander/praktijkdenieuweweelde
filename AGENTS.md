@@ -31,9 +31,13 @@ De definitieve waarden zijn:
    - Titel: `IBCT relatietherapie Tilburg | Evidence-based`
    - Meta: `IBCT relatietherapie in Tilburg. Wetenschappelijk onderbouwde aanpak voor koppels die vastgelopen patronen willen begrijpen, verzachten en duurzaam doorbreken.`
 
-5. **Relatietherapie Reeshof** (`/relatietherapie-reeshof`)
-   - Titel: `Relatietherapie Reeshof Tilburg | Aan huis & persoonlijk`
-   - Meta: `Wetenschappelijk onderbouwde relatietherapie aan huis in de Reeshof. Voor koppels die vastlopen in terugkerende patronen en weer rust, begrip en verbinding willen.`
+5. **Relatietherapie Reeshof** (`/relatietherapie-reeshof`) — **VERVALLEN, NIET OPNIEUW AANMAKEN**
+   - Deze pagina is per september 2026 samengevoegd met `/relatietherapie-tilburg` en wordt
+     via `next.config.ts` permanent omgeleid. Reden: de inhoud was voor 88% gelijk aan die
+     van de Tilburg-pagina en de pagina stond maandenlang rond positie 76 met nul klikken,
+     terwijl "reeshof" in 28 dagen zoekdata in geen enkele zoekopdracht voorkwam.
+   - De Reeshof blijft gewoon werkgebied en wordt genoemd op de Tilburg-pagina, inclusief
+     de buurten Heerevelden, Huibeven, Dalem, Dongewijk en de Gesworen Hoek.
 
 6. **Relatietherapie Berkel‑Enschot** (`/relatietherapie-berkel-enschot`)
    - Titel: `Relatietherapie Berkel‑Enschot Tilburg | Aan huis & vertrouwd`

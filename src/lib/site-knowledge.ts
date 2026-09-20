@@ -47,7 +47,8 @@ const PRACTICE_INFO = `
 - Sessies duren 75 minuten (vanaf 1 oktober 2026; daarvoor 90 minuten)
 
 ## Tarieven (vanaf 1 oktober 2026, exclusief btw)
-- IBCT-sessie: € 155 (75 min, aan huis, inclusief reiskosten binnen werkgebied)
+- IBCT-sessie: € 155 (75 min, aan huis, inclusief reiskosten binnen 10 km)
+- Reiskosten buiten 10 km: vaste toeslag € 25 per sessie; werkgebied tot ongeveer 20 km rond Tilburg
 - Individuele relatietherapie: € 125 (60 min)
 - APK voor Relaties (preventief, 3 sessies van 60 min, inclusief 75 min voorbereiding): € 495
 - Voor cliënten die reeds in behandeling zijn, blijven de oude tarieven van kracht

@@ -29,11 +29,11 @@ export const metadata: Metadata = {
 const faqs: FAQItem[] = [
   {
     q: "In welke wijken van Tilburg kom je aan huis?",
-    a: "Ik werk door heel Tilburg en directe omgeving: Reeshof, Berkel-Enschot en aangrenzende wijken. Ook in nabijgelegen plaatsen zoals Dongen, Udenhout, Goirle en Loon op Zand kom ik meestal. Stuur gerust een bericht als je wilt weten of jullie adres binnen het werkgebied valt.",
+    a: "Ik werk door heel Tilburg en directe omgeving. In de Reeshof kom ik overal, van Heerevelden en Huibeven tot Dalem, Dongewijk en de Gesworen Hoek. Ook in Berkel-Enschot, de aangrenzende wijken en nabijgelegen plaatsen zoals Dongen, Udenhout, Goirle en Loon op Zand kom ik. Stuur gerust een bericht als je wilt weten of jullie adres binnen het werkgebied valt.",
   },
   {
     q: "Wat kost relatietherapie in Tilburg bij jou?",
-    a: "Een IBCT-sessie van 75 minuten kost €155 exclusief btw, inclusief reiskosten binnen het werkgebied. Voor koppels die preventief willen werken bied ik een APK voor relaties aan: drie sessies van 60 minuten inclusief 75 minuten voorbereiding voor €495. Deze tarieven en de sessieduur van 75 minuten gelden vanaf 1 oktober 2026. Voor cliënten die reeds in behandeling zijn, blijven de oude tarieven van kracht.",
+    a: "Een IBCT-sessie van 75 minuten kost €155 exclusief btw, inclusief reiskosten binnen 10 km. Daarbuiten geldt een vaste toeslag van €25 per sessie. Ik kom tot ongeveer 20 km rond Tilburg. Voor koppels die preventief willen werken bied ik een APK voor relaties aan: drie sessies van 60 minuten inclusief 75 minuten voorbereiding voor €495. Deze tarieven en de sessieduur van 75 minuten gelden vanaf 1 oktober 2026. Voor cliënten die reeds in behandeling zijn, blijven de oude tarieven van kracht.",
   },
   {
     q: "Hoe snel kunnen wij starten?",

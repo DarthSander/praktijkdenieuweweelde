@@ -9,7 +9,7 @@ const plans = [
     priceSuffix: ",-",
     per: "/ 75 minuten",
     features: [
-      "Inclusief reiskosten binnen Tilburg",
+      "Inclusief reiskosten binnen 10 km",
       "IBCT methode",
       "Praktische oefeningen voor thuis",
     ],
