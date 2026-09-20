@@ -109,8 +109,9 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-// Geo: benaderde coördinaten voor Kasteel Nijenrodestraat (Reeshof, Tilburg).
-// Verfijn met exacte waarde uit Google Maps indien gewenst.
+// Geo: benaderde coördinaten bij Kasteel Nijenrodestraat, Tilburg.
+// LET OP: nog te vervangen door de exacte waarde uit Google Maps. De huidige
+// waarde is niet geverifieerd en kan naast het werkelijke adres liggen.
 // aggregateRating/review bewust weggelaten: toevoegen pas zodra er echte reviews zijn
 // — verzonnen ratings schenden Google's richtlijnen.
 const jsonLd = {

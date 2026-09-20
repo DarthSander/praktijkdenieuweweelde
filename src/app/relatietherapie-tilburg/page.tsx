@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const faqs: FAQItem[] = [
   {
     q: "In welke wijken van Tilburg kom je aan huis?",
-    a: "Ik werk door heel Tilburg en directe omgeving: Reeshof, Berkel-Enschot en aangrenzende wijken. Ook in nabijgelegen plaatsen zoals Dongen, Udenhout, Goirle en Loon op Zand kom ik meestal. Stuur gerust een bericht als je wilt weten of jullie adres binnen het werkgebied valt.",
+    a: "Ik werk door heel Tilburg en directe omgeving. In de Reeshof kom ik overal, van Heerevelden en Huibeven tot Dalem, Dongewijk en de Gesworen Hoek. Ook in Berkel-Enschot, de aangrenzende wijken en nabijgelegen plaatsen zoals Dongen, Udenhout, Goirle en Loon op Zand kom ik. Stuur gerust een bericht als je wilt weten of jullie adres binnen het werkgebied valt.",
   },
   {
     q: "Wat kost relatietherapie in Tilburg bij jou?",

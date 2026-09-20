@@ -23,6 +23,17 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // De Reeshof-pagina is samengevoegd met de Tilburg-pagina: hij was voor 88%
+  // een kopie daarvan en haalde nul klikken. permanent: true geeft een 308.
+  async redirects() {
+    return [
+      {
+        source: "/relatietherapie-reeshof",
+        destination: "/relatietherapie-tilburg",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
