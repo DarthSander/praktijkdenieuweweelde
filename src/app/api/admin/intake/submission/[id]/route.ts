@@ -1,6 +1,6 @@
 import type { NextRequest } from "next/server";
-import { getAdminUser } from "@/lib/supabase-server";
-import { getServerSupabase } from "@/lib/supabase";
+import { getAdminSession } from "@/lib/auth";
+import { getSql } from "@/lib/db";
 
 export const runtime = "nodejs";
 
@@ -9,8 +9,8 @@ export async function PATCH(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const user = await getAdminUser();
-  if (!user) return Response.json({ error: "Niet ingelogd" }, { status: 401 });
+  const admin = await getAdminSession();
+  if (!admin) return Response.json({ error: "Niet ingelogd" }, { status: 401 });
 
   const { id } = await params;
   let body: { action?: string };
@@ -30,13 +30,11 @@ export async function PATCH(
     return Response.json({ error: "Onbekende actie" }, { status: 400 });
   }
 
-  const supabase = getServerSupabase();
-  const { error } = await supabase
-    .from("intake_submissions")
-    .update({ status })
-    .eq("id", id);
-  if (error) {
-    console.error("Archiveren mislukt", error);
+  try {
+    const sql = getSql();
+    await sql`update intake_submissions set status = ${status} where id = ${id}`;
+  } catch (err) {
+    console.error("Archiveren mislukt", err);
     return Response.json({ error: "Bijwerken mislukt" }, { status: 500 });
   }
   return Response.json({ ok: true, status });
@@ -48,36 +46,30 @@ export async function DELETE(
   _req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const user = await getAdminUser();
-  if (!user) return Response.json({ error: "Niet ingelogd" }, { status: 401 });
+  const admin = await getAdminSession();
+  if (!admin) return Response.json({ error: "Niet ingelogd" }, { status: 401 });
 
   const { id } = await params;
-  const supabase = getServerSupabase();
+  const sql = getSql();
 
-  // Eerst de uitnodiging-id ophalen zodat we die PII ook kunnen wissen.
-  const { data: sub } = await supabase
-    .from("intake_submissions")
-    .select("invite_id")
-    .eq("id", id)
-    .maybeSingle<{ invite_id: string | null }>();
-
-  const { error } = await supabase
-    .from("intake_submissions")
-    .delete()
-    .eq("id", id);
-  if (error) {
-    console.error("Verwijderen inzending mislukt", error);
+  let inviteId: string | null = null;
+  try {
+    // Eerst de uitnodiging-id ophalen zodat we die PII ook kunnen wissen.
+    const deleted = (await sql`
+      delete from intake_submissions where id = ${id} returning invite_id
+    `) as { invite_id: string | null }[];
+    inviteId = deleted[0]?.invite_id ?? null;
+  } catch (err) {
+    console.error("Verwijderen inzending mislukt", err);
     return Response.json({ error: "Verwijderen mislukt" }, { status: 500 });
   }
 
-  if (sub?.invite_id) {
-    const { error: invErr } = await supabase
-      .from("intake_invites")
-      .delete()
-      .eq("id", sub.invite_id);
-    if (invErr) {
+  if (inviteId) {
+    try {
+      await sql`delete from intake_invites where id = ${inviteId}`;
+    } catch (err) {
       // Inzending is al weg; log alleen de rest-PII die bleef staan.
-      console.error("Verwijderen uitnodiging mislukt", invErr);
+      console.error("Verwijderen uitnodiging mislukt", err);
     }
   }
 

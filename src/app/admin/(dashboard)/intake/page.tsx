@@ -1,16 +1,16 @@
 import Link from "next/link";
-import { getServerSupabase } from "@/lib/supabase";
+import { getSql } from "@/lib/db";
 import InviteForm from "./InviteForm";
 
 export const dynamic = "force-dynamic";
 
 type InviteListRow = {
   id: string;
-  created_at: string;
+  created_at: Date;
   client_name: string | null;
   client_email: string;
-  expires_at: string;
-  used_at: string | null;
+  expires_at: Date;
+  used_at: Date | null;
   submission_id: string | null;
 };
 
@@ -32,24 +32,23 @@ export default async function AdminIntakePage() {
   let invites: InviteListRow[] = [];
   const submissionStatus = new Map<string, string>();
   try {
-    const supabase = getServerSupabase();
-    const { data } = await supabase
-      .from("intake_invites")
-      .select("id, created_at, client_name, client_email, expires_at, used_at, submission_id")
-      .order("created_at", { ascending: false })
-      .limit(25);
-    invites = data ?? [];
+    const sql = getSql();
+    invites = (await sql`
+      select id, created_at, client_name, client_email, expires_at, used_at, submission_id
+      from intake_invites
+      order by created_at desc
+      limit 25
+    `) as InviteListRow[];
 
     // Status van de bijbehorende inzendingen ophalen (voor "Gearchiveerd").
     const ids = invites
       .map((r) => r.submission_id)
       .filter((v): v is string => Boolean(v));
     if (ids.length) {
-      const { data: subs } = await supabase
-        .from("intake_submissions")
-        .select("id, status")
-        .in("id", ids);
-      for (const s of subs ?? []) submissionStatus.set(s.id, s.status);
+      const subs = (await sql`
+        select id, status from intake_submissions where id = any(${ids}::uuid[])
+      `) as { id: string; status: string }[];
+      for (const s of subs) submissionStatus.set(s.id, s.status);
     }
   } catch (err) {
     console.error("Kon uitnodigingen niet laden", err);

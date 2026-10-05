@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import { getAdminUser } from "@/lib/supabase-server";
+import { getAdminSession } from "@/lib/auth";
+import { getVapidKeys } from "@/lib/push";
+import AdminNav from "./AdminNav";
 
 export const dynamic = "force-dynamic";
 
@@ -14,20 +16,28 @@ export default async function AdminDashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const user = await getAdminUser();
-  if (!user) {
+  const admin = await getAdminSession();
+  if (!admin) {
     redirect("/admin/login");
+  }
+
+  let vapidPublicKey = "";
+  try {
+    vapidPublicKey = (await getVapidKeys()).publicKey;
+  } catch (err) {
+    console.error("VAPID-sleutels niet beschikbaar", err);
   }
 
   return (
     <div className="min-h-screen bg-[#F5F0EB] print:bg-white">
       <header className="bg-[#946B66] text-white print:hidden">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
           <span className="font-[family-name:var(--font-playfair)] font-bold">
             Admin · de Nieuwe Weelde
           </span>
-          <span className="text-white/70 text-sm">{user.email}</span>
+          <span className="text-white/70 text-sm truncate">{admin.email}</span>
         </div>
+        <AdminNav vapidPublicKey={vapidPublicKey} />
       </header>
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {children}

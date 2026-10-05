@@ -4,14 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/db-migrate.mjs --build && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:migrate": "node scripts/db-migrate.mjs",
+    "admin:hash": "node scripts/hash-password.mjs",
+    "push:keys": "node scripts/vapid-keys.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.90.0",
-    "@supabase/ssr": "^0.12.0",
-    "@supabase/supabase-js": "^2.103.3",
+    "@neondatabase/serverless": "^1.2.0",
     "@types/aos": "^3.0.7",
     "@types/nodemailer": "^7.0.11",
     "aos": "^2.3.4",
@@ -19,16 +21,17 @@
     "next": "16.2.2",
     "nodemailer": "^8.0.4",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "web-push": "^3.6.7"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/web-push": "^3.6.4",
     "eslint": "^9",
     "eslint-config-next": "16.2.2",
-    "supabase": "^2.107.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

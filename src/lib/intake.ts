@@ -1,19 +1,20 @@
 // Intake magic-link-logica.
 // We bewaren nooit de ruwe token in de database — alleen de SHA-256 hash.
 // De ruwe token zit alleen in de magic link (de e-mail naar de klant).
-import { randomBytes, createHash } from "node:crypto";
-import { getServerSupabase } from "@/lib/supabase";
+import { randomBytes, randomUUID, createHash } from "node:crypto";
+import { getSql } from "@/lib/db";
 
 const DEFAULT_EXPIRY_DAYS = 14;
 
+// Neon geeft timestamptz-kolommen terug als Date-objecten.
 export type InviteRow = {
   id: string;
-  created_at: string;
+  created_at: Date;
   client_name: string | null;
   client_email: string;
   token_hash: string;
-  expires_at: string;
-  used_at: string | null;
+  expires_at: Date;
+  used_at: Date | null;
   submission_id: string | null;
   created_by: string | null;
 };
@@ -46,26 +47,21 @@ export async function createInvite(args: {
   email: string;
   createdBy?: string | null;
 }): Promise<{ inviteId: string; rawToken: string; expiresAt: string }> {
-  const supabase = getServerSupabase();
+  const sql = getSql();
   const rawToken = generateToken();
   const expiresAt = new Date(
     Date.now() + expiryDays() * 24 * 60 * 60 * 1000
   ).toISOString();
 
-  const { data, error } = await supabase
-    .from("intake_invites")
-    .insert({
-      client_name: args.name ?? null,
-      client_email: args.email,
-      token_hash: hashToken(rawToken),
-      expires_at: expiresAt,
-      created_by: args.createdBy ?? null,
-    })
-    .select("id")
-    .single();
+  const rows = (await sql`
+    insert into intake_invites (client_name, client_email, token_hash, expires_at, created_by)
+    values (${args.name ?? null}, ${args.email}, ${hashToken(rawToken)}, ${expiresAt}, ${args.createdBy ?? null})
+    returning id
+  `) as { id: string }[];
+  const data = rows[0];
 
-  if (error || !data) {
-    throw new Error(`Kon uitnodiging niet aanmaken: ${error?.message ?? "onbekend"}`);
+  if (!data) {
+    throw new Error("Kon uitnodiging niet aanmaken.");
   }
 
   return { inviteId: data.id, rawToken, expiresAt };
@@ -75,14 +71,23 @@ export async function createInvite(args: {
 export async function getValidInvite(rawToken: string): Promise<ValidationResult> {
   if (!rawToken) return { ok: false, reason: "invalid" };
 
-  const supabase = getServerSupabase();
-  const { data, error } = await supabase
-    .from("intake_invites")
-    .select("*")
-    .eq("token_hash", hashToken(rawToken))
-    .maybeSingle<InviteRow>();
+  let data: InviteRow | undefined;
+  try {
+    const sql = getSql();
+    const rows = (await sql`
+      select id, created_at, client_name, client_email, token_hash, expires_at,
+             used_at, submission_id, created_by
+      from intake_invites
+      where token_hash = ${hashToken(rawToken)}
+      limit 1
+    `) as InviteRow[];
+    data = rows[0];
+  } catch (err) {
+    console.error("Kon uitnodiging niet ophalen", err);
+    return { ok: false, reason: "invalid" };
+  }
 
-  if (error || !data) return { ok: false, reason: "invalid" };
+  if (!data) return { ok: false, reason: "invalid" };
   if (data.used_at) return { ok: false, reason: "used" };
   if (new Date(data.expires_at).getTime() <= Date.now()) {
     return { ok: false, reason: "expired" };
@@ -103,35 +108,27 @@ export async function recordSubmission(
     throw new Error(`Uitnodiging niet geldig: ${validation.reason}`);
   }
   const invite = validation.invite;
-  const supabase = getServerSupabase();
+  const sql = getSql();
 
-  const { data: submission, error: submissionError } = await supabase
-    .from("intake_submissions")
-    .insert({
-      invite_id: invite.id,
-      client_name: invite.client_name,
-      client_email: invite.client_email,
-      answers,
-    })
-    .select("id")
-    .single();
-
-  if (submissionError || !submission) {
-    throw new Error(
-      `Kon inzending niet opslaan: ${submissionError?.message ?? "onbekend"}`
-    );
-  }
-
-  // Markeer de uitnodiging als gebruikt. Voorwaarde used_at is null voorkomt
-  // dubbele inzendingen bij een race.
-  const { error: updateError } = await supabase
-    .from("intake_invites")
-    .update({ used_at: new Date().toISOString(), submission_id: submission.id })
-    .eq("id", invite.id)
-    .is("used_at", null);
-
-  if (updateError) {
-    throw new Error(`Kon uitnodiging niet afsluiten: ${updateError.message}`);
+  // Eén atomaire query: uitnodiging afsluiten (alleen als used_at nog leeg is,
+  // dat voorkomt dubbele inzendingen bij een race) en de inzending opslaan.
+  // Mislukt een stap, dan gebeurt er niets.
+  const submissionId = randomUUID();
+  const rows = (await sql`
+    with claimed as (
+      update intake_invites
+      set used_at = now(), submission_id = ${submissionId}
+      where id = ${invite.id} and used_at is null
+      returning id, client_name, client_email
+    )
+    insert into intake_submissions (id, invite_id, client_name, client_email, answers)
+    select ${submissionId}, id, client_name, client_email, ${JSON.stringify(answers)}::jsonb
+    from claimed
+    returning id
+  `) as { id: string }[];
+  const submission = rows[0];
+  if (!submission) {
+    throw new Error("Uitnodiging niet geldig: used");
   }
 
   return { submissionId: submission.id, invite };

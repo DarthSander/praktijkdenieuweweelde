@@ -1,5 +1,5 @@
 import type { NextRequest } from "next/server";
-import { getAdminUser } from "@/lib/supabase-server";
+import { getAdminSession } from "@/lib/auth";
 import { createInvite } from "@/lib/intake";
 import { sendIntakeMagicLink } from "@/lib/intake-mail";
 
@@ -15,8 +15,8 @@ function baseUrl(req: NextRequest): string {
 
 export async function POST(req: NextRequest) {
   // Alleen ingelogde admins mogen uitnodigingen maken.
-  const user = await getAdminUser();
-  if (!user) {
+  const admin = await getAdminSession();
+  if (!admin) {
     return Response.json({ error: "Niet ingelogd" }, { status: 401 });
   }
 
@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
     const { rawToken } = await createInvite({
       name: name || null,
       email,
-      createdBy: user.id,
+      createdBy: admin.email,
     });
     const link = `${baseUrl(req)}/intake/${rawToken}`;
     await sendIntakeMagicLink({ toEmail: email, name: name || null, link });
