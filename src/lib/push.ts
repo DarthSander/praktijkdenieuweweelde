@@ -1,5 +1,6 @@
 // Web Push naar de admin (Android/Chrome). Alleen server-side.
-// Sleutels maken: `npm run push:keys`.
+// Sleutels worden automatisch aangemaakt en in de database bewaard; optioneel
+// kun je eigen sleutels zetten met `npm run push:keys`.
 import webpush from "web-push";
 import { getSql } from "@/lib/db";
 
@@ -10,33 +11,62 @@ export type PushPayload = {
   tag?: string;
 };
 
-let configured: boolean | null = null;
+type VapidKeys = { publicKey: string; privateKey: string };
 
-function configure(): boolean {
-  if (configured !== null) return configured;
-  const publicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
-  const privateKey = process.env.VAPID_PRIVATE_KEY;
-  const subject = process.env.VAPID_SUBJECT || "mailto:info@praktijkdenieuweweelde.nl";
-  if (!publicKey || !privateKey) {
-    configured = false;
-    return false;
+let cachedKeys: VapidKeys | null = null;
+let configured = false;
+
+/**
+ * VAPID-sleutels: uit de env-variabelen als die gezet zijn, anders uit de
+ * database. Bestaan ze daar nog niet, dan worden ze eenmalig aangemaakt.
+ */
+export async function getVapidKeys(): Promise<VapidKeys> {
+  if (cachedKeys) return cachedKeys;
+
+  const envPublic = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
+  const envPrivate = process.env.VAPID_PRIVATE_KEY;
+  if (envPublic && envPrivate) {
+    cachedKeys = { publicKey: envPublic, privateKey: envPrivate };
+    return cachedKeys;
   }
-  webpush.setVapidDetails(subject, publicKey, privateKey);
-  configured = true;
-  return true;
+
+  const sql = getSql();
+  let rows = (await sql`
+    select value from app_settings where key = 'vapid_keys'
+  `) as { value: string }[];
+  if (!rows.length) {
+    // "on conflict do nothing" + opnieuw lezen: bij gelijktijdige aanroepen
+    // wint één set sleutels.
+    await sql`
+      insert into app_settings (key, value)
+      values ('vapid_keys', ${JSON.stringify(webpush.generateVAPIDKeys())})
+      on conflict (key) do nothing
+    `;
+    rows = (await sql`
+      select value from app_settings where key = 'vapid_keys'
+    `) as { value: string }[];
+  }
+  const stored = JSON.parse(rows[0].value) as VapidKeys;
+  cachedKeys = { publicKey: stored.publicKey, privateKey: stored.privateKey };
+  return cachedKeys;
 }
 
-export function isPushConfigured(): boolean {
-  return configure();
+async function configure(): Promise<void> {
+  if (configured) return;
+  const { publicKey, privateKey } = await getVapidKeys();
+  const subject = process.env.VAPID_SUBJECT || "mailto:info@praktijkdenieuweweelde.nl";
+  webpush.setVapidDetails(subject, publicKey, privateKey);
+  configured = true;
 }
 
 /** Stuurt een melding naar alle geregistreerde apparaten. Retourneert het aantal geslaagde verzendingen. */
 export async function sendPushToAll(payload: PushPayload): Promise<number> {
-  if (!configure()) return 0;
   const sql = getSql();
   const subs = (await sql`
     select endpoint, p256dh, auth from push_subscriptions
   `) as { endpoint: string; p256dh: string; auth: string }[];
+  if (!subs.length) return 0;
+  await configure();
 
   const body = JSON.stringify(payload);
   const results = await Promise.allSettled(

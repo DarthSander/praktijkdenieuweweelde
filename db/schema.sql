@@ -129,6 +129,16 @@ create table if not exists push_subscriptions (
   created_at  timestamptz not null default now()
 );
 
+-- ---------- Instellingen ----------
+
+-- Automatisch aangemaakte instellingen, zoals de VAPID-sleutels voor push
+-- (alleen als ze niet als env-variabele zijn gezet).
+create table if not exists app_settings (
+  key         text primary key,
+  value       text not null,
+  created_at  timestamptz not null default now()
+);
+
 -- ---------- Bewaartermijn-helper ----------
 
 -- Chat sessions + messages ouder dan 30 dagen wissen.

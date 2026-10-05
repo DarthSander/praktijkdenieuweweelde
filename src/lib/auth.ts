@@ -1,7 +1,10 @@
 // Admin-login zonder externe dienst.
-// - Inloggegevens: ADMIN_EMAIL + ADMIN_PASSWORD_HASH (maak met `npm run admin:hash`).
-// - Sessie: cookie met vervaldatum, ondertekend met HMAC-SHA256 (ADMIN_SESSION_SECRET).
-import { createHmac, scrypt, timingSafeEqual } from "node:crypto";
+// - Inloggegevens: ADMIN_EMAIL + ADMIN_PASSWORD (gewoon wachtwoord), of in plaats
+//   van ADMIN_PASSWORD een ADMIN_PASSWORD_HASH (maak met `npm run admin:hash`).
+// - Sessie: cookie met vervaldatum, ondertekend met HMAC-SHA256. De sleutel is
+//   ADMIN_SESSION_SECRET, of (als die ontbreekt) afgeleid van het wachtwoord en
+//   de database-URL. Wachtwoord wijzigen logt dan alle sessies uit.
+import { createHash, createHmac, scrypt, timingSafeEqual } from "node:crypto";
 import { promisify } from "node:util";
 import { cookies } from "next/headers";
 
@@ -17,11 +20,17 @@ export const SESSION_MAX_AGE = 60 * 60 * 24 * 30; // 30 dagen
 export type AdminSession = { email: string };
 
 function secret(): string {
-  const s = process.env.ADMIN_SESSION_SECRET;
-  if (!s || s.length < 32) {
-    throw new Error("ADMIN_SESSION_SECRET ontbreekt of is korter dan 32 tekens.");
+  const explicit = process.env.ADMIN_SESSION_SECRET;
+  if (explicit && explicit.length >= 32) return explicit;
+
+  const passwordMaterial = process.env.ADMIN_PASSWORD_HASH || process.env.ADMIN_PASSWORD || "";
+  if (!passwordMaterial) {
+    throw new Error("ADMIN_PASSWORD (of ADMIN_PASSWORD_HASH) ontbreekt.");
   }
-  return s;
+  const dbUrl = process.env.DATABASE_URL || process.env.POSTGRES_URL || "";
+  return createHash("sha256")
+    .update(`nw-admin-session\0${passwordMaterial}\0${dbUrl}`)
+    .digest("base64url");
 }
 
 function sign(payload: string): string {
@@ -37,15 +46,29 @@ function safeEqual(a: string, b: string): boolean {
 /** Controleert e-mail + wachtwoord tegen de env-variabelen. */
 export async function verifyCredentials(email: string, password: string): Promise<boolean> {
   const expectedEmail = (process.env.ADMIN_EMAIL ?? "").trim().toLowerCase();
+  const plain = process.env.ADMIN_PASSWORD ?? "";
   const stored = process.env.ADMIN_PASSWORD_HASH ?? "";
-  const [scheme, saltB64, hashB64] = stored.split(":");
-  if (!expectedEmail || scheme !== "scrypt" || !saltB64 || !hashB64) {
-    console.error("ADMIN_EMAIL of ADMIN_PASSWORD_HASH ontbreekt of is ongeldig.");
+  if (!expectedEmail || (!plain && !stored)) {
+    console.error("ADMIN_EMAIL of ADMIN_PASSWORD ontbreekt.");
     return false;
   }
-  const expectedHash = Buffer.from(hashB64, "base64url");
-  const actual = await scryptAsync(password, Buffer.from(saltB64, "base64url"), expectedHash.length);
-  const passwordOk = timingSafeEqual(actual, expectedHash);
+
+  let passwordOk = false;
+  if (stored) {
+    const [scheme, saltB64, hashB64] = stored.split(":");
+    if (scheme !== "scrypt" || !saltB64 || !hashB64) {
+      console.error("ADMIN_PASSWORD_HASH heeft een ongeldig formaat.");
+      return false;
+    }
+    const expectedHash = Buffer.from(hashB64, "base64url");
+    const actual = await scryptAsync(password, Buffer.from(saltB64, "base64url"), expectedHash.length);
+    passwordOk = timingSafeEqual(actual, expectedHash);
+  } else {
+    // Vergelijk de SHA-256 van beide, zodat de vergelijking altijd even lang duurt.
+    const a = createHash("sha256").update(password).digest();
+    const b = createHash("sha256").update(plain).digest();
+    passwordOk = timingSafeEqual(a, b);
+  }
   const emailOk = safeEqual(email.trim().toLowerCase(), expectedEmail);
   return passwordOk && emailOk;
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { getAdminSession } from "@/lib/auth";
+import { getVapidKeys } from "@/lib/push";
 import AdminNav from "./AdminNav";
 
 export const dynamic = "force-dynamic";
@@ -20,6 +21,13 @@ export default async function AdminDashboardLayout({
     redirect("/admin/login");
   }
 
+  let vapidPublicKey = "";
+  try {
+    vapidPublicKey = (await getVapidKeys()).publicKey;
+  } catch (err) {
+    console.error("VAPID-sleutels niet beschikbaar", err);
+  }
+
   return (
     <div className="min-h-screen bg-[#F5F0EB] print:bg-white">
       <header className="bg-[#946B66] text-white print:hidden">
@@ -29,7 +37,7 @@ export default async function AdminDashboardLayout({
           </span>
           <span className="text-white/70 text-sm truncate">{admin.email}</span>
         </div>
-        <AdminNav vapidPublicKey={process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY ?? ""} />
+        <AdminNav vapidPublicKey={vapidPublicKey} />
       </header>
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {children}

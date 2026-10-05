@@ -1,5 +1,5 @@
 import { getAdminSession } from "@/lib/auth";
-import { isPushConfigured, sendPushToAll } from "@/lib/push";
+import { sendPushToAll } from "@/lib/push";
 
 export const runtime = "nodejs";
 
@@ -7,13 +7,6 @@ export const runtime = "nodejs";
 export async function POST() {
   const admin = await getAdminSession();
   if (!admin) return Response.json({ error: "Niet ingelogd" }, { status: 401 });
-
-  if (!isPushConfigured()) {
-    return Response.json(
-      { error: "VAPID-sleutels ontbreken (NEXT_PUBLIC_VAPID_PUBLIC_KEY / VAPID_PRIVATE_KEY)." },
-      { status: 500 }
-    );
-  }
 
   try {
     const sent = await sendPushToAll({
