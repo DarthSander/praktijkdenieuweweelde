@@ -1,7 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import type { NextRequest } from "next/server";
 import { buildChatSystemPrompt } from "@/lib/site-knowledge";
-import { getServerSupabase } from "@/lib/supabase";
+import { getSql } from "@/lib/db";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -43,31 +43,27 @@ export async function POST(req: NextRequest) {
 
   // Session bijhouden (best-effort, faalt stil)
   let sessionId = body.sessionId;
-  let supabase: ReturnType<typeof getServerSupabase> | null = null;
+  let sql: ReturnType<typeof getSql> | null = null;
   try {
-    supabase = getServerSupabase();
+    sql = getSql();
     if (!sessionId) {
-      const { data } = await supabase
-        .from("chat_sessions")
-        .insert({
-          page_url: body.pageUrl ?? null,
-          user_agent: req.headers.get("user-agent") ?? null,
-        })
-        .select("id")
-        .single();
-      sessionId = data?.id ?? undefined;
+      const rows = (await sql`
+        insert into chat_sessions (page_url, user_agent)
+        values (${body.pageUrl ?? null}, ${req.headers.get("user-agent") ?? null})
+        returning id
+      `) as { id: string }[];
+      sessionId = rows[0]?.id ?? undefined;
     }
     if (sessionId) {
       const lastUser = messages[messages.length - 1];
-      await supabase.from("chat_messages").insert({
-        session_id: sessionId,
-        role: "user",
-        content: lastUser.content,
-      });
+      await sql`
+        insert into chat_messages (session_id, role, content)
+        values (${sessionId}, 'user', ${lastUser.content})
+      `;
     }
   } catch (err) {
-    console.error("Supabase chat-session log failed", err);
-    supabase = null;
+    console.error("Chat-sessie loggen mislukt", err);
+    sql = null;
   }
 
   const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
@@ -109,12 +105,15 @@ export async function POST(req: NextRequest) {
         }
 
         // Log assistant antwoord
-        if (supabase && sessionId && assistantText) {
-          await supabase.from("chat_messages").insert({
-            session_id: sessionId,
-            role: "assistant",
-            content: assistantText,
-          });
+        if (sql && sessionId && assistantText) {
+          try {
+            await sql`
+              insert into chat_messages (session_id, role, content)
+              values (${sessionId}, 'assistant', ${assistantText})
+            `;
+          } catch (err) {
+            console.error("Chat-antwoord loggen mislukt", err);
+          }
         }
       } catch (err) {
         console.error("Anthropic stream error", err);

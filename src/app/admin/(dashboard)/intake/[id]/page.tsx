@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getServerSupabase } from "@/lib/supabase";
+import { getSql } from "@/lib/db";
 import SubmissionActions from "./SubmissionActions";
 import SubmissionManage from "./SubmissionManage";
 
@@ -163,13 +163,18 @@ export default async function SubmissionDetailPage({
 
   let submission: Submission | null = null;
   try {
-    const supabase = getServerSupabase();
-    const { data } = await supabase
-      .from("intake_submissions")
-      .select("id, created_at, client_name, client_email, status, answers")
-      .eq("id", id)
-      .maybeSingle<Submission>();
-    submission = data;
+    const sql = getSql();
+    const rows = (await sql`
+      select id, created_at, client_name, client_email, status, answers
+      from intake_submissions
+      where id = ${id}
+      limit 1
+    `) as (Omit<Submission, "created_at"> & { created_at: Date })[];
+    // created_at als ISO-string, zodat het object ongewijzigd naar de
+    // client-component (export) kan.
+    submission = rows[0]
+      ? { ...rows[0], created_at: rows[0].created_at.toISOString() }
+      : null;
   } catch (err) {
     console.error("Kon inzending niet laden", err);
   }

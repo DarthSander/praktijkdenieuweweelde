@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { createClientSupabase } from "@/lib/supabase-browser";
 
 const inputClass =
   "w-full px-3 py-2.5 rounded-lg border border-[#EDE6DD] bg-white text-[#5E524F] text-sm focus:border-[#C4A4A0] focus:ring-0 outline-none transition placeholder:text-[#C4A4A0]/60";
@@ -21,19 +20,25 @@ export default function AdminLoginPage() {
     const email = (form.elements.namedItem("email") as HTMLInputElement).value;
     const password = (form.elements.namedItem("password") as HTMLInputElement).value;
 
-    const supabase = createClientSupabase();
-    const { error: signInError } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+    let ok = false;
+    try {
+      const res = await fetch("/api/admin/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+      ok = res.ok;
+    } catch {
+      ok = false;
+    }
 
-    if (signInError) {
+    if (!ok) {
       setError("Inloggen mislukt. Controleer je gegevens.");
       setLoading(false);
       return;
     }
 
-    router.replace("/admin/intake");
+    router.replace("/admin/analyse");
     router.refresh();
   }
 
