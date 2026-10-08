@@ -99,6 +99,9 @@ export const metadata: Metadata = {
       { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
       { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
     ],
+    // iOS gebruikt dit icoon bij "Zet op beginscherm"; zonder deze regel maakt
+    // Safari zelf een (piepklein) miniatuurtje van de pagina.
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
 
   category: "health",
