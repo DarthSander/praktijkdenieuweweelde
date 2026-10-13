@@ -95,6 +95,8 @@ export const metadata: Metadata = {
 
   icons: {
     icon: [
+      // Vector eerst: moderne browsers tonen het logo dan scherp op elk formaat.
+      { url: "/icon.svg", type: "image/svg+xml", sizes: "any" },
       { url: "/favicon.ico", sizes: "any" },
       { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
       { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
