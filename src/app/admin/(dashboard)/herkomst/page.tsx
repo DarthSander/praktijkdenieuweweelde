@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getSql } from "@/lib/db";
-import { formatDateTime, formatDuration } from "@/lib/visitor-format";
+import { formatDateTime, formatDuration, timeAgo } from "@/lib/visitor-format";
 import { CATEGORY_LABELS, trafficSource, type SourceCategory } from "@/lib/traffic-source";
 import { aggregate, type LeadRow, type VisitRow } from "./aggregate";
 
@@ -8,6 +8,14 @@ export const dynamic = "force-dynamic";
 
 const PERIODS = [7, 30, 90] as const;
 const CATEGORY_ORDER: SourceCategory[] = ["ai", "zoekmachine", "sociaal", "direct", "overig"];
+
+type BotRow = {
+  bot: string;
+  kind: "antwoord" | "index";
+  hits: number;
+  last_seen: Date;
+  paths: string[];
+};
 
 function StatCard({ label, value, sub }: { label: string; value: string; sub?: string }) {
   return (
@@ -29,10 +37,11 @@ export default async function HerkomstPage({
 
   let rows: VisitRow[] = [];
   let leads: LeadRow[] = [];
+  let bots: BotRow[] = [];
   let loadError = false;
   try {
     const sql = getSql();
-    const [visitRows, leadRows] = await sql.transaction([
+    const [visitRows, leadRows, botRows] = await sql.transaction([
       sql`
         select v.visitor_id::text as visitor_id,
                v.landing_path, v.referrer, v.utm_source,
@@ -62,9 +71,18 @@ export default async function HerkomstPage({
         order by l.created_at desc
         limit 25
       `,
+      sql`
+        select bot, kind, count(*)::int as hits, max(seen_at) as last_seen,
+               (array_agg(path order by seen_at desc))[1:3] as paths
+        from bot_hits
+        where seen_at > now() - make_interval(days => ${days})
+        group by bot, kind
+        order by hits desc
+      `,
     ]);
     rows = visitRows as VisitRow[];
     leads = leadRows as LeadRow[];
+    bots = botRows as BotRow[];
   } catch (err) {
     console.error("Kon herkomst niet laden", err);
     loadError = true;
@@ -223,6 +241,46 @@ export default async function HerkomstPage({
               );
             })}
           </section>
+
+          {bots.length > 0 && (
+            <section>
+              <h2 className="text-xs font-semibold uppercase tracking-wide text-[#C4A4A0] mb-2">
+                AI-assistenten achter de schermen
+              </h2>
+              <ul className="space-y-3">
+                {bots.map((bot) => (
+                  <li key={`${bot.bot}-${bot.kind}`} className="bg-white rounded-2xl shadow-sm p-4">
+                    <div className="flex flex-wrap items-baseline justify-between gap-2">
+                      <span className="font-semibold text-[#5E524F]">
+                        {bot.bot}
+                        <span
+                          className={`ml-2 align-middle inline-block px-2 py-0.5 rounded-full text-xs font-medium ${
+                            bot.kind === "antwoord"
+                              ? "bg-[#946B66] text-white"
+                              : "bg-[#F5F0EB] text-[#5E524F]/70"
+                          }`}
+                        >
+                          {bot.kind === "antwoord" ? "tijdens een antwoord" : "indexeren"}
+                        </span>
+                      </span>
+                      <span className="text-sm text-[#5E524F]/70 shrink-0">
+                        {bot.hits}× · laatst {timeAgo(bot.last_seen, Date.now())}
+                      </span>
+                    </div>
+                    <p className="mt-2 text-sm text-[#5E524F]/70 break-words">
+                      {bot.paths.join("  ·  ")}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-2 text-xs text-[#5E524F]/50 leading-relaxed">
+                &quot;Tijdens een antwoord&quot; betekent dat iemand op dat moment een vraag stelde en
+                jouw pagina werd opgehaald om die te beantwoorden. &quot;Indexeren&quot; gaat over
+                doorzoeken en trainen; dat zegt niets over een bezoeker nu, wel of je straks
+                gevonden wordt.
+              </p>
+            </section>
+          )}
 
           <section>
             <h2 className="text-xs font-semibold uppercase tracking-wide text-[#C4A4A0] mb-2">

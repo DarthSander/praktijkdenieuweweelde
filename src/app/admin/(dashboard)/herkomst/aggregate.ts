@@ -54,7 +54,17 @@ export function aggregate(rows: VisitRow[]): {
   const landings = new Map<string, { visits: number; leads: number; sources: Map<string, number> }>();
 
   for (const row of rows) {
-    const { label, category } = trafficSource(row.referrer, row.utm_source);
+    const source = trafficSource(row.referrer, row.utm_source);
+    // "Direct" betekent alleen dat de browser geen herkomst doorgaf. Wie op de
+    // homepage binnenkomt heeft de URL vermoedelijk ingetypt of stond in de
+    // favorieten; wie rechtstreeks op een diepe pagina binnenkomt heeft vrijwel
+    // zeker een gedeelde link gevolgd — uit een appje, een mail of een
+    // AI-assistent die geen herkomst meestuurt.
+    const label =
+      source.category === "direct" && row.landing_path && row.landing_path !== "/"
+        ? "Direct op een diepe pagina"
+        : source.label;
+    const category = source.category;
     let s = sources.get(label);
     if (!s) {
       s = {

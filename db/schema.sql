@@ -139,6 +139,23 @@ create index if not exists leads_visit_idx   on leads(visit_id);
 -- Eén aanvraag per bezoek per soort: voorkomt dubbeltellingen bij dubbelklikken.
 create unique index if not exists leads_visit_kind_idx on leads(visit_id, kind);
 
+-- Eén rij per keer dat een AI-assistent een pagina ophaalt. Dit verkeer komt
+-- nooit in de bezoekersanalyse terecht: dat script draait in de browser en
+-- bots voeren geen JavaScript uit.
+--   kind = 'antwoord' : opgehaald tijdens het beantwoorden van een vraag
+--   kind = 'index'    : opgehaald om te doorzoeken of te trainen
+create table if not exists bot_hits (
+  id          uuid primary key default gen_random_uuid(),
+  seen_at     timestamptz not null default now(),
+  bot         text not null,
+  kind        text not null check (kind in ('antwoord','index')),
+  path        text not null,
+  user_agent  text
+);
+
+create index if not exists bot_hits_seen_idx on bot_hits(seen_at desc);
+create index if not exists bot_hits_bot_idx  on bot_hits(bot, seen_at desc);
+
 -- ---------- Pushmeldingen (admin) ----------
 
 create table if not exists push_subscriptions (
