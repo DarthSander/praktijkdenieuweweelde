@@ -23,6 +23,17 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        // De Reeshof-pagina is opgegaan in de Tilburg-pagina; die beschrijft
+        // nu het hele werkgebied, inclusief de wijken van de Reeshof.
+        source: "/relatietherapie-reeshof",
+        destination: "/relatietherapie-tilburg",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

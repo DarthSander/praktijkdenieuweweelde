@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const faqs: FAQItem[] = [
   {
     q: "In welke wijken van Tilburg kom je aan huis?",
-    a: "Ik werk door heel Tilburg en directe omgeving: Reeshof, Berkel-Enschot en aangrenzende wijken. Ook in nabijgelegen plaatsen zoals Dongen, Udenhout, Goirle en Loon op Zand kom ik meestal. Stuur gerust een bericht als je wilt weten of jullie adres binnen het werkgebied valt.",
+    a: "In alle wijken. In de Reeshof kom ik het vaakst, want daar staat mijn praktijk: Heerevelden, Huibeven, Dalem, Dongewijk en de Gesworen Hoek. Verder kom ik in het Centrum, Oud-Noord, de Hasselt, Het Zand, Korvel, de Blaak, Oerle en Berkel-Enschot. Buiten de stad kom ik onder meer in Dongen, Goirle, Udenhout, Loon op Zand, Oisterwijk en Waalwijk. Stuur gerust een bericht als je wilt weten of jullie adres binnen het werkgebied valt.",
   },
   {
     q: "Wat kost relatietherapie in Tilburg bij jou?",
@@ -113,14 +113,24 @@ export default function Page() {
             </h2>
             <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
               <p>
-                Misschien praten jullie langs elkaar heen. Misschien is er iets gebeurd dat niet
-                meer uit te praten valt. Misschien voelt het anders dan het ooit was en weten
-                jullie niet precies waar het misgaat. In deze situaties is relatietherapie een
-                plek om samen te onderzoeken wat er werkelijk speelt.
+                De meeste koppels die mij bellen, zijn niet in één klap vastgelopen. Het is
+                geslopen. Een gesprek dat jullie liever uit de weg gaan, een opmerking die
+                blijft hangen, avonden waarop de televisie aanstaat omdat praten te veel
+                vraagt. En dan komt het moment waarop een van jullie zegt: zo wil ik het niet
+                langer.
               </p>
               <p>
-                Als IBCT-relatietherapeut in Tilburg kom ik bij jullie thuis, zodat jullie in een
-                vertrouwde omgeving kunnen werken aan verbinding en helderheid.
+                Dat moment is precies het juiste moment. Niet omdat er iets kapot is dat
+                gerepareerd moet worden, maar omdat jullie allebei nog genoeg om deze relatie
+                geven om er moeite voor te doen. In de therapie zoeken we uit welk patroon
+                zich tussen jullie heeft genesteld, waar het vandaan komt en hoe jullie eruit
+                kunnen stappen.
+              </p>
+              <p>
+                Ik kom daarvoor naar jullie toe, ergens in Tilburg of in een van de dorpen
+                eromheen. Thuis praat het anders dan in een spreekkamer: jullie hoeven niet
+                eerst aan te komen, de jas uit te doen en op gang te komen. Het gesprek begint
+                waar jullie leven zich afspeelt.
               </p>
             </div>
           </div>
@@ -155,28 +165,28 @@ export default function Page() {
             <div className="grid md:grid-cols-2 gap-5">
               {[
                 {
-                  title: "Vastgelopen communicatie",
-                  text: "Gesprekken eindigen in ruzie of stilte. Jullie zitten vast in een patroon waarin de één fel wordt en de ander zich terugtrekt.",
+                  title: "Dezelfde ruzie, telkens weer",
+                  text: "Het gaat over de vaatwasser of over de weekendplanning, maar het gaat natuurlijk nergens over. De een wordt fel, de ander loopt weg, en morgen begint het opnieuw.",
                 },
                 {
-                  title: "Na vreemdgaan of een vertrouwensbreuk",
-                  text: "Er is iets gebeurd dat hard binnenkwam. Jullie willen onderzoeken of herstel mogelijk is en hoe dat eruit kan zien.",
+                  title: "Er is iets gebeurd",
+                  text: "Een verhouding, een leugen, een geheim dat boven tafel kwam. Jullie willen uitzoeken of er een weg terug is, en wat daarvoor nodig zou zijn.",
                 },
                 {
-                  title: "Afstand en eenzaamheid",
-                  text: "Jullie zijn samen, maar zo voelt het niet. Intimiteit is afgenomen en gesprekken gaan vooral over praktische zaken.",
+                  title: "Naast elkaar in plaats van met elkaar",
+                  text: "Jullie draaien het huishouden, de kinderen en twee banen keurig rond. Alleen raken jullie elkaar nauwelijks meer aan en gaan de gesprekken over roosters.",
                 },
                 {
-                  title: "Stress door levensfase",
-                  text: "Jonge kinderen, mantelzorg, drukke banen. Externe stress zorgt ervoor dat jullie aan alles toekomen behalve aan elkaar.",
+                  title: "Het leven drukt op jullie",
+                  text: "Een ziek kind, een zieke ouder, werk dat niet ophoudt. Alles krijgt voorrang boven jullie tweeën, en dat begint zijn tol te eisen.",
                 },
                 {
-                  title: "Twijfel over de toekomst",
-                  text: "Eén van jullie denkt aan scheiden, of jullie twijfelen beiden. Relatietherapie helpt om helderheid te krijgen, ook als dat betekent bewust loslaten.",
+                  title: "Een van jullie twijfelt",
+                  text: "Blijven of gaan. Soms weet de een het al een tijd en de ander niet. Ook dan is begeleiding mogelijk, wat de uitkomst ook wordt.",
                 },
                 {
-                  title: "Preventief onderhoud",
-                  text: "Geen crisis, wel de wens om verbonden te blijven. Een APK voor relaties is een korte, bewuste check-up.",
+                  title: "Jullie willen het vóór zijn",
+                  text: "Er is geen crisis, maar wel het besef dat een relatie onderhoud nodig heeft. De APK voor relaties is daarvoor bedoeld: drie sessies, bewust stilstaan.",
                 },
               ].map((item) => (
                 <div key={item.title} className="bg-[#F5F0EB] rounded-2xl p-6 md:p-7 card-hover">
@@ -213,6 +223,32 @@ export default function Page() {
         </section>
 
         <section className="section-padding bg-white">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-6 text-center">
+              In welke wijken ik kom
+            </h2>
+            <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
+              <p>
+                Ik werk door heel Tilburg en kom in alle wijken aan huis. In de{" "}
+                <strong>Reeshof</strong> kom ik het vaakst, simpelweg omdat mijn eigen praktijk
+                daar staat: van Heerevelden en Huibeven tot Dalem, Dongewijk en de Gesworen
+                Hoek. Daarnaast kom ik in het Centrum, Oud-Noord, de Hasselt, Het Zand, Korvel,
+                de Blaak, Oerle en Berkel-Enschot.
+              </p>
+              <p>
+                Ook buiten de stadsgrens kom ik graag. Dongen, Goirle, Udenhout, Loon op Zand,
+                Oisterwijk en Waalwijk liggen binnen een redelijke reistijd. Reiskosten binnen
+                dit werkgebied zitten bij het tarief in, dus daar komt niets bovenop.
+              </p>
+              <p>
+                Twijfel je of jullie adres erbij hoort? Stuur gerust een bericht. Ligt het net
+                buiten dit gebied, dan kijken we samen of het alsnog te regelen valt.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-padding bg-[#F5F0EB]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-4">

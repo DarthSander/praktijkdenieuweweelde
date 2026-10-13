@@ -24,7 +24,6 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5">
               <li><Link href="/relatietherapie-tilburg" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Relatietherapie Tilburg</Link></li>
-              <li><Link href="/relatietherapie-reeshof" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Relatietherapie Reeshof</Link></li>
               <li><Link href="/relatietherapie-berkel-enschot" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Relatietherapie Berkel-Enschot</Link></li>
               <li><Link href="/relatietherapie-aan-huis" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Relatietherapie aan huis</Link></li>
             </ul>

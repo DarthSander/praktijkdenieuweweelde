@@ -31,7 +31,6 @@ export const landingPages: LandingPage[] = [
     areaServed: "Tilburg",
     relatedLandings: [
       "relatietherapie-aan-huis",
-      "relatietherapie-reeshof",
       "relatietherapie-berkel-enschot",
       "ibct-relatietherapie",
     ],
@@ -40,26 +39,6 @@ export const landingPages: LandingPage[] = [
       "relatiecoach-of-relatietherapeut",
       "hoe-lang-duurt-relatietherapie",
     ],
-  },
-  {
-    slug: "relatietherapie-reeshof",
-    title: "Relatietherapie in de Reeshof",
-    metaTitle: "Relatietherapie Reeshof Tilburg | Aan huis & persoonlijk",
-    description:
-      "Wetenschappelijk onderbouwde relatietherapie aan huis in de Reeshof. Voor koppels die vastlopen in terugkerende patronen en weer rust, begrip en verbinding willen.",
-    h1: "Relatietherapie in de Reeshof, gewoon bij jullie thuis",
-    heroKicker: "IBCT relatietherapie in Tilburg-West",
-    heroSubtitle:
-      "Wetenschappelijk onderbouwde begeleiding voor koppels in Tilburg en omgeving. Ik kom bij jullie thuis in de Reeshof, zodat jullie rustig en in een vertrouwde sfeer kunnen werken aan jullie relatie.",
-    image: "/pampas-breeze.jpg",
-    imageAlt: "Pampasgras in de bries, symbool voor ruimte en beweging in de Reeshof",
-    areaServed: "Reeshof",
-    relatedLandings: [
-      "relatietherapie-tilburg",
-      "relatietherapie-aan-huis",
-      "ibct-relatietherapie",
-    ],
-    relatedPosts: ["steeds-dezelfde-ruzie-in-je-relatie"],
   },
   {
     slug: "relatietherapie-berkel-enschot",
@@ -120,7 +99,6 @@ export const landingPages: LandingPage[] = [
     areaServed: "Tilburg en omgeving",
     relatedLandings: [
       "relatietherapie-tilburg",
-      "relatietherapie-reeshof",
       "relatietherapie-berkel-enschot",
     ],
     relatedPosts: ["relatietherapie-aan-huis", "hoe-lang-duurt-relatietherapie"],
