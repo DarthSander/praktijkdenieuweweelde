@@ -93,6 +93,24 @@ function send(data: Record<string, unknown>) {
   }).catch(() => {});
 }
 
+/**
+ * Legt vast dat deze bezoeker een aanvraag deed. Alleen de ids van het lopende
+ * bezoek gaan mee — naam, e-mail en bericht blijven bij het formulier zelf.
+ * Zonder lopend bezoek (bijv. localStorage geblokkeerd) gebeurt er niets.
+ */
+export function reportLead(kind: "contact" | "intake"): void {
+  try {
+    const visitorId = localStorage.getItem(VISITOR_KEY);
+    const raw = localStorage.getItem(VISIT_KEY);
+    if (!visitorId || !raw) return;
+    const visit = JSON.parse(raw) as { id?: string };
+    if (!visit.id) return;
+    send({ type: "lead", kind, visitorId, visitId: visit.id, path: location.pathname });
+  } catch {
+    // Geen opslag beschikbaar: de aanvraag zelf gaat gewoon door.
+  }
+}
+
 function externalReferrer(): string | null {
   if (!document.referrer) return null;
   try {

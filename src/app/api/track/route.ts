@@ -1,3 +1,4 @@
+import { randomUUID } from "node:crypto";
 import { after, type NextRequest } from "next/server";
 import { getSql } from "@/lib/db";
 import { readSessionToken, SESSION_COOKIE } from "@/lib/auth";
@@ -85,11 +86,13 @@ export async function POST(req: NextRequest) {
 
   const visitorId = str(data.visitorId, 36);
   const visitId = str(data.visitId, 36);
+  if (!visitorId || !visitId || !UUID_RE.test(visitorId) || !UUID_RE.test(visitId)) {
+    return new Response(null, { status: 400 });
+  }
+  // Een aanvraag hoort bij het bezoek, niet bij één paginaweergave; daar is
+  // dus geen pageviewId voor nodig.
   const pageviewId = str(data.pageviewId, 36);
-  if (
-    !visitorId || !visitId || !pageviewId ||
-    !UUID_RE.test(visitorId) || !UUID_RE.test(visitId) || !UUID_RE.test(pageviewId)
-  ) {
+  if (data.type !== "lead" && (!pageviewId || !UUID_RE.test(pageviewId))) {
     return new Response(null, { status: 400 });
   }
 
@@ -103,6 +106,7 @@ export async function POST(req: NextRequest) {
 
   try {
     if (data.type === "pageview") {
+      if (!pageviewId) return new Response(null, { status: 400 });
       const path = str(data.path, 300);
       if (!path || !path.startsWith("/")) return new Response(null, { status: 400 });
 
@@ -174,6 +178,7 @@ export async function POST(req: NextRequest) {
     }
 
     if (data.type === "ping") {
+      if (!pageviewId) return new Response(null, { status: 400 });
       const durationMs = int(data.durationMs, 0, 24 * 60 * 60 * 1000);
       const maxScroll = int(data.maxScroll, 0, 100);
       const sections: Section[] = Array.isArray(data.sections)
@@ -219,6 +224,50 @@ export async function POST(req: NextRequest) {
         `);
       }
       await sql.transaction(queries);
+      return new Response(null, { status: 204 });
+    }
+
+    if (data.type === "lead") {
+      const kind = data.kind === "intake" ? "intake" : "contact";
+      const path = str(data.path, 300);
+
+      // Alleen vastleggen als het bezoek echt bij deze bezoeker hoort.
+      // De unieke index op (visit_id, kind) voorkomt dubbeltellingen.
+      const rows = (await sql`
+        insert into leads (id, visitor_id, visit_id, kind, path)
+        select ${randomUUID()}, ${visitorId}, ${visitId}, ${kind}, ${path}
+        where exists (select 1 from visits where id = ${visitId} and visitor_id = ${visitorId})
+        on conflict (visit_id, kind) do nothing
+        returning id
+      `) as { id: string }[];
+
+      // Alleen bij een nieuwe aanvraag een pushmelding, met de route ernaartoe.
+      if (rows.length) {
+        after(async () => {
+          try {
+            const info = (await sql`
+              select v.landing_path, v.referrer, v.utm_source,
+                     (select count(*)::int from pageviews p where p.visit_id = v.id) as views
+              from visits v where v.id = ${visitId}
+            `) as { landing_path: string | null; referrer: string | null; utm_source: string | null; views: number }[];
+            const visit = info[0];
+            const parts = [
+              `via ${referrerLabel(visit?.referrer ?? null, visit?.utm_source ?? null)}`,
+              `binnengekomen op ${visit?.landing_path ?? "?"}`,
+              `${visit?.views ?? 0} pagina's bekeken`,
+            ];
+            await sendPushToAll({
+              title: "Nieuwe aanvraag via het contactformulier",
+              body: parts.join(" · "),
+              url: `/admin/analyse/${visitorId}`,
+              tag: `lead-${visitId}`,
+            });
+          } catch (err) {
+            console.error("Pushmelding aanvraag mislukt", err);
+          }
+        });
+      }
+
       return new Response(null, { status: 204 });
     }
 

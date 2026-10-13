@@ -1,76 +1,13 @@
 import Link from "next/link";
 import { getSql } from "@/lib/db";
-import { formatDuration } from "@/lib/visitor-format";
-import {
-  CATEGORY_LABELS,
-  trafficSource,
-  type SourceCategory,
-} from "@/lib/traffic-source";
+import { formatDateTime, formatDuration } from "@/lib/visitor-format";
+import { CATEGORY_LABELS, trafficSource, type SourceCategory } from "@/lib/traffic-source";
+import { aggregate, type LeadRow, type VisitRow } from "./aggregate";
 
 export const dynamic = "force-dynamic";
 
 const PERIODS = [7, 30, 90] as const;
 const CATEGORY_ORDER: SourceCategory[] = ["ai", "zoekmachine", "sociaal", "direct", "overig"];
-
-type VisitRow = {
-  visitor_id: string;
-  landing_path: string | null;
-  referrer: string | null;
-  utm_source: string | null;
-  views: number;
-  ms: number;
-};
-
-type SourceStats = {
-  label: string;
-  category: SourceCategory;
-  visits: number;
-  visitors: Set<string>;
-  views: number;
-  ms: number;
-  landings: Map<string, number>;
-};
-
-function aggregate(rows: VisitRow[]) {
-  const sources = new Map<string, SourceStats>();
-  const landings = new Map<string, { visits: number; sources: Map<string, number> }>();
-
-  for (const row of rows) {
-    const { label, category } = trafficSource(row.referrer, row.utm_source);
-    let s = sources.get(label);
-    if (!s) {
-      s = { label, category, visits: 0, visitors: new Set(), views: 0, ms: 0, landings: new Map() };
-      sources.set(label, s);
-    }
-    s.visits += 1;
-    s.visitors.add(row.visitor_id);
-    s.views += row.views;
-    s.ms += row.ms;
-
-    const path = row.landing_path ?? "—";
-    s.landings.set(path, (s.landings.get(path) ?? 0) + 1);
-
-    let l = landings.get(path);
-    if (!l) {
-      l = { visits: 0, sources: new Map() };
-      landings.set(path, l);
-    }
-    l.visits += 1;
-    l.sources.set(label, (l.sources.get(label) ?? 0) + 1);
-  }
-
-  return {
-    sources: [...sources.values()].sort((a, b) => b.visits - a.visits),
-    landings: [...landings.entries()]
-      .map(([path, l]) => ({
-        path,
-        visits: l.visits,
-        top: [...l.sources.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3),
-      }))
-      .sort((a, b) => b.visits - a.visits)
-      .slice(0, 12),
-  };
-}
 
 function StatCard({ label, value, sub }: { label: string; value: string; sub?: string }) {
   return (
@@ -91,23 +28,43 @@ export default async function HerkomstPage({
   const days = PERIODS.includes(requested as (typeof PERIODS)[number]) ? requested : 30;
 
   let rows: VisitRow[] = [];
+  let leads: LeadRow[] = [];
   let loadError = false;
   try {
     const sql = getSql();
-    rows = (await sql`
-      select v.visitor_id::text as visitor_id,
-             v.landing_path, v.referrer, v.utm_source,
-             coalesce(p.views, 0)::int as views,
-             coalesce(p.ms, 0)::float8 as ms
-      from visits v
-      left join lateral (
-        select count(*)::int as views, sum(duration_ms)::float8 as ms
-        from pageviews where visit_id = v.id
-      ) p on true
-      where v.started_at > now() - make_interval(days => ${days})
-      order by v.started_at desc
-      limit 5000
-    `) as VisitRow[];
+    const [visitRows, leadRows] = await sql.transaction([
+      sql`
+        select v.visitor_id::text as visitor_id,
+               v.landing_path, v.referrer, v.utm_source,
+               coalesce(p.views, 0)::int as views,
+               coalesce(p.ms, 0)::float8 as ms,
+               exists (select 1 from leads l where l.visit_id = v.id) as converted
+        from visits v
+        left join lateral (
+          select count(*)::int as views, sum(duration_ms)::float8 as ms
+          from pageviews where visit_id = v.id
+        ) p on true
+        where v.started_at > now() - make_interval(days => ${days})
+        order by v.started_at desc
+        limit 5000
+      `,
+      sql`
+        select l.id, l.created_at, l.path, l.visitor_id::text as visitor_id,
+               v.landing_path, v.referrer, v.utm_source,
+               coalesce(j.paths, array[]::text[]) as paths
+        from leads l
+        left join visits v on v.id = l.visit_id
+        left join lateral (
+          select array_agg(p.path order by p.entered_at) as paths
+          from pageviews p where p.visit_id = l.visit_id
+        ) j on true
+        where l.created_at > now() - make_interval(days => ${days})
+        order by l.created_at desc
+        limit 25
+      `,
+    ]);
+    rows = visitRows as VisitRow[];
+    leads = leadRows as LeadRow[];
   } catch (err) {
     console.error("Kon herkomst niet laden", err);
     loadError = true;
@@ -116,6 +73,7 @@ export default async function HerkomstPage({
   const { sources, landings } = aggregate(rows);
   const totalVisits = rows.length;
   const uniqueVisitors = new Set(rows.map((r) => r.visitor_id)).size;
+  const totalLeads = rows.filter((r) => r.converted).length;
   const share = (category: SourceCategory) =>
     sources.filter((s) => s.category === category).reduce((n, s) => n + s.visits, 0);
   const pct = (n: number) => (totalVisits ? `${Math.round((100 * n) / totalVisits)}%` : "—");
@@ -127,7 +85,7 @@ export default async function HerkomstPage({
           Herkomst
         </h1>
         <p className="text-[#5E524F]/70 text-sm mb-4">
-          Waar bezoekers vandaan komen en op welke pagina ze binnenkomen.
+          Waar bezoekers vandaan komen, waar ze binnenkomen en wat tot een aanvraag leidt.
         </p>
 
         <div className="flex gap-2 mb-6">
@@ -148,13 +106,17 @@ export default async function HerkomstPage({
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <StatCard label="Bezoeken" value={String(totalVisits)} sub={`${uniqueVisitors} bezoekers`} />
+          <StatCard
+            label="Aanvragen"
+            value={String(totalLeads)}
+            sub={totalVisits ? `${((100 * totalLeads) / totalVisits).toFixed(1)}% van de bezoeken` : undefined}
+          />
           <StatCard label="Via AI" value={pct(share("ai"))} sub={`${share("ai")} bezoeken`} />
           <StatCard
             label="Via zoekmachines"
             value={pct(share("zoekmachine"))}
             sub={`${share("zoekmachine")} bezoeken`}
           />
-          <StatCard label="Direct" value={pct(share("direct"))} sub={`${share("direct")} bezoeken`} />
         </div>
       </section>
 
@@ -168,6 +130,50 @@ export default async function HerkomstPage({
         </p>
       ) : (
         <>
+          {leads.length > 0 && (
+            <section>
+              <h2 className="text-xs font-semibold uppercase tracking-wide text-[#C4A4A0] mb-2">
+                Aanvragen en de route ernaartoe
+              </h2>
+              <ul className="space-y-3">
+                {leads.map((lead) => {
+                  const source = trafficSource(lead.referrer, lead.utm_source);
+                  const route = lead.paths.length ? lead.paths.join("  →  ") : (lead.path ?? "—");
+                  const body = (
+                    <>
+                      <div className="flex flex-wrap items-baseline justify-between gap-2">
+                        <span className="font-semibold text-[#5E524F]">
+                          {source.label}
+                          <span className="font-normal text-[#5E524F]/60">
+                            {" "}· binnen op {lead.landing_path ?? "—"}
+                          </span>
+                        </span>
+                        <span className="text-xs text-[#5E524F]/50 shrink-0">
+                          {formatDateTime(lead.created_at)}
+                        </span>
+                      </div>
+                      <p className="mt-2 text-sm text-[#5E524F]/80 break-words">{route}</p>
+                    </>
+                  );
+                  return (
+                    <li key={lead.id}>
+                      {lead.visitor_id ? (
+                        <Link
+                          href={`/admin/analyse/${lead.visitor_id}`}
+                          className="block bg-white rounded-2xl shadow-sm p-4 hover:shadow-md transition"
+                        >
+                          {body}
+                        </Link>
+                      ) : (
+                        <div className="bg-white rounded-2xl shadow-sm p-4">{body}</div>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+          )}
+
           <section className="space-y-6">
             {CATEGORY_ORDER.map((category) => {
               const inCategory = sources.filter((s) => s.category === category);
@@ -179,19 +185,20 @@ export default async function HerkomstPage({
                   </h2>
                   <ul className="space-y-3">
                     {inCategory.map((s) => {
-                      const topLanding = [...s.landings.entries()].sort((a, b) => b[1] - a[1])[0];
+                      const topLanding = s.landings[0];
                       return (
                         <li key={s.label} className="bg-white rounded-2xl shadow-sm p-4">
-                          <div className="flex items-baseline justify-between gap-3">
+                          <div className="flex flex-wrap items-baseline justify-between gap-2">
                             <span className="font-semibold text-[#5E524F] truncate">{s.label}</span>
                             <span className="text-sm text-[#5E524F]/70 shrink-0">
-                              {s.visits} {s.visits === 1 ? "bezoek" : "bezoeken"} · {pct(s.visits)}
+                              {s.visits} {s.visits === 1 ? "bezoek" : "bezoeken"}
+                              {s.leads > 0 ? ` · ${s.leads} ${s.leads === 1 ? "aanvraag" : "aanvragen"}` : ""}
                             </span>
                           </div>
                           <dl className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-2 text-sm">
                             <div>
                               <dt className="text-xs text-[#C4A4A0]">Bezoekers</dt>
-                              <dd className="text-[#5E524F]">{s.visitors.size}</dd>
+                              <dd className="text-[#5E524F]">{s.visitors}</dd>
                             </div>
                             <div>
                               <dt className="text-xs text-[#C4A4A0]">Pagina&apos;s per bezoek</dt>
@@ -224,10 +231,11 @@ export default async function HerkomstPage({
             <ul className="space-y-3">
               {landings.map((l) => (
                 <li key={l.path} className="bg-white rounded-2xl shadow-sm p-4">
-                  <div className="flex items-baseline justify-between gap-3">
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
                     <span className="font-semibold text-[#5E524F] truncate">{l.path}</span>
                     <span className="text-sm text-[#5E524F]/70 shrink-0">
                       {l.visits} {l.visits === 1 ? "bezoek" : "bezoeken"}
+                      {l.leads > 0 ? ` · ${l.leads} ${l.leads === 1 ? "aanvraag" : "aanvragen"}` : ""}
                     </span>
                   </div>
                   <p className="mt-2 text-sm text-[#5E524F]/70 truncate">
@@ -241,6 +249,8 @@ export default async function HerkomstPage({
           <p className="text-xs text-[#5E524F]/50 leading-relaxed">
             AI-assistenten sturen niet altijd een herkomst mee; een deel van dat verkeer komt
             daardoor onder &quot;Direct&quot; terecht. De cijfers bij AI zijn dus een ondergrens.
+            Aanvragen worden geteld vanaf het moment dat het contactformulier verstuurd is; het
+            intakeformulier staat op een pagina die bewust niet gevolgd wordt.
           </p>
         </>
       )}
