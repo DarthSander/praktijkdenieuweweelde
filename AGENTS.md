@@ -4,6 +4,20 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
+# Schrijfstijl: alle zichtbare tekst
+
+Alle tekst die een bezoeker leest is van de eigenaar. Lees `docs/schrijfstijl.md`
+voordat je ook maar één zin op de site aanpast of toevoegt. Daarin staan de
+harde regels (geen gedachtestreepjes, geen anglicismen, geen AI-taal), hoe de
+lezer wordt aangesproken en wat er nooit geschreven wordt.
+
+Voorstellen voor tekst mag altijd: laat de huidige en de voorgestelde versie
+naast elkaar zien en laat de eigenaar per blok beslissen. Bestaande lopende
+tekst herschrijven zonder die voorlegging, of teksten "opfrissen" als onderdeel
+van ander werk, mag niet.
+
+@docs/schrijfstijl.md
+
 # SEO titels en meta omschrijvingen — DEFINITIEF (NIET WIJZIGEN)
 
 De onderstaande SEO titels en meta descriptions zijn **definitief vastgesteld** en mogen **niet meer worden aangepast**, tenzij de eigenaar daar uitdrukkelijk om vraagt. Wijzig deze waarden niet bij refactoring, opschoning of "verbeteringen". Bij twijfel: laat ze staan.
