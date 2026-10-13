@@ -25,8 +25,16 @@ export default function manifest(): MetadataRoute.Manifest {
         type: "image/png",
         purpose: "any",
       },
+      // Aparte maskable-iconen: Android snijdt het icoon bij tot de vorm van het
+      // toestel, dus daar staat de bloem kleiner op het vlak (binnen de veilige zone).
       {
-        src: "/icon-512.png",
+        src: "/icon-maskable-192.png",
+        sizes: "192x192",
+        type: "image/png",
+        purpose: "maskable",
+      },
+      {
+        src: "/icon-maskable-512.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "maskable",
