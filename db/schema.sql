@@ -166,3 +166,33 @@ create or replace function purge_old_chat()
 returns void language sql as $$
   delete from chat_sessions where created_at < now() - interval '30 days';
 $$;
+
+-- ---------- Eenmalige correctie ----------
+
+-- De twee aanvragen van 12 oktober 17:26 en 13 oktober 2026 11:59 werden
+-- verstuurd voordat het vastleggen van aanvragen live stond. Ze worden hier
+-- alsnog gekoppeld aan het bezoek dat eraan voorafging.
+--
+-- Het juiste bezoek is het bezoek dat op dat moment liep én waarbij de sectie
+-- met het contactformulier in beeld is geweest; dat laatste onderscheidt de
+-- invuller van andere bezoekers op hetzelfde moment. Is er geen bezoek dat aan
+-- beide voorwaarden voldoet, dan wordt er niets vastgelegd — liever geen regel
+-- dan een verkeerde. Herhaald uitvoeren voegt niets toe (zie de unieke index),
+-- dus dit blok mag blijven staan en mag ook weg zodra het is uitgevoerd.
+insert into leads (id, visitor_id, visit_id, kind, path, created_at)
+select gen_random_uuid(), gekozen.visitor_id, gekozen.id, 'contact', '/', t.moment
+from (values (timestamptz '2026-10-12 17:26+02'),
+             (timestamptz '2026-10-13 11:59+02')) as t(moment)
+join lateral (
+  select v.id, v.visitor_id,
+         (select max(s.visible_ms)
+            from section_views s
+            join pageviews p on p.id = s.pageview_id
+           where p.visit_id = v.id and s.section_id = 'contact') as contact_ms
+  from visits v
+  where v.started_at <= t.moment + interval '2 minutes'
+    and v.last_activity_at >= t.moment - interval '20 minutes'
+  order by contact_ms desc nulls last
+  limit 1
+) gekozen on gekozen.contact_ms > 0
+on conflict (visit_id, kind) do nothing;
