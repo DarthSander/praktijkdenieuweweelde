@@ -18,9 +18,10 @@ Deze staan vast en kennen geen uitzondering.
 **Geen gedachtestreepjes.** Niet als onderbreking in een zin. Gebruik een komma,
 een puntkomma of twee zinnen.
 
-**Geen komma voor "en".** Dus niet "de een wordt fel, en de ander loopt weg".
-Haal de komma weg of maak er twee zinnen van. Vraagt de zin grammaticaal toch om
-die komma, dan is de zin te vol en moet hij gesplitst worden.
+**Spaarzaam met de komma voor "en".** Dus niet "de een wordt fel, en de ander
+loopt weg". Haal de komma weg of maak er twee zinnen van. Eva zet hem zelf een
+enkele keer wel, wanneer er na "en" een nieuwe gedachte begint met een eigen
+onderwerp. Drie keer in één alinea is te veel. Eén keer in een lange tekst kan.
 
 **Geen anglicismen.** Niet "waar het schuurt", niet "een levenslange
 gevangenis", geen mindset, journey, tools, skills of safe space.
@@ -72,8 +73,13 @@ mooi, te zacht en te suggestief. Daarmee is hij niet eerlijk. Eva beschrijft hoe
 iets werkt. Ze voert de lezer niet mee in een stemming.
 
 **De korte scharnierzin is kenmerkend.** "Dat proces is niet te forceren." Zes
-woorden, midden in de alinea, die het betoog een draai geeft. Zulke zinnen mogen
-blijven staan.
+woorden, midden in de alinea, die het betoog een draai geeft. In de tekst uit
+haar boek staat dezelfde beweging: "Hoe ik dat weet." Vier woorden, los. Zulke
+zinnen mogen blijven staan.
+
+**Geen beeldspraak, in welk register dan ook.** Beide teksten die Eva herkent
+als de hare bevatten er geen enkele. De tekst die zij afwijst drijft erop. Dat
+is het betrouwbaarste onderscheid dat uit haar voorbeelden te halen valt.
 
 ---
 
@@ -85,9 +91,8 @@ overdrijving.
 **Oprechtheid** betekent: niets beweren wat je niet waar kunt maken. Liever een
 kleine zin die klopt dan een grote die indruk maakt.
 
-**Gevat** betekent niet grappig. Het zit in precisie: het juiste woord op de
-juiste plek, waardoor de lezer iets herkent. "Koppels die elkaar even kwijt
-zijn" is gevat. Een grap over vaatwassers is het niet.
+**Gevat** betekent niet grappig. Zie hoofdstuk 3a: daar staat een tekst van Eva
+waarin te zien is hoe haar gevatheid werkt.
 
 **Warmte** komt uit de houding, niet uit warme woorden. Een zin wordt niet
 warmer van "liefdevol" of "met hart en ziel". Hij wordt warm doordat je de lezer
@@ -95,6 +100,52 @@ serieus neemt en niets van hem vraagt.
 
 **Geen overdrijving.** Geen "in crisis", geen "op het punt van breken", geen
 "de liefde verdwijnt".
+
+---
+
+## 3a. Wat gevatheid bij Eva is
+
+> **Let op: dit is een tekst uit haar boek, niet uit haar site.** Eva gaf er zelf
+> bij: "gevat inhoudelijk, maar tekstueel niet per se mijn stijl". Neem dus het
+> mechanisme over, niet de vorm. Losse zinsflarden en herinneringen uit haar
+> eigen leven horen in het boek, niet op een pagina over relatietherapie.
+
+> Ik was een jaar of acht en logeerde voor het eerst bij een vriendinnetje. Het
+> kussensloop waar ik op sliep had bloemetjes en het dekbedovertrek was van
+> Disney. Dat hoorde daar bij elkaar, want niemand had er iets van gevonden. Bij
+> ons thuis hoorde het bij elkaar te passen, en ik heb die avond liggen denken
+> dat het niet klopte.
+>
+> Er is geen enkele reden waarom een sloop bij een dekbedovertrek zou moeten
+> horen. Er gebeurt niets als het niet zo is. Niemand ziet het, want het ligt in
+> een kamer waar alleen jij komt. En toch stond het bij mij vast, op mijn
+> achtste, zonder dat iemand het ooit had gezegd.
+>
+> Dat is wat ik in dit boek een maat noem. Zo'n ding valt niet uit elkaar te
+> halen en het gaat ook niet weg als je het doorziet.
+>
+> Hoe ik dat weet.
+>
+> Vorige week stond mijn partner een bed op te maken en pakte hij wat bovenop
+> lag. Bloemen bij ruitjes. Bloemen. Bij ruitjes.
+
+Wat deze tekst gevat maakt:
+
+1. **Het begint bij iets kleins en controleerbaars.** Een kussensloop. Geen
+   abstractie over normen of over hoe mensen in elkaar zitten.
+2. **De regel wordt benoemd en vervolgens nuchter ontmanteld.** "Er is geen
+   enkele reden waarom een sloop bij een dekbedovertrek zou moeten horen." Geen
+   spot, alleen de feiten naast elkaar.
+3. **De clou is zelf de grap niet.** "Bloemen bij ruitjes. Bloemen. Bij
+   ruitjes." Er staat niet bij dat het grappig is, en er volgt geen uitleg. De
+   lezer zet de laatste stap.
+4. **De grap gaat over haarzelf.** Nooit over een cliënt, nooit over de lezer.
+5. **Ze blijft zichzelf tegenspreken zonder zich te verontschuldigen.** Ze weet
+   dat het nergens op slaat en het staat nog steeds vast.
+
+**Wat hiervan op de site mag:** de concreetheid, de nuchtere ontmanteling en het
+weglaten van de uitleg. **Wat niet:** de zinsflarden, het tempo en het
+persoonlijke verhaal.
 
 ---
 
@@ -187,5 +238,3 @@ De SEO-titels en meta-omschrijvingen hebben hun eigen regeling in `AGENTS.md`.
 2. Hoe persoonlijk mag een blogartikel worden? Mag daarin een geanonimiseerd
    voorbeeld uit je praktijk staan?
 3. Hoe noem je de mensen die bij je komen: cliënten, koppels, stellen?
-4. Heb je een stuk tekst waarin je gevat bent? De ijktekst in hoofdstuk 2 is
-   ernstig van toon. Een tweede voorbeeld zou die kant van je stem vastleggen.
