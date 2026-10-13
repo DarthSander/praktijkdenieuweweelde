@@ -119,6 +119,26 @@ create table if not exists section_views (
   primary key (pageview_id, section_id)
 );
 
+-- Eén rij per aanvraag via het contactformulier, gekoppeld aan het bezoek.
+-- Bewust ZONDER naam, e-mail of bericht: die gaan via het formulier naar de
+-- mailbox. Hier staat alleen wanneer iemand contact opnam en welke route
+-- daaraan voorafging, zodat zichtbaar wordt welke pagina's tot aanvragen leiden.
+-- on delete set null: een aanvraag blijft bestaan als bezoekgegevens worden gewist.
+create table if not exists leads (
+  id          uuid primary key,
+  created_at  timestamptz not null default now(),
+  kind        text not null check (kind in ('contact','intake')),
+  visitor_id  uuid references visitors(id) on delete set null,
+  visit_id    uuid references visits(id) on delete set null,
+  path        text
+);
+
+create index if not exists leads_created_idx on leads(created_at desc);
+create index if not exists leads_visit_idx   on leads(visit_id);
+
+-- Eén aanvraag per bezoek per soort: voorkomt dubbeltellingen bij dubbelklikken.
+create unique index if not exists leads_visit_kind_idx on leads(visit_id, kind);
+
 -- ---------- Pushmeldingen (admin) ----------
 
 create table if not exists push_subscriptions (
