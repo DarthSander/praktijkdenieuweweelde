@@ -10,19 +10,20 @@ import { trackLead } from "@/lib/analytics";
 
 const TOPICS = [
   "Financiën",
-  "Kinderen / opvoeden",
-  "Uiten van liefde",
-  "Seks",
-  "Werk / carrière",
+  "Kinderen en opvoeding",
+  "Genegenheid en waardering tonen",
+  "Seks en intimiteit",
+  "Werk en loopbaan",
   "Huishouden",
   "Vertrouwen en jaloezie",
-  "(Schoon-)familie",
-  "Vrije tijd",
-  "Drugs, alcohol",
-  "Geloof",
-  "Humeur, temperament",
-  "Doelen en prioriteiten",
-  "Uiterlijk of gepast gedrag",
+  "Familie, schoonfamilie en vrienden",
+  "Tijd samen en tijd voor jezelf",
+  "Alcohol, roken en drugs",
+  "Geloof en levensbeschouwing",
+  "Omgaan met stress en emoties",
+  "Toekomstplannen en wensen",
+  "Communicatie en meningsverschillen",
+  "Telefoon en sociale media",
 ];
 
 // Combineert module-classnames (incl. kebab-case) tot één className-string.
@@ -180,7 +181,7 @@ export default function IntakeForm({
                 <input name="werk" type="text" />
               </div>
               <div className={cx("field", "full")}>
-                <label>Adres &amp; woonplaats</label>
+                <label>Adres en woonplaats</label>
                 <input name="adres" type="text" />
               </div>
             </div>
@@ -244,21 +245,21 @@ export default function IntakeForm({
             </div>
             <div className={cx("field", "full")} style={{ marginBottom: 20 }}>
               <span className={cx("qlabel")}>
-                Tijdpad: wanneer is het relatieprobleem of vraagstuk begonnen?
+                Wanneer is het begonnen?
               </span>
               <textarea className={cx("lines")} name="tijdpad" />
             </div>
             <div className={cx("field", "full")} style={{ marginBottom: 20 }}>
               <span className={cx("qlabel")}>
-                Ontwikkeling: hoe heeft het zich ontwikkeld?
+                Hoe heeft het zich sindsdien ontwikkeld?
               </span>
               <div className={styles.choice} style={{ margin: "4px 0 10px" }}>
                 <label className={styles.opt}>
-                  <input type="radio" name="ontwikkeling" value="erger" />
+                  <input type="radio" name="ontwikkeling" value="erger geworden" />
                   Erger geworden
                 </label>
                 <label className={styles.opt}>
-                  <input type="radio" name="ontwikkeling" value="stabiel" />
+                  <input type="radio" name="ontwikkeling" value="stabiel gebleven" />
                   Stabiel gebleven
                 </label>
                 <label className={styles.opt}>
@@ -274,8 +275,16 @@ export default function IntakeForm({
             </div>
             <div className={cx("field", "full")}>
               <span className={cx("qlabel")}>
-                Coping: wat heb je of hebben jullie al gedaan aan het vraagstuk, en
-                wat heeft dat opgeleverd?
+                Beschrijf de laatste keer dat het misging tussen jullie. Wat
+                gebeurde er, wat zei of deed jij, en hoe liep het af?
+              </span>
+              <textarea className={cx("lines", "tall")} name="laatste_keer" />
+            </div>
+
+            <div className={cx("field", "full")}>
+              <span className={cx("qlabel")}>
+                Wat heb je of hebben jullie al geprobeerd, en wat heeft dat
+                opgeleverd?
               </span>
               <textarea className={cx("lines")} name="coping" />
             </div>
@@ -289,30 +298,29 @@ export default function IntakeForm({
             </div>
             <div className={cx("field", "full")} style={{ marginBottom: 20 }}>
               <span className={cx("qlabel")}>
-                Welke gedachten ervaar je bij het vraagstuk?
+                Wat gaat er door je heen als het vraagstuk speelt?
               </span>
               <textarea className={cx("lines")} name="gedachten" />
             </div>
             <div className={cx("field", "full")} style={{ marginBottom: 20 }}>
               <span className={cx("qlabel")}>
-                Welke emoties ervaar je bij het vraagstuk?
+                Welke gevoelens roept het bij je op?
               </span>
               <textarea className={cx("lines")} name="emoties" />
             </div>
             <div className={cx("field", "full")}>
               <span className={cx("qlabel")}>
-                Welke lichamelijke gewaarwordingen of klachten ervaar je bij of
-                door het vraagstuk?
+                Wat merk je daarbij in je lichaam?
               </span>
               <textarea className={cx("lines")} name="lichaam" />
             </div>
           </section>
 
-          {/* 05 Doel */}
+          {/* 05 Doelen en sterke kanten */}
           <section className={styles.section}>
             <div className={cx("sec-head")}>
               <span className={cx("sec-num")}>05</span>
-              <h2>Wat wil je bereiken?</h2>
+              <h2>Doelen en sterke kanten</h2>
             </div>
             <div className={cx("field", "full")}>
               <span className={cx("qlabel")}>
@@ -320,6 +328,21 @@ export default function IntakeForm({
                 zie je voor jezelf en voor jullie relatie?
               </span>
               <textarea className={cx("lines", "tall")} name="doel" />
+            </div>
+
+            <div className={cx("field", "full")}>
+              <span className={cx("qlabel")}>
+                Stel dat de therapie heeft geholpen. Waaraan zou je dat in
+                jullie dagelijks leven merken?
+              </span>
+              <textarea className={cx("lines")} name="merken" />
+            </div>
+
+            <div className={cx("field", "full")}>
+              <span className={cx("qlabel")}>
+                Wat gaat er goed tussen jullie? Wat waardeer je aan je partner?
+              </span>
+              <textarea className={cx("lines")} name="sterke_kanten" />
             </div>
           </section>
 
@@ -487,7 +510,7 @@ export default function IntakeForm({
                   Soms
                 </label>
                 <label className={styles.opt}>
-                  <input type="radio" name="einde" value="ja" />
+                  <input type="radio" name="einde" value="ja, serieus" />
                   Ja, serieus
                 </label>
               </div>
@@ -507,7 +530,7 @@ export default function IntakeForm({
             </div>
             <div className={cx("field", "full")}>
               <span className={cx("qlabel")}>
-                Wat verwacht je van mij als begeleider, en van het traject?
+                Wat verwacht je van mij als relatietherapeut, en van het traject?
               </span>
               <textarea className={cx("lines")} name="verwachtingen" />
             </div>

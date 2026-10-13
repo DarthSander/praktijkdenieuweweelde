@@ -48,7 +48,8 @@ const SECTIONS: { num: string; title: string; fields: [string, string][] }[] = [
       ["tijdpad", "Tijdpad"],
       ["ontwikkeling", "Ontwikkeling"],
       ["ontwikkeling_toelichting", "Toelichting ontwikkeling"],
-      ["coping", "Coping"],
+      ["laatste_keer", "Laatste keer dat het misging"],
+      ["coping", "Wat al geprobeerd"],
     ],
   },
   {
@@ -62,8 +63,12 @@ const SECTIONS: { num: string; title: string; fields: [string, string][] }[] = [
   },
   {
     num: "05",
-    title: "Wat wil je bereiken?",
-    fields: [["doel", "Doel"]],
+    title: "Doelen en sterke kanten",
+    fields: [
+      ["doel", "Doel"],
+      ["merken", "Waaraan zou je het merken"],
+      ["sterke_kanten", "Wat gaat er goed"],
+    ],
   },
   {
     num: "07",
