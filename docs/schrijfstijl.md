@@ -91,8 +91,12 @@ overdrijving.
 **Oprechtheid** betekent: niets beweren wat je niet waar kunt maken. Liever een
 kleine zin die klopt dan een grote die indruk maakt.
 
-**Gevat** betekent niet grappig. Zie hoofdstuk 3a: daar staat een tekst van Eva
-waarin te zien is hoe haar gevatheid werkt.
+**Gevat** mag, maar hoeft niet. Het is geen doel en geen toon die er standaard
+bij hoort. Het mag staan wanneer het iets toevoegt: een zin die daardoor
+scherper wordt, of een herkenning die er anders niet zou zijn. Een tekst zonder
+een enkele gevatte zin is niet minder goed. Geforceerde luchtigheid is wel
+slechter. Gevat betekent bovendien niet grappig. Zie hoofdstuk 3a voor hoe het
+werkt wanneer het er wel staat.
 
 **Warmte** komt uit de houding, niet uit warme woorden. Een zin wordt niet
 warmer van "liefdevol" of "met hart en ziel". Hij wordt warm doordat je de lezer
@@ -109,6 +113,10 @@ serieus neemt en niets van hem vraagt.
 > bij: "gevat inhoudelijk, maar tekstueel niet per se mijn stijl". Neem dus het
 > mechanisme over, niet de vorm. Losse zinsflarden en herinneringen uit haar
 > eigen leven horen in het boek, niet op een pagina over relatietherapie.
+>
+> **En lees dit hoofdstuk niet als een opdracht.** Gevat zijn mag wanneer het
+> meerwaarde heeft. Het moet niet en het hoeft niet. Hier staat hoe het werkt
+> als het er staat, niet dat het ergens moet staan.
 
 > Ik was een jaar of acht en logeerde voor het eerst bij een vriendinnetje. Het
 > kussensloop waar ik op sliep had bloemetjes en het dekbedovertrek was van
