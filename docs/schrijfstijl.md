@@ -227,7 +227,13 @@ maar terughoudendheid. Spreek de lezer aan wanneer het over hem gaat. Schrijf
 in de derde persoon wanneer je iets uitlegt.
 
 Eva zelf is aanwezig in de tekst. Ze schrijft **ik**, niet "de therapeut" of
-"wij".
+"wij". Dat geldt ook in zakelijke teksten als de privacyverklaring en de
+algemene voorwaarden: het is een praktijk van één persoon en de tekst zegt dat
+ook. Schrijf dus "welke gegevens verwerk ik" en niet "welke gegevens verwerken
+wij".
+
+Eén uitzondering: in de veelgestelde vragen staat "wij" voor het koppel dat de
+vraag stelt, zoals in "Hoe snel kunnen wij starten?". Dat blijft staan.
 
 ---
 
@@ -266,6 +272,8 @@ met een nagelaten gevoel.
 
 | Goed | Niet |
 |---|---|
+| binnen 24 uur | binnen vierentwintig uur |
+| 75 minuten, €155, drie sessies | getallen boven de twaalf voluit |
 | IBCT (Integrative Behavioral Couple Therapy) | ibct, I.B.C.T. |
 | Berkel-Enschot | Berkel Enschot |
 | de Reeshof | Reeshof zonder lidwoord |

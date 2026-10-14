@@ -35,7 +35,7 @@ export default function Privacyverklaring() {
           <div className="prose prose-sm max-w-none text-[#5E524F] space-y-10">
 
             <section>
-              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">1. Wie zijn wij?</h2>
+              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">1. Wie ben ik?</h2>
               <p>
                 Relatiepraktijk de Nieuwe Weelde is een eenmanszaak, gedreven door Eva Mulder, gespecialiseerd in IBCT-relatietherapie aan huis in Tilburg en omgeving. Als verwerkingsverantwoordelijke ben ik verantwoordelijk voor de zorgvuldige omgang met je persoonsgegevens.
               </p>
@@ -50,7 +50,7 @@ export default function Privacyverklaring() {
             </section>
 
             <section>
-              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">2. Welke gegevens verwerken wij?</h2>
+              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">2. Welke gegevens verwerk ik?</h2>
               <p>Ik verwerk de volgende persoonsgegevens:</p>
 
               <h3 className="font-semibold text-[#6B6866] mt-4 mb-2">Via het contactformulier</h3>
@@ -76,7 +76,7 @@ export default function Privacyverklaring() {
             </section>
 
             <section>
-              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">3. Waarom verwerken wij deze gegevens?</h2>
+              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">3. Waarom verwerk ik deze gegevens?</h2>
               <div className="space-y-3">
                 <div className="bg-white rounded-xl p-4 text-sm">
                   <p className="font-semibold mb-1">Contactformulier</p>
@@ -97,7 +97,7 @@ export default function Privacyverklaring() {
             </section>
 
             <section>
-              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">4. Hoe lang bewaren wij je gegevens?</h2>
+              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">4. Hoe lang bewaar ik je gegevens?</h2>
               <div className="space-y-3 text-sm">
                 <div className="bg-white rounded-xl p-4">
                   <p className="font-semibold mb-1">Therapiedossier</p>
@@ -115,7 +115,7 @@ export default function Privacyverklaring() {
             </section>
 
             <section>
-              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">5. Delen wij je gegevens met anderen?</h2>
+              <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">5. Deel ik je gegevens met anderen?</h2>
               <p>
                 Je gegevens worden niet verkocht of gedeeld met derden voor commerciële doeleinden. In de volgende situaties kunnen gegevens gedeeld worden:
               </p>
@@ -130,7 +130,7 @@ export default function Privacyverklaring() {
             <section>
               <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">6. Privacy van beide partners</h2>
               <p className="text-sm">
-                Bij relatietherapie zijn doorgaans twee personen betrokken. Wij beschermen de privacy van beide partners. Dat betekent:
+                Bij relatietherapie zijn doorgaans twee personen betrokken. Ik bescherm de privacy van beide partners. Dat betekent:
               </p>
               <ul className="list-disc list-inside space-y-2 mt-3 text-sm">
                 <li>Sessie-aantekeningen zijn bedoeld voor de therapeut en worden niet automatisch gedeeld met de individuele partner</li>
@@ -144,7 +144,7 @@ export default function Privacyverklaring() {
               <p className="mb-3 text-sm">Op grond van de AVG heb je de volgende rechten:</p>
               <div className="grid sm:grid-cols-2 gap-3 text-sm">
                 {[
-                  ["Recht op inzage", "Je kunt opvragen welke gegevens wij van je verwerken."],
+                  ["Recht op inzage", "Je kunt opvragen welke gegevens ik van je verwerk."],
                   ["Recht op rectificatie", "Je kunt onjuiste of onvolledige gegevens laten corrigeren."],
                   ["Recht op vergetelheid", "Je kunt verzoeken je gegevens te verwijderen, tenzij een wettelijke bewaarplicht van toepassing is (zoals de WGBO)."],
                   ["Recht op beperking", "Je kunt verzoeken de verwerking van je gegevens tijdelijk te beperken."],
@@ -178,11 +178,11 @@ export default function Privacyverklaring() {
                 Op deze website staat Bea, een chatbot die wordt aangedreven door een AI-model van <strong>Anthropic</strong> (Claude). Bea beantwoordt vragen over relatietherapie, IBCT en de werkwijze van de praktijk.
               </p>
               <div className="bg-white rounded-xl p-4 text-sm space-y-2">
-                <p><strong>Welke gegevens worden naar Anthropic gestuurd?</strong> Alleen de tekst die je zelf in het chatvenster typt. <em>Voordat</em> je bericht wordt verstuurd, verwijdert onze server automatisch e-mailadressen en telefoonnummers uit de tekst.</p>
+                <p><strong>Welke gegevens worden naar Anthropic gestuurd?</strong> Alleen de tekst die je zelf in het chatvenster typt. <em>Voordat</em> je bericht wordt verstuurd, verwijdert mijn server automatisch e-mailadressen en telefoonnummers uit de tekst.</p>
                 <p><strong>Welke gegevens gaan NIET naar Anthropic?</strong> Je naam, contactgegevens, IP-adres en factuurgegevens.</p>
-                <p><strong>Hoe lang bewaren wij chat-gesprekken?</strong> Maximaal 30 dagen, daarna worden ze automatisch verwijderd.</p>
+                <p><strong>Hoe lang bewaar ik chat-gesprekken?</strong> Maximaal 30 dagen, daarna worden ze automatisch verwijderd.</p>
                 <p><strong>Waar staan de gegevens?</strong> In een Supabase-database (regio Frankfurt, EU). Anthropic verwerkt aanvragen binnen de EU/VS, op basis van een Data Processing Addendum en (waar van toepassing) het EU-VS Data Privacy Framework.</p>
-                <p><strong>Toestemming.</strong> Voordat Bea start, vragen wij je expliciete toestemming. Zonder die toestemming kun je de website gewoon gebruiken en kun je via het contactformulier of telefonisch contact opnemen.</p>
+                <p><strong>Toestemming.</strong> Voordat Bea start, vraag ik je expliciete toestemming. Zonder die toestemming kun je de website gewoon gebruiken en kun je via het contactformulier of telefonisch contact opnemen.</p>
                 <p><strong>Geen medisch advies.</strong> Bea geeft geen diagnoses en is geen vervanging voor een gesprek met Eva. Bij acute nood: bel 112 of 113 Zelfmoordpreventie (0800-0113).</p>
               </div>
               <p className="text-sm mt-3">

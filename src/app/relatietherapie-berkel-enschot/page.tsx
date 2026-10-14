@@ -245,7 +245,7 @@ export default function Page() {
 
         <LandingCTA
           title="Kennismaken"
-          text="Stuur een bericht via het contactformulier. Ik neem binnen vierentwintig uur contact op en we plannen een intakegesprek op een moment dat voor jullie past, bij jullie thuis in Berkel-Enschot."
+          text="Stuur een bericht via het contactformulier. Ik neem binnen 24 uur contact op en we plannen een intakegesprek op een moment dat voor jullie past, bij jullie thuis in Berkel-Enschot."
         />
 
         <LandingFAQ

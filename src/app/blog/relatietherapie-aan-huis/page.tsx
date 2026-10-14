@@ -96,7 +96,7 @@ export default function Page() {
         Een intakegesprek vindt plaats bij jullie thuis. Tijdens dit gesprek verkennen we waar jullie tegenaan lopen, of <Link href="/blog/communicatieproblemen-in-een-relatie">IBCT</Link> passend is, en welke stappen zinvol zijn.
       </p>
       <p>
-        Stuur een bericht via het <Link href="/#contact">contactformulier</Link> en ik neem binnen vierentwintig uur contact op.
+        Stuur een bericht via het <Link href="/#contact">contactformulier</Link> en ik neem binnen 24 uur contact op.
       </p>
     </BlogLayout>
   );

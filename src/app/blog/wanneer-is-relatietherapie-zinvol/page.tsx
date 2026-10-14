@@ -124,7 +124,7 @@ export default function Page() {
         Als jullie twee of meer van deze signalen herkennen, is een intakegesprek zinvol. In dat gesprek krijgen we helder zicht op wat er speelt en welke aanpak het beste bij jullie past. Dan kunnen we samen bepalen hoe het traject eruit ziet.
       </p>
       <p>
-        Een afspraak maken kan via het <Link href="/#contact">contactformulier</Link>. Ik neem binnen vierentwintig uur contact op.
+        Een afspraak maken kan via het <Link href="/#contact">contactformulier</Link>. Ik neem binnen 24 uur contact op.
       </p>
 
       <h2>Herkennen jullie iets in dit verhaal?</h2>
