@@ -4,6 +4,20 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
+# Schrijfstijl: alle zichtbare tekst
+
+Alle tekst die een bezoeker leest is van de eigenaar. Lees `docs/schrijfstijl.md`
+voordat je ook maar één zin op de site aanpast of toevoegt. Daarin staan de
+harde regels (geen gedachtestreepjes, geen anglicismen, geen AI-taal), hoe de
+lezer wordt aangesproken en wat er nooit geschreven wordt.
+
+Voorstellen voor tekst mag altijd: laat de huidige en de voorgestelde versie
+naast elkaar zien en laat de eigenaar per blok beslissen. Bestaande lopende
+tekst herschrijven zonder die voorlegging, of teksten "opfrissen" als onderdeel
+van ander werk, mag niet.
+
+@docs/schrijfstijl.md
+
 # SEO titels en meta omschrijvingen — DEFINITIEF (NIET WIJZIGEN)
 
 De onderstaande SEO titels en meta descriptions zijn **definitief vastgesteld** en mogen **niet meer worden aangepast**, tenzij de eigenaar daar uitdrukkelijk om vraagt. Wijzig deze waarden niet bij refactoring, opschoning of "verbeteringen". Bij twijfel: laat ze staan.
@@ -12,6 +26,10 @@ Bronlocaties:
 - Homepage: `src/app/layout.tsx` (`metadata.title.default` + `metadata.description`, plus openGraph/twitter)
 - Landingspagina's: `src/lib/landing-pages.ts` (`metaTitle` + `description` per slug)
 - Blogoverzicht: `src/app/blog/page.tsx`
+
+De pagina `/relatietherapie-reeshof` is opgegaan in `/relatietherapie-tilburg` en
+verwijst daar permanent naartoe. De titel en meta van die pagina stonden hieronder
+als punt 5 en zijn op verzoek van de eigenaar verwijderd.
 
 De definitieve waarden zijn:
 
@@ -31,19 +49,15 @@ De definitieve waarden zijn:
    - Titel: `IBCT relatietherapie Tilburg | Evidence-based`
    - Meta: `IBCT relatietherapie in Tilburg. Wetenschappelijk onderbouwde aanpak voor koppels die vastgelopen patronen willen begrijpen, verzachten en duurzaam doorbreken.`
 
-5. **Relatietherapie Reeshof** (`/relatietherapie-reeshof`)
-   - Titel: `Relatietherapie Reeshof Tilburg | Aan huis & persoonlijk`
-   - Meta: `Wetenschappelijk onderbouwde relatietherapie aan huis in de Reeshof. Voor koppels die vastlopen in terugkerende patronen en weer rust, begrip en verbinding willen.`
-
-6. **Relatietherapie Berkel‑Enschot** (`/relatietherapie-berkel-enschot`)
+5. **Relatietherapie Berkel‑Enschot** (`/relatietherapie-berkel-enschot`)
    - Titel: `Relatietherapie Berkel‑Enschot Tilburg | Aan huis & vertrouwd`
    - Meta: `Relatietherapie aan huis in Berkel‑Enschot. Professionele, wetenschappelijk onderbouwde begeleiding voor koppels die patronen willen doorbreken en meer rust en nabijheid zoeken.`
 
-7. **Blogoverzicht** (`/blog`)
+6. **Blogoverzicht** (`/blog`)
    - Titel: `Relatietherapie blog | Inzichten over ruzie, jaloezie & verbinding`
    - Meta: `Wetenschappelijk onderbouwde artikelen van Eva Mulder over ruzie, jaloezie, communicatie en verbinding. Professionele inzichten voor koppels die willen groeien. Tilburg.`
 
-8. **Voor jonge ouders** (`/relatietherapie-jonge-ouders`)
+7. **Voor jonge ouders** (`/relatietherapie-jonge-ouders`)
    - Titel: `Relatietherapie jonge ouders Tilburg | Stress, baby & slaaptekort`
    - Meta: `Relatietherapie aan huis voor jonge ouders in Tilburg. Ik kom bij jullie thuis: vertrouwd, rustig en op jullie eigen plek. Relatiepraktijk De Nieuwe Weelde.`
 

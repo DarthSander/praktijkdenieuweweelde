@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const faqs: FAQItem[] = [
   {
     q: "In welke wijken van Tilburg kom je aan huis?",
-    a: "Ik werk door heel Tilburg en directe omgeving: Reeshof, Berkel-Enschot en aangrenzende wijken. Ook in nabijgelegen plaatsen zoals Dongen, Udenhout, Goirle en Loon op Zand kom ik meestal. Stuur gerust een bericht als je wilt weten of jullie adres binnen het werkgebied valt.",
+    a: "Ik werk door heel Tilburg en directe omgeving. Denk aan wijken zoals de Reeshof, met Heerevelden, Huibeven, Dalem, Dongewijk en de Gesworen Hoek. Verder kom ik in Berkel-Enschot en de aangrenzende wijken. Ook in nabijgelegen plaatsen zoals Dongen, Udenhout, Goirle en Loon op Zand kom ik meestal. Stuur gerust een bericht als je wilt weten of jullie adres binnen het werkgebied valt.",
   },
   {
     q: "Wat kost relatietherapie in Tilburg bij jou?",
@@ -113,14 +113,15 @@ export default function Page() {
             </h2>
             <div className="text-[#5E524F] text-base md:text-lg leading-relaxed space-y-5">
               <p>
-                Misschien praten jullie langs elkaar heen. Misschien is er iets gebeurd dat niet
-                meer uit te praten valt. Misschien voelt het anders dan het ooit was en weten
-                jullie niet precies waar het misgaat. In deze situaties is relatietherapie een
-                plek om samen te onderzoeken wat er werkelijk speelt.
+                Veel koppels wachten lang voordat ze hulp inschakelen. Vaak komt dat doordat het
+                probleem lastig te benoemen is. Er is niet één ruzie aan te wijzen en toch klopt
+                er iets niet meer. In de sessies kijken we naar wat zich tussen jullie herhaalt,
+                waar dat patroon vandaan komt en hoe jullie het kunnen doorbreken.
               </p>
               <p>
-                Als IBCT-relatietherapeut in Tilburg kom ik bij jullie thuis, zodat jullie in een
-                vertrouwde omgeving kunnen werken aan verbinding en helderheid.
+                Ik kom daarvoor naar jullie toe, in Tilburg of in de omliggende plaatsen. Thuis
+                moeten jullie elkaar weer zien te vinden. Dan is het fijn als het gesprek precies
+                daar plaatsvindt.
               </p>
             </div>
           </div>
@@ -155,28 +156,28 @@ export default function Page() {
             <div className="grid md:grid-cols-2 gap-5">
               {[
                 {
-                  title: "Vastgelopen communicatie",
-                  text: "Gesprekken eindigen in ruzie of stilte. Jullie zitten vast in een patroon waarin de één fel wordt en de ander zich terugtrekt.",
+                  title: "Het gesprek loopt altijd hetzelfde af",
+                  text: "Jullie beginnen over iets kleins en komen altijd op dezelfde plek uit. De een wordt fel en de ander trekt zich terug.",
                 },
                 {
-                  title: "Na vreemdgaan of een vertrouwensbreuk",
-                  text: "Er is iets gebeurd dat hard binnenkwam. Jullie willen onderzoeken of herstel mogelijk is en hoe dat eruit kan zien.",
+                  title: "Na vreemdgaan of een leugen",
+                  text: "Een van jullie beiden is ontzettend gekwetst of geraakt. Jullie willen weten of herstel mogelijk is en wat daarvoor nodig zou zijn.",
                 },
                 {
-                  title: "Afstand en eenzaamheid",
-                  text: "Jullie zijn samen, maar zo voelt het niet. Intimiteit is afgenomen en gesprekken gaan vooral over praktische zaken.",
+                  title: "Afstand zonder ruzie",
+                  text: "Er is geen conflict en toch voelt het niet meer samen. De gesprekken gaan over boodschappen, de planning en wie wat doet in huis.",
                 },
                 {
-                  title: "Stress door levensfase",
-                  text: "Jonge kinderen, mantelzorg, drukke banen. Externe stress zorgt ervoor dat jullie aan alles toekomen behalve aan elkaar.",
+                  title: "Er gaat van alles voor",
+                  text: "Jonge kinderen, een zieke ouder, werk dat doorloopt. Er blijft aandacht over voor iedereen behalve voor elkaar.",
                 },
                 {
-                  title: "Twijfel over de toekomst",
-                  text: "Eén van jullie denkt aan scheiden, of jullie twijfelen beiden. Relatietherapie helpt om helderheid te krijgen, ook als dat betekent bewust loslaten.",
+                  title: "Een van jullie twijfelt",
+                  text: "Blijven of gaan. Soms draagt een van jullie die vraag al een tijd alleen. Ook dan kunnen we onderzoeken wat er speelt, wat de uitkomst ook wordt.",
                 },
                 {
-                  title: "Preventief onderhoud",
-                  text: "Geen crisis, wel de wens om verbonden te blijven. Een APK voor relaties is een korte, bewuste check-up.",
+                  title: "Jullie willen het voor zijn",
+                  text: "Er is geen crisis en toch merken jullie dat er onderhoud nodig is. De APK voor relaties is daarvoor bedoeld. Drie sessies waarin jullie bewust stilstaan bij een aantal specifieke aandachtspunten.",
                 },
               ].map((item) => (
                 <div key={item.title} className="bg-[#F5F0EB] rounded-2xl p-6 md:p-7 card-hover">
@@ -229,7 +230,7 @@ export default function Page() {
                 {
                   icon: MapPin,
                   title: "Werkgebied",
-                  text: "Heel Tilburg, inclusief Reeshof, Centrum, Oud-Noord, de Hasselt, Berkel-Enschot, en omliggende plaatsen zoals Dongen, Goirle, Udenhout en Loon op Zand.",
+                  text: "Heel Tilburg, inclusief Reeshof, Centrum, Oud-Noord, de Hasselt en Berkel-Enschot, plus omliggende plaatsen zoals Dongen, Goirle, Udenhout en Loon op Zand.",
                 },
                 {
                   icon: Clock,
