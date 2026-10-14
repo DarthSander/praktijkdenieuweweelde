@@ -230,7 +230,7 @@ export default function Page() {
                 {
                   icon: MapPin,
                   title: "Werkgebied",
-                  text: "Heel Tilburg, inclusief Reeshof, Centrum, Oud-Noord, de Hasselt, Berkel-Enschot, en omliggende plaatsen zoals Dongen, Goirle, Udenhout en Loon op Zand.",
+                  text: "Heel Tilburg, inclusief Reeshof, Centrum, Oud-Noord, de Hasselt en Berkel-Enschot, plus omliggende plaatsen zoals Dongen, Goirle, Udenhout en Loon op Zand.",
                 },
                 {
                   icon: Clock,
