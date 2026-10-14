@@ -27,6 +27,10 @@ Bronlocaties:
 - Landingspagina's: `src/lib/landing-pages.ts` (`metaTitle` + `description` per slug)
 - Blogoverzicht: `src/app/blog/page.tsx`
 
+De pagina `/relatietherapie-reeshof` is opgegaan in `/relatietherapie-tilburg` en
+verwijst daar permanent naartoe. De titel en meta van die pagina stonden hieronder
+als punt 5 en zijn op verzoek van de eigenaar verwijderd.
+
 De definitieve waarden zijn:
 
 1. **Homepage**
@@ -45,19 +49,15 @@ De definitieve waarden zijn:
    - Titel: `IBCT relatietherapie Tilburg | Evidence-based`
    - Meta: `IBCT relatietherapie in Tilburg. Wetenschappelijk onderbouwde aanpak voor koppels die vastgelopen patronen willen begrijpen, verzachten en duurzaam doorbreken.`
 
-5. **Relatietherapie Reeshof** (`/relatietherapie-reeshof`)
-   - Titel: `Relatietherapie Reeshof Tilburg | Aan huis & persoonlijk`
-   - Meta: `Wetenschappelijk onderbouwde relatietherapie aan huis in de Reeshof. Voor koppels die vastlopen in terugkerende patronen en weer rust, begrip en verbinding willen.`
-
-6. **Relatietherapie Berkel‑Enschot** (`/relatietherapie-berkel-enschot`)
+5. **Relatietherapie Berkel‑Enschot** (`/relatietherapie-berkel-enschot`)
    - Titel: `Relatietherapie Berkel‑Enschot Tilburg | Aan huis & vertrouwd`
    - Meta: `Relatietherapie aan huis in Berkel‑Enschot. Professionele, wetenschappelijk onderbouwde begeleiding voor koppels die patronen willen doorbreken en meer rust en nabijheid zoeken.`
 
-7. **Blogoverzicht** (`/blog`)
+6. **Blogoverzicht** (`/blog`)
    - Titel: `Relatietherapie blog | Inzichten over ruzie, jaloezie & verbinding`
    - Meta: `Wetenschappelijk onderbouwde artikelen van Eva Mulder over ruzie, jaloezie, communicatie en verbinding. Professionele inzichten voor koppels die willen groeien. Tilburg.`
 
-8. **Voor jonge ouders** (`/relatietherapie-jonge-ouders`)
+7. **Voor jonge ouders** (`/relatietherapie-jonge-ouders`)
    - Titel: `Relatietherapie jonge ouders Tilburg | Stress, baby & slaaptekort`
    - Meta: `Relatietherapie aan huis voor jonge ouders in Tilburg. Ik kom bij jullie thuis: vertrouwd, rustig en op jullie eigen plek. Relatiepraktijk De Nieuwe Weelde.`
 
