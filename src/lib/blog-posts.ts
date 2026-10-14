@@ -17,6 +17,29 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "huiswerk-bij-relatietherapie",
+    title: "Waarom er huiswerk bij relatietherapie hoort",
+    description:
+      "Bij IBCT-relatietherapie oefenen jullie tussen de sessies. Waarom dat nodig is, waarom het in het begin gekunsteld voelt en wat herhaling doet met vastgeroeste patronen.",
+    excerpt:
+      "Bij relatietherapie hoort huiswerk, en dat doet soms denken aan terug in de schoolbanken gaan. Nieuwe manieren van praten moet je herhalen voordat ze eigen worden. Waarom het in het begin ongemakkelijk voelt en waarom dat erbij hoort.",
+    image: "/pampas-beige.jpg",
+    imageAlt: "Pampasgras in zacht licht, symbool voor oefenen en herhalen",
+    readingTime: "4 min leestijd",
+    date: "2026-10-14",
+    dateLabel: "14 oktober 2026",
+    related: [
+      "communicatieproblemen-in-een-relatie",
+      "steeds-dezelfde-ruzie-in-je-relatie",
+      "hoe-lang-duurt-relatietherapie",
+    ],
+    relatedLandings: [
+      "ibct-relatietherapie",
+      "relatietherapie-tilburg",
+    ],
+    category: "IBCT",
+  },
+  {
     slug: "relatiecoach-of-relatietherapeut",
     title: "Relatiecoach of relatietherapeut: wat is het verschil?",
     description:
@@ -87,7 +110,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "relatietherapie-aan-huis",
-    title: "De voordelen van relatietherapie aan huis: waarom jullie eigen bank werkt",
+    title: "De voordelen van relatietherapie aan huis",
     description:
       "Relatietherapie aan huis heeft unieke voordelen boven een praktijkruimte. Meer rust, minder drempel en therapie in jullie eigen omgeving. Eva Mulder werkt in Tilburg.",
     excerpt:
