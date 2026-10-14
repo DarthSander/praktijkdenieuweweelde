@@ -227,8 +227,8 @@ maar terughoudendheid. Spreek de lezer aan wanneer het over hem gaat. Schrijf
 in de derde persoon wanneer je iets uitlegt.
 
 Eva zelf is aanwezig in de tekst. Ze schrijft **ik**, niet "de therapeut" of
-"wij". Dat geldt ook in zakelijke teksten als de privacyverklaring en de
-algemene voorwaarden: het is een praktijk van één persoon en de tekst zegt dat
+"wij". Dat geldt ook in zakelijke teksten als de privacyverklaring, de
+algemene voorwaarden en de cookiemelding: het is een praktijk van één persoon en de tekst zegt dat
 ook. Schrijf dus "welke gegevens verwerk ik" en niet "welke gegevens verwerken
 wij".
 
