@@ -34,6 +34,9 @@ export default function Page() {
       <p>
         In een sessie valt vaak een kwartje. Jullie zien hoe het gesprek steeds dezelfde kant op gaat en wie daarin welke stap zet. Dat is belangrijk en het is niet voldoende. Een <Link href="/blog/steeds-dezelfde-ruzie-in-je-relatie">patroon</Link> dat zich over jaren heeft gevormd gaat niet weg doordat je het doorziet. Het gaat weg doordat jullie iets anders doen, vaak genoeg om het te laten wennen.
       </p>
+      <p>
+        Dat is ook te zien in de grote vergelijkende studie naar IBCT. Doss, Thum, Sevier, Atkins en Christensen (2005) keken waar de verbetering bij koppels vandaan kwam. In het begin hing die vooral samen met hoe vaak het gedrag waar het om ging anders ging. Later in het traject hing die meer samen met hoe de partners op dat gedrag reageerden.
+      </p>
 
       <h2>Net als bij gitaar spelen</h2>
       <p>
@@ -55,6 +58,17 @@ export default function Page() {
         Een nieuwe reactie moet klaarliggen op het moment dat het moeilijk wordt. Dat lukt alleen als jullie hem vaker hebben gegeven op momenten dat er weinig op het spel stond. Tussen twee sessies zit een week met gelegenheden om dat te doen. Daarom vraag ik ernaar als we weer bij elkaar zitten.
       </p>
 
+      <h2>Wat onderzoek over huiswerk laat zien</h2>
+      <p>
+        Hawrilenko, Eubanks Fleming, Goldstein en Cordova (2016) volgden 108 koppels na een korte vorm van relatiebegeleiding. De koppels die meer met de opdrachten deden gingen sneller vooruit. Een halfjaar later was dat verschil het grootst. Na een jaar was het verdwenen, want de koppels die minder hadden geoefend kwamen er ook, alleen langzamer. Oefenen is dus geen voorwaarde. Het scheelt tijd.
+      </p>
+      <p>
+        Holtzworth-Munroe, Jacobson, DeKlyen en Whisman (1989) onderzochten de gedragsmatige voorloper van IBCT. Koppels die actief meededen en hun opdrachten uitvoerden, hadden aan het eind een betere uitkomst. Dat is een verband en geen bewijs dat het een het ander veroorzaakt.
+      </p>
+      <p>
+        Van IBCT bestaat ook een internetversie. Koppels werken daarin zelf door het programma heen en hebben in totaal ongeveer een uur contact met een begeleider. Doss en collega&apos;s (2016) legden dat bij 300 koppels naast een wachtlijst. De relatietevredenheid van de koppels die het programma doorliepen verbeterde duidelijk meer. Het grootste deel van dat werk deden ze zelf.
+      </p>
+
       <h2>Als het niet gelukt is</h2>
       <p>
         Soms komt er van het oefenen niets. De week liep anders, of jullie hebben het geprobeerd en het ging mis. Dat is geen verloren week. Wat jullie tegenhield is precies waar we dan naar kijken. Dat het niet lukte is informatie en geen cijfer.
@@ -69,6 +83,16 @@ export default function Page() {
       <p>
         Wat het oefenen bij jullie zou inhouden hangt af van wat er speelt. In een intakegesprek bij jullie thuis kijken we daarnaar. Stuur een bericht via het <Link href="/#contact">contactformulier</Link> en ik neem binnen 24 uur contact op.
       </p>
+
+      <div className="blog-sources">
+        <h3>Bronnen</h3>
+        <ul>
+          <li>Doss, B. D., Cicila, L. N., Georgia, E. J., Roddy, M. K., Nowlan, K. M., Benson, L. A., &amp; Christensen, A. (2016). A randomized controlled trial of the web-based OurRelationship program: Effects on relationship and individual functioning. <em>Journal of Consulting and Clinical Psychology, 84</em>(4), 285-296.</li>
+          <li>Doss, B. D., Thum, Y. M., Sevier, M., Atkins, D. C., &amp; Christensen, A. (2005). Improving relationships: Mechanisms of change in couple therapy. <em>Journal of Consulting and Clinical Psychology, 73</em>(4), 624-633.</li>
+          <li>Hawrilenko, M., Eubanks Fleming, C. J., Goldstein, A. S., &amp; Cordova, J. V. (2016). Motivating action and maintaining change: The time-varying role of homework following a brief couples&apos; intervention. <em>Journal of Marital and Family Therapy, 42</em>(3), 396-408.</li>
+          <li>Holtzworth-Munroe, A., Jacobson, N. S., DeKlyen, M., &amp; Whisman, M. A. (1989). Relationship between behavioral marital therapy outcome and process variables. <em>Journal of Consulting and Clinical Psychology, 57</em>(5), 658-662.</li>
+        </ul>
+      </div>
     </BlogLayout>
   );
 }

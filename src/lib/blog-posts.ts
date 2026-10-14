@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
       "Bij relatietherapie hoort huiswerk, en dat doet soms denken aan terug in de schoolbanken gaan. Nieuwe manieren van praten moet je herhalen voordat ze eigen worden. Waarom het in het begin ongemakkelijk voelt en waarom dat erbij hoort.",
     image: "/pampas-beige.jpg",
     imageAlt: "Pampasgras in zacht licht, symbool voor oefenen en herhalen",
-    readingTime: "4 min leestijd",
+    readingTime: "6 min leestijd",
     date: "2026-10-14",
     dateLabel: "14 oktober 2026",
     related: [
