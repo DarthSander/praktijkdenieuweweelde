@@ -18,6 +18,12 @@ function getTransport(): Transporter {
     port,
     secure: port === 465, // 465 = SSL, 587 = STARTTLS
     auth: { user, pass },
+    // Zonder deze grenzen blijft een stille SMTP-server hangen tot de
+    // serverless-functie wordt afgekapt. Dan komt er geen foutmelding terug,
+    // alleen een timeout, en is er niets te zien wat er misging.
+    connectionTimeout: 8000,
+    greetingTimeout: 8000,
+    socketTimeout: 12000,
   });
   return transporter;
 }
