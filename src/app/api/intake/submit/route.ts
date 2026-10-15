@@ -1,5 +1,5 @@
 import type { NextRequest } from "next/server";
-import { recordSubmission } from "@/lib/intake";
+import { IntakeSubmitError, recordSubmission } from "@/lib/intake";
 import { sendIntakeSubmittedNotice } from "@/lib/intake-mail";
 
 export const runtime = "nodejs";
@@ -33,7 +33,20 @@ export async function POST(req: NextRequest) {
     invite = result.invite;
   } catch (err) {
     console.error("Intake-submit mislukt", err);
-    // Niet verklappen óf de token ooit geldig was.
+    const reason = err instanceof IntakeSubmitError ? err.reason : "error";
+    if (reason === "error") {
+      // Storing aan onze kant. Dat is geen 400: de invuller deed niets verkeerd.
+      return Response.json(
+        {
+          error:
+            "Het opslaan lukte niet aan mijn kant. Je antwoorden staan nog op deze " +
+            "pagina, dus sluit hem niet. Probeer het over een paar minuten opnieuw. " +
+            "Blijft het misgaan, mail me dan op info@praktijkdenieuweweelde.nl.",
+        },
+        { status: 503 }
+      );
+    }
+    // Bij een token-probleem niet verklappen óf de token ooit geldig was.
     return Response.json(
       { error: "Deze link is niet (meer) geldig of het formulier is al ingevuld." },
       { status: 400 }
