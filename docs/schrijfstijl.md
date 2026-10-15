@@ -33,7 +33,9 @@ bij wat er gebeurt of bij wat mensen doen.
 **Geen AI-taal.** Zinnen die gewichtig klinken maar niets zeggen: "het is
 belangrijk om te beseffen dat", "een cruciale rol spelen", "niet alleen, maar
 ook". Als een zin kan verdwijnen zonder verlies van betekenis, hoorde hij er
-niet.
+niet. Let op het verschil met "niet omdat X, maar omdat Y": die constructie
+gebruikt Eva zelf. Daar doet hij werk, want hij zet een verkeerde verklaring
+opzij en geeft de juiste.
 
 ---
 
@@ -62,7 +64,7 @@ niet.
 |---|---|---|
 | Opening | bij wat koppels doen of wensen | bij een algemene uitspraak |
 | Redenering | legt uit waaróm ("omdat patronen zich over jaren vormen") | stelt vast en laat het zweven |
-| Beeldspraak | geen | lagen, iets eronder, "alsof" |
+| Beeldspraak | hooguit een enkel woord | uitgesponnen: lagen, iets eronder |
 | Zinslengte | wisselend, mediaan twaalf woorden, met een korte scharnierzin van zes | vrij gelijkmatig lang, mediaan zeventien |
 | Dubbele punt | geen | leidt een rijtje gevoelens in |
 | De lezer | wordt niet meegevoerd | wordt meegevoerd met "je" en een slotvraag |
@@ -77,9 +79,60 @@ woorden, midden in de alinea, die het betoog een draai geeft. In de tekst uit
 haar boek staat dezelfde beweging: "Hoe ik dat weet." Vier woorden, los. Zulke
 zinnen mogen blijven staan.
 
-**Geen beeldspraak, in welk register dan ook.** Beide teksten die Eva herkent
-als de hare bevatten er geen enkele. De tekst die zij afwijst drijft erop. Dat
-is het betrouwbaarste onderscheid dat uit haar voorbeelden te halen valt.
+**Beeldspraak: mag, maar niet uitgesponnen.** Een enkel beeldend woord gebruikt
+zij wel. "Het contact voelt vlakker" is van haar. "Het lijkt alsof jullie
+elkaar minder goed bereiken" ook. Wat zij afwijst is beeldspraak die een heel
+betoog draagt, zoals de laag die eronder ligt, of die een gevoel opblaast tot
+"alsof de liefde zelf aan het verdwijnen is". Het verschil zit niet in het
+woord maar in wat het doet: beschrijven mag, dramatiseren niet.
+
+---
+
+## 2b. Uitleggen of verkopen
+
+Dit tweede paar komt uit haar eigen blog. Het is het belangrijkste voorbeeld in
+dit document, want de afgewezen tekst voldoet aan elke vormregel hierboven.
+Korte zinnen, concreet, geen gedachtestreepjes, geen anglicismen, een cijfer uit
+onderzoek. En toch is hij niet van haar.
+
+### Zo schrijft Eva wel
+
+> Veel stellen herkennen het gevoel dat ze uit elkaar zijn gegroeid. Niet omdat
+> er grote ruzies zijn, maar omdat de relatie anders aanvoelt dan vroeger. De
+> vanzelfsprekendheid is minder geworden, het contact voelt vlakker en het lijkt
+> alsof jullie elkaar minder goed bereiken. Dat kan verwarrend zijn, zeker als er
+> geen duidelijke aanleiding is. Toch volgt dit gevoel in de relatiewetenschappen
+> vaak een herkenbaar patroon.
+
+### Zo schrijft Eva niet
+
+> De voordelen van relatietherapie aan huis: waarom jullie eigen bank werkt
+>
+> Onderzoek laat zien dat koppels gemiddeld zo'n tweeënhalf tot drie jaar wachten
+> voordat ze hulp zoeken. Een deel daarvan is twijfel, maar een groot deel is
+> praktisch: oppas, reistijd, werk. Aan huis vallen die drempels weg. Het enige
+> dat jullie hoeven te doen is de deur opendoen.
+
+### Het verschil zit in de bedoeling
+
+De eerste tekst legt uit wat de lezer doormaakt. De tweede verkoopt een
+werkwijze. Dat verschil is in vier dingen te zien:
+
+1. **Voor wie het onderzoek er staat.** Allebei de teksten noemen onderzoek. In
+   de eerste verklaart het wat de lezer voelt. In de tweede onderbouwt het
+   waarom aan huis een goed idee is. Hetzelfde cijfer, een andere eigenaar.
+2. **Wie er aan het eind overblijft.** De eerste eindigt bij een herkenbaar
+   patroon, dus bij de lezer. De tweede eindigt bij een voordeel van de
+   praktijk.
+3. **De belofte van gemak.** "Het enige dat jullie hoeven te doen is de deur
+   opendoen" maakt iets kleins van een stap die groot voelt. Dat is geruststellen
+   op de verkeerde manier.
+4. **De knipoog in de kop.** "Waarom jullie eigen bank werkt" is een vondst.
+   Vondsten horen in het boek, niet boven een artikel over therapie.
+
+**Toets hierop voordat je iets publiceert.** Niet alleen: voldoet deze zin aan de
+regels. Maar ook: staat hier iets uitgelegd, of wordt hier iets aangeprezen? Een
+tekst die alle vormregels haalt en toch verkoopt, valt af.
 
 ---
 
@@ -174,7 +227,13 @@ maar terughoudendheid. Spreek de lezer aan wanneer het over hem gaat. Schrijf
 in de derde persoon wanneer je iets uitlegt.
 
 Eva zelf is aanwezig in de tekst. Ze schrijft **ik**, niet "de therapeut" of
-"wij".
+"wij". Dat geldt ook in zakelijke teksten als de privacyverklaring, de
+algemene voorwaarden en de cookiemelding: het is een praktijk van één persoon en de tekst zegt dat
+ook. Schrijf dus "welke gegevens verwerk ik" en niet "welke gegevens verwerken
+wij".
+
+Eén uitzondering: in de veelgestelde vragen staat "wij" voor het koppel dat de
+vraag stelt, zoals in "Hoe snel kunnen wij starten?". Dat blijft staan.
 
 ---
 
@@ -213,6 +272,8 @@ met een nagelaten gevoel.
 
 | Goed | Niet |
 |---|---|
+| binnen 24 uur | binnen vierentwintig uur |
+| 75 minuten, €155, drie sessies | getallen boven de twaalf voluit |
 | IBCT (Integrative Behavioral Couple Therapy) | ibct, I.B.C.T. |
 | Berkel-Enschot | Berkel Enschot |
 | de Reeshof | Reeshof zonder lidwoord |
@@ -241,8 +302,7 @@ De SEO-titels en meta-omschrijvingen hebben hun eigen regeling in `AGENTS.md`.
 
 ## 9. Nog te beantwoorden
 
-1. Welke drie zinnen op de huidige site vind je het meest van jou? En welke drie
-   het minst?
-2. Hoe persoonlijk mag een blogartikel worden? Mag daarin een geanonimiseerd
+1. Hoe persoonlijk mag een blogartikel worden? Mag daarin een geanonimiseerd
    voorbeeld uit je praktijk staan?
-3. Hoe noem je de mensen die bij je komen: cliënten, koppels, stellen?
+2. Hoe noem je de mensen die bij je komen: cliënten, koppels, stellen? In haar
+   eigen tekst staat "stellen" en "koppels" door elkaar.

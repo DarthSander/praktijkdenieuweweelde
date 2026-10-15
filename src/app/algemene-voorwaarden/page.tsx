@@ -64,7 +64,7 @@ export default function AlgemeneVoorwaarden() {
               <ul className="list-disc list-inside space-y-2 text-sm">
                 <li>De praktijk biedt relatietherapie en -begeleiding op basis van de IBCT-methode. Dit is geen medische of psychiatrische zorg.</li>
                 <li>Er worden geen (medische of psychologische) diagnoses gesteld.</li>
-                <li>De praktijk biedt geen crisiszorg. Bij crisis verwijzen wij naar de huisarts of relevante hulpinstanties.</li>
+                <li>De praktijk biedt geen crisiszorg. Bij crisis verwijs ik naar de huisarts of relevante hulpinstanties.</li>
                 <li>De therapeut heeft een <strong>inspanningsverplichting</strong>: zij zet zich volledig in voor het traject, maar kan geen specifiek resultaat of uitkomst garanderen.</li>
               </ul>
             </section>
@@ -125,7 +125,7 @@ export default function AlgemeneVoorwaarden() {
                 De therapeut handelt conform de Algemene Verordening Gegevensbescherming (AVG) en heeft een professionele geheimhoudingsplicht. Gegevens van cliënten worden zorgvuldig bewaard en niet zonder uitdrukkelijke toestemming gedeeld met derden, tenzij wettelijk verplicht.
               </p>
               <p className="mt-3 text-sm">
-                Voor meer informatie over hoe wij omgaan met persoonsgegevens verwijzen wij naar onze{" "}
+                Voor meer informatie over hoe ik met persoonsgegevens omga verwijs ik naar mijn{" "}
                 <Link href="/privacyverklaring" className="text-[#946B66] underline underline-offset-2">privacyverklaring</Link>.
               </p>
             </section>
@@ -133,16 +133,16 @@ export default function AlgemeneVoorwaarden() {
             <section>
               <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">8. Klachtenregeling (Wkkgz)</h2>
               <p className="text-sm mb-4">
-                Heb je een klacht? We bespreken deze graag direct met je. Als je er samen niet uitkomt, kun je terecht bij een onafhankelijke instantie.
+                Heb je een klacht? Ik bespreek deze graag direct met je. Als je er samen niet uitkomt, kun je terecht bij een onafhankelijke instantie.
               </p>
               <div className="space-y-3 text-sm">
                 <div className="bg-white rounded-xl p-4">
                   <p className="font-semibold mb-1">Stap 1 – Meld je klacht bij de praktijk</p>
-                  <p>Neem contact op via <a href="mailto:Info@praktijkdenieuweweelde.nl" className="text-[#946B66] underline underline-offset-2">Info@praktijkdenieuweweelde.nl</a>. We streven ernaar je klacht binnen 10 werkdagen te beantwoorden.</p>
+                  <p>Neem contact op via <a href="mailto:Info@praktijkdenieuweweelde.nl" className="text-[#946B66] underline underline-offset-2">Info@praktijkdenieuweweelde.nl</a>. Ik streef ernaar je klacht binnen 10 werkdagen te beantwoorden.</p>
                 </div>
                 <div className="bg-white rounded-xl p-4">
                   <p className="font-semibold mb-1">Stap 2 – Onafhankelijke klachtenfunctionaris</p>
-                  <p>Ben je niet tevreden met de uitkomst, dan kun je terecht bij een onafhankelijke klachtenfunctionaris, aangesloten bij onze beroepsvereniging.</p>
+                  <p>Ben je niet tevreden met de uitkomst, dan kun je terecht bij een onafhankelijke klachtenfunctionaris, aangesloten bij mijn beroepsvereniging.</p>
                 </div>
                 <div className="bg-white rounded-xl p-4">
                   <p className="font-semibold mb-1">Stap 3 – Erkende geschilleninstantie</p>
@@ -150,7 +150,7 @@ export default function AlgemeneVoorwaarden() {
                 </div>
               </div>
               <p className="mt-4 text-sm">
-                Voor meer informatie over de klachtenprocedure verwijzen wij naar onze{" "}
+                Voor meer informatie over de klachtenprocedure verwijs ik naar mijn{" "}
                 <Link href="/klachtenregeling" className="text-[#946B66] underline underline-offset-2">klachtenregeling</Link>.
               </p>
             </section>

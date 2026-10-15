@@ -44,7 +44,7 @@ export default function CookieSettings({ onClose, onAccept }: CookieSettingsProp
             <div>
               <p className="font-semibold text-sm text-[#6B6866] mb-1">Analytische cookies</p>
               <p className="text-xs text-[#5E524F] leading-relaxed">
-                Wij maken momenteel geen gebruik van analytische cookies.
+                Ik maak momenteel geen gebruik van analytische cookies.
               </p>
             </div>
             <div className="flex-shrink-0">
@@ -59,7 +59,7 @@ export default function CookieSettings({ onClose, onAccept }: CookieSettingsProp
             <div>
               <p className="font-semibold text-sm text-[#6B6866] mb-1">Marketingcookies</p>
               <p className="text-xs text-[#5E524F] leading-relaxed">
-                Wij maken momenteel geen gebruik van marketingcookies.
+                Ik maak momenteel geen gebruik van marketingcookies.
               </p>
             </div>
             <div className="flex-shrink-0">
@@ -86,7 +86,7 @@ export default function CookieSettings({ onClose, onAccept }: CookieSettingsProp
         </div>
 
         <p className="mt-4 text-xs text-[#B0ADAB] text-center">
-          Meer informatie in onze{" "}
+          Meer informatie in mijn{" "}
           <a href="/privacyverklaring" className="underline underline-offset-2 hover:text-[#946B66] transition">
             privacyverklaring
           </a>
