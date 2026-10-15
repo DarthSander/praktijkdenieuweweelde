@@ -97,9 +97,19 @@ export default function IntakeForm({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ token, answers }),
       });
-      const json = await res.json();
+      // Een stukgelopen server stuurt soms geen json terug. Dan tonen we de
+      // foutcode, want "er ging iets mis" is niet te onderzoeken.
+      let json: { ok?: boolean; error?: string } = {};
+      try {
+        json = await res.json();
+      } catch {
+        json = {};
+      }
       if (!res.ok || !json.ok) {
-        setError(json.error || "Er ging iets mis. Probeer het opnieuw.");
+        setError(
+          json.error ||
+            `Er ging iets mis bij het versturen (foutcode ${res.status}). Probeer het opnieuw.`
+        );
         setStatus("error");
         return;
       }

@@ -19,9 +19,37 @@ export type InviteRow = {
   created_by: string | null;
 };
 
+/**
+ * "error" betekent dat de database niet te bereiken was. Dat is iets anders dan
+ * een ongeldige link en het moet ook iets anders op het scherm geven: anders
+ * krijgt iemand met een geldige link te horen dat zijn link niet meer werkt.
+ */
+export type InviteProblem = "invalid" | "expired" | "used" | "error";
+
 export type ValidationResult =
   | { ok: true; invite: InviteRow }
-  | { ok: false; reason: "invalid" | "expired" | "used" };
+  | { ok: false; reason: InviteProblem };
+
+/** Meldingen op het scherm, op één plek zodat pagina en api hetzelfde zeggen. */
+export const INVITE_MESSAGE: Record<InviteProblem, string> = {
+  invalid: "Deze link is niet (meer) geldig. Vraag gerust een nieuwe link aan.",
+  expired: "Deze link is verlopen. Vraag gerust een nieuwe link aan.",
+  used: "Dit formulier is al ingevuld. Bedankt!",
+  error:
+    "Er gaat iets mis aan mijn kant, waardoor ik je link nu niet kan controleren. " +
+    "Probeer het over een paar minuten opnieuw. Blijft het misgaan, mail me dan op " +
+    "info@praktijkdenieuweweelde.nl.",
+};
+
+/** Fout bij het opslaan, met de reden erbij zodat de api kan onderscheiden. */
+export class IntakeSubmitError extends Error {
+  readonly reason: InviteProblem;
+  constructor(reason: InviteProblem) {
+    super(`Inzending geweigerd: ${reason}`);
+    this.name = "IntakeSubmitError";
+    this.reason = reason;
+  }
+}
 
 function expiryDays(): number {
   const raw = Number(process.env.INTAKE_INVITE_EXPIRY_DAYS);
@@ -83,8 +111,9 @@ export async function getValidInvite(rawToken: string): Promise<ValidationResult
     `) as InviteRow[];
     data = rows[0];
   } catch (err) {
+    // Database onbereikbaar. Niet doen alsof de link ongeldig is.
     console.error("Kon uitnodiging niet ophalen", err);
-    return { ok: false, reason: "invalid" };
+    return { ok: false, reason: "error" };
   }
 
   if (!data) return { ok: false, reason: "invalid" };
@@ -105,7 +134,7 @@ export async function recordSubmission(
 ): Promise<{ submissionId: string; invite: InviteRow }> {
   const validation = await getValidInvite(rawToken);
   if (!validation.ok) {
-    throw new Error(`Uitnodiging niet geldig: ${validation.reason}`);
+    throw new IntakeSubmitError(validation.reason);
   }
   const invite = validation.invite;
   const sql = getSql();
@@ -114,21 +143,29 @@ export async function recordSubmission(
   // dat voorkomt dubbele inzendingen bij een race) en de inzending opslaan.
   // Mislukt een stap, dan gebeurt er niets.
   const submissionId = randomUUID();
-  const rows = (await sql`
-    with claimed as (
-      update intake_invites
-      set used_at = now(), submission_id = ${submissionId}
-      where id = ${invite.id} and used_at is null
-      returning id, client_name, client_email
-    )
-    insert into intake_submissions (id, invite_id, client_name, client_email, answers)
-    select ${submissionId}, id, client_name, client_email, ${JSON.stringify(answers)}::jsonb
-    from claimed
-    returning id
-  `) as { id: string }[];
+  let rows: { id: string }[];
+  try {
+    rows = (await sql`
+      with claimed as (
+        update intake_invites
+        set used_at = now(), submission_id = ${submissionId}
+        where id = ${invite.id} and used_at is null
+        returning id, client_name, client_email
+      )
+      insert into intake_submissions (id, invite_id, client_name, client_email, answers)
+      select ${submissionId}, id, client_name, client_email, ${JSON.stringify(answers)}::jsonb
+      from claimed
+      returning id
+    `) as { id: string }[];
+  } catch (err) {
+    // Opslaan mislukt door een storing. De invuller hoort dat te weten, want
+    // zijn antwoorden staan nog op het scherm en een nieuwe poging kan lukken.
+    console.error("Inzending opslaan mislukt", err);
+    throw new IntakeSubmitError("error");
+  }
   const submission = rows[0];
   if (!submission) {
-    throw new Error("Uitnodiging niet geldig: used");
+    throw new IntakeSubmitError("used");
   }
 
   return { submissionId: submission.id, invite };

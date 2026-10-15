@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { getValidInvite } from "@/lib/intake";
+import type { InviteProblem } from "@/lib/intake";
+import { INVITE_MESSAGE, getValidInvite } from "@/lib/intake";
 import IntakeForm from "@/components/IntakeForm";
 
 export const dynamic = "force-dynamic";
@@ -9,13 +10,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const REASON_MESSAGE: Record<string, string> = {
-  invalid: "Deze link is niet (meer) geldig. Vraag gerust een nieuwe link aan.",
-  expired: "Deze link is verlopen. Vraag gerust een nieuwe link aan.",
-  used: "Dit formulier is al ingevuld. Bedankt!",
-};
-
-function InvalidNotice({ reason }: { reason: string }) {
+function InvalidNotice({ reason }: { reason: InviteProblem }) {
   return (
     <div className="min-h-screen bg-[#E7DED3] flex items-center justify-center px-4 py-12">
       <div className="bg-[#FBF7F2] rounded-2xl shadow-[0_24px_60px_rgba(63,58,53,0.12)] p-10 w-full max-w-md text-center">
@@ -23,7 +18,7 @@ function InvalidNotice({ reason }: { reason: string }) {
           Intakeformulier
         </h1>
         <p className="text-[#6E665E] text-[15px] leading-relaxed">
-          {REASON_MESSAGE[reason]}
+          {INVITE_MESSAGE[reason]}
         </p>
       </div>
     </div>
