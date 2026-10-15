@@ -77,17 +77,11 @@ export default async function AdminIntakePage() {
           {invites.length === 0 ? (
             <p className="text-[#5E524F]/60 text-sm p-6">Nog geen uitnodigingen.</p>
           ) : (
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="text-left text-[#5E524F]/60 border-b border-[#EDE6DD]">
-                  <th className="px-4 py-3 font-medium">Naam</th>
-                  <th className="px-4 py-3 font-medium">E-mail</th>
-                  <th className="px-4 py-3 font-medium">Verstuurd</th>
-                  <th className="px-4 py-3 font-medium">Status</th>
-                  <th className="px-4 py-3 font-medium"></th>
-                </tr>
-              </thead>
-              <tbody>
+            <>
+              {/* Op een telefoon valt een tabel buiten beeld, en juist de status
+                  en de link naar de inzending staan in de laatste kolommen.
+                  Daar dus kaarten onder elkaar. */}
+              <ul className="md:hidden divide-y divide-[#F5F0EB]">
                 {invites.map((row) => {
                   const s = statusLabel(
                     row,
@@ -96,36 +90,86 @@ export default async function AdminIntakePage() {
                       : undefined
                   );
                   return (
-                    <tr key={row.id} className="border-b border-[#F5F0EB] last:border-0">
-                      <td className="px-4 py-3 text-[#5E524F]">
-                        {row.client_name || "—"}
-                      </td>
-                      <td className="px-4 py-3 text-[#5E524F]">{row.client_email}</td>
-                      <td className="px-4 py-3 text-[#5E524F]/70">
-                        {new Date(row.created_at).toLocaleDateString("nl-NL")}
-                      </td>
-                      <td className="px-4 py-3">
+                    <li key={row.id} className="p-4 flex items-start justify-between gap-3">
+                      <div className="min-w-0">
+                        <p className="text-[#5E524F] font-medium">
+                          {row.client_name || "—"}
+                        </p>
+                        <p className="text-[#5E524F]/70 text-sm break-all">
+                          {row.client_email}
+                        </p>
+                        <p className="text-[#5E524F]/50 text-xs mt-1">
+                          {new Date(row.created_at).toLocaleDateString("nl-NL")}
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-end gap-2 flex-none">
                         <span className={`inline-block px-2.5 py-1 rounded-full text-xs font-medium ${s.className}`}>
                           {s.text}
                         </span>
-                      </td>
-                      <td className="px-4 py-3 text-right">
-                        {row.used_at && row.submission_id ? (
+                        {row.used_at && row.submission_id && (
                           <Link
                             href={`/admin/intake/${row.submission_id}`}
-                            className="text-[#946B66] font-medium hover:underline whitespace-nowrap"
+                            className="text-[#946B66] font-medium text-sm whitespace-nowrap"
                           >
                             Bekijken →
                           </Link>
-                        ) : (
-                          <span className="text-[#5E524F]/30">—</span>
                         )}
-                      </td>
-                    </tr>
+                      </div>
+                    </li>
                   );
                 })}
-              </tbody>
-            </table>
+              </ul>
+
+              <table className="hidden md:table w-full text-sm">
+                <thead>
+                  <tr className="text-left text-[#5E524F]/60 border-b border-[#EDE6DD]">
+                    <th className="px-4 py-3 font-medium">Naam</th>
+                    <th className="px-4 py-3 font-medium">E-mail</th>
+                    <th className="px-4 py-3 font-medium">Verstuurd</th>
+                    <th className="px-4 py-3 font-medium">Status</th>
+                    <th className="px-4 py-3 font-medium"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {invites.map((row) => {
+                    const s = statusLabel(
+                      row,
+                      row.submission_id
+                        ? submissionStatus.get(row.submission_id)
+                        : undefined
+                    );
+                    return (
+                      <tr key={row.id} className="border-b border-[#F5F0EB] last:border-0">
+                        <td className="px-4 py-3 text-[#5E524F]">
+                          {row.client_name || "—"}
+                        </td>
+                        <td className="px-4 py-3 text-[#5E524F]">{row.client_email}</td>
+                        <td className="px-4 py-3 text-[#5E524F]/70">
+                          {new Date(row.created_at).toLocaleDateString("nl-NL")}
+                        </td>
+                        <td className="px-4 py-3">
+                          <span className={`inline-block px-2.5 py-1 rounded-full text-xs font-medium ${s.className}`}>
+                            {s.text}
+                          </span>
+                        </td>
+                        <td className="px-4 py-3 text-right">
+                          {row.used_at && row.submission_id ? (
+                            <Link
+                              href={`/admin/intake/${row.submission_id}`}
+                              className="text-[#946B66] font-medium hover:underline whitespace-nowrap"
+                            >
+                              Bekijken →
+                            </Link>
+                          ) : (
+                            <span className="text-[#5E524F]/30">—</span>
+                          )}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </>
           )}
         </div>
       </section>

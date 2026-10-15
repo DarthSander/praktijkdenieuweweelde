@@ -1,6 +1,7 @@
 import type { NextRequest } from "next/server";
 import { IntakeSubmitError, recordSubmission } from "@/lib/intake";
 import { sendIntakeSubmittedNotice } from "@/lib/intake-mail";
+import { sendPushToAll } from "@/lib/push";
 
 export const runtime = "nodejs";
 
@@ -28,9 +29,11 @@ export async function POST(req: NextRequest) {
   }
 
   let invite;
+  let submissionId;
   try {
     const result = await recordSubmission(token, answers);
     invite = result.invite;
+    submissionId = result.submissionId;
   } catch (err) {
     console.error("Intake-submit mislukt", err);
     const reason = err instanceof IntakeSubmitError ? err.reason : "error";
@@ -53,15 +56,30 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Notificatie aan Eva is best-effort — een mislukte mail mag de opslag niet ongedaan maken.
-  try {
-    await sendIntakeSubmittedNotice({
+  // Twee keer melden, langs twee wegen. De mail loopt over SMTP en de
+  // pushmelding over de adminapp; valt de een uit, dan blijft de ander staan.
+  // Allebei best-effort: een mislukte melding mag de opslag niet ongedaan maken.
+  const wie = invite.client_name
+    ? `${invite.client_name} (${invite.client_email})`
+    : invite.client_email;
+  await Promise.allSettled([
+    sendIntakeSubmittedNotice({
       name: invite.client_name,
       email: invite.client_email,
-    });
-  } catch (err) {
-    console.error("Intake-notificatie mislukt", err);
-  }
+    }).catch((err) => {
+      console.error("Intake-notificatie per mail mislukt", err);
+      throw err;
+    }),
+    sendPushToAll({
+      title: "Intakeformulier ingevuld",
+      body: wie,
+      url: `/admin/intake/${submissionId}`,
+      tag: `intake-${submissionId}`,
+    }).catch((err) => {
+      console.error("Intake-pushmelding mislukt", err);
+      throw err;
+    }),
+  ]);
 
   return Response.json({ ok: true });
 }
