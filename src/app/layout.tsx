@@ -96,10 +96,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       // Vector eerst: moderne browsers tonen het logo dan scherp op elk formaat.
+      // Alleen de bloem, zonder gekleurd vlak. De vierkante iconen staan in het
+      // manifest en gelden voor het beginscherm; hier zouden ze een browser de
+      // kans geven om alsnog een vierkantje in de tab te zetten.
       { url: "/icon.svg", type: "image/svg+xml", sizes: "any" },
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
-      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
     ],
     // iOS gebruikt dit icoon bij "Zet op beginscherm"; zonder deze regel maakt
     // Safari zelf een (piepklein) miniatuurtje van de pagina.
