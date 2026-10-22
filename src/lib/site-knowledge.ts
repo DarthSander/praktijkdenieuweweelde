@@ -36,7 +36,7 @@ const PRACTICE_INFO = `
 
 **Therapeut:** Eva Mulder, IBCT-relatietherapeut
 **Praktijk:** Relatiepraktijk de Nieuwe Weelde
-**Locatie:** Tilburg (Reeshof), werkt aan huis bij koppels in heel Tilburg en omgeving (Berkel-Enschot, Reeshof, Centrum)
+**Locatie:** werkt aan huis bij koppels in heel Tilburg en omgeving (Berkel-Enschot, de Reeshof, Centrum). Is het niet wenselijk om de therapie thuis te ontvangen, dan vindt de sessie plaats op een externe praktijklocatie in Tilburg, vlak bij het centraal station. Het huren van die ruimte kost niets extra. Noem nooit een adres of wijk van de praktijk zelf; die staat niet op de site.
 **Telefoon:** 06-10096923
 **E-mail:** Info@praktijkdenieuweweelde.nl
 **Website:** https://www.praktijkdenieuweweelde.nl
@@ -55,7 +55,7 @@ const PRACTICE_INFO = `
 ## Werkwijze
 - IBCT (Integrative Behavioral Couple Therapy), evidence-based
 - Sessies aan huis bij het koppel
-- Het traject begint met een intakegesprek bij jullie thuis
+- Het traject begint met een intakegesprek bij jullie thuis, of op de externe praktijklocatie als dat prettiger is
 - Gemiddeld traject: 8-20 sessies
 
 ## BELANGRIJK: noem geen gratis kennismakingsgesprek
