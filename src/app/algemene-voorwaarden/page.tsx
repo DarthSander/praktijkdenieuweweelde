@@ -104,7 +104,7 @@ export default function AlgemeneVoorwaarden() {
 
             <section>
               <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">5. Sessies op een externe locatie</h2>
-              <p className="text-sm">De sessies vinden in de regel bij jou thuis plaats. Geef je er de voorkeur aan om elders af te spreken, dan huur ik daarvoor een ruimte op een externe locatie in Tilburg. Je hoort vooraf om welk adres het gaat. Voor het huren van die ruimte breng ik geen extra kosten in rekening; je betaalt dus niet meer dan voor een sessie bij jou thuis.</p>
+              <p className="text-sm">De sessies vinden in de regel bij jou thuis plaats. Geef je er de voorkeur aan om elders af te spreken, dan huur ik daarvoor een ruimte op een externe praktijklocatie in Tilburg, vlak bij het centraal station. Je hoort vooraf om welk adres het gaat. Voor het huren van die ruimte breng ik geen extra kosten in rekening; je betaalt dus niet meer dan voor een sessie bij jou thuis.</p>
               <p className="mt-3 text-sm">Ik reserveer deze ruimtes per tijdsblok. Dat betekent dat de sessie begint en eindigt op het afgesproken tijdstip en niet kan uitlopen. Houd daar rekening mee bij het plannen van je reistijd. Kom je later aan dan afgesproken, dan gaat die tijd af van de sessie.</p>
               <p className="mt-3 text-sm">Is de gereserveerde ruimte onverwacht niet beschikbaar, dan neem ik zo snel mogelijk contact met je op en zoeken we samen naar een andere locatie of een ander moment. In dat geval breng ik je niets in rekening.</p>
             </section>
