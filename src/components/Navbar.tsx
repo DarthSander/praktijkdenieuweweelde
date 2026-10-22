@@ -15,12 +15,16 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Eigen pagina's eerst: wat hier staat, ziet een zoekmachine als de
+  // belangrijkste bestemmingen van de site. Tarieven en Over mij blijven
+  // verwijzingen naar de homepage, want die pagina's bestaan niet apart.
   const links = [
-    { label: "Over mij", href: "/#over-mij" },
-    { label: "IBCT Therapie", href: "/#ibct" },
-    { label: "Werkwijze", href: "/#werkwijze" },
+    { label: "Relatietherapie Tilburg", href: "/relatietherapie-tilburg" },
+    { label: "Aan huis", href: "/relatietherapie-aan-huis" },
+    { label: "IBCT", href: "/ibct-relatietherapie" },
     { label: "Tarieven", href: "/#tarieven" },
     { label: "Blog", href: "/blog" },
+    { label: "Over mij", href: "/#over-mij" },
   ];
 
   const handleLinkClick = () => setMobileOpen(false);

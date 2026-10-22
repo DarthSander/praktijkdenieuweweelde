@@ -17,7 +17,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 mb-12 text-center sm:text-left max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 mb-12 text-center sm:text-left max-w-2xl mx-auto">
           <div>
             <h4 className="text-[#F5F0EB] font-semibold text-sm uppercase tracking-wider mb-4">
               Werkgebied
@@ -39,17 +39,6 @@ export default function Footer() {
               <li><Link href="/blog" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Blog</Link></li>
             </ul>
           </div>
-          <div>
-            <h4 className="text-[#F5F0EB] font-semibold text-sm uppercase tracking-wider mb-4">
-              Info
-            </h4>
-            <ul className="space-y-2.5">
-              <li><Link href="/privacyverklaring" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Privacyverklaring</Link></li>
-              <li><Link href="/algemene-voorwaarden" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Algemene voorwaarden</Link></li>
-              <li><Link href="/klachtenregeling" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Klachtenregeling</Link></li>
-              <li><Link href="/admin/login" className="text-white/55 hover:text-[#E8D5D2] transition text-sm">Inloggen</Link></li>
-            </ul>
-          </div>
         </div>
 
         <div className="text-center">
@@ -68,7 +57,18 @@ export default function Footer() {
             Kasteel Nijenrodestraat 82 &nbsp;&middot;&nbsp; 5037 TH Tilburg
           </p>
           <div className="border-t border-white/10 pt-8 text-white/30 text-sm">
-            &copy; 2026 Relatiepraktijk de Nieuwe Weelde &nbsp;&middot;&nbsp; KVK 72945699 &nbsp;&middot;&nbsp; BTW NL004848689B38
+            <p>
+              &copy; 2026 Relatiepraktijk de Nieuwe Weelde &nbsp;&middot;&nbsp; KVK 72945699 &nbsp;&middot;&nbsp; BTW NL004848689B38
+            </p>
+            {/* De juridische pagina's horen vindbaar te zijn, maar niet even
+                zwaar te wegen als de therapiepagina's hierboven. */}
+            <p className="mt-3 text-xs">
+              <Link href="/privacyverklaring" className="hover:text-[#E8D5D2] transition">Privacyverklaring</Link>
+              &nbsp;&middot;&nbsp;
+              <Link href="/algemene-voorwaarden" className="hover:text-[#E8D5D2] transition">Algemene voorwaarden</Link>
+              &nbsp;&middot;&nbsp;
+              <Link href="/klachtenregeling" className="hover:text-[#E8D5D2] transition">Klachtenregeling</Link>
+            </p>
           </div>
         </div>
       </div>
