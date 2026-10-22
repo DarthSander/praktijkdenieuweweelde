@@ -20,6 +20,7 @@ import LandingFAQ from "@/components/LandingFAQ";
 import RelatedLinks from "@/components/RelatedLinks";
 import { faqJsonLd, type FAQItem } from "@/lib/faq-schema";
 import { getLandingBySlug } from "@/lib/landing-pages";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
 
 const slug = "relatietherapie-aan-huis";
 const page = getLandingBySlug(slug)!;
@@ -130,6 +131,20 @@ const voorWie = [
 export default function Page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", item: "https://www.praktijkdenieuweweelde.nl" },
+              {
+                name: page.title,
+                item: `https://www.praktijkdenieuweweelde.nl/${slug}`,
+              },
+            ])
+          ),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }}
