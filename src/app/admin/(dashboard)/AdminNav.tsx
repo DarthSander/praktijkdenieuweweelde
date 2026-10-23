@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Bell, BellOff, BellRing, ChartColumn, ClipboardList, Compass, LogOut } from "lucide-react";
+import { Bell, BellOff, BellRing, ChartColumn, ClipboardList, Compass, LogOut, MessageCircle } from "lucide-react";
 
 type PushState = "loading" | "unsupported" | "denied" | "off" | "on" | "busy";
 
@@ -11,6 +11,7 @@ const TABS = [
   { href: "/admin/analyse", label: "Analyse", icon: ChartColumn },
   { href: "/admin/herkomst", label: "Herkomst", icon: Compass },
   { href: "/admin/intake", label: "Intake", icon: ClipboardList },
+  { href: "/admin/chat", label: "Vragen", icon: MessageCircle },
 ];
 
 function urlBase64ToUint8Array(base64: string): Uint8Array<ArrayBuffer> {

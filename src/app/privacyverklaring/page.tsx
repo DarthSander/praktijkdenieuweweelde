@@ -181,7 +181,7 @@ export default function Privacyverklaring() {
                 <p><strong>Welke gegevens worden naar Anthropic gestuurd?</strong> Alleen de tekst die je zelf in het chatvenster typt. <em>Voordat</em> je bericht wordt verstuurd, verwijdert mijn server automatisch e-mailadressen en telefoonnummers uit de tekst.</p>
                 <p><strong>Welke gegevens gaan NIET naar Anthropic?</strong> Je naam, contactgegevens, IP-adres en factuurgegevens.</p>
                 <p><strong>Hoe lang bewaar ik chat-gesprekken?</strong> Maximaal 30 dagen, daarna worden ze automatisch verwijderd.</p>
-                <p><strong>Waar staan de gegevens?</strong> In een Supabase-database (regio Frankfurt, EU). Anthropic verwerkt aanvragen binnen de EU/VS, op basis van een Data Processing Addendum en (waar van toepassing) het EU-VS Data Privacy Framework.</p>
+                <p><strong>Waar staan de gegevens?</strong> In een Neon-database (regio Frankfurt, EU). Anthropic verwerkt aanvragen binnen de EU/VS, op basis van een Data Processing Addendum en (waar van toepassing) het EU-VS Data Privacy Framework.</p>
                 <p><strong>Toestemming.</strong> Voordat Bea start, vraag ik je expliciete toestemming. Zonder die toestemming kun je de website gewoon gebruiken en kun je via het contactformulier of telefonisch contact opnemen.</p>
                 <p><strong>Geen medisch advies.</strong> Bea geeft geen diagnoses en is geen vervanging voor een gesprek met Eva. Bij acute nood: bel 112 of 113 Zelfmoordpreventie (0800-0113).</p>
               </div>
