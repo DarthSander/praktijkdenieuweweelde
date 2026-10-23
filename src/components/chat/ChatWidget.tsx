@@ -147,9 +147,17 @@ export default function ChatWidget() {
     }
   }, []);
 
+  // Staat er op dit moment een bericht onderweg? Dit mag niet in state, want
+  // dan weet een tweede toetsaanslag in dezelfde tel er nog niets van.
+  const verzendRef = useRef(false);
+
   const send = useCallback(async () => {
     const text = input.trim();
-    if (!text || stream.isStreaming) return;
+    // stream.isStreaming komt uit state en staat er bij twee toetsaanslagen
+    // vlak na elkaar nog op false: beide aanroepen lezen dezelfde invoer en
+    // versturen hem allebei. Een ref schakelt meteen om, nog in dezelfde tel.
+    if (!text || stream.isStreaming || verzendRef.current) return;
+    verzendRef.current = true;
     setInput("");
 
     const newMsgs: Msg[] = [
@@ -179,21 +187,42 @@ export default function ChatWidget() {
 
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
+      // De server stuurt het sessienummer als eerste regel. Dat kan over
+      // meerdere stukjes verdeeld aankomen, dus wachten we tot de regel
+      // compleet is in plaats van alleen naar het eerste stukje te kijken.
+      // Lukt dat niet, dan begint het volgende bericht een nieuw gesprek en
+      // valt één gesprek uiteen in losse brokjes in de admin.
+      const PREFIX = "__session__:";
       let sessionParsed = false;
+      let buffer = "";
       while (true) {
         const { value, done } = await reader.read();
         if (done) break;
         let chunk = decoder.decode(value, { stream: true });
-        if (!sessionParsed && chunk.startsWith("__session__:")) {
-          const newlineIdx = chunk.indexOf("\n");
-          const sid = chunk.slice("__session__:".length, newlineIdx).trim();
-          if (sid) {
-            sessionIdRef.current = sid;
-            localStorage.setItem(SESSION_KEY, sid);
+
+        if (!sessionParsed) {
+          buffer += chunk;
+          const begintMetPrefix = buffer.startsWith(PREFIX);
+          const kanNogPrefixWorden = !begintMetPrefix && PREFIX.startsWith(buffer);
+          const newlineIdx = buffer.indexOf("\n");
+
+          if (kanNogPrefixWorden) continue;
+          if (begintMetPrefix && newlineIdx === -1) continue;
+
+          if (begintMetPrefix) {
+            const sid = buffer.slice(PREFIX.length, newlineIdx).trim();
+            if (sid) {
+              sessionIdRef.current = sid;
+              localStorage.setItem(SESSION_KEY, sid);
+            }
+            chunk = buffer.slice(newlineIdx + 1);
+          } else {
+            chunk = buffer;
           }
-          chunk = chunk.slice(newlineIdx + 1);
+          buffer = "";
           sessionParsed = true;
         }
+
         if (chunk) stream.push(chunk);
       }
     } catch (err) {
@@ -201,6 +230,7 @@ export default function ChatWidget() {
       console.error(err);
       stream.push("Sorry, er ging iets mis. Probeer het zo opnieuw.");
     } finally {
+      verzendRef.current = false;
       stream.finish();
     }
   }, [input, messages, stream]);
