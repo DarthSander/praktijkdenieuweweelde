@@ -32,7 +32,7 @@ export default function Page() {
 
       <h2>1. De drempel is lager</h2>
       <p>
-        Onderzoek laat zien dat koppels gemiddeld zo&apos;n tweeënhalf tot drie jaar wachten voordat ze hulp zoeken. Een deel daarvan is twijfel, maar een groot deel is praktisch: oppas, reistijd, werk. Aan huis vallen die drempels weg. Het enige dat jullie hoeven te doen is de deur opendoen.
+        Onderzoek laat zien dat koppels gemiddeld tweeënhalf tot drie jaar wachten voordat ze hulp zoeken. Een deel van dat uitstel is twijfel. Is het allemaal wel zo erg? Is het niet gewoon een fase? Een ander deel is praktisch. Er moet oppas komen, er is reistijd en het moet naast het werk passen. Aan huis vallen die praktische drempels weg, maar het blijft een flinke stap om te zetten.
       </p>
 
       <h2>2. Jullie zijn meer jezelf in een vertrouwde omgeving</h2>
