@@ -42,7 +42,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Wordt individuele relatietherapie vergoed?",
-    a: "Relatietherapie wordt doorgaans niet vergoed door de basisverzekering. Raadpleeg je aanvullende verzekering.",
+    a: "De basisverzekering dekt het niet. Raadpleeg je aanvullende verzekering en je polisvoorwaarden om te kijken of je in aanmerking komt voor mogelijke vergoedingen.",
   },
   {
     q: "Waar vinden de sessies plaats?",

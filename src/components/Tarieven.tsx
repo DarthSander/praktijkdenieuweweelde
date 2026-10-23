@@ -101,7 +101,7 @@ export default function Tarieven() {
         </p>
 
         <p className="text-center text-xs text-[#C4A4A0] mt-3">
-          * Relatietherapie wordt doorgaans niet vergoed door de basisverzekering. Raadpleeg je aanvullende verzekering. Tarieven zijn exclusief 21% btw.
+          * De basisverzekering dekt het niet. Raadpleeg je aanvullende verzekering en je polisvoorwaarden om te kijken of je in aanmerking komt voor mogelijke vergoedingen. Tarieven zijn exclusief 21% btw.
         </p>
       </div>
     </section>
