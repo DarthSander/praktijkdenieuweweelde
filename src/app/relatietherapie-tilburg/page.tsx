@@ -42,7 +42,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Wordt relatietherapie vergoed door de zorgverzekeraar?",
-    a: "Relatietherapie valt niet onder de basisverzekering en wordt dus niet vergoed. Sommige aanvullende verzekeringen vergoeden een deel onder systeemtherapie. Steeds meer werkgevers bieden vergoeding via een vitaliteitsbudget of EAP-regeling.",
+    a: "De basisverzekering dekt het niet. Raadpleeg je aanvullende verzekering en je polisvoorwaarden om te kijken of je in aanmerking komt voor mogelijke vergoedingen.",
   },
   {
     q: "Wij twijfelen of relatietherapie iets voor ons is.",

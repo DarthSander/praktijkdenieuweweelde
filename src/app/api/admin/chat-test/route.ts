@@ -1,7 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { getAdminSession } from "@/lib/auth";
 import { chatFoutDetails } from "@/lib/chat-log";
-import { CHAT_MODEL } from "@/lib/chat-model";
+import { CHAT_MODEL, CHAT_OUTPUT_CONFIG } from "@/lib/chat-model";
 
 export const runtime = "nodejs";
 
@@ -31,7 +31,8 @@ export async function POST() {
     const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
     const bericht = await anthropic.messages.create({
       model: CHAT_MODEL,
-      max_tokens: 16,
+      max_tokens: 64,
+      output_config: CHAT_OUTPUT_CONFIG,
       messages: [{ role: "user", content: "Antwoord met het woord: werkt" }],
     });
     const tekst = bericht.content

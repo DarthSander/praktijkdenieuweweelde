@@ -3,7 +3,7 @@ import { after, type NextRequest } from "next/server";
 import { buildChatSystemPrompt } from "@/lib/site-knowledge";
 import { getSql } from "@/lib/db";
 import { logChatFout } from "@/lib/chat-log";
-import { CHAT_MODEL } from "@/lib/chat-model";
+import { CHAT_MAX_TOKENS, CHAT_MODEL, CHAT_OUTPUT_CONFIG } from "@/lib/chat-model";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -98,7 +98,8 @@ export async function POST(req: NextRequest) {
       try {
         const response = await anthropic.messages.stream({
           model: CHAT_MODEL,
-          max_tokens: 1024,
+          max_tokens: CHAT_MAX_TOKENS,
+          output_config: CHAT_OUTPUT_CONFIG,
           system: [
             {
               type: "text",
