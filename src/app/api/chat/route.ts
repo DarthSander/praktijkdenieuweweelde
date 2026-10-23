@@ -1,5 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
-import type { NextRequest } from "next/server";
+import { after, type NextRequest } from "next/server";
 import { buildChatSystemPrompt } from "@/lib/site-knowledge";
 import { getSql } from "@/lib/db";
 
@@ -53,6 +53,19 @@ export async function POST(req: NextRequest) {
         returning id
       `) as { id: string }[];
       sessionId = rows[0]?.id ?? undefined;
+      // Een nieuw gesprek is een goed moment om de oude op te ruimen. De
+      // dagelijkse taak doet dit ook; dit is de vangnetvariant. Na het
+      // antwoord, zodat de bezoeker er niet op wacht, en los van de
+      // foutafhandeling hierboven: mislukt het opruimen, dan mag dat het
+      // opslaan van het bericht niet in de weg zitten.
+      const db = sql;
+      after(async () => {
+        try {
+          await db`select purge_old_chat()`;
+        } catch (err) {
+          console.error("Opschonen van oude chats mislukt", err);
+        }
+      });
     }
     if (sessionId) {
       const lastUser = messages[messages.length - 1];

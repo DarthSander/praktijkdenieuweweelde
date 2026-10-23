@@ -178,10 +178,19 @@ create table if not exists app_settings (
 
 -- ---------- Bewaartermijn-helper ----------
 
--- Chat sessions + messages ouder dan 30 dagen wissen.
-create or replace function purge_old_chat()
-returns void language sql as $$
+-- Chat sessions + messages ouder dan 30 dagen wissen. De privacyverklaring
+-- belooft dat dit vanzelf gebeurt; /api/cron/purge roept dit dagelijks aan.
+-- Het aantal gewiste gesprekken komt terug, zodat de aanroeper iets kan loggen.
+-- Eerst droppen: een bestaande functie kan niet van retourtype veranderen.
+drop function if exists purge_old_chat();
+create function purge_old_chat()
+returns integer language plpgsql as $$
+declare verwijderd integer;
+begin
   delete from chat_sessions where created_at < now() - interval '30 days';
+  get diagnostics verwijderd = row_count;
+  return verwijderd;
+end;
 $$;
 
 -- ---------- Eenmalige correctie ----------
