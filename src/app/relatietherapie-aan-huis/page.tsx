@@ -58,6 +58,10 @@ const faqs: FAQItem[] = [
     a: "Therapie aan huis is net zo effectief als in een praktijk wanneer de therapeut en methode goed aansluiten. Thuis ervaren veel stellen meer rust, maar we letten er wel op dat de sessie ongestoord kan plaatsvinden.",
   },
   {
+    q: "Wat als we de sessie liever niet bij ons thuis hebben?",
+    a: "Dan reserveer ik een externe praktijklocatie nabij het centraal station voor onze afspraken. Dat kost jullie niets extra. Zo'n ruimte reserveer ik per tijdsblok, dus de sessie begint en eindigt op de afgesproken tijd.",
+  },
+  {
     q: "Hoe zit het met privacy?",
     a: "Jullie privacy is gewaarborgd; gesprekken blijven vertrouwelijk en vallen onder beroepsgeheim. Er wordt niets gedeeld dat naar jullie herleidbaar is.",
   },

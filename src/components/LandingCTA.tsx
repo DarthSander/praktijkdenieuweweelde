@@ -8,7 +8,7 @@ type Props = {
 
 export default function LandingCTA({
   title = "Klaar voor een eerste gesprek?",
-  text = "Een intakegesprek vindt plaats bij jullie thuis. We verkennen samen jullie situatie en of IBCT passend is.",
+  text = "Een intakegesprek vindt plaats bij jullie thuis of op een externe praktijklocatie. We verkennen samen jullie situatie en of IBCT passend is.",
   buttonLabel = "Plan een intakegesprek",
 }: Props) {
   return (
