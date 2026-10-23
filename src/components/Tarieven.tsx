@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 const plans = [
   {
     title: "Relatietherapie Sessie",
-    subtitle: "Intake of vervolgsessie bij jullie thuis",
+    subtitle: "Intake of vervolgsessie bij jullie thuis of op een externe praktijklocatie",
     sessions: "Gemiddeld 10 sessies",
     price: 155,
     priceSuffix: ",-",

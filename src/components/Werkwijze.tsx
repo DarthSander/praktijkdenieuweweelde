@@ -31,7 +31,7 @@ export default function Werkwijze() {
               Thuis in <span className="font-normal">Tilburg</span>
             </h2>
             <p className="text-[#5E524F] text-base leading-relaxed mb-10">
-              Relatietherapie kan spannend voelen. Daarom draai ik het om: jullie hoeven niet naar een praktijkruimte, maar ik kom naar jullie toe, in jullie eigen vertrouwde omgeving.
+              Relatietherapie kan spannend voelen. Daarom draai ik het om: ik kom naar jullie toe, in jullie eigen vertrouwde omgeving. Is thuis niet wenselijk, dan is het ook mogelijk om de sessies plaats te laten vinden op een externe praktijklocatie op loopafstand van het station.
             </p>
             <div className="space-y-8">
               {features.map((feature) => (
