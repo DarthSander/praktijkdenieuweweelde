@@ -2,6 +2,8 @@ import Anthropic from "@anthropic-ai/sdk";
 import { after, type NextRequest } from "next/server";
 import { buildChatSystemPrompt } from "@/lib/site-knowledge";
 import { getSql } from "@/lib/db";
+import { logChatFout } from "@/lib/chat-log";
+import { CHAT_MODEL } from "@/lib/chat-model";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -38,6 +40,7 @@ export async function POST(req: NextRequest) {
   }
 
   if (!process.env.ANTHROPIC_API_KEY) {
+    await logChatFout(new Error("ANTHROPIC_API_KEY ontbreekt in deze omgeving"));
     return Response.json({ error: "ANTHROPIC_API_KEY ontbreekt" }, { status: 500 });
   }
 
@@ -94,7 +97,7 @@ export async function POST(req: NextRequest) {
 
       try {
         const response = await anthropic.messages.stream({
-          model: "claude-sonnet-4-6",
+          model: CHAT_MODEL,
           max_tokens: 1024,
           system: [
             {
@@ -130,8 +133,11 @@ export async function POST(req: NextRequest) {
         }
       } catch (err) {
         console.error("Anthropic stream error", err);
+        await logChatFout(err);
         controller.enqueue(
-          encoder.encode("\n\n_Er ging iets mis. Probeer het zo opnieuw._")
+          encoder.encode(
+            "\n\n_Er ging iets mis. Probeer het zo opnieuw, of stuur een bericht via het contactformulier._"
+          )
         );
       } finally {
         controller.close();

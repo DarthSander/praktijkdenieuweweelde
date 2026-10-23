@@ -166,6 +166,21 @@ create table if not exists push_subscriptions (
   created_at  timestamptz not null default now()
 );
 
+-- ---------- Storingen van het chatvenster ----------
+
+-- Als het chatvenster strandt, ziet de bezoeker alleen "er ging iets mis".
+-- De reden hoort hier, zodat de adminpagina kan laten zien wat er aan de hand
+-- is: een ongeldige sleutel ziet er anders uit dan een lege rekening.
+create table if not exists chat_errors (
+  id        bigserial primary key,
+  seen_at   timestamptz not null default now(),
+  status    integer,
+  code      text,
+  message   text
+);
+
+create index if not exists chat_errors_seen_idx on chat_errors(seen_at desc);
+
 -- ---------- Instellingen ----------
 
 -- Automatisch aangemaakte instellingen, zoals de VAPID-sleutels voor push
@@ -187,6 +202,9 @@ create function purge_old_chat()
 returns integer language plpgsql as $$
 declare verwijderd integer;
 begin
+  -- Storingsregels bevatten geen tekst van bezoekers, maar hoeven ook niet
+  -- eeuwig te blijven staan.
+  delete from chat_errors where seen_at < now() - interval '90 days';
   delete from chat_sessions where created_at < now() - interval '30 days';
   get diagnostics verwijderd = row_count;
   return verwijderd;

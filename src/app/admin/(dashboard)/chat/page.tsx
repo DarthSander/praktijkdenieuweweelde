@@ -1,4 +1,5 @@
 import { getSql } from "@/lib/db";
+import ChatTest from "./ChatTest";
 
 export const dynamic = "force-dynamic";
 
@@ -34,11 +35,26 @@ function telWoorden(vragen: string[]): [string, number][] {
   return [...tel.entries()].sort((a, b) => b[1] - a[1]).slice(0, 18);
 }
 
+type Storing = {
+  seen_at: Date;
+  status: number | null;
+  code: string | null;
+  message: string | null;
+};
+
 export default async function AdminChatPage() {
   let rijen: VraagRij[] = [];
+  let storingen: Storing[] = [];
   let fout = false;
   try {
     const sql = getSql();
+    storingen = (await sql`
+      select seen_at, status, code, message
+      from chat_errors
+      where seen_at > now() - interval '30 days'
+      order by seen_at desc
+      limit 3
+    `) as Storing[];
     rijen = (await sql`
       select s.id as session_id,
              s.page_url,
@@ -72,6 +88,39 @@ export default async function AdminChatPage() {
           E-mailadressen en telefoonnummers zijn er al uit gehaald voordat ze
           werden opgeslagen.
         </p>
+      </section>
+
+      <section className="space-y-4">
+        <ChatTest />
+        {storingen.length > 0 && (
+          <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <h2 className="font-semibold text-amber-900">
+              Het chatvenster liep vast
+            </h2>
+            <p className="text-amber-900/80 text-sm mt-1">
+              De bezoeker kreeg op dat moment alleen te zien dat er iets misging.
+              Dit is wat eronder zat.
+            </p>
+            <ul className="mt-3 space-y-2">
+              {storingen.map((s, i) => (
+                <li key={i} className="text-sm text-amber-900">
+                  <span className="text-amber-900/70">
+                    {new Date(s.seen_at).toLocaleString("nl-NL", {
+                      day: "numeric",
+                      month: "long",
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })}
+                    {" · "}
+                  </span>
+                  {s.status ? `${s.status} · ` : ""}
+                  {s.code ? `${s.code} · ` : ""}
+                  <span className="break-words">{s.message}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </section>
 
       {fout ? (
