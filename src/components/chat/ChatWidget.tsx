@@ -147,9 +147,17 @@ export default function ChatWidget() {
     }
   }, []);
 
+  // Staat er op dit moment een bericht onderweg? Dit mag niet in state, want
+  // dan weet een tweede toetsaanslag in dezelfde tel er nog niets van.
+  const verzendRef = useRef(false);
+
   const send = useCallback(async () => {
     const text = input.trim();
-    if (!text || stream.isStreaming) return;
+    // stream.isStreaming komt uit state en staat er bij twee toetsaanslagen
+    // vlak na elkaar nog op false: beide aanroepen lezen dezelfde invoer en
+    // versturen hem allebei. Een ref schakelt meteen om, nog in dezelfde tel.
+    if (!text || stream.isStreaming || verzendRef.current) return;
+    verzendRef.current = true;
     setInput("");
 
     const newMsgs: Msg[] = [
@@ -222,6 +230,7 @@ export default function ChatWidget() {
       console.error(err);
       stream.push("Sorry, er ging iets mis. Probeer het zo opnieuw.");
     } finally {
+      verzendRef.current = false;
       stream.finish();
     }
   }, [input, messages, stream]);
