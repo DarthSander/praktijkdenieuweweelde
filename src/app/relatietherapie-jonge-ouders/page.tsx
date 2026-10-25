@@ -36,7 +36,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "We hebben gewoon geen tijd voor therapie, kan dat wel?",
-    a: "Daarom kom ik bij jullie thuis, ook 's avonds. Veel jonge ouders kiezen voor sessies om 20:00 of 20:30, zodra de kleine slaapt. Geen oppas, geen reistijd. Eén sessie per twee weken is goed haalbaar, ook als jullie leven al vol zit.",
+    a: "Daarom kom ik bij jullie thuis, ook 's avonds. Veel jonge ouders kiezen voor een sessie in de avond, zodra de kleine slaapt. Geen oppas, geen reistijd. Eén sessie per twee weken is goed haalbaar, ook als jullie leven al vol zit.",
   },
   {
     q: "Mag ons kind er bij zijn als het nog heel klein is?",
@@ -233,7 +233,7 @@ export default function Page() {
                 {
                   icon: Moon,
                   title: "Avondsessies",
-                  text: "Veel koppels kiezen voor 20:00 of 20:30. Na de avondroutine, als het in huis rustig is.",
+                  text: "Veel koppels kiezen voor een sessie in de avond. Na de avondroutine, als het in huis rustig is.",
                 },
                 {
                   icon: Users,

@@ -144,18 +144,6 @@ const jsonLd = {
     latitude: 51.5556,
     longitude: 5.0089,
   },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ],
-    description: "Op afspraak",
-  },
   areaServed: [
     { "@type": "City", name: "Tilburg" },
     { "@type": "AdministrativeArea", name: "Reeshof" },

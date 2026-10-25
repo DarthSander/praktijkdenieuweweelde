@@ -38,7 +38,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Hoe snel kunnen wij starten?",
-    a: "De wachttijd voor een intakegesprek varieert, maar is meestal één tot twee weken. Bij acute situaties probeer ik eerder ruimte te maken.",
+    a: "Dat hangt af van wat er op dat moment vrij is. Stuur een bericht via het contactformulier, dan laat ik weten wanneer er ruimte is.",
   },
   {
     q: "Wordt relatietherapie vergoed door de zorgverzekeraar?",
