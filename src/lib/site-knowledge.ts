@@ -41,9 +41,10 @@ const PRACTICE_INFO = `
 **E-mail:** Info@praktijkdenieuweweelde.nl
 **Website:** https://www.praktijkdenieuweweelde.nl
 
-## Werkdagen
-- Maandag t/m vrijdag: 18:00 - 21:00 (avondsessies)
-- Zaterdag: 13:00 - 17:00
+## Werktijden en beschikbaarheid
+- Er zijn GEEN vaste werktijden. Noem nooit dagen, tijden, dagdelen of openingstijden, ook niet bij benadering.
+- Sessies in de avond en in het weekend zijn mogelijk. Meer zeg je er niet over.
+- Doe geen enkele uitspraak over wachttijd, hoe snel iemand terecht kan of hoeveel ruimte er is. Wanneer iets kan, bespreekt Eva zelf. Verwijs daarvoor naar het contactformulier.
 - Sessies duren 75 minuten (vanaf 1 oktober 2026; daarvoor 90 minuten)
 
 ## Tarieven (vanaf 1 oktober 2026, exclusief btw)
