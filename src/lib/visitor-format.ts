@@ -1,19 +1,52 @@
 // Weergave-helpers voor de bezoekersanalyse (server en client).
 
-const COUNTRY_NAMES: Record<string, string> = {
-  NL: "Nederland",
-  BE: "België",
-  DE: "Duitsland",
-  FR: "Frankrijk",
-  GB: "Verenigd Koninkrijk",
-  US: "Verenigde Staten",
+// Landnamen komen uit de browser- of serverbibliotheek zelf, zodat ook Spanje,
+// Polen of Marokko een Nederlandse naam krijgen in plaats van een code.
+let landnamen: Intl.DisplayNames | null = null;
+function landnaam(code: string): string {
+  try {
+    landnamen ??= new Intl.DisplayNames(["nl"], { type: "region" });
+    return landnamen.of(code.toUpperCase()) ?? code;
+  } catch {
+    return code;
+  }
+}
+
+// Provincies kent Intl niet; dit zijn de twaalf codes die Vercel teruggeeft.
+const PROVINCIES: Record<string, string> = {
+  DR: "Drenthe",
+  FL: "Flevoland",
+  FR: "Friesland",
+  GE: "Gelderland",
+  GR: "Groningen",
+  LI: "Limburg",
+  NB: "Noord-Brabant",
+  NH: "Noord-Holland",
+  OV: "Overijssel",
+  UT: "Utrecht",
+  ZE: "Zeeland",
+  ZH: "Zuid-Holland",
 };
 
+function regionaam(region: string, country: string | null): string {
+  if (country === "NL") return PROVINCIES[region.toUpperCase()] ?? region;
+  return region;
+}
+
+/**
+ * De plaats komt van het IP-adres en is dus een benadering: vaak het knooppunt
+ * van de provider in plaats van de woonplaats. Daarom liever een leesbare
+ * provincie dan een code, en liever "Onbekend" dan iets wat suggereert dat we
+ * het zeker weten.
+ */
 export function formatLocation(city: string | null, region: string | null, country: string | null): string {
-  const countryName = country ? (COUNTRY_NAMES[country] ?? country) : null;
+  const countryName = country ? landnaam(country) : null;
   if (city && countryName) return country === "NL" ? city : `${city}, ${countryName}`;
   if (city) return city;
-  if (region && countryName) return `${region}, ${countryName}`;
+  if (region && countryName) {
+    const naam = regionaam(region, country);
+    return country === "NL" ? naam : `${naam}, ${countryName}`;
+  }
   return countryName ?? "Onbekend";
 }
 
