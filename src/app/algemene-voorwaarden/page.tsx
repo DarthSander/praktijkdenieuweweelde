@@ -30,7 +30,7 @@ export default function AlgemeneVoorwaarden() {
           <h1 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-2">
             Algemene Voorwaarden
           </h1>
-          <p className="text-[#B0ADAB] text-sm mb-12">Laatst bijgewerkt: 15 november 2026</p>
+          <p className="text-[#B0ADAB] text-sm mb-12">Laatst bijgewerkt: 22 oktober 2026</p>
 
           <div className="prose prose-sm max-w-none text-[#5E524F] space-y-10">
 
@@ -121,9 +121,6 @@ export default function AlgemeneVoorwaarden() {
                 <li>Betaling dient te geschieden binnen <strong>14 dagen</strong> na factuurdatum.</li>
                 <li>Bij uitblijven van betaling na de vervaldatum is de therapeut gerechtigd een herinnering te sturen en – bij verdere nalatigheid – incassomaatregelen te treffen. De bijkomende kosten zijn voor rekening van de cliënt.</li>
               </ul>
-
-              <h3 className="font-semibold text-[#6B6866] mt-5 mb-2">Een openstaande factuur en de volgende afspraak</h3>
-              <p className="text-sm">Is een factuur na 14 dagen niet betaald, dan stuur ik een herinnering. Blijft de betaling daarna uit, dan laat ik de volgende sessie niet doorgaan zolang de factuur openstaat. Ik laat je dat op tijd weten, niet pas op de dag van de afspraak. De sessie die daardoor niet doorgaat breng ik niet in rekening.</p>
             </section>
 
             <section>
