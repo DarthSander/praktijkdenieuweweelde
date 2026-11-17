@@ -30,7 +30,7 @@ export default function AlgemeneVoorwaarden() {
           <h1 className="text-3xl md:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-2">
             Algemene Voorwaarden
           </h1>
-          <p className="text-[#B0ADAB] text-sm mb-12">Laatst bijgewerkt: 15 november 2026</p>
+          <p className="text-[#B0ADAB] text-sm mb-12">Laatst bijgewerkt: 17 november 2026</p>
 
           <div className="prose prose-sm max-w-none text-[#5E524F] space-y-10">
 
@@ -93,7 +93,7 @@ export default function AlgemeneVoorwaarden() {
                 </div>
                 <div className="bg-white rounded-xl p-4">
                   <p className="font-semibold mb-1">Niet verschijnen</p>
-                  <p>Verschijn je zonder bericht niet op de afspraak, dan breng ik het volledige sessietarief in rekening. Vindt de sessie plaats op een externe locatie, dan komen daar de reserveringskosten van de ruimte bij.</p>
+                  <p>Verschijn je zonder bericht niet op de afspraak, dan breng ik het volledige sessietarief in rekening. Vindt de sessie plaats op een externe locatie, dan komen de reserveringskosten van de ruimte daarbij.</p>
                 </div>
               </div>
 
@@ -106,7 +106,7 @@ export default function AlgemeneVoorwaarden() {
 
             <section>
               <h2 className="text-xl font-[family-name:var(--font-playfair)] font-bold text-[#6B6866] mb-3">5. Sessies op een externe locatie</h2>
-              <p className="text-sm">De sessies vinden in de regel bij jou thuis plaats. Geef je er de voorkeur aan om elders af te spreken, dan huur ik daarvoor een ruimte op een externe praktijklocatie in Tilburg, vlak bij het centraal station. Je hoort vooraf om welk adres het gaat. Voor het huren van die ruimte breng ik geen extra kosten in rekening; je betaalt dus niet meer dan voor een sessie bij jou thuis.</p>
+              <p className="text-sm">De sessies vinden in de regel bij jou thuis plaats. Geef je er de voorkeur aan om elders af te spreken, dan huur ik daarvoor een ruimte op een externe praktijklocatie in Tilburg, vlak bij het centraal station. Je hoort vooraf om welk adres het gaat. Gaat de sessie door, dan breng ik voor het huren van die ruimte geen extra kosten in rekening. Je betaalt dan niet meer dan voor een sessie bij jou thuis.</p>
               <p className="mt-3 text-sm">Ik reserveer deze ruimtes per tijdsblok. Dat betekent dat de sessie begint en eindigt op het afgesproken tijdstip en niet kan uitlopen. Houd daar rekening mee bij het plannen van je reistijd. Kom je later aan dan afgesproken, dan gaat die tijd af van de sessie.</p>
               <p className="mt-3 text-sm">Is de gereserveerde ruimte onverwacht niet beschikbaar, dan neem ik zo snel mogelijk contact met je op en zoeken we samen naar een andere locatie of een ander moment. In dat geval breng ik je niets in rekening.</p>
             </section>
