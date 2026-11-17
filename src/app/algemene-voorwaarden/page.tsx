@@ -93,7 +93,7 @@ export default function AlgemeneVoorwaarden() {
                 </div>
                 <div className="bg-white rounded-xl p-4">
                   <p className="font-semibold mb-1">Niet verschijnen</p>
-                  <p>Verschijn je zonder bericht niet op de afspraak, dan breng ik het volledige sessietarief in rekening. Vindt de sessie plaats op een externe locatie, dan komen de reserveringskosten van de ruimte daarbij. Die ruimte heb ik dan al betaald.</p>
+                  <p>Verschijn je zonder bericht niet op de afspraak, dan breng ik het volledige sessietarief in rekening. Vindt de sessie plaats op een externe locatie, dan komen de reserveringskosten van de ruimte daarbij.</p>
                 </div>
               </div>
 
