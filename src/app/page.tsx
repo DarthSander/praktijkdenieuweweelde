@@ -1,7 +1,6 @@
 import AOSProvider from "@/components/AOSProvider";
 import ScrollProgress from "@/components/ScrollProgress";
 import FloatingParticles from "@/components/FloatingParticles";
-import CookieBanner from "@/components/CookieBanner";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import QuoteBanner from "@/components/QuoteBanner";
@@ -30,7 +29,6 @@ export default function Home() {
       <Tarieven />
       <Contact />
       <Footer />
-      <CookieBanner />
     </AOSProvider>
   );
 }
