@@ -40,7 +40,7 @@ export default function CookieBanner() {
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl border border-[#EDE6DD] p-5 md:p-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
             <div className="flex-1 text-sm text-[#5E524F] leading-relaxed">
               <span className="font-semibold text-[#6B6866]">Ik gebruik cookies.</span>{" "}
-              Deze website gebruikt alleen functionele cookies die noodzakelijk zijn voor een goede werking. Er worden geen tracking- of marketingcookies gebruikt.{" "}
+              Een deel is nodig om de site te laten werken. Daarnaast houd ik bij welke pagina&apos;s worden gelezen, zodat ik de site kan verbeteren. Daarvoor gebruik ik Google Analytics en een eigen teller. Dat gebeurt alleen als je hieronder akkoord gaat.{" "}
               <a href="/privacyverklaring" className="text-[#946B66] underline underline-offset-2 hover:text-[#6B6866] transition">
                 Meer informatie
               </a>

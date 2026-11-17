@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 interface CookieSettingsProps {
   onClose: () => void;
   onAccept: () => void;
@@ -7,6 +9,9 @@ interface CookieSettingsProps {
 }
 
 export default function CookieSettings({ onClose, onAccept, onDecline }: CookieSettingsProps) {
+  // Het schuifje staat uit tot iemand het zelf aanzet. Opslaan volgt die stand.
+  const [analytisch, setAnalytisch] = useState(false);
+
   return (
     <div className="fixed inset-0 z-[300] flex items-end sm:items-center justify-center p-4">
       {/* Backdrop */}
@@ -41,17 +46,26 @@ export default function CookieSettings({ onClose, onAccept, onDecline }: CookieS
           </div>
 
           {/* Analytisch */}
-          <div className="flex items-start justify-between gap-4 p-4 bg-[#F5F0EB] rounded-xl opacity-60">
+          <div className="flex items-start justify-between gap-4 p-4 bg-[#F5F0EB] rounded-xl">
             <div>
               <p className="font-semibold text-sm text-[#6B6866] mb-1">Analytische cookies</p>
               <p className="text-xs text-[#5E524F] leading-relaxed">
-                Ik maak momenteel geen gebruik van analytische cookies.
+                Hiermee houd ik bij welke pagina&apos;s worden gelezen en hoe bezoekers op de site terechtkomen. Ik gebruik daarvoor Google Analytics en een eigen teller. Daaraan kan ik niet zien wie je bent.
               </p>
             </div>
             <div className="flex-shrink-0">
-              <div className="w-11 h-6 bg-[#EDE6DD] rounded-full flex items-center justify-start px-1 cursor-not-allowed">
-                <div className="w-4 h-4 bg-white rounded-full shadow" />
-              </div>
+              <button
+                type="button"
+                role="switch"
+                aria-checked={analytisch}
+                aria-label="Analytische cookies"
+                onClick={() => setAnalytisch((v) => !v)}
+                className={`w-11 h-6 rounded-full flex items-center px-1 transition ${
+                  analytisch ? "bg-[#946B66] justify-end" : "bg-[#EDE6DD] justify-start"
+                }`}
+              >
+                <span className="w-4 h-4 bg-white rounded-full shadow block" />
+              </button>
             </div>
           </div>
 
@@ -79,7 +93,7 @@ export default function CookieSettings({ onClose, onAccept, onDecline }: CookieS
             Weigeren
           </button>
           <button
-            onClick={onAccept}
+            onClick={() => (analytisch ? onAccept() : onDecline())}
             className="px-5 py-2 rounded-full text-sm font-semibold bg-[#946B66] text-white hover:bg-[#7A5955] transition"
           >
             Opslaan &amp; sluiten
