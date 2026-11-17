@@ -3,9 +3,10 @@
 interface CookieSettingsProps {
   onClose: () => void;
   onAccept: () => void;
+  onDecline: () => void;
 }
 
-export default function CookieSettings({ onClose, onAccept }: CookieSettingsProps) {
+export default function CookieSettings({ onClose, onAccept, onDecline }: CookieSettingsProps) {
   return (
     <div className="fixed inset-0 z-[300] flex items-end sm:items-center justify-center p-4">
       {/* Backdrop */}
@@ -72,10 +73,10 @@ export default function CookieSettings({ onClose, onAccept }: CookieSettingsProp
 
         <div className="mt-6 flex gap-3 justify-end">
           <button
-            onClick={onClose}
+            onClick={onDecline}
             className="px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#D4B5B1] text-[#946B66] hover:bg-[#F5F0EB] transition"
           >
-            Annuleren
+            Weigeren
           </button>
           <button
             onClick={onAccept}

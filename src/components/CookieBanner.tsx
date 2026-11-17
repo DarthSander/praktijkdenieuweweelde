@@ -2,19 +2,25 @@
 
 import { useEffect, useState } from "react";
 import CookieSettings from "./CookieSettings";
+import { leesConsent, zetConsent } from "./Meting";
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem("cookie-consent");
-    if (!consent) setVisible(true);
+    if (!leesConsent()) setVisible(true);
   }, []);
 
   const accept = () => {
-    localStorage.setItem("cookie-consent", "accepted");
+    zetConsent("accepted");
     setVisible(false);
+  };
+
+  const decline = () => {
+    zetConsent("declined");
+    setVisible(false);
+    setSettingsOpen(false);
   };
 
   if (!visible && !settingsOpen) return null;
@@ -25,6 +31,7 @@ export default function CookieBanner() {
         <CookieSettings
           onClose={() => setSettingsOpen(false)}
           onAccept={() => { accept(); setSettingsOpen(false); }}
+          onDecline={decline}
         />
       )}
 
@@ -44,6 +51,12 @@ export default function CookieBanner() {
                 className="px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#D4B5B1] text-[#946B66] hover:bg-[#F5F0EB] transition"
               >
                 Instellingen
+              </button>
+              <button
+                onClick={decline}
+                className="px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#D4B5B1] text-[#946B66] hover:bg-[#F5F0EB] transition"
+              >
+                Weigeren
               </button>
               <button
                 onClick={accept}
