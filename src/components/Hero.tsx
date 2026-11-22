@@ -2,7 +2,7 @@
 
 import { Fragment, useEffect, useRef, useState } from "react";
 
-import { ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import HeroCarousel from "./HeroCarousel";
 import MagneticButton from "./MagneticButton";
 import { getUniqueBlogImages } from "@/lib/blog-posts";
@@ -167,9 +167,10 @@ export default function Hero() {
           <MagneticButton className="inline-block">
             <a
               href="#contact"
-              className="btn-secondary inline-block px-8 py-4 rounded-full text-lg font-semibold"
+              className="btn-primary inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold"
             >
               Naar het contactformulier
+              <ArrowRight className="w-5 h-5" />
             </a>
           </MagneticButton>
         </div>
