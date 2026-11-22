@@ -145,12 +145,24 @@ button.btn-secondary:hover,
 }
 
 /* Card hover */
+/* Kaarten zijn wit met een dun lijntje in plaats van een gevulde vlakte.
+   Vier gevulde kaarten naast elkaar maken van een pagina een lappendeken.
+   Het element staat in de selector, zodat deze regels winnen van een
+   achtergrondkleur en een hoekafronding die in de opmaak meegegeven zijn. */
+div.card-hover,
+a.card-hover,
 .card-hover {
+  background-color: #fff;
+  border: 1px solid rgba(148, 107, 102, 0.16);
+  border-radius: 10px 26px 10px 26px;
   transition: all 0.3s ease;
 }
 
+div.card-hover:hover,
+a.card-hover:hover,
 .card-hover:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  border-color: rgba(148, 107, 102, 0.32);
+  box-shadow: 0 20px 25px -5px rgba(94, 82, 79, 0.07), 0 8px 10px -6px rgba(94, 82, 79, 0.05);
 }
 
 .card-hover:hover .card-icon {
