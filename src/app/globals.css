@@ -53,31 +53,43 @@ h1, h2, h3, h4, h5, h6 {
 /* === Uniform button styles === */
 
 /* Primary: sage filled */
+/* De vorm staat hier en niet bij elke knop apart: één hoek rond, één hoek
+   hoekig, als een blaadje. De selector noemt het element erbij, zodat deze
+   regels het winnen van een rounded-full die er in de opmaak bij staat. */
+a.btn-primary,
+button.btn-primary,
 .btn-primary {
-  background-color: var(--color-sage);
-  color: white;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(196, 164, 160, 0.25);
-}
-
-.btn-primary:hover {
   background-color: var(--color-sage-dark);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(196, 164, 160, 0.4);
+  color: white;
+  border-radius: 12px 22px 12px 22px;
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 24px -14px rgba(94, 82, 79, 0.7);
 }
 
-/* Secondary: white with rose border */
+a.btn-primary:hover,
+button.btn-primary:hover,
+.btn-primary:hover {
+  background-color: #7A5955;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px -14px rgba(94, 82, 79, 0.75);
+}
+
+/* Secondary: wit met een dunne rand, voor de tweede keus */
+a.btn-secondary,
+button.btn-secondary,
 .btn-secondary {
-  border: 2px solid var(--color-rose-light);
-  color: var(--color-rose-dark);
+  border: 1px solid var(--color-sage-light);
+  color: var(--color-text);
   background-color: white;
+  border-radius: 22px 12px 22px 12px;
   transition: all 0.3s ease;
 }
 
+a.btn-secondary:hover,
+button.btn-secondary:hover,
 .btn-secondary:hover {
-  background-color: var(--color-rose);
-  color: white;
-  border-color: var(--color-rose);
+  background-color: var(--color-cream);
+  border-color: var(--color-sage);
   transform: translateY(-1px);
 }
 
@@ -133,12 +145,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Card hover */
+/* Kaarten zijn wit met een dun lijntje in plaats van een gevulde vlakte.
+   Vier gevulde kaarten naast elkaar maken van een pagina een lappendeken.
+   Het element staat in de selector, zodat deze regels winnen van een
+   achtergrondkleur en een hoekafronding die in de opmaak meegegeven zijn. */
+div.card-hover,
+a.card-hover,
 .card-hover {
+  background-color: #fff;
+  border: 1px solid rgba(148, 107, 102, 0.16);
+  border-radius: 10px 26px 10px 26px;
   transition: all 0.3s ease;
 }
 
+div.card-hover:hover,
+a.card-hover:hover,
 .card-hover:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  border-color: rgba(148, 107, 102, 0.32);
+  box-shadow: 0 20px 25px -5px rgba(94, 82, 79, 0.07), 0 8px 10px -6px rgba(94, 82, 79, 0.05);
 }
 
 .card-hover:hover .card-icon {
